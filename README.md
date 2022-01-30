@@ -1,23 +1,23 @@
 
 # Grupo CodeMakers
 ## Objetivo: 
-Proyecto integrador crear un sitio de e-commerce.
+Proyecto integrador para crear un sitio de e-commerce.
 
-## Tematica del sitio: 
+## Temática del sitio: 
 
-Ecommerce de vehiculos de media y alta gamma, siempre cero kilometro.
+E-commerce de vehículos cero kilómetro de media y alta gama.
 
 ## Productos del sitio
 
-Autos cero kilometro de gamma media y alta. 
+Autos cero kilómetro de gama media y alta. 
 
 ## Publico objetivo: 
 
-Cualquier persona, mayor de 18 años que pueda adquirir el vehiculo.
+Cualquier persona mayor de 18 años que pueda adquirir el vehículo.
 
-## Extrategia hacia el publico
+## Estrategia hacia el público
 
-Vender autos de buena calidad o de renombre.
+Vender autos de buena calidad y de renombre.
 
 ## Equipo de trabajo
 
@@ -47,4 +47,4 @@ Vender autos de buena calidad o de renombre.
 
 [Pagina de Chevrolet Argentina] (https://www.chevrolet.com.ar/)
 
-Motivo: sitios elegantes, innovadores y de gamma media/alta.
+Motivo: sitios elegantes, innovadores y de gama media/alta.
