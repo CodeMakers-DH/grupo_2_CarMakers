@@ -33,18 +33,20 @@ Vender autos de buena calidad y de renombre.
 
 ## Referencias:
 
-[Pagina de Fiat Argentina] (https://www.fiat.com.ar/)
+[Pagina de Fiat Argentina] (https://www.fiat.com.ar/) --> Nos inspiramos más que nada en el carrousel que tiene la página principal y lo copiamos para implementarlo
+en nuestra home page, también usamos de inspiración la página de detalles del producto.
 
 
-[Pagina de Peugeot Argentina] (https://www.peugeotstore.com.ar/)
+[Pagina de Peugeot Argentina] (https://www.peugeotstore.com.ar/208-gt) --> De acá tomamos la idea de que la imagen de los autos cubriera la totalidad del ancho de la
+pantalla. La página nos pareció muy elegante, lo cual se ajusta a nuestra oferta de productos, y por eso nos inspiramos en ella. También copiamos la pequeña infografía que aparece al final de la página de inicio de Peugeot que explica como adquirir un auto en 5 pasos porque nos pareció una buena forma de disuadir a potenciales clientes. 
 
 
-[Pagina de Tesla] (https://www.tesla.com/)
+[Pagina de Tesla] (https://www.tesla.com/) --> Esta página fue la que mayor influencia tuvo en nuestro wireframe, quisimos replicar su minimalismo porque nos pareció muy sobrio y elegante, lo cual se ajusta a nuestra oferta de productos. 
 
 
-[Pagina de GCDC Argentina] (https://www.gcdconline.com.ar/#/)
+[Pagina de GCDC Argentina] (https://www.gcdconline.com.ar/#/) De esta página tomamos inspiración para crear un botón de contacto para charlar con un asesor comercial. 
 
 
-[Pagina de Chevrolet Argentina] (https://www.chevrolet.com.ar/)
+[Pagina de Chevrolet Argentina] (https://www.chevrolet.com.ar/) Esta también es una página minimalista que tiene un carrousel en el home page, más que nada la usamos para comparar lo que habíamos ido escogiendo de las otras páginas y terminar de definirlo. 
 
 Motivo: sitios elegantes, innovadores y de gama media/alta.
