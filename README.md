@@ -1,5 +1,7 @@
 
 # Grupo CodeMakers
+Enlace al tablero de trabajo: https://sharing.clickup.com/l/h/7-36075579-1/15c2f6eb610fa0c
+
 ## Objetivo: 
 Proyecto integrador para crear un sitio de e-commerce.
 
@@ -50,3 +52,4 @@ pantalla. La página nos pareció muy elegante, lo cual se ajusta a nuestra ofer
 [Pagina de Chevrolet Argentina] (https://www.chevrolet.com.ar/) Esta también es una página minimalista que tiene un carrousel en el home page, más que nada la usamos para comparar lo que habíamos ido escogiendo de las otras páginas y terminar de definirlo. 
 
 Motivo: sitios elegantes, innovadores y de gama media/alta.
+
