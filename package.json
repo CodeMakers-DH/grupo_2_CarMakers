@@ -1,0 +1,20 @@
+{
+  "name": "grupo_2_carmakers",
+  "version": "1.0.0",
+  "description": "Enlace al tablero de trabajo: https://sharing.clickup.com/l/h/7-36075579-1/15c2f6eb610fa0c",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CodeMakers-DH/grupo_2_CarMakers.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CodeMakers-DH/grupo_2_CarMakers/issues"
+  },
+  "homepage": "https://github.com/CodeMakers-DH/grupo_2_CarMakers#readme"
+}
