@@ -4,7 +4,7 @@
   "description": "Enlace al tablero de trabajo: https://sharing.clickup.com/l/h/7-36075579-1/15c2f6eb610fa0c",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon app.js"
   },
   "repository": {
     "type": "git",
@@ -16,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/CodeMakers-DH/grupo_2_CarMakers/issues"
   },
-  "homepage": "https://github.com/CodeMakers-DH/grupo_2_CarMakers#readme"
+  "homepage": "https://github.com/CodeMakers-DH/grupo_2_CarMakers#readme",
+  "dependencies": {
+    "express": "^4.17.2",
+    "nodemon": "^2.0.15"
+  }
 }
