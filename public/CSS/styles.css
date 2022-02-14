@@ -9,15 +9,6 @@
 
 /*---NAV---*/
 
-header{
-
-
-}
-
-.barra-blanca{
-    
-}
-
 .navbar{
     display: flex;
     justify-content: space-between;
