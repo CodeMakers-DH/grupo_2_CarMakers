@@ -139,6 +139,7 @@ img{
     position: fixed;
     top: 200px;
     right: -13px;
+    z-index: 12;
 }
 
 .wpp-container{
@@ -152,6 +153,7 @@ img{
     border:none;
     border-radius: 10px;
     padding: 5px 15px 5px 5px;
+    background-color: #acceff;
 }
 
 
@@ -177,22 +179,24 @@ img{
 
 .saber-mas{
     margin-bottom: 10px;
-    padding: 5px;
+    padding: 7px;
     border:none;
     border-radius: 20px;
     font-family: 'Roboto', sans-serif;
     font-weight: 700;
+    color:white;
+    background-color: #ed7237;
 }
 
 .compra-ahora{
     margin-bottom: 30px;
-    padding: 5px;
+    padding: 7px;
     border:none;
     border-radius: 20px;
     font-family: 'Roboto', sans-serif;
     font-weight: 700;
-    background-color: #ed7237;
-    color: white;
+    color: rgb(0, 0, 0);
+    background-color: #ececec;
 }
 
 .texto-uno{
@@ -262,3 +266,131 @@ img{
 }
 
 
+/*---CINCO PASOS---*/
+
+.cincopasos{
+    margin: 50px 0;
+}
+
+.cincopasos h4{
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    font-weight: 700;
+    font-size:90%;
+    margin-bottom: 30px;
+}
+
+.cincopasos article img{
+    display:flex;
+    width:80%;
+    margin: 0 auto;
+
+}
+
+
+/*---FOOTER---*/
+
+footer{
+    background-color: #ececec;
+}
+
+.carmakers{
+    padding:10px 0 0 10px;
+    margin:0;
+    font-family: fuentelogo;
+    font-size: 15px;
+}
+
+
+footer div div a img{
+    width:40px;
+}
+
+
+.email, .terminos input, .terminos label{
+    margin-bottom: 5px;
+}
+
+.derechos{
+    margin:0;
+    padding:0;
+}
+
+.form-footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width:80%;
+    margin: 50px auto;
+}
+
+.form-footer h5{
+    text-align: center;
+    padding-bottom:5px;
+}
+
+.suscribirme{
+    padding: 10px;
+    border:none;
+    border-radius: 20px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    background-color: #ed7237;
+    color: white;
+}
+
+.email{
+    border:none;
+    border-radius: 20px;
+    padding: 10px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+}
+
+.email:focus{
+    outline-color: #ed7237;
+}
+
+
+.social-media h5{
+    text-align: center;
+    margin-top: 30px;
+}
+
+.iconos{
+    width:70%;
+    display: flex;
+    margin: 0 auto;
+}
+
+.iconos a{
+    padding: 5px;
+}
+
+.links{
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.links a{
+    text-decoration: none;
+    margin: 0 auto;
+    font-family: 'Raleway', sans-serif;
+    color: #6a6a6a;
+    font-size: 80%;
+}
+
+.copy{
+    display: flex;
+    justify-content: center;
+}
+
+.copy p{
+    font-size: 80%;
+}
+
+.derechos{
+    color:#939393;
+}
