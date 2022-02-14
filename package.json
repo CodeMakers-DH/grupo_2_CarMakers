@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/CodeMakers-DH/grupo_2_CarMakers#readme",
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.0.0",
     "express": "^4.17.2",
     "nodemon": "^2.0.15"
   }
