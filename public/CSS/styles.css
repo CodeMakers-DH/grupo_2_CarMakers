@@ -1,0 +1,273 @@
+*{
+    box-sizing: border-box;
+    }
+
+@font-face {
+    font-family: fuentelogo;
+    src: url(fuentelogo.otf);
+}
+
+/*---NAV---*/
+
+header{
+
+
+}
+
+.barra-blanca{
+    
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+nav h1{
+    padding:0;
+    margin: 10px 0 0 15px;
+    font-family: fuentelogo;
+    font-size: 15px;
+    position: fixed;
+    top: 7px;
+    z-index: 5;
+}
+
+nav button{
+    margin: 5px 0 0 0;
+    border:none;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    padding: 5px 15px;
+    border-radius: 5px;
+    position: fixed;
+    right: 5px;
+    top:2px;
+    z-index: 5;
+}
+
+
+.barra-blanca{
+    background-color: #ffffff;
+    width:100%;
+    position:fixed;
+    z-index: 4;
+}
+
+
+/*---IMÁGENES----*/
+
+img{
+    width: 100%;
+}
+
+/*---SLIDER---*/
+
+.carousel, .slide{
+    position: relative;
+    padding-top: 50px;
+}
+
+.texto-principal{
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform:translate(-50%, -50%);
+}
+
+.nombre-auto{
+    font-size: 2em;
+    color:white;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+    text-align: center;
+}
+
+.desc-auto{
+    font-size: 1em;
+    color:white;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    text-align: center;
+}
+
+/*---SEARCH BAR---*/
+
+.box-container{
+    margin: 30px auto 40px auto;
+    position:relative;
+    width:80%;
+    background-color:#acceff;
+    padding: 7px;
+    border-radius: 5px;
+}
+
+.elements-container{
+    display: flex;
+    width:100%;
+    vertical-align: center;
+}
+
+.search{
+    border:none;
+    width:100%;
+    padding: 0 5px;
+    background-color:#acceff;
+    color:rgb(0, 0, 0);
+    border-radius: 5px;
+    font-size: 15px;
+    font-family: 'Roboto', sans-serif;
+    color:#455266;
+}
+
+.search:focus{
+    outline: none; 
+}
+
+.boton-lupa{
+    border:none;
+    background-color:#acceff;
+    color: #455266;
+}
+
+/*---ICONO-ARROW---*/
+
+.icon-arrow{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+
+/*---WPP BOTON---*/
+
+.article-wpp{
+    display: flex;
+    flex-direction:row-reverse;
+    position: fixed;
+    top: 200px;
+    right: -13px;
+}
+
+.wpp-container{
+    width: 60px;
+    display: flex;
+    flex-direction:row-reverse;
+    
+}
+
+.wpp-container button{
+    border:none;
+    border-radius: 10px;
+    padding: 5px 15px 5px 5px;
+}
+
+
+/*---SECCIÓN 1---*/
+
+.seccion-uno{
+    width:100%;
+    height: 100%;
+    background-image: url(/imgs/blue.jpg);
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center;
+}
+
+.botones{
+    display: flex;
+    position:relative;
+    bottom:20px;
+    width: 80%;
+    flex-direction: column;
+    margin: 310px auto 0px auto;
+}
+
+.saber-mas{
+    margin-bottom: 10px;
+    padding: 5px;
+    border:none;
+    border-radius: 20px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+}
+
+.compra-ahora{
+    margin-bottom: 30px;
+    padding: 5px;
+    border:none;
+    border-radius: 20px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    background-color: #ed7237;
+    color: white;
+}
+
+.texto-uno{
+    text-align: center;
+    position:relative;
+    top: 30px;
+}
+
+.nombre-auto-uno{
+    font-size: 2em;
+    color:white;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+}
+
+.desc-auto-uno{
+    font-size: 1em;
+    color:white;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    text-align: center;
+}
+
+/*---SECCIÓN 2---*/
+
+.seccion-dos{
+    width:100%;
+    height: 100%;
+    background-image: url(/imgs/black.jpg);
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center;
+}
+
+/*---SECCIÓN 3---*/
+
+.seccion-tres{
+    width:100%;
+    height: 100%;
+    background-image: url(/imgs/red.jpg);
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center;
+}
+
+
+/*---SECCIÓN 4---*/
+
+.seccion-cuatro{
+    width:100%;
+    height: 100%;
+    background-image: url(/imgs/puente.jpg);
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center;
+}
+
+/*---SECCIÓN 5---*/
+
+.seccion-cinco{
+    width:100%;
+    height: 100%;
+    background-image: url(/imgs/white.jpg);
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center;
+}
+
+
