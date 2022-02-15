@@ -84,6 +84,10 @@ img{
     text-align: center;
 }
 
+.icon-arrow{
+    font-size: 20px;
+}
+
 /*---SEARCH BAR---*/
 
 .box-container{
@@ -171,10 +175,10 @@ img{
 .botones{
     display: flex;
     position:relative;
-    bottom:20px;
-    width: 80%;
     flex-direction: column;
+    text-align: center;
     margin: 310px auto 0px auto;
+    bottom:20px;
 }
 
 .saber-mas{
@@ -186,6 +190,7 @@ img{
     font-weight: 700;
     color:white;
     background-color: #ed7237;
+    width: 80%;
 }
 
 .compra-ahora{
@@ -197,6 +202,8 @@ img{
     font-weight: 700;
     color: rgb(0, 0, 0);
     background-color: #ececec;
+    width: 80%;
+
 }
 
 .texto-uno{
@@ -334,7 +341,7 @@ footer div div a img{
     border:none;
     border-radius: 20px;
     font-family: 'Roboto', sans-serif;
-    font-weight: 700;
+    font-weight: 500;
     background-color: #ed7237;
     color: white;
 }
@@ -393,4 +400,205 @@ footer div div a img{
 
 .derechos{
     color:#939393;
+}
+
+/*---DETALLE DEL PRODUCTO---*/
+
+.foto-principal{
+    width:80%;
+    margin:110px 0 50px 0;
+    padding:0;
+    max-width: 800px;
+}
+
+.main-article{
+    text-align: center;
+}
+
+.modelo-delivery{
+    margin: 0 0 40px 0;
+}
+
+/*TÍTULO*/
+
+main section article div h2{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    font-size:2em;
+    padding: 0 50px;
+
+}
+
+main section article div h3{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    font-size:1.3em;
+    color:#939393;
+}
+
+/*CARACTERÍSTICAS*/
+
+.caracteristicas{
+    margin: 100px 0 0 0;
+}
+
+.caracteristicas h4{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size:1.6em;
+}
+
+.caracteristicas h5{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    font-size:1.2em;
+    color:#939393;
+    margin-bottom: 40px;
+}
+/*
+.precio{
+    border:solid 1.8px grey;
+    margin: 0 auto;
+    border-radius: 30px;
+    padding:15px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    width:80%;
+}
+*/
+
+.precio-auto{
+    display: flex;
+    justify-content: center;
+    border: solid 1.8px grey;
+    border-radius: 30px;
+    width:80%;
+    margin: 0 auto;
+    padding:10px;
+}
+
+.precio, .numero{
+    margin:0;
+}
+
+/*PINTURA Y RUEDAS*/
+
+.auto-pintura, .auto-ruedas{
+    width:80%;
+    margin:80px auto 50px auto;
+    padding:0;
+    max-width: 800px;
+}
+
+.article-pintura h4, .article-ruedas h4{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    font-size:2em;
+    padding: 5px 50px 0 50px;
+    margin-bottom:30px;
+}
+
+.flex-circle{
+    display: flex;
+    justify-content: space-around;
+    margin: 0 auto;
+    font-size: 2.3em;
+    max-width: 250px;
+
+}
+
+.flex-circle-dos{
+    display: flex;
+    justify-content: space-around;
+    font-size: 2.3em;
+    max-width: 100px;
+    margin: 0 auto;
+}
+
+.desc-color, .desc-ruedas{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.color-pintura, .nombre-rueda, .precio{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    font-size:1.1em;
+    margin-right: 5px;
+}
+
+.precio-pintura, .precio-rueda, .numero{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+    font-size:1.1em;
+    color:#6a6a6a;
+    margin-left:5px;
+}
+
+/*BOTÓN*/
+
+.add a button{
+    border:none;
+    border-radius: 30px;
+    padding:15px;
+    margin: 40px 0;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    background-color: #ed7237;
+    color: white;
+    width:80%;
+
+}
+
+.add{
+    margin-bottom: 50px;
+}
+
+/*CÍRCULOS*/
+
+#plateado{
+    color: #eeeeee;
+}
+
+#gris-oscuro{
+    color: #525252;
+}
+
+#azul{
+    color: #195abb;
+}
+
+#negro{
+    color: #000000;
+}
+
+#rojo{
+    color: #ca1a1a;
+}
+
+
+
+/*TEXTO SUPERIOR*/
+
+.flex-texto{
+    background-color: #ececec;
+    width:90%;
+    padding: 15px 15px 5px 35px;
+    margin: 0 auto;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    position: relative;
+    top: 70px;
+    text-align: left;
+}
+
+.flex-texto i{
+    position:relative;
+    right: 12px;
+    top: 2px;
+    color:#d23c00;
 }
