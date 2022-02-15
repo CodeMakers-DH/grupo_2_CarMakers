@@ -14,3 +14,11 @@ app.get('/', (req, res) => {
     res.sendFile(path.resolve(__dirname, './views/index.html'))
 })
 
+app.get('/detalleproducto', (req, res) => {
+    res.sendFile(path.resolve(__dirname, './views/detalleproducto.html'))
+})
+
+app.get('/carrito', (req, res) => {
+    res.sendFile(path.resolve(__dirname, './views/carrito.html'))
+})
+
