@@ -455,17 +455,6 @@ main section article div h3{
     color:#939393;
     margin-bottom: 40px;
 }
-/*
-.precio{
-    border:solid 1.8px grey;
-    margin: 0 auto;
-    border-radius: 30px;
-    padding:15px;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 500;
-    width:80%;
-}
-*/
 
 .precio-auto{
     display: flex;
@@ -601,4 +590,218 @@ main section article div h3{
     right: 12px;
     top: 2px;
     color:#d23c00;
+}
+
+
+/*---CARRITO---*/
+
+
+/*SECCIONES*/
+
+.mis-compras{
+    width: 90%;
+    padding: 90px 0 0 0px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    margin: 0 auto;
+}
+
+.main-section{
+    border-top: #939393 solid 1px;
+    border-bottom: #939393 solid 1px;
+    padding: 40px 0;
+    margin: 40px auto;
+    width:90%;
+
+}
+
+
+.flexbox-seccion{
+    margin: 0 auto;
+    padding-bottom: 50px;
+    display: flex;
+    width: 100%;
+}
+
+.flexbox-seccion-dos{
+    margin: 0 auto;
+    display: flex;
+    width: 100%;
+}
+
+.nombre-imagen{
+    display: flex;
+    justify-content: left;
+}
+
+.flex-img{
+    width: 30%;
+    border: #939393 solid 1px;
+    max-width: 200px;
+}
+
+.flex-nombre-desc h3{
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 0 20px;
+}
+
+
+.flex-nombre-desc h4{
+    font-family: 'Raleway', sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    color: #939393;
+    padding: 0 20px;
+}
+
+.flex-icono-precio h5{
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    padding: 0;
+    margin:0;
+    color: #939393;
+}
+
+.flex-icono-precio i{
+    margin:0;
+    padding:0;
+    text-align: right;
+}
+
+.flex-icono-precio{
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+    margin:0;
+}
+
+/*FORMULARIO*/
+
+
+.resumen-compra{
+    width: 90%;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    margin: 0 auto 20px auto;
+}
+
+.cupon-descuento{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+}
+
+.cupon-descuento label{
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 10px;
+}
+
+.cupon-descuento input{
+    max-width: 280px;
+    padding: 5px;
+}
+
+.flex-giftcard{
+    display: flex;
+    max-width: 90%;
+}
+
+.flex-giftcard input {
+    max-width:100px;
+    margin-right: 8px;
+}
+
+.giftcard{
+    font-family: 'Roboto', sans-serif;
+    margin: 15px 0 10px 0;
+}
+
+
+.flex-envio{
+    font-family: 'Raleway', sans-serif;
+    font-size: 15px;
+    color: #939393;
+    margin: 20px 0 10px 0;
+    display: flex;
+    justify-content: space-between;
+    width: 95%;
+    align-items: center;
+}
+
+.flex-impuesto{
+    font-family: 'Raleway', sans-serif;
+    font-size: 15px;
+    color: #939393;
+    display: flex;
+    justify-content: space-between;
+    width: 95%;
+    align-items: center;
+}
+
+.flex-total{
+    font-family: 'Raleway', sans-serif; 
+    margin: 15px 0 10px 0;
+    color: #6a6a6a;
+    display: flex;
+    justify-content: space-between;
+    width: 95%;
+    align-items: center;
+}
+
+.flex-total h4{
+    font-weight: 600;
+}
+
+.form-carrito{
+    margin: 0 auto 0 auto;
+    width: 90%;
+}
+
+.contacto{
+    border:none;
+    background-color: #ed7237;
+    color: white;
+    border-radius: 40px;
+    font-family: 'Roboto', sans-serif; 
+    font-weight: 500;
+    padding:8px;
+}
+
+.div-boton{
+    text-align: center;
+    width: 100%;
+    margin: 20px auto 50px auto;
+}
+
+/*FOOTER-CARRITO*/
+
+#footer-carrito{
+    background-color: white;
+}
+
+.copy-carrito{
+    text-align: center;
+    font-family: 'Raleway', sans-serif; 
+    color: #6a6a6a;
+}
+
+.car-carrito{
+    margin-top: 100px;
+    margin-bottom: 0;
+}
+
+
+.links-carrito{
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    margin-bottom: 20px;
+}
+
+.links-carrito a{
+    text-decoration: none;
+    color: #6a6a6a;
 }
