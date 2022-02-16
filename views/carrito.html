@@ -10,10 +10,11 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"rel="stylesheet"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;400;500;600;900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/b12fa36c29.js" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/8d64f88109.js" crossorigin="anonymous"></script>
     <title>CarMakers</title>
 </head>
@@ -35,53 +36,124 @@
     </header>
 
 
-    <main>
+    <main class="main-carrito">
+
+        <h2 class="mis-compras">Mis compras</h2>
+
+        <section class="main-section">
+
+            <div class="flexbox-seccion">
+
+            <div class="nombre-imagen">
+
+                <div class="flex-img">
+                    <img src="\imgs\producto.jpg" alt="Foto del producto a comprar">
+                </div>
+                
+                <div class="flex-nombre-desc">
+                    <h3>Nombre del producto</h3>
+                    <h4>Descripción y detalles de la compra.</h4>
+                </div>
+
+            </div>
+
+                
+                <div class="flex-icono-precio">
+                    <i class="fa-solid fa-xmark"></i>
+                    <h5>Precio</h5>
+                </div>
+                
+            </div>
+
+
+
+            <div class="flexbox-seccion-dos">
+
+            <div class="nombre-imagen">
+
+                <div class="flex-img">
+                    <img src="\imgs\producto2.jpg" alt="Foto del producto a comprar">
+                </div>
+                
+                <div class="flex-nombre-desc">
+                    <h3>Nombre del producto</h3>
+                    <h4>Descripción y detalles de la compra.</h4>
+                </div>
+
+            </div>
+
+                
+                <div class="flex-icono-precio">
+                    <i class="fa-solid fa-xmark"></i>
+                    <h5>Precio</h5>
+                </div>
+                
+            </div>
+
+        </section>
+
+
+        <section>
+            <h3 class="resumen-compra">Resumen de compra</h3>
+
+            <form action="/carrito" method="POST" class="form-carrito">
+
+                <div class="cupon-descuento">
+                    <label for="cupon">¿Tenés cupón de descuento?</label>
+                    <input type="text" name="cupon" id="cupon"  placeholder="Ingresar código"required>
+                </div>
+
+                <label for="giftcard" class="giftcard">¿Tenés GiftCard?</label>
+
+                <div class="flex-giftcard">
+                    <input type="number" name="numero" id="giftcard" placeholder="Número de tarjeta" required>
+                    <input type="number" name="codigo" id="giftcard" placeholder="Código de seguridad" required>
+                    <input type="number" name="monto" id="giftcard" placeholder="Monto a utilizar" required>
+                </div>
+
+                <div class="flex-envio">
+                    <h5>Envío</h5>
+                    <h6>Calculado en el checkout</h6>
+                </div>
+
+
+                <div class="flex-impuesto">
+                    <h5>Impuestos</h5>
+                    <h6>Calculado en el checkout</h6>
+                </div>
+
+                <div class="flex-total">
+                    <h4>Subtotal:</h4>
+                    <h5>$2,456,198</h5>
+                </div>
+
+                <div class="div-boton">
+                <button type="submit" class="contacto">PONERSE EN CONTACTO CON EL VENDEDOR</button>
+                </div>
+
+            </form>
+
+            
+
+
+
+
+
+        </section>
 
 
     </main>
 
-    <footer>
-        <h4 class="carmakers">CARMAKERS</h4>
+    <footer id="footer-carrito">
 
-
-        <form class="form-footer">
-            <h5>Sumate al newsletter</h5>
-
-            <input type="email" placeholder="tuemail@ejemplo.com" class="email" required="">
-
-            <div class="terminos">
-                <input type="checkbox" name="datos" value="email" required>
-                <label for="datos">Acepto términos y condiciones</label>
-            </div>
-
-            <button type="submit" class="suscribirme">SUSCRIBIRME</button>
-        </form>
-
-        <div class="social-media">
-            <h5>Seguínos en</h5>
-            <article class="iconos">
-                <a href="https://youtube.com"><img src="\imgs\youtube.png" alt="Logo Youtube"/></a>
-                <a href="https://linkedin.com"><img src="\imgs\linkedin.png" alt="Logo Linkedin"/></a>
-                <a href="https://facebook.com"><img src="\imgs\facebook.png" alt="Logo Twitter"/></a>
-                <a href="https://twitter.com"><img src="\imgs\twitter.png" alt="Logo Facebook"/></a>
-                <a href="https://instagram.com"><img src="\imgs\instagram.png" alt="Logo Instagram"/></a>
-            </article>
+        <div class="copy-carrito">
+            <p class="car-carrito">CarMakers © 2022</p>
         </div>
 
-
-        <div class="links">
+        <div class="links-carrito">
             <a href="/sobrenosotros.html">Sobre Nosotros</a>
             <a href="/terminos.html">Términos y condiciones</a>
-            <a href="/cookies.html">Política de cookies</a>
-            <a href="/privacidad.html">Política de privacidad</a>
         </div>
-
-
-        <div class="copy">
-            <p class="2022">CarMakers © 2022, </p>
-            <p class="derechos">Todos los derechos reservados</p>
-        </div>
-
 
     </footer>
 
