@@ -14,6 +14,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;400;500;600;900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/b12fa36c29.js" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/8d64f88109.js" crossorigin="anonymous"></script>
     <title>CarMakers</title>
 </head>
@@ -30,6 +31,7 @@
                 <a href="/"><h1>CARMAKERS</h1></a>
 
                 <ul class="enlaces-menu">
+                    <button class="cruz" type="button"><i class="fa-solid fa-xmark"></i></button>
                     <li><a href="/login">Cuenta</a></li>
                     <li><a href="/Carrito">Carrito</a></li>
                     <li><a href="/Carrito">Comprar</a></li>
@@ -78,7 +80,7 @@
 
               <div class="box-container">
                   <form class="elements-container">
-                        <input type="text" placeholder="Marcas, modelos, características" class="search" required="">
+                        <input type="text" placeholder="Modelos, características, servicios" class="search" required="">
                         <button type="submit" class="boton-lupa"><i class="fas fa-search" id="icono-lupa"></i></button>
                   </form>
               </div>
@@ -236,12 +238,26 @@
 
 
 
-        <section id="cincopasos">
-            <h4>PODÉS TENER TU AUTO EN 5 PASOS</h4>
+        <section class="cincopasos" id="cincopasos">
+            <h6>PODÉS TENER TU AUTO EN 5 PASOS</h6>
 
-            <article>
-                <img src="\imgs\cincopasos.jpg" alt="Cinco pasos para tener tu auto">
-            </artic>
+        <div class="ambos-container">
+            <div class="grid-container-uno">
+                <div class="grid-item"><i class="fa-solid fa-car"></i><span class="span-num">1</span>Elegí tu auto</div>
+                <div class="grid-item"><span class="right-arrow"><i class="fa-solid fa-arrow-right-long"></i></span></div>
+                <div class="grid-item"><i class="fa-solid fa-clipboard-check"></i><span class="span-num">2</span>Completá la registración con tus datos</div>
+            </div>
+
+            <div class="grid-container-dos">
+                <div class="grid-item"><i class="fa-solid fa-building"></i><span class="span-num">3</span>Seleccioná un consecionario y hacé la reserva</div>
+                <div class="grid-item"><span class="right-arrow"><i class="fa-solid fa-arrow-right-long"></i></span></div>
+                <div class="grid-item"><i class="fa-solid fa-hand-holding-dollar"></i><span class="span-num">4</span>Cancelá el saldo</div>
+                <div class="grid-item"><span class="right-arrow"><i class="fa-solid fa-arrow-right-long"></i></span></div>
+                <div class="grid-item"><i class="fa-solid fa-people-carry-box"></i><span class="span-num">5</span>Retirá el auto</div>
+            </div>
+        </div>
+
+
         </section>
 
 
@@ -267,11 +283,11 @@
         <div class="social-media">
             <h5>Seguínos en</h5>
             <article class="iconos">
-                <a href="https://youtube.com"><img src="\imgs\youtube.png" alt="Logo Youtube"/></a>
-                <a href="https://linkedin.com"><img src="\imgs\linkedin.png" alt="Logo Linkedin"/></a>
-                <a href="https://facebook.com"><img src="\imgs\facebook.png" alt="Logo Twitter"/></a>
-                <a href="https://twitter.com"><img src="\imgs\twitter.png" alt="Logo Facebook"/></a>
-                <a href="https://instagram.com"><img src="\imgs\instagram.png" alt="Logo Instagram"/></a>
+                <a target="_blank" href="https://youtube.com"><img src="\imgs\youtube.png" alt="Logo Youtube"/></a>
+                <a target="_blank" href="https://linkedin.com"><img src="\imgs\linkedin.png" alt="Logo Linkedin"/></a>
+                <a target="_blank" href="https://facebook.com"><img src="\imgs\facebook.png" alt="Logo Twitter"/></a>
+                <a target="_blank" href="https://twitter.com"><img src="\imgs\twitter.png" alt="Logo Facebook"/></a>
+                <a target="_blank" href="https://instagram.com"><img src="\imgs\instagram.png" alt="Logo Instagram"/></a>
             </article>
         </div>
 
@@ -292,7 +308,7 @@
 
     </footer>
 
-    <script src="main.js"></script>
+    <script src="js/main.js" type="module"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
 </html>
