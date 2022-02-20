@@ -1,11 +1,13 @@
 *{
     box-sizing: border-box;
-    }
+    scroll-behavior: smooth;
+}
 
 @font-face {
     font-family: fuentelogo;
     src: url(fuentelogo.otf);
 }
+
 
 /*---NAV---*/
 
@@ -17,28 +19,31 @@
 }
 
 nav h1{
+    color:#11151a;
     padding:0;
-    margin: 10px 0 0 15px;
+    margin: 0 0 0 15px;
     font-family: fuentelogo;
     font-size: 15px;
     position: fixed;
-    top: 7px;
+    top: 15px;
     z-index: 5;
 }
 
-nav button{
-    margin: 5px 0 0 0;
+.menu{
+    cursor:pointer;
+    margin: 8px 3px 0 0;
     border:none;
     font-family: 'Roboto', sans-serif;
     font-size: 15px;
+    font-weight: 400;
     padding: 5px 15px;
     border-radius: 5px;
     position: fixed;
     right: 5px;
     top:2px;
     z-index: 5;
+    background-color: #ececec;
 }
-
 
 .barra-blanca{
     background-color: #ffffff;
@@ -46,6 +51,88 @@ nav button{
     position:fixed;
     z-index: 4;
 }
+
+.enlaces-menu{
+    position: absolute;
+    top: 0px;
+    right: -50px;
+    padding-right:100px;
+    background-color: rgb(255, 255, 255);
+    height: 500vh;
+    z-index: 20;
+    opacity: 1;
+    display: none;
+}
+
+
+@keyframes muestraMenu{
+    from{right: -50}
+    to{right: 0}
+
+    from{ opacity:0}
+    to{opacity: 1}
+}
+
+
+.enlaces-menu.activado{
+    display: block;
+    animation: muestraMenu 500ms ease-in-out both;
+}
+
+
+.enlaces-menu li:first-child{
+    margin-top: 100px;
+}
+
+
+.enlaces-menu li{
+    list-style: none;
+    margin: 20px 0 0 0;
+}
+
+
+.enlaces-menu li a{
+    text-decoration: none;
+    color:#6a6a6a;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+}
+
+@keyframes muestraCruz{
+    from{opacity:0}
+    to{opacity:1}
+}
+
+.cruz{
+    opacity:1;
+    z-index: 30;
+    position:absolute;
+    right: 10px;
+    top: 10px;
+    background-color: transparent;
+    border:none;
+    color:#6a6a6a;
+    display: none;
+}
+
+
+.cruz.activado{
+    display: block;
+    animation: muestraCruz 500ms ease-in-out both;
+}
+
+.cuenta-button{
+    display:none;
+}
+
+.carrito-button{
+    display: none;
+}
+
+.enlaces-productos{
+    display: none;
+}
+
 
 
 /*---IMÁGENES----*/
@@ -84,17 +171,19 @@ img{
     text-align: center;
 }
 
-.icon-arrow{
-    font-size: 20px;
+.carousel-inner div{
+    height: 60vh;
 }
+
 
 /*---SEARCH BAR---*/
 
 .box-container{
-    margin: 30px auto 40px auto;
+    margin: 30px auto 30px auto;
     position:relative;
     width:80%;
-    background-color:#acceff;
+    max-width: 400px;
+    background-color:#ececec;
     padding: 7px;
     border-radius: 5px;
 }
@@ -109,30 +198,61 @@ img{
     border:none;
     width:100%;
     padding: 0 5px;
-    background-color:#acceff;
+    background-color:#ececec;
     color:rgb(0, 0, 0);
     border-radius: 5px;
     font-size: 15px;
     font-family: 'Roboto', sans-serif;
-    color:#455266;
+    color:#6a6a6a;
 }
 
 .search:focus{
-    outline: none; 
+    outline: none;
 }
 
 .boton-lupa{
     border:none;
-    background-color:#acceff;
-    color: #455266;
+    background-color:transparent;
+    color: #6a6a6a;
 }
 
 /*---ICONO-ARROW---*/
 
 .icon-arrow{
+    font-size: 20px;
+    text-align: center;
+    margin-top:10px;
+    position:relative;
+    bottom: 150px;
+    animation: arrow-movement 2s infinite;
+}
+
+.icon-arrow a{
+    color:white;
+}
+
+.icon-arrow-uno{
+    font-size: 20px;
     text-align: center;
     margin-bottom: 20px;
 }
+
+.icon-arrow-uno a{
+    color:#6a6a6a;
+}
+
+/*ICONO ARROW MAIN*/
+
+.icon-arrow-main{
+    font-size: 20px;
+    text-align: center;
+    padding: 20px;
+}
+
+.icon-arrow-main a{
+    color: #6a6a6a;
+}
+
 
 
 /*---WPP BOTON---*/
@@ -144,6 +264,7 @@ img{
     top: 200px;
     right: -13px;
     z-index: 12;
+    display: none;
 }
 
 .wpp-container{
@@ -157,82 +278,103 @@ img{
     border:none;
     border-radius: 10px;
     padding: 5px 15px 5px 5px;
-    background-color: #acceff;
+    background-color: #37b2ed;
+}
+
+/*---MAIN SECTION INDEX---*/
+
+#main-section-index{
+    width:100%;
+    min-height: 100vh;
 }
 
 
 /*---SECCIÓN 1---*/
 
-.seccion-uno{
+#seccion-uno{
     width:100%;
-    height: 100%;
-    background-image: url(/imgs/blue.jpg);
+    min-height: 100vh;
+    background-image: url(/imgs/editada0.jpg);
     background-repeat: no-repeat;
     background-size:cover;
     background-position: center;
 }
 
 .botones{
-    display: flex;
-    position:relative;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
     text-align: center;
-    margin: 310px auto 0px auto;
-    bottom:20px;
+}
+
+.botones-container{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    position:relative;
+    bottom: 140px;
 }
 
 .saber-mas{
-    margin-bottom: 10px;
-    padding: 7px;
-    border:none;
-    border-radius: 20px;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 700;
-    color:white;
-    background-color: #ed7237;
-    width: 80%;
+        padding: 7px;
+        border:none;
+        border-radius: 20px;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 700;
+        color:white;
+        background-color: #ed7237;
+        width: 250px;
+        margin-bottom: 20px;
 }
 
 .compra-ahora{
-    margin-bottom: 30px;
-    padding: 7px;
-    border:none;
-    border-radius: 20px;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 700;
-    color: rgb(0, 0, 0);
-    background-color: #ececec;
-    width: 80%;
-
+        padding: 7px;
+        border:none;
+        border-radius: 20px;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 700;
+        color: rgb(0, 0, 0);
+        background-color: #ececec;
+        width: 250px;
 }
 
 .texto-uno{
     text-align: center;
     position:relative;
-    top: 30px;
+    top: 100px;
 }
 
 .nombre-auto-uno{
     font-size: 2em;
-    color:white;
+    color:#11151a;
     font-family: 'Raleway', sans-serif;
-    font-weight: 500;
+    font-weight: 600;
+    margin:3px;
 }
 
 .desc-auto-uno{
     font-size: 1em;
-    color:white;
+    color:#11151a;
     font-family: 'Roboto', sans-serif;
-    font-weight: 300;
+    font-weight: 400;
+    text-align: center;
+}
+
+.desc-auto-uno a{
+    font-size: 1em;
+    color:#11151a;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
     text-align: center;
 }
 
 /*---SECCIÓN 2---*/
 
-.seccion-dos{
+#seccion-dos{
     width:100%;
-    height: 100%;
-    background-image: url(/imgs/black.jpg);
+    min-height: 100vh;
+    background-image: url(/imgs/editada1.jpg);
     background-repeat: no-repeat;
     background-size:cover;
     background-position: center;
@@ -240,10 +382,10 @@ img{
 
 /*---SECCIÓN 3---*/
 
-.seccion-tres{
+#seccion-tres{
     width:100%;
-    height: 100%;
-    background-image: url(/imgs/red.jpg);
+    min-height: 100vh;
+    background-image: url(/imgs/editada2.jpg);
     background-repeat: no-repeat;
     background-size:cover;
     background-position: center;
@@ -252,10 +394,10 @@ img{
 
 /*---SECCIÓN 4---*/
 
-.seccion-cuatro{
+#seccion-cuatro{
     width:100%;
-    height: 100%;
-    background-image: url(/imgs/puente.jpg);
+    min-height: 100vh;
+    background-image: url(/imgs/editada3.jpg);
     background-repeat: no-repeat;
     background-size:cover;
     background-position: center;
@@ -263,10 +405,10 @@ img{
 
 /*---SECCIÓN 5---*/
 
-.seccion-cinco{
+#seccion-cinco{
     width:100%;
-    height: 100%;
-    background-image: url(/imgs/white.jpg);
+    min-height: 100vh;
+    background-image: url(/imgs/editada4.jpg);
     background-repeat: no-repeat;
     background-size:cover;
     background-position: center;
@@ -276,23 +418,80 @@ img{
 /*---CINCO PASOS---*/
 
 .cincopasos{
-    margin: 50px 0;
+    padding-right:30px;
+    padding-left:30px;
 }
 
-.cincopasos h4{
-    font-family: 'Roboto', sans-serif;
+.cincopasos h6{
     text-align: center;
-    font-weight: 700;
-    font-size:90%;
-    margin-bottom: 30px;
+    padding: 100px 0px 30px 0px;
+    font-size: 20px;
 }
 
-.cincopasos article img{
-    display:flex;
-    width:80%;
+.ambos-container{
+    border: solid #687c99 1px;
+    border-radius: 40px;
+    padding: 30px;
+    max-width: 400px;
+    margin: 0 auto 100px auto;
+}
+
+.grid-item{
+    font-size: 10px;
+}
+
+.grid-container-uno{
+    font-family: 'Raleway', sans-serif;
+    color:black;
+    font-weight: 500;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 25px 1fr;
+    grid-gap: 10px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+
+.grid-container-dos{
+        font-family: 'Raleway', sans-serif;
+        color:black;
+        font-weight: 500;
+        display: grid;
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr 25px 1fr;
+        grid-gap: 5px;
+        text-align: center;
+        grid-row-gap: 20px;
+}
+
+.grid-container-uno div i, .grid-container-dos div i{
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+
+.span-num{
+    padding: 5px 0 5px 0;
+    font-size: 10px;
+    font-family: 'Raleway', sans-serif;
+    color: #687c99; 
+    font-weight: 500;
     margin: 0 auto;
-
+    display: flex;
+    justify-content: center;
 }
+
+.right-arrow i{
+    font-size: 25px;
+    color: #ed7237;
+}
+
+.fa-car, .fa-clipboard-check, .fa-building, .fa-hand-holding-dollar, .fa-people-carry-box{
+    color: black;
+}
+
 
 
 /*---FOOTER---*/
@@ -926,4 +1125,207 @@ main section article div h3{
 
 .boton-crear-cuenta{
     text-align: center;
+}
+
+/*---ANIMACIONES---*/
+
+@keyframes arrow-movement{
+    0% { bottom: 145px}
+    50% { bottom: 155px}
+    100% { bottom: 145px}
+}
+
+
+/*---MEDIA QUERIES---*/
+
+
+@media (min-width: 400px){
+
+.grid-container-dos{
+    font-family: 'Raleway', sans-serif;
+    color:black;
+    font-weight: 500;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 25px 1fr 25px 1fr;
+    grid-gap: 5px;
+    text-align: center;
+}
+
+.saber-mas, .compra-ahora{
+    width: 350px;
+}
+
+.texto-uno{
+    top: 110px;
+}
+
+}
+
+@media (min-width: 600px){
+
+    .texto-uno{
+        top: 130px;
+    }
+
+    .saber-mas{
+        padding: 10px;
+        margin-bottom: 15px;
+        margin-right: 12px;
+        border:none;
+        border-radius: 20px;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 700;
+        color:white;
+        background-color: #ed7237;
+        width: 250px;
+    }
+
+    .compra-ahora{
+        margin-left: 12x;
+        padding: 10px;
+        border:none;
+        border-radius: 20px;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 700;
+        color: rgb(0, 0, 0);
+        background-color: #ececec;
+        width: 250px;
+    }
+
+    .botones{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        text-align: center;
+    }
+
+
+    .botones-container{
+        bottom: 160px;
+    }
+}
+
+
+@media (min-width:900px){
+    .saber-mas{
+        padding: 12px;
+        margin-bottom: 15px;
+        margin-right: 15px;
+        width: 300px;
+    }
+
+    .compra-ahora{
+        margin-left: 15x;
+        padding: 12px;
+        width: 300px;
+    }
+
+
+    .botones-container{
+        bottom: 200px;
+    }
+
+    .texto-uno{
+        top: 140px;
+    }
+
+    .nombre-auto-uno{
+        font-size: 3em;
+    }
+    
+    .desc-auto-uno{
+        font-size: 1.1em;
+    }
+    
+    .desc-auto-uno a{
+        font-size: 1.1em;
+    }
+
+
+    .icon-arrow{
+        font-size: 20px;
+        text-align: center;
+        margin-top:10px;
+        position:relative;
+        bottom: 185px;
+    }
+
+    @keyframes arrow-movement{
+        0% { bottom: 185px}
+        50% { bottom: 180px}
+        100% { bottom: 185px}
+    }
+
+    /*--NAVEGADOR--*/
+
+.menu{
+    background-color: transparent;
+    top:16px;
+    right: 15px;
+    padding: 0;
+    margin: 0;
+
+}
+
+.cuenta-button{
+    display: block;
+    cursor:pointer;
+    padding: 0;
+    margin: 0;
+    border:none;
+    font-weight: 400;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    border-radius: 5px;
+    position: fixed;
+    right: 65px;
+    top:16px;
+    background-color: transparent;
+}
+
+.carrito-button{
+    display: block;
+    cursor:pointer;
+    padding: 0;
+    margin: 0;
+    border:none;
+    font-weight: 400;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    border-radius: 5px;
+    position: fixed;
+    right: 125px;
+    top:16px;
+    background-color: transparent;
+}
+
+.enlaces-productos{
+    list-style: none;
+    display: flex;
+    margin: 11px auto 0 auto;
+    padding-bottom: 10px;
+}
+
+.enlaces-productos li{
+    padding: 0 25px 0 0;
+    margin: 0;
+}
+
+.enlaces-productos li a{
+    text-decoration: none;
+    font-size: 15px;
+    color:#11151a;
+    font-weight: 400;
+    font-family: 'Roboto', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+
+.navbar{
+    padding: 0;
+    margin: 0;
+}
+
 }
