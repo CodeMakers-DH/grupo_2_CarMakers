@@ -298,6 +298,8 @@ img{
     background-repeat: no-repeat;
     background-size:cover;
     background-position: center;
+    margin:0;
+    padding:0;
 }
 
 .botones{
@@ -507,11 +509,9 @@ footer{
     font-size: 15px;
 }
 
-
 footer div div a img{
     width:40px;
 }
-
 
 .email, .terminos input, .terminos label{
     margin-bottom: 5px;
@@ -557,14 +557,13 @@ footer div div a img{
     outline-color: #ed7237;
 }
 
-
 .social-media h5{
     text-align: center;
     margin-top: 30px;
 }
 
 .iconos{
-    width:70%;
+    width:80%;
     display: flex;
     margin: 0 auto;
 }
@@ -1160,6 +1159,17 @@ main section article div h3{
     top: 110px;
 }
 
+/*FOOTER*/
+
+.iconos{
+    max-width:350px;
+}
+
+.form-footer{
+    max-width: 350px;
+}
+
+
 }
 
 @media (min-width: 600px){
@@ -1298,6 +1308,11 @@ main section article div h3{
     right: 125px;
     top:16px;
     background-color: transparent;
+}
+
+.cuenta-button a, .carrito-button a{
+    text-decoration: none;
+    color:#11151a;
 }
 
 .enlaces-productos{
