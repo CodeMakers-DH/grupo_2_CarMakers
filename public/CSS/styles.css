@@ -33,9 +33,9 @@ nav h1{
     cursor:pointer;
     margin: 8px 3px 0 0;
     border:none;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Raleway', sans-serif;
     font-size: 15px;
-    font-weight: 400;
+    font-weight: 600;
     padding: 5px 15px;
     border-radius: 5px;
     position: fixed;
@@ -203,7 +203,7 @@ img{
     border-radius: 5px;
     font-size: 15px;
     font-family: 'Roboto', sans-serif;
-    color:#6a6a6a;
+    color:#ececec;
 }
 
 .search:focus{
@@ -213,7 +213,7 @@ img{
 .boton-lupa{
     border:none;
     background-color:transparent;
-    color: #6a6a6a;
+    color:#11151a;
 }
 
 /*---ICONO-ARROW---*/
@@ -239,6 +239,10 @@ img{
 
 .icon-arrow-uno a{
     color:#6a6a6a;
+}
+
+.icon-arrow-main a i{
+    color:#11151a;
 }
 
 /*ICONO ARROW MAIN*/
@@ -419,6 +423,10 @@ img{
 
 /*---CINCO PASOS---*/
 
+.uno-container{
+    display:none;
+}
+
 .cincopasos{
     padding-right:30px;
     padding-left:30px;
@@ -520,6 +528,15 @@ footer div div a img{
 .derechos{
     margin:0;
     padding:0;
+    color:#939393;
+    font-family: 'Raleway', sans-serif;
+}
+
+.veinte{
+    margin:0;
+    padding:0;
+    color:#11151a;
+    font-family: 'Raleway', sans-serif;
 }
 
 .form-footer{
@@ -596,9 +613,20 @@ footer div div a img{
     font-size: 80%;
 }
 
-.derechos{
-    color:#939393;
+
+.footer-nav{
+    display: none;
 }
+
+/*FOOTER NAV*/
+
+.grid-footer{
+    display: grid;
+    grid-template-columns: 5% 40% 15% 15% 25%;
+}
+
+
+
 
 /*---DETALLE DEL PRODUCTO---*/
 
@@ -1168,8 +1196,6 @@ main section article div h3{
 .form-footer{
     max-width: 350px;
 }
-
-
 }
 
 @media (min-width: 600px){
@@ -1214,10 +1240,86 @@ main section article div h3{
     .botones-container{
         bottom: 160px;
     }
+
+
 }
 
 
 @media (min-width:900px){
+
+    /*CINCO PASOS*/
+
+ .ambos-container{
+    display: none;
+}
+   
+
+.uno-container{
+   display: block;
+   border: solid #687c99 1px;
+   border-radius: 40px;
+   padding: 30px;
+   margin: 0 auto 100px auto;
+   max-width: 900px;
+}
+   
+.cincopasos{
+   padding-right:30px;
+   padding-left:30px;
+}
+
+.cincopasos h6{
+   text-align: center;
+   padding: 100px 0px 30px 0px;
+   font-size: 20px;
+}
+
+
+.grid-item{
+   font-size: 15px;
+}
+
+.container-estilo{
+   font-family: 'Raleway', sans-serif;
+   color:black;
+   font-weight: 500;
+   display: grid;
+   grid-template-rows: 1fr;
+   grid-template-columns: 1fr 10px 1fr 10px 1fr 10px 1fr 10px 1fr;
+   grid-gap: 0px;
+   text-align: center;
+   margin-bottom: 20px;
+}
+
+.container-estilo div i{
+   font-size: 2em;
+   display: flex;
+   justify-content: center;
+}
+
+
+.span-num{
+   padding: 5px 0 5px 0;
+   font-size: 10px;
+   font-family: 'Raleway', sans-serif;
+   color: #687c99; 
+   font-weight: 500;
+   margin: 0 auto;
+   display: flex;
+   justify-content: center;
+}
+
+.right-arrow i{
+   font-size: 5px;
+   color: #ed7237;
+}
+
+.fa-car, .fa-clipboard-check, .fa-building, .fa-hand-holding-dollar, .fa-people-carry-box{
+   color: black;
+}
+
+
+/*BOTONES*/
     .saber-mas{
         padding: 12px;
         margin-bottom: 15px;
@@ -1284,9 +1386,9 @@ main section article div h3{
     padding: 0;
     margin: 0;
     border:none;
-    font-weight: 400;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Raleway', sans-serif;
     font-size: 15px;
+    font-weight: 600;
     border-radius: 5px;
     position: fixed;
     right: 65px;
@@ -1300,12 +1402,12 @@ main section article div h3{
     padding: 0;
     margin: 0;
     border:none;
-    font-weight: 400;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Raleway', sans-serif;
     font-size: 15px;
+    font-weight: 600;
     border-radius: 5px;
     position: fixed;
-    right: 125px;
+    right: 127px;
     top:16px;
     background-color: transparent;
 }
@@ -1331,8 +1433,8 @@ main section article div h3{
     text-decoration: none;
     font-size: 15px;
     color:#11151a;
-    font-weight: 400;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
     padding: 0;
     margin: 0;
 }
@@ -1341,6 +1443,101 @@ main section article div h3{
 .navbar{
     padding: 0;
     margin: 0;
+}
+
+
+
+/*---FOOTER NAV---*/
+
+.footer-mobile{
+    display: none;
+}
+
+.footer-nav{
+    display: block;
+    margin-top: 30px;
+}
+
+.form-footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width:80%;
+    margin: 0 auto;
+}
+
+.terminos label{
+    font-size: 14px;
+}
+
+.lista-links, .lista-descubrir{
+    list-style: none;
+    margin:0;
+    padding:0;
+}
+
+.lista-links li a, .lista-descubrir li a{
+    margin:0;
+    padding:0;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    color:#11151a;
+}
+
+#social{
+    display: grid;
+    align-items: end;
+}
+
+.social-media{
+    width: 80%;
+    height: 60%;
+    display: grid;
+    margin: 0 auto;
+    align-items: end;
+}
+
+
+.social-media h5{
+    text-align:center;
+    margin:0;
+}
+
+.form-footer h5, .footer-item h6, .social-media h5{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 17px;
+}
+
+.iconos{
+    display: flex;
+    margin: 0 auto;
+}
+
+.iconos a{
+    color:#ed7237;
+    margin:0 auto;
+    font-size: 130%;
+}
+
+.link-copy{
+    margin: 80px 0 0 0;
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.links-nav a{
+    padding-right: 20px;
+    font-family: 'Raleway', sans-serif;
+    text-decoration: none;
+    color:#11151a;
+}
+
+.copy-nav{
+    display: flex;
 }
 
 }
