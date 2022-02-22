@@ -45,12 +45,12 @@
 
 
                 <button class="menu" type="button">Menú</button>
-                <button class="cuenta-button" type="button">Cuenta</button>
-                <button class="carrito-button" type="button">Carrito</button>
+                <button class="cuenta-button" type="button"><a href="/login">Cuenta</a></button>
+                <button class="carrito-button" type="button"><a href="/Carrito">Carrito</a></button>
 
 
                 <ul class="enlaces-productos">
-                    <li><a href="#seccion-uno">Modelo uno</a></li>
+                    <li><a href="#seccion-uno">Modelo 1</a></li>
                     <li><a href="#seccion-dos">Modelo 2</a></li>
                     <li><a href="#seccion-tres">Modelo 3</a></li>
                     <li><a href="#seccion-cuatro">Modelo 4</a></li>
@@ -292,6 +292,20 @@
             </div>
         </div>
 
+        <div class="uno-container">
+            <div class="container-estilo">
+            <div class="grid-item"><i class="fa-solid fa-car"></i><span class="span-num">1</span>Elegí tu auto</div>
+                <div class="grid-item"><span class="right-arrow"><i class="fa-solid fa-arrow-right-long"></i></span></div>
+                <div class="grid-item"><i class="fa-solid fa-clipboard-check"></i><span class="span-num">2</span>Completá la registración con tus datos</div>
+                <div class="grid-item"><span class="right-arrow"><i class="fa-solid fa-arrow-right-long"></i></span></div>
+                <div class="grid-item"><i class="fa-solid fa-building"></i><span class="span-num">3</span>Seleccioná un consecionario y hacé la reserva</div>
+                <div class="grid-item"><span class="right-arrow"><i class="fa-solid fa-arrow-right-long"></i></span></div>
+                <div class="grid-item"><i class="fa-solid fa-hand-holding-dollar"></i><span class="span-num">4</span>Cancelá el saldo</div>
+                <div class="grid-item"><span class="right-arrow"><i class="fa-solid fa-arrow-right-long"></i></span></div>
+                <div class="grid-item"><i class="fa-solid fa-people-carry-box"></i><span class="span-num">5</span>Retirá el auto</div>
+            </div>
+        </div>
+
 
         </section>
 
@@ -301,44 +315,125 @@
     <footer>
         <h4 class="carmakers">CARMAKERS</h4>
 
+        <section class="footer-mobile">
+            <form class="form-footer">
+                <h5>Sumate al newsletter</h5>
+    
+                <input type="email" placeholder="tuemail@ejemplo.com" class="email" required="">
+    
+                <div class="terminos">
+                    <input type="checkbox" name="datos" value="email" required>
+                    <label for="datos">Acepto términos y condiciones</label>
+                </div>
+    
+                <button type="submit" class="suscribirme">SUSCRIBIRME</button>
+            </form>
+    
+            <div class="social-media">
+                <h5>Seguínos en</h5>
+                <article class="iconos">
+                    <a target="_blank" href="https://youtube.com"><img src="\imgs\youtube.png" alt="Logo Youtube"/></a>
+                    <a target="_blank" href="https://linkedin.com"><img src="\imgs\linkedin.png" alt="Logo Linkedin"/></a>
+                    <a target="_blank" href="https://facebook.com"><img src="\imgs\facebook.png" alt="Logo Twitter"/></a>
+                    <a target="_blank" href="https://twitter.com"><img src="\imgs\twitter.png" alt="Logo Facebook"/></a>
+                    <a target="_blank" href="https://instagram.com"><img src="\imgs\instagram.png" alt="Logo Instagram"/></a>
+                </article>
+            </div>
+    
+    
+            <div class="links">
+                <a href="/sobrenosotros.html">Sobre Nosotros</a>
+                <a href="/terminos.html">Términos y condiciones</a>
+                <a href="/cookies.html">Política de cookies</a>
+                <a href="/privacidad.html">Política de privacidad</a>
+            </div>
+    
+    
+            <div class="copy">
+                <p class="2022">CarMakers © 2022, </p>
+                <p class="derechos">Todos los derechos reservados</p>
+            </div>
+        </section>
+        
+        <section class="footer-nav">
 
-        <form class="form-footer">
-            <h5>Sumate al newsletter</h5>
+            <div class="grid-footer">
 
-            <input type="email" placeholder="tuemail@ejemplo.com" class="email" required="">
+                <div class="footer-item">
+                    
+                </div>
 
-            <div class="terminos">
-                <input type="checkbox" name="datos" value="email" required>
-                <label for="datos">Acepto términos y condiciones</label>
+                <div class="footer-item">
+
+                    <form class="form-footer">
+                        <h5>Sumate al newsletter</h5>
+            
+                        <input type="email" placeholder="tuemail@ejemplo.com" class="email" required="">
+            
+                        <div class="terminos">
+                            <input type="checkbox" name="datos" value="email" required>
+                            <label for="datos">Acepto términos y condiciones</label>
+                        </div>
+            
+                        <button type="submit" class="suscribirme">SUSCRIBIRME</button>
+                    </form>
+
+                </div>
+
+                
+                <div class="footer-item">
+                    <h6>Links rápidos</h6>
+                    <ul class="lista-links">
+                        <li><a href="/">Comprar online</a></li>
+                        <li><a href="/">Configurar mi auto</a></li>
+                        <li><a href="/">Solicitar una oferta</a></li>
+                        <li><a href="/">Actualizar GPS</a></li>
+                    </ul>
+                </div>
+
+
+                <div class="footer-item">
+                    <h6>Descubrir</h6>
+                    <ul class="lista-descubrir">
+                        <li><a href="/">Accesorios</a></li>
+                        <li><a href="/">Mantenimiento y reparación</a></li>
+                        <li><a href="/">Opciones rápidas</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-item" id="social">
+                    <div class="social-media">
+                        <h5>Seguínos en</h5>
+                        <article class="iconos">
+                            <a target="_blank" href="https://youtube.com"><i class="fa-brands fa-youtube"></i></a>
+                            <a target="_blank" href="https://linkedin.com"><i class="fa-brands fa-linkedin-in"></i></a>
+                            <a target="_blank" href="https://facebook.com"><i class="fa-brands fa-twitter"></i></a>
+                            <a target="_blank" href="https://twitter.com"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a target="_blank" href="https://instagram.com"><i class="fa-brands fa-instagram"></i></a>
+                        </article>
+                    </div>
+                </div>
             </div>
 
-            <button type="submit" class="suscribirme">SUSCRIBIRME</button>
-        </form>
+            <div class="link-copy">
 
-        <div class="social-media">
-            <h5>Seguínos en</h5>
-            <article class="iconos">
-                <a target="_blank" href="https://youtube.com"><img src="\imgs\youtube.png" alt="Logo Youtube"/></a>
-                <a target="_blank" href="https://linkedin.com"><img src="\imgs\linkedin.png" alt="Logo Linkedin"/></a>
-                <a target="_blank" href="https://facebook.com"><img src="\imgs\facebook.png" alt="Logo Twitter"/></a>
-                <a target="_blank" href="https://twitter.com"><img src="\imgs\twitter.png" alt="Logo Facebook"/></a>
-                <a target="_blank" href="https://instagram.com"><img src="\imgs\instagram.png" alt="Logo Instagram"/></a>
-            </article>
-        </div>
+            <div class="links-nav">
+                <a href="/sobrenosotros.html">Sobre Nosotros</a>
+                <a href="/terminos.html">Términos y condiciones</a>
+                <a href="/cookies.html">Política de cookies</a>
+                <a href="/privacidad.html">Política de privacidad</a>
+            </div>
 
+            <div class="copy-nav">
+                <p class="veinte">CarMakers © 2022, </p>
+                <p class="derechos">Todos los derechos reservados</p>
+            </div>
 
-        <div class="links">
-            <a href="/sobrenosotros.html">Sobre Nosotros</a>
-            <a href="/terminos.html">Términos y condiciones</a>
-            <a href="/cookies.html">Política de cookies</a>
-            <a href="/privacidad.html">Política de privacidad</a>
-        </div>
+            </div>
 
 
-        <div class="copy">
-            <p class="2022">CarMakers © 2022, </p>
-            <p class="derechos">Todos los derechos reservados</p>
-        </div>
+
+        </section>
 
 
     </footer>
