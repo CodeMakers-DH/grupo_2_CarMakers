@@ -4,7 +4,7 @@
   "description": "Enlace al tablero de trabajo: https://sharing.clickup.com/l/h/7-36075579-1/15c2f6eb610fa0c",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon app.js"
+    "start": "nodemon src/app.js"
   },
   "repository": {
     "type": "git",
@@ -19,6 +19,7 @@
   "homepage": "https://github.com/CodeMakers-DH/grupo_2_CarMakers#readme",
   "dependencies": {
     "@fortawesome/fontawesome-free": "^6.0.0",
+    "ejs": "^3.1.6",
     "express": "^4.17.2",
     "nodemon": "^2.0.15"
   }

@@ -1,28 +1,20 @@
 const express = require('express');
-const path = require('path');
 const app = express();
+const path = require('path');
+const mainRoutes = require('./routes/mainRouter');
 
-
+//configuracion del path publico
 const publicPath = path.resolve(__dirname, './public');
 app.use(express.static(publicPath));
 
+//configuracion del template engine
+app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname,'/views'))
+
+// configuracion de rutas
+app.use(mainRoutes);
+
+// llamada al servidor en puerto 5000
 app.listen(5000, () => {
     console.log('Servidor para CarMakers');
 })
-
-app.get('/', (req, res) => {
-    res.sendFile(path.resolve(__dirname, './views/index.html'))
-})
-
-app.get('/detalleproducto', (req, res) => {
-    res.sendFile(path.resolve(__dirname, './views/detalleproducto.html'))
-})
-
-app.get('/carrito', (req, res) => {
-    res.sendFile(path.resolve(__dirname, './views/carrito.html'))
-})
-
-app.get('/login', (req, res) => {
-    res.sendFile(path.resolve(__dirname, './views/login.html'))
-})
-
