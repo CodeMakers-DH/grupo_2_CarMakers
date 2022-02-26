@@ -4,8 +4,7 @@ const path = require('path');
 const mainRoutes = require('./routes/mainRouter');
 
 //configuracion del path publico
-const publicPath = path.resolve(__dirname, './public');
-app.use(express.static(publicPath));
+app.use(express.static('public'));
 
 //configuracion del template engine
 app.set('view engine', 'ejs');
