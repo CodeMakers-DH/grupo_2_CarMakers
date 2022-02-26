@@ -6,7 +6,7 @@ const controlador ={
         res.render('index')
     },
     detalleProducto: (req, res) => {
-        res.render('detallaproducto')
+        res.render('detalleproducto')
     },
     carritoCompras: (req, res) => {
         res.render('carrito')
