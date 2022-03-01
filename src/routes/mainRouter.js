@@ -21,5 +21,8 @@ router.get('/carrito', controlador.carritoCompras)
 //vista login
 router.get('/login', controlador.login)
 
+//vista login
+router.get('/register', controlador.register)
+
 //exportar el modulo
 module.exports = router;
