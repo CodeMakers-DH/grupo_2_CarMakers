@@ -43,6 +43,7 @@ nav h1{
     top:2px;
     z-index: 5;
     background-color: #ececec;
+    color:#313131;
 }
 
 .barra-blanca{
@@ -93,7 +94,7 @@ nav h1{
 
 .enlaces-menu li a{
     text-decoration: none;
-    color:#6a6a6a;
+    color:#313131;
     font-family: 'Roboto', sans-serif;
     font-weight: 500;
 }
@@ -111,7 +112,7 @@ nav h1{
     top: 10px;
     background-color: transparent;
     border:none;
-    color:#6a6a6a;
+    color:#313131;
     display: none;
 }
 
@@ -203,7 +204,7 @@ img{
     border-radius: 5px;
     font-size: 15px;
     font-family: 'Roboto', sans-serif;
-    color:#ececec;
+    color:#313131;
 }
 
 .search:focus{
@@ -213,7 +214,7 @@ img{
 .boton-lupa{
     border:none;
     background-color:transparent;
-    color:#11151a;
+    color:#313131;
 }
 
 /*---ICONO-ARROW---*/
@@ -242,7 +243,7 @@ img{
 }
 
 .icon-arrow-main a i{
-    color:#11151a;
+    color:#313131;
 }
 
 /*ICONO ARROW MAIN*/
@@ -585,8 +586,9 @@ footer div div a img{
     margin: 0 auto;
 }
 
-.iconos a{
+.iconos a, .iconos-mobile a{
     padding: 5px;
+    color:#ed7237;
 }
 
 .links{
@@ -613,10 +615,13 @@ footer div div a img{
     font-size: 80%;
 }
 
-
-.footer-nav{
-    display: none;
+.iconos-mobile{
+    font-size: 2em;
+    color:#ed7237;
+    text-align: center;
+    
 }
+
 
 /*FOOTER NAV*/
 
@@ -625,7 +630,9 @@ footer div div a img{
     grid-template-columns: 5% 40% 15% 15% 25%;
 }
 
-
+.footer-nav{
+    display: none;
+}
 
 
 /*---DETALLE DEL PRODUCTO---*/
@@ -1009,6 +1016,7 @@ main section article div h3{
 }
 
 .copy-carrito{
+    font-size: 0.9em;
     text-align: center;
     font-family: 'Raleway', sans-serif; 
     color: #6a6a6a;
@@ -1023,6 +1031,7 @@ main section article div h3{
     text-align: center;
     font-family: 'Raleway', sans-serif;
     margin-bottom: 20px;
+    font-size: 0.9em;
 }
 
 .links-carrito a{
@@ -1030,7 +1039,7 @@ main section article div h3{
     color: #6a6a6a;
 }
 
-/*--LOG IN---*/
+/*--LOG IN Y REGISTER---*/
 
 .titulo-login{
     font-size: 25px;
@@ -1054,7 +1063,7 @@ main section article div h3{
     color:#6a6a6a;
 }
 
-#correo, #contraseña{
+#correo, #contraseña, #nombre, #apellido, #caracteres{
     background-color: #ececec;
     border-radius: 20px;
     margin: 5px auto 0 auto;
@@ -1063,7 +1072,7 @@ main section article div h3{
     border:none;
 }
 
-#correo:focus, #contraseña:focus{
+#correo:focus, #contraseña:focus, #nombre:focus, #apellido:focus, #caracteres:focus{
     outline-color: #c7c7c7;
 }
 
@@ -1088,6 +1097,28 @@ main section article div h3{
     margin: 10px 0 0 10px;
 }
 
+.privacidad{
+    font-family: 'Roboto', sans-serif;
+    margin: 30px 0 30px 10px;
+    display: flex;
+    max-width: 96%;
+}
+
+.privacidad label span{
+    text-decoration: underline;
+    font-weight: 500;
+}
+
+.correo-contra img{
+    width:100%;
+}
+
+#aceptar-terminos{
+    position:relative;
+    top:5px;
+    margin-right: 5px;
+}
+
 .checkbox-label{
     padding-left: 3px;
 }
@@ -1103,6 +1134,20 @@ main section article div h3{
     border-radius: 20px;
     padding: 10px;
     margin: 10px 0;
+
+}
+
+.register-button{
+    font-size: 15px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    border:none;
+    color:white;
+    background-color: #9bbae6;
+    width: 100%;
+    border-radius: 20px;
+    padding: 10px;
+    margin: 30px 0 0 0;
 
 }
 
@@ -1377,7 +1422,7 @@ main section article div h3{
     right: 15px;
     padding: 0;
     margin: 0;
-
+    color:#313131;
 }
 
 .cuenta-button{
@@ -1414,7 +1459,7 @@ main section article div h3{
 
 .cuenta-button a, .carrito-button a{
     text-decoration: none;
-    color:#11151a;
+    color:#313131;
 }
 
 .enlaces-productos{
@@ -1432,7 +1477,7 @@ main section article div h3{
 .enlaces-productos li a{
     text-decoration: none;
     font-size: 15px;
-    color:#11151a;
+    color:#313131;
     font-family: 'Raleway', sans-serif;
     font-weight: 600;
     padding: 0;
@@ -1529,7 +1574,13 @@ main section article div h3{
     justify-content: space-around;
 }
 
+.links-nav{
+    padding-left: 50px;
+}
+
+
 .links-nav a{
+    font-size: 0.9em;
     padding-right: 20px;
     font-family: 'Raleway', sans-serif;
     text-decoration: none;
@@ -1537,7 +1588,16 @@ main section article div h3{
 }
 
 .copy-nav{
+    font-size: 0.9em;
     display: flex;
+    padding-right:50px;
 }
 
+}
+
+/*---HOVER---*/
+
+
+.cruz:hover, .enlaces-menu li a:hover, .enlaces-productos li a:hover, .menu:hover, .cuenta-button a:hover, .carrito-button a:hover{
+    color:#939393;
 }
