@@ -176,6 +176,10 @@ img{
     height: 60vh;
 }
 
+#banner-uno{
+    object-fit:fill;
+}
+
 
 /*---SEARCH BAR---*/
 
@@ -296,10 +300,10 @@ img{
 
 /*---SECCIÓN 1---*/
 
-#seccion-uno{
+#seccion-1{
     width:100%;
     min-height: 100vh;
-    background-image: url(/imgs/editada3.jpg);
+    background-image: url(/imgs/editada1.jpg);
     background-repeat: no-repeat;
     background-size:cover;
     background-position: center;
@@ -378,10 +382,10 @@ img{
 
 /*---SECCIÓN 2---*/
 
-#seccion-dos{
+#seccion-2{
     width:100%;
     min-height: 100vh;
-    background-image: url(/imgs/editada3.jpg);
+    background-image: url(/imgs/editada2.jpg);
     background-repeat: no-repeat;
     background-size:cover;
     background-position: center;
@@ -389,7 +393,7 @@ img{
 
 /*---SECCIÓN 3---*/
 
-#seccion-tres{
+#seccion-3{
     width:100%;
     min-height: 100vh;
     background-image: url(/imgs/editada3.jpg);
@@ -401,10 +405,10 @@ img{
 
 /*---SECCIÓN 4---*/
 
-#seccion-cuatro{
+#seccion-4{
     width:100%;
     min-height: 100vh;
-    background-image: url(/imgs/editada3.jpg);
+    background-image: url(/imgs/editada4.jpg);
     background-repeat: no-repeat;
     background-size:cover;
     background-position: center;
@@ -412,10 +416,10 @@ img{
 
 /*---SECCIÓN 5---*/
 
-#seccion-cinco{
+#seccion-5{
     width:100%;
     min-height: 100vh;
-    background-image: url(/imgs/editada3.jpg);
+    background-image: url(/imgs/editada5.jpg);
     background-repeat: no-repeat;
     background-size:cover;
     background-position: center;
@@ -448,7 +452,7 @@ img{
 }
 
 .grid-item{
-    font-size: 10px;
+    font-size: 12px;
 }
 
 .grid-container-uno{
@@ -485,7 +489,7 @@ img{
 
 .span-num{
     padding: 5px 0 5px 0;
-    font-size: 10px;
+    font-size: 15px;
     font-family: 'Raleway', sans-serif;
     color: #687c99; 
     font-weight: 500;
@@ -1301,16 +1305,16 @@ main section article div h3{
 
 .uno-container{
    display: block;
-   border: solid #687c99 1px;
+   border: solid #000000 1px;
    border-radius: 40px;
-   padding: 30px;
+   padding-top: 30px;
+   padding-bottom:25px;
    margin: 0 auto 100px auto;
    max-width: 900px;
 }
    
 .cincopasos{
-   padding-right:30px;
-   padding-left:30px;
+   padding: 0 30px 0 30px;
 }
 
 .cincopasos h6{
@@ -1333,7 +1337,7 @@ main section article div h3{
    grid-template-columns: 1fr 10px 1fr 10px 1fr 10px 1fr 10px 1fr;
    grid-gap: 0px;
    text-align: center;
-   margin-bottom: 20px;
+   
 }
 
 .container-estilo div i{
@@ -1345,9 +1349,9 @@ main section article div h3{
 
 .span-num{
    padding: 5px 0 5px 0;
-   font-size: 10px;
+   font-size: 20px;
    font-family: 'Raleway', sans-serif;
-   color: #687c99; 
+   color: #000000; 
    font-weight: 500;
    margin: 0 auto;
    display: flex;
