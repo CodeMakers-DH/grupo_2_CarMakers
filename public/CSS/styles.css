@@ -173,7 +173,7 @@ img{
 }
 
 .carousel-inner div{
-    height: 60vh;
+    
 }
 
 #banner-uno{
@@ -236,32 +236,19 @@ img{
     color:white;
 }
 
-.icon-arrow-uno{
-    font-size: 20px;
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.icon-arrow-uno a{
-    color:#6a6a6a;
-}
-
-.icon-arrow-main a i{
-    color:#313131;
-}
 
 /*ICONO ARROW MAIN*/
 
 .icon-arrow-main{
     font-size: 20px;
     text-align: center;
-    padding: 20px;
+    animation: arrow-movement 2s infinite;
+    margin: 30px;
 }
 
-.icon-arrow-main a{
-    color: #6a6a6a;
+.icon-arrow-main a i{
+    color:#313131;
 }
-
 
 
 /*---WPP BOTON---*/
@@ -294,7 +281,7 @@ img{
 
 #main-section-index{
     width:100%;
-    min-height: 100vh;
+    /*min-height: 100vh;*/
 }
 
 
@@ -444,7 +431,7 @@ img{
 }
 
 .ambos-container{
-    border: solid #687c99 1px;
+    border: solid #000000 1px;
     border-radius: 40px;
     padding: 30px;
     max-width: 400px;
@@ -491,7 +478,7 @@ img{
     padding: 5px 0 5px 0;
     font-size: 15px;
     font-family: 'Raleway', sans-serif;
-    color: #687c99; 
+    color: #000000; 
     font-weight: 500;
     margin: 0 auto;
     display: flex;
