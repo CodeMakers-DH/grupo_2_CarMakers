@@ -1,0 +1,32 @@
+<% for(i=1; i<6; i++) { %>
+
+    <section id="seccion-<%=(i)%>">
+
+        <div class="texto-uno">
+            <h2 class="nombre-auto-uno">Modelo <%= i %> </h2>
+            <h3 class="desc-auto-uno">Conocé <a href="#seccion-1">acá</a> ofertas exclusivas</h3>
+        </div>
+    
+        <div class="botones-container">
+        <div class="botones">
+            <a href="/detalleproducto">
+                <button type="button" class="saber-mas">SABER MÁS</i></button>
+            </a>
+    
+            <a href="/carrito">
+                <button type="button" class="compra-ahora">COMPRAR AHORA</i></button>
+            </a>
+        
+        </div>
+        
+    </div>
+    
+    <div class="icon-arrow">
+        <a href="#seccion-<%=(i+1)%>"><i class="fas fa-solid fa-angle-down"></i></a>
+    </div>
+          
+    
+    </section>
+
+
+<% } %>
