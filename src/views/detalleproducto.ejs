@@ -8,7 +8,7 @@
     <main class="main-article">
 
         <div class="flex-texto">
-            <p class="texto">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam eaque ut porro pariatur eveniet.</p>
+            <p class="texto"><%= modelos.nombreModelo%><%= modelos.descripcion%></p>
             <i class="fas fa-solid fa-info"></i>
         </div>
 
@@ -19,24 +19,24 @@
         <section>
             <article>
                 <div class="modelo-delivery">
-                    <h2>Modelo uno</h2>
-                    <h3>Delivery estimado</h3>
+                    <h2>Modelo <%= modelos.nombreModelo%> </h2>
+                    <h3>Delivery estimado <%= modelos.deliveryEstimado%></h3>
                 </div>
             
 
                 <div class="caracteristicas">
-                    <h4>Característica 1</h4>
-                    <h5>Breve Descripción</h5>
-
-                    <h4>Característica 2</h4>
-                    <h5>Breve Descripción</h5>
-
-                    <h4>Característica 3</h4>
-                    <h5>Breve Descripción</h5>
+                <% for (let i=0; i< modelos.caracteristicas.length; i++){ %>
+                    <h4>
+                        <%= modelos.caracteristicas[i].nombreCaractiristica %>
+                    </h4>
+                    <h5>
+                        <%= modelos.caracteristicas[i].valor %>
+                    </h5>
+                <% } %>
 
                     <div class="precio-auto">
                         <p class="precio">Precio</p>
-                        <p class="numero">$1,000,000</p>
+                        <p class="numero"><%= modelos.precio%></p>
                     </div>
 
                 </div>
