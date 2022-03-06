@@ -24,5 +24,12 @@ router.get('/login', controlador.login)
 //vista login
 router.get('/register', controlador.register)
 
+//vista crear Producto
+router.get('/crearproducto', controlador.crearproducto)
+
+//vista crear Producto
+router.get('/editarproducto', controlador.editarproducto)
+
+
 //exportar el modulo
 module.exports = router;

@@ -1054,7 +1054,7 @@ main section article div h3{
     color:#6a6a6a;
 }
 
-#correo, #contraseña, #nombre, #apellido, #caracteres{
+#correo, #contraseña, #descripcionProducto, #precioProducto, #nombre, #nombreProducto, #apellido, #caracteres{
     background-color: #ececec;
     border-radius: 20px;
     margin: 5px auto 0 auto;
@@ -1592,3 +1592,9 @@ main section article div h3{
 .cruz:hover, .enlaces-menu li a:hover, .enlaces-productos li a:hover, .menu:hover, .cuenta-button a:hover, .carrito-button a:hover{
     color:#939393;
 }
+
+/*---EDICION PRODUCTO---*/
+
+#correo {
+    background-color: white;
+} 

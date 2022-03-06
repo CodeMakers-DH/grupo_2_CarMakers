@@ -140,7 +140,15 @@ const controlador ={
     },
     register: (req, res) => {
         res.render('register')
+    },
+    crearproducto: (req, res) => {
+        res.render('crearproducto')
+    },
+    editarproducto: (req, res) => {
+        res.render('editarproducto')
     }
+
+
 }
 
 // exportacion del modulo
