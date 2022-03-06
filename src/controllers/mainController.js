@@ -5,7 +5,7 @@ let modelos =[
         idModelo: 0,
         descripcion: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam eaque ut porro pariatur eveniet.",
         nombreModelo: "Pucará",
-        imgModelo: "/imgs/producto.jpg",
+        imgModelo: "/imgs/producto2.jpg",
         deliveryEstimado: "90 dias",
         precio: '$2.5M',
         caracteristicas: 
@@ -52,7 +52,7 @@ let modelos =[
         idModelo: 2,
         descripcion: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam eaque ut porro pariatur eveniet.",
         nombreModelo: "Tronador",
-        imgModelo: "/imgs/producto.jpg",
+        imgModelo: "/imgs/producto2.jpg",
         deliveryEstimado: "60 dias",
         precio: '$2M',
         caracteristicas: 
@@ -102,7 +102,7 @@ let modelos =[
         idModelo: 4,
         descripcion: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam eaque ut porro pariatur eveniet.",
         nombreModelo: "Llullaillaco",
-        imgModelo: "/imgs/producto.jpg",
+        imgModelo: "/imgs/producto2.jpg",
         deliveryEstimado: "90 dias",
         precio: '$5M',
         caracteristicas: 
