@@ -1054,7 +1054,7 @@ main section article div h3{
     color:#6a6a6a;
 }
 
-#correo, #contraseña, #descripcionProducto, #precioProducto, #nombre, #nombreProducto, #apellido, #caracteres{
+#correo, #contraseña, #idProducto, #descripcionProducto, #precioProducto, #nombre, #nombreProducto, #apellido, #caracteres{
     background-color: #ececec;
     border-radius: 20px;
     margin: 5px auto 0 auto;
