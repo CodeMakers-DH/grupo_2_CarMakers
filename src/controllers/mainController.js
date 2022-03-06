@@ -46,7 +46,6 @@ let modelos =[
                 nombreCaractiristica: "Tiempo de cero a 100 km/h",
                 valor: "60 segundos"
             },
-            
         ]
     },
     {
