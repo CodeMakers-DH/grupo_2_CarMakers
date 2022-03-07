@@ -13,7 +13,7 @@ const router = express.Router();
 router.get('/', controlador.index)
 
 //vista detalle de producto
-router.get('/detalleproducto/:idModelo', controlador.detalleProducto)
+router.get('/detalleproducto/:idModelo?', controlador.detalleProducto)
 
 //vista carrito de compras
 router.get('/carrito', controlador.carritoCompras)
