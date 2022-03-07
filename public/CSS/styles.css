@@ -936,6 +936,7 @@ main section article div h3{
 .flex-giftcard input {
     max-width:100px;
     margin-right: 8px;
+    padding: 5px;
 }
 
 .giftcard{
@@ -986,12 +987,14 @@ main section article div h3{
 
 .contacto{
     border:none;
+    font-size: 15px;
     background-color: #ed7237;
     color: white;
     border-radius: 40px;
     font-family: 'Roboto', sans-serif; 
     font-weight: 500;
-    padding:8px;
+    width:100%;
+    padding: 8px;
 }
 
 .div-boton{
@@ -1588,8 +1591,9 @@ main section article div h3{
 
  .main-carrito{
     display:grid;
-    grid-template-columns: 70% 30%;
-    max-width: 70%;
+    grid-template-columns: 60% 40%;
+    column-gap: 20px;
+    max-width: 80%;
     margin: 0 auto;
     padding-top: 100px;
 }
@@ -1603,7 +1607,6 @@ main section article div h3{
     font-weight: 700;
     padding-bottom: 20px;
 }
-
 
 
 .main-section{
@@ -1677,9 +1680,28 @@ justify-content:space-between;
 margin:0;
 }
 
+.flex-envio, .flex-impuesto{
+    margin: 20px 0 10px 0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
 
+.flex-envio h5, .flex-impuesto h5{
+    font-size: 15px;
+}
+.flex-envio h6, .flex-impuesto h6{
+    font-size: 12px;
+}
 
 }
+
+ @media (min-width: 1500px){
+    .main-carrito{
+        max-width: 1200px;
+    }
+ }
 
 /*---HOVER---*/
 
