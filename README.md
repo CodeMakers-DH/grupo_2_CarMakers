@@ -23,7 +23,7 @@ Vender autos de buena calidad y de renombre.
 
 ## Equipo de trabajo
 
-**Sara Valentina** Latyn nació el 6 de noviembre de 1998 en la ciudad de Sáenz Peña provincia del Chaco, Argentina. Por varios años se dedicó a la fotografía, cine e ilustración. Actualmente estudia para ser desarrolladora Web Full Stack. En el mundo de la programación le interesa todo lo que pueda aportar a tener un medio ambiente más sano y una mejor convivencia en sociedad. 
+**Sara Valentina  Latyn** nació el 6 de noviembre de 1998 en la ciudad de Sáenz Peña provincia del Chaco, Argentina. Por varios años se dedicó a la fotografía, cine e ilustración. Actualmente estudia para ser desarrolladora Web Full Stack. En el mundo de la programación le interesa todo lo que pueda aportar a tener un medio ambiente más sano y una mejor convivencia en sociedad. 
 
 **Salvador Martin** es estudiante de RRHH del Instituto Universitario Aeronautico. Actualmente trabaja encargado de RRHH de una cadena de barberias llamada Barberia Popular. Su interés por la programación y por cambiar de trabajo lo llevaron a hacer el curso de desarrollo web full stack.
 
