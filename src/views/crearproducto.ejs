@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('./partials/head')%>
+<body>
+    <%- include('./partials/header-2')%>
+
+<!-- 
+    Nombre del producto (n​ ame)​
+Descripción (d​ escription​)
+Imagen (i​ mage)​
+Categoría (c​ ategory)​
+Colores (o cualquier otro campo similar como: tamaños, talles, etc)
+Precio (p​ rice​)
+-->
+
+    <main>
+
+            <div clas="big-container">
+
+                <div class="single-column">
+                <form action="/" method="POST" class="form-login">
+
+                    <h2 class="titulo-login">Crear Producto</h2>
+
+                    <div class="correo-contra">
+
+                        <label for="nombreProducto" class="label-correo">Nombre del Producto</label>
+                        <input type="text" name="nombreProducto" id="nombreProducto" required>
+
+                        <label for="descripcionProducto" class="label-correo">Descripción</label>
+                        <input type="textarea" name="descripcionProducto" id="descripcionProducto" required>
+
+                        <label for="correo" class="label-correo">Imagen del producto</label>
+                        <input type="file" name="correo" id="correo" required>
+
+                        <label for="precioProducto" class="label-correo">Precio</label>
+                        <input type="textarea" name="precioProducto" id="precioProducto" required>
+
+                        <label for="contraseña" class="label-contra">Tipo de Ruedas</label>
+                        <div class="interests">
+                            <div>
+                                <input type="checkbox" name="interests" value="a" id="a">
+                                <label for="a">Ruedas Tipo 1</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="interests" value="b" id="b">
+                                <label for="b">Ruedas Tipo 2</label>
+                            </div>
+                        </div>
+
+                        <label for="contraseña" class="label-contra">Colores Disponibles</label>
+                        <div class="interests">
+                            <div>
+                                <input type="checkbox" name="interests" value="a" id="a">
+                                <label for="a">Color 1</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="interests" value="b" id="b">
+                                <label for="b">Color 2</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="interests" value="b" id="b">
+                                <label for="b">Color 3</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="interests" value="b" id="b">
+                                <label for="b">Color 4</label>
+                            </div>
+                        </div>
+
+
+                    </div>
+                    
+                    
+                    <div class="div-login-button">
+                        <button class="register-button" type="submit" name="ingreso">Guardar Producto</button>
+                    </div>
+
+                </form>
+
+            
+        
+            </div>
+
+
+        </div>
+
+        </main>
+
+        <%- include('./partials/footer-2')%>
+        <script src="/js/main.js" type="module"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    </body>
+    </html>
