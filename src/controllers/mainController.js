@@ -130,7 +130,11 @@ const controlador ={
     },
     detalleProducto: (req, res) => {
         let idModelo = req.params.idModelo;
-        res.render('detalleproducto', {"modelos": modelos[idModelo] })
+        if (idModelo === undefined) { // aqui esta mi duda
+            res.status(404).render('404')
+            }else{
+            res.render('detalleproducto', {"modelos": modelos[idModelo] })
+            }
     },
     carritoCompras: (req, res) => {
         res.render('carrito')
