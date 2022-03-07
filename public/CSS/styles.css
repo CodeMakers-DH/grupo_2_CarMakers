@@ -1584,6 +1584,101 @@ main section article div h3{
     padding-right:50px;
 }
 
+ /*CARRITO*/
+
+ .main-carrito{
+    display:grid;
+    grid-template-columns: 70% 30%;
+    max-width: 70%;
+    margin: 0 auto;
+    padding-top: 100px;
+}
+
+.mis-compras{
+    display: none;
+}
+
+.mis-compras-dos{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    padding-bottom: 20px;
+}
+
+
+
+.main-section{
+border-top: none;
+border-bottom: none;
+padding: 0px 0;
+margin: 0 auto;
+width:90%;
+
+}
+
+
+.flexbox-seccion{
+margin: 0 auto;
+padding-bottom: 50px;
+display: flex;
+width: 100%;
+}
+
+.flexbox-seccion-dos{
+margin: 0 auto;
+display: flex;
+width: 100%;
+}
+
+.nombre-imagen{
+display: flex;
+justify-content: left;
+}
+
+.flex-img{
+width: 30%;
+border: #939393 solid 1px;
+max-width: 200px;
+}
+
+.flex-nombre-desc h3{
+font-family: 'Roboto', sans-serif;
+font-size: 20px;
+font-weight: 500;
+padding: 0 20px;
+}
+
+.flex-nombre-desc h4{
+font-family: 'Raleway', sans-serif;
+font-size: 15px;
+font-weight: 500;
+color: #939393;
+padding: 0 20px;
+}
+
+.flex-icono-precio h5{
+font-family: 'Roboto', sans-serif;
+font-size: 15px;
+font-weight: 400;
+padding: 0;
+margin:0;
+color: #939393;
+}
+
+.flex-icono-precio i{
+margin:0;
+padding:0;
+text-align: right;
+}
+
+.flex-icono-precio{
+display: flex;
+flex-direction: column;
+justify-content:space-between;
+margin:0;
+}
+
+
+
 }
 
 /*---HOVER---*/
