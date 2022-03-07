@@ -1207,6 +1207,13 @@ main section article div h3{
     text-align: center;
 }
 
+.account-button a, .account-button a{
+    text-decoration: none;
+    color: black;
+}
+
+
+
 /*---ANIMACIONES---*/
 
 @keyframes arrow-movement{
