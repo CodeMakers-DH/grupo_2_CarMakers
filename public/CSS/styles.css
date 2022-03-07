@@ -172,9 +172,6 @@ img{
     text-align: center;
 }
 
-.carousel-inner div{
-    
-}
 
 #banner-uno{
     object-fit:fill;
@@ -839,7 +836,6 @@ main section article div h3{
 
 }
 
-
 .flexbox-seccion{
     margin: 0 auto;
     padding-bottom: 50px;
@@ -859,9 +855,9 @@ main section article div h3{
 }
 
 .flex-img{
-    width: 30%;
+    width: 100%;
     border: #939393 solid 1px;
-    max-width: 200px;
+    max-width: 120px;
 }
 
 .flex-nombre-desc h3{
@@ -901,6 +897,10 @@ main section article div h3{
     margin:0;
 }
 
+.mis-compras-dos{
+    display: none;
+}
+
 /*FORMULARIO*/
 
 
@@ -915,7 +915,7 @@ main section article div h3{
 .cupon-descuento{
     display: flex;
     flex-direction: column;
-    width: 80%;
+    width: 100%;
 }
 
 .cupon-descuento label{
@@ -924,18 +924,18 @@ main section article div h3{
 }
 
 .cupon-descuento input{
-    max-width: 280px;
     padding: 5px;
 }
 
 .flex-giftcard{
-    display: flex;
-    max-width: 90%;
+    display: grid;
+    grid-template-columns: 32% 32% 32%;
+    justify-content: space-between;
 }
 
 .flex-giftcard input {
-    max-width:100px;
-    margin-right: 8px;
+    width: 100%;
+    padding: 5px;
 }
 
 .giftcard{
@@ -943,32 +943,9 @@ main section article div h3{
     margin: 15px 0 10px 0;
 }
 
-
-.flex-envio{
-    font-family: 'Raleway', sans-serif;
-    font-size: 15px;
-    color: #939393;
-    margin: 20px 0 10px 0;
-    display: flex;
-    justify-content: space-between;
-    width: 95%;
-    align-items: center;
-}
-
-.flex-impuesto{
-    font-family: 'Raleway', sans-serif;
-    font-size: 15px;
-    color: #939393;
-    display: flex;
-    justify-content: space-between;
-    width: 95%;
-    align-items: center;
-}
-
 .flex-total{
     font-family: 'Raleway', sans-serif; 
     margin: 15px 0 10px 0;
-    color: #6a6a6a;
     display: flex;
     justify-content: space-between;
     width: 95%;
@@ -986,12 +963,14 @@ main section article div h3{
 
 .contacto{
     border:none;
+    font-size: 15px;
     background-color: #ed7237;
     color: white;
     border-radius: 40px;
     font-family: 'Roboto', sans-serif; 
     font-weight: 500;
-    padding:8px;
+    width:100%;
+    padding: 8px;
 }
 
 .div-boton{
@@ -1000,15 +979,53 @@ main section article div h3{
     margin: 20px auto 50px auto;
 }
 
+
+.flex-total{
+    font-family: 'Raleway', sans-serif; 
+    margin: 15px 0 10px 0;
+    color: #888888;
+    display: flex;
+    justify-content: space-between;
+    width: 95%;
+    align-items: center;
+}
+
+.flex-total h4{
+    color:black;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.checkout h6{
+    color: #888888;
+    font-weight: 400;
+}
+
+.flex-total h5{
+    color: #888888;
+}
+
+.checkout h5{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    margin-top:15px;
+    font-size: 20px;
+    color: #000000;
+}
+
 /*FOOTER-CARRITO*/
 
 #footer-carrito{
     background-color: white;
+    position: relative;
+    padding: 0px 0 20px 0;
+    top: 23vh;
+    text-align: center;
+    width: 100%;
 }
 
 .copy-carrito{
     font-size: 0.9em;
-    text-align: center;
     font-family: 'Raleway', sans-serif; 
     color: #6a6a6a;
 }
@@ -1019,7 +1036,6 @@ main section article div h3{
 }
 
 .links-carrito{
-    text-align: center;
     font-family: 'Raleway', sans-serif;
     margin-bottom: 20px;
     font-size: 0.9em;
@@ -1028,6 +1044,7 @@ main section article div h3{
 .links-carrito a{
     text-decoration: none;
     color: #6a6a6a;
+    margin-right: 10px;
 }
 
 /*--LOG IN Y REGISTER---*/
@@ -1203,6 +1220,7 @@ main section article div h3{
 
 
 @media (min-width: 400px){
+
 
 .grid-container-dos{
     font-family: 'Raleway', sans-serif;
@@ -1588,8 +1606,9 @@ main section article div h3{
 
  .main-carrito{
     display:grid;
-    grid-template-columns: 70% 30%;
-    max-width: 70%;
+    grid-template-columns: 60% 40%;
+    column-gap: 20px;
+    max-width: 80%;
     margin: 0 auto;
     padding-top: 100px;
 }
@@ -1605,81 +1624,25 @@ main section article div h3{
 }
 
 
-
 .main-section{
-border-top: none;
-border-bottom: none;
-padding: 0px 0;
-margin: 0 auto;
-width:90%;
+    border-top: none;
+    border-bottom: none;
+    padding: 0px 0;
+    margin: 0 auto;
+    width:90%;
+}
+
+.mis-compras-dos{
+    display: block;
+}
 
 }
 
-
-.flexbox-seccion{
-margin: 0 auto;
-padding-bottom: 50px;
-display: flex;
-width: 100%;
-}
-
-.flexbox-seccion-dos{
-margin: 0 auto;
-display: flex;
-width: 100%;
-}
-
-.nombre-imagen{
-display: flex;
-justify-content: left;
-}
-
-.flex-img{
-width: 30%;
-border: #939393 solid 1px;
-max-width: 200px;
-}
-
-.flex-nombre-desc h3{
-font-family: 'Roboto', sans-serif;
-font-size: 20px;
-font-weight: 500;
-padding: 0 20px;
-}
-
-.flex-nombre-desc h4{
-font-family: 'Raleway', sans-serif;
-font-size: 15px;
-font-weight: 500;
-color: #939393;
-padding: 0 20px;
-}
-
-.flex-icono-precio h5{
-font-family: 'Roboto', sans-serif;
-font-size: 15px;
-font-weight: 400;
-padding: 0;
-margin:0;
-color: #939393;
-}
-
-.flex-icono-precio i{
-margin:0;
-padding:0;
-text-align: right;
-}
-
-.flex-icono-precio{
-display: flex;
-flex-direction: column;
-justify-content:space-between;
-margin:0;
-}
-
-
-
-}
+ @media (min-width: 1500px){
+    .main-carrito{
+        max-width: 1200px;
+    }
+ }
 
 /*---HOVER---*/
 
