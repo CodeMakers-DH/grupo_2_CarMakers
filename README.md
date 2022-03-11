@@ -27,9 +27,9 @@ Vender autos de buena calidad y de renombre.
 
 **Salvador Martin** es estudiante de RRHH del Instituto Universitario Aeronautico. Actualmente trabaja encargado de RRHH de una cadena de barberias llamada Barberia Popular. Su interés por la programación y por cambiar de trabajo lo llevaron a hacer el curso de desarrollo web full stack.
 
-**Marifel Rivero** es estudiante del Traductorado de Inglés de la Escuela Normal Superior en Lenguas Vivas Sofía Esther Broquen de Spangenberg. Actualmente trabaja como transcriptora y subtituladora para la empresa TransPerfect. Su interés por el aprendizaje, la tecnología y el mundo cripto la impulsó a incursionar en el mundo de la programación. 
-
 **Cristian Salinas Talamilla** es Ingeniero en Recursos Naturales con 14 años de experiencia en el rubro minero. Respecto a conocimientos de programación, se encuentra terminando el curso de Científico de Datos de Acamica/Digital House. En 2021 se desempeñó profesor de Python Data Analytics en la Escuela Argentina de Nuevas Tecnologías. Ha realizado trabajos privados de analítica y ciencia de datos con R y Python para empresas mineras.
+
+**Giuliano Raschetti**
 
 
 
