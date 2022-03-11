@@ -29,6 +29,8 @@ router.get('/crearproducto', controlador.crearproducto)
 
 //vista crear Producto
 router.get('/editarproducto', controlador.editarproducto)
+router.get ('*', controlador.pagerror);
+
 
 
 //exportar el modulo

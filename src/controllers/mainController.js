@@ -150,9 +150,10 @@ const controlador ={
     },
     editarproducto: (req, res) => {
         res.render('editarproducto')
-    }
-
-
+    },
+    pagerror: (req, res) => { 
+        res.render('error')
+    },
 }
 
 // exportacion del modulo
