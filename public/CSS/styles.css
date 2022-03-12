@@ -65,6 +65,9 @@ nav h1{
     display: none;
 }
 
+#ocultar-nav li{
+    opacity: 0;
+}
 
 @keyframes muestraMenu{
     from{right: -50}
@@ -640,6 +643,11 @@ footer div div a img{
     margin: 0 0 40px 0;
 }
 
+.slider-vh{
+    display: none;
+}
+
+
 /*TÍTULO*/
 
 main section article div h2{
@@ -660,7 +668,7 @@ main section article div h3{
 /*CARACTERÍSTICAS*/
 
 .caracteristicas{
-    margin: 100px 0 0 0;
+    margin: 80px 0 0 0;
 }
 
 .caracteristicas h4{
@@ -791,6 +799,10 @@ main section article div h3{
 
 
 /*TEXTO SUPERIOR*/
+
+.flex-texto-2{
+    display: none;
+}
 
 .flex-texto{
     background-color: #ececec;
@@ -1212,6 +1224,11 @@ main section article div h3{
     color: black;
 }
 
+/*---EDICION PRODUCTO---*/
+
+#correo {
+    background-color: white;
+} 
 
 
 /*---ANIMACIONES---*/
@@ -1643,6 +1660,70 @@ main section article div h3{
     display: block;
 }
 
+
+/*DETALLE DE PRODUCTO*/
+
+.flex-texto{
+    display: none;
+}
+
+.flex-texto-2{
+    display: block;
+}
+
+
+.flex-texto-2{
+    background-color: #ececec;
+    width:90%;
+    padding: 15px 15px 5px 35px;
+    margin: 0 auto;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    position: relative;
+    top: 70px;
+    text-align: left;
+}
+
+.flex-texto-2 i{
+    position:relative;
+    right: 12px;
+    top: 2px;
+    color:#d23c00;
+}
+
+
+.main-article img{
+    display: none;
+}
+
+.slider-vh{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+#main-detalle{
+    display: grid;
+    grid-template-columns: 75% 25%;
+}
+
+.modelo-delivery h2{
+    margin-top: 120px;
+}
+
+
+.scroll{
+    height: 100vh;
+    overflow-y: scroll;
+}
+
+
+
+
 }
 
  @media (min-width: 1500px){
@@ -1658,8 +1739,3 @@ main section article div h3{
     color:#939393;
 }
 
-/*---EDICION PRODUCTO---*/
-
-#correo {
-    background-color: white;
-} 
