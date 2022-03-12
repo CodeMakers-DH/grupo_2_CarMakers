@@ -18,22 +18,3 @@ app.listen(5000, () => {
     console.log('Servidor para CarMakers');
 })
 
-
-/*
-function splitScroll(){
-    const controller = new ScrollMagic.Controller();
-
-    new ScrollMagic.Scene({
-        duration: 500,
-        triggerElement: '.titulo-modelo',
-        triggerHook : 0
-    })
-
-    .setPin('.titulo-modelo')
-    .addIndicators()
-    .addTo(controller)
-
-}
-
-splitScroll();
-*/
