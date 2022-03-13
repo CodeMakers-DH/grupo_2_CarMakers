@@ -2,14 +2,14 @@
     {
         "idModelo": 0,
         "descripcion": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam eaque ut porro pariatur eveniet.",
-        "nombreModelo": "Pucará",
+        "nombreModelo": "Modelo 1",
         "imgModelo": "/imgs/producto2.jpg",
         "deliveryEstimado": "90 dias",
         "precio": "$2.5M",
         "caracteristicas": 
         [
             { 
-                "nombreCaractiristicA": "Autonomia",
+                "nombreCaractiristica": "Autonomia",
                 "valor": "1500 kilometros"
             },
             { 
@@ -26,7 +26,7 @@
     {
         "idModelo": 1,
         "descripcion": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam eaque ut porro pariatur eveniet.",
-        "nombreModelo": "Quilmes",
+        "nombreModelo": "Modelo 2",
         "imgModelo": "/imgs/producto.jpg",
         "deliveryEstimado": "120 dias",
         "precio": "$2.2M",
@@ -49,7 +49,7 @@
     {
         "idModelo": 2,
         "descripcion": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam eaque ut porro pariatur eveniet.",
-        "nombreModelo": "Tronador",
+        "nombreModelo": "Modelo 3",
         "imgModelo": "/imgs/producto2.jpg",
         "deliveryEstimado": "60 dias",
         "precio": "$2M",
@@ -73,7 +73,7 @@
     {
         "idModelo": 3,
         "descripcion": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam eaque ut porro pariatur eveniet.",
-        "nombreModelo": "Pacuy",
+        "nombreModelo": "Modelo 4",
         "imgModelo": "/imgs/producto.jpg",
         "deliveryEstimado": "30 dias",
         "precio": "$1.5M",
@@ -99,7 +99,7 @@
     {
         "idModelo": 4,
         "descripcion": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam eaque ut porro pariatur eveniet.",
-        "nombreModelo": "Llullaillaco",
+        "nombreModelo": "Modelo 5",
         "imgModelo": "/imgs/producto2.jpg",
         "deliveryEstimado": "90 dias",
         "precio": "$5M",
