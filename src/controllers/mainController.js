@@ -8,11 +8,6 @@ const controlador ={
     index:(req, res) => {
         res.render('index', {productosParseados})
     },
-    detalleProducto: (req, res) => {
-        let idModelo = req.params.idModelo;
-        res.render('detalleproducto', {"modelos": productosParseados[idModelo] })
-    
-    },
     carritoCompras: (req, res) => {
         res.render('carrito')
     },
@@ -21,12 +16,6 @@ const controlador ={
     },
     register: (req, res) => {
         res.render('register')
-    },
-    crearproducto: (req, res) => {
-        res.render('crearproducto')
-    },
-    editarproducto: (req, res) => {
-        res.render('editarproducto')
     },
     pagerror: (req, res) => { 
         res.render('error')
