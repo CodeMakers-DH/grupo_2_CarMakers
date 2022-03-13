@@ -348,7 +348,6 @@ img{
     color:#11151a;
     font-family: 'Raleway', sans-serif;
     font-weight: 600;
-    margin:3px;
 }
 
 .desc-auto-uno{
@@ -1226,7 +1225,7 @@ main section article div h3{
 
 /*---EDICION PRODUCTO---*/
 
-#correo {
+#correo-imagen {
     background-color: white;
 } 
 
@@ -1513,8 +1512,10 @@ main section article div h3{
     color:#313131;
     font-family: 'Raleway', sans-serif;
     font-weight: 600;
-    padding: 0;
+    padding: 5px;
     margin: 0;
+    background-color: transparent;
+    border-radius: 5px;
 }
 
 
@@ -1739,3 +1740,8 @@ main section article div h3{
     color:#939393;
 }
 
+
+.enlaces-productos li a:hover{
+    background-color: #ececec;
+    color:#313131;
+}

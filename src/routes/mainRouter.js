@@ -2,7 +2,7 @@ const express = require('express');
 const path = require('path');
 
 //llamada al controlador
-const controlador = require("../controllers/mainController");
+const mainControlador = require("../controllers/mainController");
 
 //definicion de rutas
 const router = express.Router();
@@ -10,28 +10,19 @@ const router = express.Router();
 //rutas de las vistas
 
 //vista index
-router.get('/', controlador.index)
-
-//vista detalle de producto
-router.get('/detalleproducto/:idModelo?', controlador.detalleProducto)
+router.get('/', mainControlador.index)
 
 //vista carrito de compras
-router.get('/carrito', controlador.carritoCompras)
+router.get('/carrito', mainControlador.carritoCompras)
 
 //vista login
-router.get('/login', controlador.login)
+router.get('/login', mainControlador.login)
 
 //vista login
-router.get('/register', controlador.register)
-
-//vista crear Producto
-router.get('/crearproducto', controlador.crearproducto)
-
-//vista crear Producto
-router.get('/editarproducto', controlador.editarproducto)
-router.get ('*', controlador.pagerror);
+router.get('/register', mainControlador.register)
 
 
+//router.get ('*', mainControlador.pagerror);
 
 //exportar el modulo
 module.exports = router;
