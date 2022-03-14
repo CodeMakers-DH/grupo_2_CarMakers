@@ -24,7 +24,7 @@
                     <label for="modelotres">Modelo 3</label>
                 </div>
                 <div>
-                    <input type="checkbox" name="interests id="modelocuatro">
+                    <input type="checkbox" name="interests" id="modelocuatro">
                     <label for="modelocuatro">Modelo 4</label>
                 </div>
                 <div>
@@ -38,20 +38,20 @@
 
             <div class="interests">
                 <div>
-                    <input type="checkbox" name="interests" value="c" id="c">
-                    <label for="c">Color 1</label>
+                    <input type="checkbox" name="interests" id="coloruno">
+                    <label for="coloruno">Color 1</label>
                 </div>
                 <div>
-                    <input type="checkbox" name="interests" value="d" id="d">
-                    <label for="d">Color 2</label>
+                    <input type="checkbox" name="interests" id="colordos">
+                    <label for="colordos">Color 2</label>
                 </div>
                 <div>
-                    <input type="checkbox" name="interests" value="e" id="e">
-                    <label for="e">Color 3</label>
+                    <input type="checkbox" name="interests" id="colortres">
+                    <label for="colortres">Color 3</label>
                 </div>
                 <div>
-                    <input type="checkbox" name="interests" value="f" id="f">
-                    <label for="f">Color 4</label>
+                    <input type="checkbox" name="interests" id="colorcuatro">
+                    <label for="colorcuatro">Color 4</label>
                 </div>
             </div>
 
@@ -60,12 +60,12 @@
 
             <div class="interests">
                 <div>
-                    <input type="checkbox" name="interests" value="c" id="c">
-                    <label for="c">Ruedas tipo 1</label>
+                    <input type="checkbox" name="interests" id="ruedasuno">
+                    <label for="ruedasuno">Tipo 1</label>
                 </div>
                 <div>
-                    <input type="checkbox" name="interests" value="d" id="d">
-                    <label for="d">Ruedas tipo 2</label>
+                    <input type="checkbox" name="interests" id="ruedasdos">
+                    <label for="ruedasdos">Tipo 2</label>
                 </div>
             </div>
 
@@ -76,7 +76,7 @@
             <% for(i=0; i<productosParseados.length; i++) { %>
                     <div class="div-producto">
                         <a href="/products/detalleproducto/<%= productosParseados[i].idModelo %>">
-                            <img src=<%= productosParseados[i].imgModelo %>>
+                            <img src="/imgs/products/<%=productosParseados[i].imgModelo%>" alt="imagen de producto">
                         </a>
                         <h3><%= productosParseados[i].nombreModelo %></h3>
                         <h4><%= productosParseados[i].precio %></h4>

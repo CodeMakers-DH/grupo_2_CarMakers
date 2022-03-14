@@ -8,7 +8,7 @@ const productsController = require('../controllers/productController');
 /*** USAMOS EL MULTER ***/ 
 const storage = multer.diskStorage({
     destination: (req,file, cb) =>{
-        cb (null, 'public/images/products')
+        cb (null, 'public/imgs/products')
     },
     filename: (req,file,cb) =>{
         console.log(file);
@@ -27,7 +27,7 @@ router.get('/detalleproducto/:idModelo?', productsController.detalleProducto);
 
 //crear Producto
 router.get('/crearproducto', productsController.crearproducto);
-router.post('/products/crearproducto', upload.single('imgProducto'), productsController.create);
+router.post('/', upload.single('imgModelo'), productsController.create);
 
 
 //editar Producto

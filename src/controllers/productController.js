@@ -14,20 +14,16 @@ const controlador ={
         res.render('crearproducto')
     },
     create: (req, res) => {
-        let productosActuales = fs.readFileSync(productsFilePath, 'utf-8')
+		let productosActuales = fs.readFileSync(productsFilePath, 'utf-8')
 		productosActuales = JSON.parse(productosActuales)
 		let newProduct = req.body;
-		newProduct.image = req.file.filename;
-		let ultimoIndice = productosActuales.length+1;
-		newProduct.id = ultimoIndice;
+		newProduct.imgModelo = req.file.filename;
+		let ultimoIndice = productosActuales.length;
+		newProduct.idModelo = ultimoIndice;
 		productosActuales.push(newProduct)
 		let newProductoJSON = JSON.stringify(productosActuales)
-		//const nuevaVariableJSON = JSON.stringify(newProduct)
 		fs.writeFileSync(productsFilePath, newProductoJSON)
-		//products.push(newProductoJSON);
-        console.log(req.file);
-        res.send('archivo subido correctamente')
-		res.redirect('/products/crearproducto')
+		res.redirect('products')
     },
     editarproducto: (req, res) => {
         res.render('editarproducto')
