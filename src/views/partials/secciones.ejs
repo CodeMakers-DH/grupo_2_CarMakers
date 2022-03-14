@@ -9,14 +9,14 @@
     
         <div class="botones-container">
         <div class="botones">
-            <a href="/detalleproducto/<%= productosParseados[i-1].idModelo %>"> <!--acá va -1 porque el for empieza en 1 y necesitamos que muestre el primer objeto del array JSON-->
+            <a href="/products/detalleproducto/<%= productosParseados[i-1].idModelo %>"> <!--acá va -1 porque el for empieza en 1 y necesitamos que muestre el primer objeto del array JSON-->
                 <button type="button" class="saber-mas">SABER MÁS</i></button>
             </a>
     
-            <a href="/carrito">
+            <a href="/products/carrito">
                 <button type="button" class="compra-ahora">COMPRAR AHORA</i></button>
             </a>
-        
+         
         </div>
         
     </div>
@@ -24,8 +24,6 @@
     <div class="icon-arrow">
         <a href="#seccion-<%=(i+1)%>"><i class="fas fa-solid fa-angle-down"></i></a>
     </div>
-          
-    
     </section>
 
 

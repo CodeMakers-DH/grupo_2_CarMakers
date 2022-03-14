@@ -82,7 +82,7 @@
         [
             { 
                 "nombreCaractiristica": "Autonomia",
-                "valo": "800 kilometros"
+                "valor": "800 kilometros"
             },
             { 
                 "nombreCaractiristica": "Velocidad Máxima",
