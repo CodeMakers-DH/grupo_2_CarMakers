@@ -135,6 +135,8 @@ nav h1{
 
 .enlaces-productos{
     display: none;
+    transition-property: all;
+    transition-duration: 2s;
 }
 
 
@@ -1227,7 +1229,134 @@ main section article div h3{
 
 #correo-imagen {
     background-color: white;
+    border-radius: 20px;
+    margin: 5px auto 0 auto;
+    width: 100%;
+    padding: 10px;
+    border:none;
 } 
+
+/*---PRODUCTOS---*/
+
+.main-inv{
+    height:90vh;
+}
+
+.seccion-inv{
+    background-color: #ececec;
+    display: grid;
+    grid-template-columns: 15% 85%;
+    grid-template-rows: 75vh;
+}
+
+.form-inv{
+    margin-top: 20px;
+}
+
+.inventario{
+    padding: 60px 0 0 20px;
+}
+
+.form-inv h2{
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    padding:0;
+    margin: 25px auto 5px auto;
+    max-width: 70%;
+}
+
+.interests{
+    max-width: 70%;
+    margin: 0 auto;
+}
+
+.interests label{
+    font-family: 'Raleway', sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+/*FOR PRODUCTOS */
+
+.productos-article img {
+    max-width: 300px;
+    border: solid black 2px;
+}
+
+.productos-article{
+    background-color: white;
+    width: 95%;
+    padding: 40px 0 40px 0;
+    height: 95%;
+    margin: auto auto;
+    display: grid;
+    border-radius: 20px;
+    grid-template-columns: 30% 30% 30%;
+    justify-content: center;
+    row-gap: 20px;
+    overflow-y: scroll;
+}
+
+
+.div-producto{
+    margin: 0 auto;
+}
+
+.div-producto h3{
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    color:black;
+    margin: 10px 0 0 0;
+    padding:0;
+}
+
+.div-producto h4{
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    color:rgb(128, 128, 128);
+    margin: 3px 0 0 0;
+    padding:0;
+}
+
+.div-producto a{
+    text-decoration: none;
+}
+
+
+/*FOOTER PRODUCTOS*/
+
+#footer-productos{
+    padding-top: 10px;
+    text-align: center;
+    width: 100%;
+    background-color: white;
+}
+
+.copy-carrito{
+    font-size: 0.9em;
+    font-family: 'Raleway', sans-serif; 
+    color: #6a6a6a;
+}
+
+.car-productos{
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.links-productos{
+    font-family: 'Raleway', sans-serif;
+    margin-bottom: 10px;
+    font-size: 0.9em;
+}
+
+.links-productos a{
+    text-decoration: none;
+    color: #6a6a6a;
+    margin-right: 10px;
+}
 
 
 /*---ANIMACIONES---*/
@@ -1449,12 +1578,12 @@ main section article div h3{
     /*--NAVEGADOR--*/
 
 .menu{
-    background-color: transparent;
     top:16px;
     right: 15px;
     padding: 0;
     margin: 0;
     color:#313131;
+    background-color: transparent;
 }
 
 .cuenta-button{
@@ -1502,7 +1631,7 @@ main section article div h3{
 }
 
 .enlaces-productos li{
-    padding: 0 25px 0 0;
+    padding: 0 10px 0 0;
     margin: 0;
 }
 
@@ -1512,10 +1641,13 @@ main section article div h3{
     color:#313131;
     font-family: 'Raleway', sans-serif;
     font-weight: 600;
-    padding: 5px;
+    padding: 8px;
     margin: 0;
     background-color: transparent;
     border-radius: 5px;
+    transition-property: background-color;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in-out;
 }
 
 

@@ -18,7 +18,7 @@ Precio (p​ rice​)
             <div clas="big-container">
 
                 <div class="single-column">
-                <form action="/" method="POST" class="form-login">
+                <form action="/products/crearproducto" method="POST" class="form-login" enctype="multipart/form-data">
 
                     <h2 class="titulo-login">Crear Producto</h2>
 
@@ -30,11 +30,11 @@ Precio (p​ rice​)
                         <label for="descripcionProducto" class="label-correo">Descripción</label>
                         <input type="textarea" name="descripcionProducto" id="descripcionProducto" required>
 
-                        <label for="correo" class="label-correo">Imagen del producto</label>
-                        <input type="file" name="correo" id="correo-imagen" required>
+                        <label for="imgProducto" class="label-correo">Imagen del producto</label>
+                        <input type="file" name="imgProducto" id="correo-imagen" required>
 
                         <label for="precioProducto" class="label-correo">Precio</label>
-                        <input type="textarea" name="precioProducto" id="precioProducto" required>
+                        <input type="number" name="precioProducto" id="precioProducto" required>
 
                         <label for="contraseña" class="label-contra">Tipo de Ruedas</label>
                         <div class="interests">
@@ -51,20 +51,20 @@ Precio (p​ rice​)
                         <label for="contraseña" class="label-contra">Colores Disponibles</label>
                         <div class="interests">
                             <div>
-                                <input type="checkbox" name="interests" value="a" id="a">
-                                <label for="a">Color 1</label>
+                                <input type="checkbox" name="interests" value="c" id="c">
+                                <label for="c">Color 1</label>
                             </div>
                             <div>
-                                <input type="checkbox" name="interests" value="b" id="b">
-                                <label for="b">Color 2</label>
+                                <input type="checkbox" name="interests" value="d" id="d">
+                                <label for="d">Color 2</label>
                             </div>
                             <div>
-                                <input type="checkbox" name="interests" value="b" id="b">
-                                <label for="b">Color 3</label>
+                                <input type="checkbox" name="interests" value="e" id="e">
+                                <label for="e">Color 3</label>
                             </div>
                             <div>
-                                <input type="checkbox" name="interests" value="b" id="b">
-                                <label for="b">Color 4</label>
+                                <input type="checkbox" name="interests" value="f" id="f">
+                                <label for="f">Color 4</label>
                             </div>
                         </div>
 

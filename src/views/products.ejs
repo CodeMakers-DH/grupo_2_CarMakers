@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('./partials/head')%>
+<body>
+    <%- include('./partials/header-2')%>
+<main class="main-inv">
+    <h1 class="inventario">Inventario</h1>
+
+    <section class="seccion-inv">
+        <form class="form-inv">
+            <h2>Modelos</h2>
+
+            <div class="interests">
+                <div>
+                    <input type="checkbox" name="interests" id="modelouno">
+                    <label for="modelouno">Modelo 1</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="interests" id="modelodos">
+                    <label for="modelodos">Modelo 2</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="interests" id="modelotres">
+                    <label for="modelotres">Modelo 3</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="interests id="modelocuatro">
+                    <label for="modelocuatro">Modelo 4</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="interests" id="modelocinco">
+                    <label for="modelocinco">Modelo 5</label>
+                </div>
+            </div>
+
+            <h2>Colores</h2>
+
+
+            <div class="interests">
+                <div>
+                    <input type="checkbox" name="interests" value="c" id="c">
+                    <label for="c">Color 1</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="interests" value="d" id="d">
+                    <label for="d">Color 2</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="interests" value="e" id="e">
+                    <label for="e">Color 3</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="interests" value="f" id="f">
+                    <label for="f">Color 4</label>
+                </div>
+            </div>
+
+
+            <h2>Ruedas</h2>
+
+            <div class="interests">
+                <div>
+                    <input type="checkbox" name="interests" value="c" id="c">
+                    <label for="c">Ruedas tipo 1</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="interests" value="d" id="d">
+                    <label for="d">Ruedas tipo 2</label>
+                </div>
+            </div>
+
+        </form>
+
+
+        <article class="productos-article">
+            <% for(i=0; i<productosParseados.length; i++) { %>
+                    <div class="div-producto">
+                        <a href="/products/detalleproducto/<%= productosParseados[i].idModelo %>">
+                            <img src=<%= productosParseados[i].imgModelo %>>
+                        </a>
+                        <h3><%= productosParseados[i].nombreModelo %></h3>
+                        <h4><%= productosParseados[i].precio %></h4>
+                    </div>
+
+            <% } %>
+
+        </article>
+    </section>
+</main>
+
+<footer id="footer-productos">
+
+    <div class="copy-carrito">
+        <p class="car-productos">CarMakers © 2022</p>
+    </div>
+
+    <div class="links-productos">
+        <a href="/sobrenosotros.html">Sobre Nosotros</a>
+        <a href="/terminos.html">Términos y Condiciones</a>
+    </div>
+
+</footer>
+
+    <script src="/js/main.js" type="module"></script>
+</body>
+</html>
