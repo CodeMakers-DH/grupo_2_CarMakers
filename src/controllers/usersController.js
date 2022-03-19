@@ -18,17 +18,33 @@ const controlador ={
     registro: (req, res) => {
         res.render('register')
     },
-    create: (req, res) => {
-		let nuevoProducto = req.body;
-        res.send(nuevoProducto);
-        console.log(nuevoProducto);
-    }, /*
-    editarproducto: (req, res) => {
-        res.render('editarproducto')
+    
+    crear: (req, res) => {
+		let nuevoUsuario = req.body;
+        res.send(nuevoUsuario);
+        console.log(req.body);
+    }, 
+    
+    editarUsuario: (req, res) => {
+        let idUsuario = req.params.idUsuario;
+        res.render('editarUsuario',{usuarioToEdit :usuarios.filter((usuario)=> usuario.id == idUsuario)[0] } )
     },
-    products: (req, res) => {
-        res.render('products', {productosParseados});
-    } */
+    
+    actualizar: (req, res)=>{
+        let idUsuario = req.params.idUsuario;
+        let infoForm = req.body;
+        usuarios.forEach(element => {
+            if(element.id == idUsuario){
+                element.nombres = infoForm.nombres;
+                element.apellidos = infoForm.apellidos;
+                element.correoElectronico = infoForm.correoElectronico;
+                element.password = infoForm.password;
+            }
+        });
+        res.send(usuarios.filter((usuario)=> usuario.id == idUsuario)[0])
+        //res.redirect('/users')  
+    }
+
 }
 
 // exportacion del modulo

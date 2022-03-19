@@ -8,6 +8,10 @@ const usersRoutes = require('./routes/usersRouter');
 //configuracion del path publico
 app.use(express.static('public'));
 
+//congiguracion override
+const methodOverride = require('method-override');
+app.use(methodOverride());
+
 //configuracion del template engine
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname,'/views'))

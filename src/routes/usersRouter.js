@@ -13,17 +13,10 @@ router.get('/detalleUsuario/:idUsuario?', usersController.detalleUsuario);
 
 //crear usuario
 router.get('/registro', usersController.registro);
-router.post('/', usersController.create);
+router.post('/', usersController.crear);
 
-
-//editar Producto
-// router.get('/editarproducto', productsController.editarproducto);
-
-
-//inventario
-// router.get('/', productsController.products);
-
-
-
+//editar usuario
+router.get('/editarUsuario/:idUsuario?', usersController.editarUsuario);
+router.put('/actualizar/:idUsuario', usersController.actualizar)
 
 module.exports = router;
