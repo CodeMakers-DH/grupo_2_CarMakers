@@ -8,8 +8,14 @@ const usersRoutes = require('./routes/usersRouter');
 //configuracion del path publico
 app.use(express.static('public'));
 
+//middleware para traer json
+//Configuración del entorno
+app.use(express.urlencoded({ extended: false }));
+app.use(express.json());
+
 //congiguracion override
 const methodOverride = require('method-override');
+const { application } = require('express');
 app.use(methodOverride());
 
 //configuracion del template engine
@@ -27,7 +33,5 @@ app.listen(5010, () => {
 })
 
 
-//Configuración del entorno
-app.use(express.urlencoded({ extended: false }));
-app.use(express.json());
+
 
