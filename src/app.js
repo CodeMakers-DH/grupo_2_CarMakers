@@ -16,7 +16,7 @@ app.use(express.json());
 //congiguracion override
 const methodOverride = require('method-override');
 const { application } = require('express');
-app.use(methodOverride());
+app.use(methodOverride('_method'));
 
 //configuracion del template engine
 app.set('view engine', 'ejs');

@@ -17,6 +17,6 @@ router.post('/', usersController.crear);
 
 //editar usuario
 router.get('/editarUsuario/:idUsuario?', usersController.editarUsuario);
-router.put('/actualizar/:idUsuario', usersController.actualizar)
+router.put('/:idUsuario/editar', usersController.actualizar)
 
 module.exports = router;

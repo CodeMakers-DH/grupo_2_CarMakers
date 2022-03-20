@@ -21,8 +21,10 @@ const controlador ={
     
     crear: (req, res) => {
 		let nuevoUsuario = req.body;
-        res.send(nuevoUsuario);
-        console.log(req.body);
+        nuevoUsuario.id = usuarios[usuarios.length-1].id +1
+		usuarios.push(nuevoUsuario)
+
+		res.redirect('/users')
     }, 
     
     editarUsuario: (req, res) => {
@@ -41,8 +43,7 @@ const controlador ={
                 element.password = infoForm.password;
             }
         });
-        res.send(usuarios.filter((usuario)=> usuario.id == idUsuario)[0])
-        //res.redirect('/users')  
+        res.redirect('/users')  
     }
 
 }
