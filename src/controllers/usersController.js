@@ -1,7 +1,7 @@
 const path = require('path');
 const fs = require('fs');
 const usersFilePath = path.join(__dirname, '../data/usuarios.json');
-const usuarios = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
+var usuarios = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 
 
 const controlador ={
@@ -43,7 +43,15 @@ const controlador ={
                 element.password = infoForm.password;
             }
         });
-        res.redirect('/users')  
+        res.redirect('/users')
+    },
+
+    eliminarUsuario:  (req, res) => {
+		// Do the magic
+		let idUsuario= req.params.idUsuario;
+		usuarios = usuarios.filter((usuario)=> usuario.id != idUsuario);
+
+    res.send(usuarios);
     }
 
 }

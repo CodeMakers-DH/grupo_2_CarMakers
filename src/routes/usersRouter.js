@@ -19,4 +19,7 @@ router.post('/', usersController.crear);
 router.get('/editarUsuario/:idUsuario?', usersController.editarUsuario);
 router.put('/:idUsuario/editar', usersController.actualizar)
 
+//eliminar usuario
+router.delete('/:idUsuario/eliminar', usersController.eliminarUsuario); 
+
 module.exports = router;
