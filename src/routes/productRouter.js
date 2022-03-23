@@ -31,13 +31,16 @@ router.post('/', upload.single('imgModelo'), productsController.create);
 
 
 //editar Producto
-router.get('/editarproducto', productsController.editarproducto);
+router.get('/editarproducto/:idModelo?', productsController.editarproducto);
+router.put('/:idModelo/editar', productsController.editar);
 
 
 //inventario
 router.get('/', productsController.products);
 
+//eliminar producto
 
+router.delete('/:idModelo/eliminar', productsController.destroy); 
 
 
 module.exports = router;
