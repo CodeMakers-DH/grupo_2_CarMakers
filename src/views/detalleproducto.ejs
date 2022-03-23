@@ -66,14 +66,27 @@
             
 
                 <div class="caracteristicas">
-                <% for (let i=0; i< modelos.caracteristicas.length; i++){ %>
                     <h4>
-                        <%= modelos.caracteristicas[i].nombreCaractiristica %>
+                        Autonomía
                     </h4>
                     <h5>
-                        <%= modelos.caracteristicas[i].valor %>
+                        <%= modelos.autonomia %>
                     </h5>
-                <% } %>
+
+                    <h4>
+                        Velocidad Máxima
+                    </h4>
+                    <h5>
+                        <%= modelos.velocidadMaxima %>
+                    </h5>
+
+                    <h4>
+                        Tiempo De Cero A Cien
+                    </h4>
+                    <h5>
+                        <%= modelos.tiempoDeCeroCien %>
+                    </h5>
+                
 
                     <div class="precio-auto">
                         <p class="precio">Precio</p>

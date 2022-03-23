@@ -38,7 +38,9 @@ router.put('/:idModelo/editar', productsController.editar);
 //inventario
 router.get('/', productsController.products);
 
+//eliminar producto
 
+router.delete('/:idModelo/eliminar', productsController.destroy); 
 
 
 module.exports = router;

@@ -50,7 +50,19 @@ const controlador ={
 
     products: (req, res) => {
         res.render('products', {productosParseados});
-    }
+    },
+
+    destroy : (req, res) => {
+		let idProducto = req.params.idModelo;
+		
+		const nuevoProducto = productosParseados.filter(function(producto){
+			return producto.idModelo != idProducto;
+		})
+
+		fs.writeFileSync(productsFilePath,JSON.stringify(nuevoProducto))
+
+		res.redirect('/')
+	}
 }
 
 // exportacion del modulo
