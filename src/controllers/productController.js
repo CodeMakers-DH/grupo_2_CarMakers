@@ -1,7 +1,7 @@
 const path = require('path');
 const fs = require('fs');
 const productsFilePath = path.join(__dirname, '../data/productos.json');
-const productosParseados = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+let productosParseados = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 const multer = require('multer');
 const { info } = require('console');
 
@@ -43,9 +43,10 @@ const controlador ={
                         element.ingreso = infoForm.ingreso;
                         }
                     });
-                    fs.writeFileSync(productsFilePath,JSON.stringify(productosParseados))
-                    res.redirect('/')
-                    //res.send(productosParseados);
+
+        //fs.writeFileSync(path.join(productsFilePath) ,JSON.stringify(productosParseados))
+        //res.redirect('/')
+        res.send(productosParseados);
     },
 
     products: (req, res) => {
@@ -59,7 +60,7 @@ const controlador ={
 			return producto.idModelo != idProducto;
 		})
 
-		fs.writeFileSync(productsFilePath,JSON.stringify(nuevoProducto))
+		//fs.writeFileSync(productsFilePath,JSON.stringify(nuevoProducto))
 
 		res.redirect('/')
 	}
