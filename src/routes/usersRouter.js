@@ -8,7 +8,7 @@ const usersController = require('../controllers/usersController');
 
 //rutas de las vistas
 router.get('/', usersController.index);
-//detalle de producto
+//detalle de usuario
 router.get('/detalleUsuario/:idUsuario?', usersController.detalleUsuario);
 
 //crear usuario

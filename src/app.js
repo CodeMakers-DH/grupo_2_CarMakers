@@ -4,6 +4,7 @@ const path = require('path');
 const mainRoutes = require('./routes/mainRouter');
 const productRoutes = require('./routes/productRouter');
 const usersRoutes = require('./routes/usersRouter');
+var session = require("express-session");
 
 //configuracion del path publico
 app.use(express.static('public'));
@@ -12,6 +13,9 @@ app.use(express.static('public'));
 //Configuración del entorno
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
+
+//midlleware session
+app.use(session({secret: "Secreto!!!!"}));
 
 //congiguracion override
 const methodOverride = require('method-override');
