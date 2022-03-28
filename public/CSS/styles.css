@@ -1,6 +1,8 @@
 *{
     box-sizing: border-box;
     scroll-behavior: smooth;
+    margin:0;
+    padding:0;
 }
 
 @font-face {
@@ -9,8 +11,311 @@
 }
 
 
+
 /*---NAV---*/
 
+.container-blur{
+    width:100%;
+    height: 100vh;
+    position:fixed;
+    z-index: 100;
+    opacity: 1;
+    display: none;
+}
+
+#filter{
+    -webkit-backdrop-filter: blur(15px);
+    backdrop-filter: blur(15px);
+    background-color: rgba(0, 0, 0, 0.1);
+    z-index: 100;
+    opacity: 1;
+    display: none;
+}
+
+.enlaces-menu{
+    position: absolute;
+    top: 0px;
+    right: -50px;
+    padding-right: 15%;
+    background-color: rgb(255, 255, 255);
+    height: 300vh;
+    z-index: 400;
+    opacity: 1;
+    display: none;
+}
+
+#ocultar-nav li{
+    opacity: 0;
+}
+
+@keyframes muestraMenu{
+    from{right: -50}
+    to{right: 0}
+
+    from{ opacity:0}
+    to{opacity: 1}
+}
+
+
+.enlaces-menu.activado{
+    display: block;
+    animation: muestraMenu 500ms ease-in-out both;
+}
+
+
+.enlaces-menu li:first-child{
+    margin-top: 100px;
+}
+
+
+.enlaces-menu li{
+    list-style: none;
+    margin: 20px 0 0 0;
+}
+
+
+.enlaces-menu li a{
+    font-size: 15px;
+    text-decoration: none;
+    color:#313131;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+}
+
+@keyframes muestraCruz{
+    from{opacity:0}
+    to{opacity:1}
+}
+
+.cruz{
+    opacity:1;
+    z-index: 500;
+    position:absolute;
+    right: 20px;
+    top: 20px;
+    background-color: transparent;
+    border:none;
+    color:#313131;
+    display: none;
+}
+
+.cruz.activado{
+    display: block;
+    animation: muestraCruz 500ms ease-in-out both;
+}
+
+.container-blur.activado{
+    display: block;
+    animation: muestraBlur 500ms ease-in-out both;
+}
+
+#filter.activado{
+    display: block;
+    animation: muestraBlur 500ms ease-in-out both;
+}
+
+@keyframes muestraBlur{
+    from{opacity:0}
+    to{opacity:1}
+}
+
+
+
+
+
+
+
+.ul-enlaces{
+    display:none;
+}
+
+.ul-botones :nth-child(2), .ul-botones :nth-child(3){
+    display: none;
+}
+
+nav ul li a, .ul-botones li button, .ul-botones li button a{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    color: black;
+    text-decoration: none;
+}
+
+.ul-botones, .ul-enlaces{
+    margin:0;
+    padding:0;
+}
+
+.ul-enlaces li, .ul-botones li{
+    list-style: none;
+    display: inline-block;
+    background-color: transparent;
+    padding: 4px 10px;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+
+.ul-botones li button{
+    border:none;
+    background-color: transparent;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    position:fixed;
+    z-index: 150;
+    background-color: white;
+    width:100%;
+}
+
+.carmakers-nav{
+    margin:0;
+    padding:0;
+    text-decoration: none;
+}
+
+.carmakers-nav h1{
+    font-size: 15px;
+    margin:0;
+    padding:0;
+    color:#11151a;
+    font-family: fuentelogo;
+}
+
+
+.boton-menu{
+    border:rgb(167, 167, 167) solid 1px;
+}
+
+/* FOOTER NUEVO */
+
+.footerprueba {
+    margin-top: auto;
+    background-color: yellow;
+}
+
+
+.body-login{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* footer prueba */
+
+
+ /*
+nav{
+    display: grid;
+    grid-template-columns: 8% 25% 1fr 25% 8%;
+    background-color: rgb(233, 106, 106);
+    width:100%;
+    position:fixed;
+    z-index: 50;
+    margin:0;
+    padding:0;
+}
+    
+nav div{
+    border:black solid 2px;
+    display: flex;
+    align-items: center;
+}
+
+
+.enlaces-productos, .botones-nav{
+    display: flex;
+}
+
+
+nav h1{
+    color:#11151a;
+    font-family: fuentelogo;
+    font-size: 15px;
+    margin:0 5px;
+    padding:0;
+}
+
+nav a{
+    text-decoration: none;
+    color:black;
+}
+
+nav ul{
+    list-style: none;
+    margin:0;
+    padding:0;
+}
+
+.menu, .cuenta-button, .carrito-button{
+    background-color: transparent;
+    border:none;
+    margin:0;
+    padding:0;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    font-size: 90%;
+}
+
+.enlaces-productos li, .botones-nav li{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    font-size: 90%;
+    margin: 0 10%;
+    padding: 3px 8px;
+    border-radius: 5px;
+    background-color: yellow;
+}
+
+nav .div-enlace{
+    justify-content: center;
+}
+
+nav .div-botonn{
+    justify-content: end;
+}
+
+
+/*
+.barra-blanca{
+    background-color: white;
+    width: 85%;
+    margin: 0 auto;
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar{
+    background-color: rgb(233, 106, 106);
+    width:100%;
+    position:fixed;
+    z-index: 50;
+    margin:0;
+    padding:0;
+}
+
+
+
+.enlaces-productos{
+    background-color: red;
+}
+
+.botones-nav{
+    background-color: green;
+}
+
+a h1{
+    background-color: yellow;
+}
+
+/*
 .navbar{
     display: flex;
     justify-content: space-between;
@@ -68,6 +373,7 @@ nav h1{
 #ocultar-nav li{
     opacity: 0;
 }
+
 
 @keyframes muestraMenu{
     from{right: -50}
@@ -139,7 +445,7 @@ nav h1{
     transition-duration: 2s;
 }
 
-
+*/
 
 /*---IMÁGENES----*/
 
@@ -1447,6 +1753,13 @@ main section article div h3{
         bottom: 160px;
     }
 
+    .ul-botones :nth-child(2), .ul-botones :nth-child(3){
+        display: inline-block;
+    }
+
+    .boton-menu{
+        border:none;
+    }
 
 }
 
@@ -1576,7 +1889,10 @@ main section article div h3{
     }
 
     /*--NAVEGADOR--*/
-
+    .ul-enlaces{
+        display:block;
+    }
+/*
 .menu{
     top:16px;
     right: 15px;
@@ -1656,7 +1972,7 @@ main section article div h3{
     margin: 0;
 }
 
-
+*/
 
 /*---FOOTER NAV---*/
 
@@ -1868,12 +2184,17 @@ main section article div h3{
 /*---HOVER---*/
 
 
+/*
 .cruz:hover, .enlaces-menu li a:hover, .enlaces-productos li a:hover, .menu:hover, .cuenta-button a:hover, .carrito-button a:hover{
     color:#939393;
 }
 
-
-.enlaces-productos li a:hover{
-    background-color: #ececec;
-    color:#313131;
+*/
+.ul-enlaces li:hover, .ul-botones li:hover{
+    background-color: rgb(233, 233, 233);
 }
+
+nav a:hover{
+    color:black;
+}
+
