@@ -24,8 +24,8 @@
 }
 
 #filter{
-    -webkit-backdrop-filter: blur(15px);
-    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
     background-color: rgba(0, 0, 0, 0.1);
     z-index: 100;
     opacity: 1;
@@ -33,11 +33,12 @@
 }
 
 .enlaces-menu{
-    position: absolute;
+    position: fixed;
     top: 0px;
     right: -50px;
     padding-right: 15%;
     background-color: rgb(255, 255, 255);
+    box-shadow:  rgba(0, 0, 0, 0.3) -50px 10px 100px;
     height: 300vh;
     z-index: 400;
     opacity: 1;
@@ -90,7 +91,7 @@
 .cruz{
     opacity:1;
     z-index: 500;
-    position:absolute;
+    position:fixed;
     right: 20px;
     top: 20px;
     background-color: transparent;
@@ -168,7 +169,7 @@ header{
     align-items: center;
     padding: 15px 5%;
     position:fixed;
-    z-index: 150;
+    z-index: 90;
     background-color: white;
     width:100%;
 }
