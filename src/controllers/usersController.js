@@ -21,6 +21,7 @@ const controlador ={
     
     crear: (req, res) => {
 		let nuevoUsuario = req.body;
+        
         nuevoUsuario.id = usuarios[usuarios.length-1].id +1
 		usuarios.push(nuevoUsuario)
 

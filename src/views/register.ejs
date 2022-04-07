@@ -7,7 +7,7 @@
     <main>
 
                 <div class="single-column">
-                <form action="/users" method="POST" class="form-login">
+                <form action="/users" method="POST" class="form-login" enctype="multipart/form-data">
 
                     <h2 class="titulo-login">Crear cuenta</h2>
 
@@ -24,6 +24,10 @@
 
                         <label for="password" class="label-contra">Contraseña</label>
                         <input type="password" name="password" id="contraseña" required>
+
+                        <label for="imgPerfil" class="label-correo">Sube una imágen de perfil</label>
+                        <input accept="image/png,image/jpeg, image/jpg" type="file" name="imgPerfil" id="imgPerfil" required> 
+                        
                     </div>
                     
                     
