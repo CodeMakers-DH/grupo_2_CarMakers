@@ -1,4 +1,5 @@
 const express = require('express');
+const req = require('express/lib/request');
 const path = require('path');
 
 //llamada al controlador
@@ -15,12 +16,17 @@ router.get('/', mainControlador.index)
 //vista carrito de compras
 router.get('/carrito', mainControlador.carritoCompras)
 
-//vista login
-router.get('/login', mainControlador.login)
 
-//vista login
-router.get('/register', mainControlador.register)
-
+/*
+PRUEBA SESSION
+router.get('/pruebaSession', function(req, res){
+    if(req.session.numeroVisitas == undefined){
+        req.session.numeroVisitas = 0;
+    }
+    req.session.numeroVisitas++;
+    res.send('Session tiene el numero: ' + req.session.numeroVisitas)
+});
+*/
 
 //router.get ('*', mainControlador.pagerror);
 

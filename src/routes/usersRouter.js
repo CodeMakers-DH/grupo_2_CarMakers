@@ -2,6 +2,7 @@ const express = require('express');
 const path = require('path');
 const multer = require('multer'); 
 const router = express.Router();
+const {check} = require('express-validator');
 const usersController = require('../controllers/usersController');
 
 //Usamos el Multer
@@ -19,12 +20,42 @@ const storage = multer.diskStorage({
 const upload = multer ({storage})
 
 //rutas de las vistas
+
 router.get('/', usersController.index);
-//detalle de producto
+router.get('/login', usersController.login)
+router.get('/register', usersController.register)
 router.get('/detalleUsuario/:idUsuario?', usersController.detalleUsuario);
 
+//login
+
+const validateLogin = [
+    check('email')
+        .notEmpty().withMessage('Debes rellenar el email').bail()
+        .isEmail().withMessage('No hemos podido encontra una cuenta con ese email.'),
+    check('password')
+        .notEmpty().withMessage('Debes rellenar la contraseña').bail()
+        .isLength({min:8}).withMessage('La contraseña debe tener al menos 8 caracteres.')
+];
+
+router.post('/', validateLogin, usersController.processLogin);
+
 //crear usuario
-router.get('/registro', usersController.registro);
+
+const validateRegister = [
+    check('nombres')
+        .notEmpty().withMessage('Debes rellenar los nombres').bail(),
+    check('apellidos')
+        .notEmpty().withMessage('Debes rellenar los apellidos').bail(),
+    check('email')
+        .notEmpty().withMessage('Debes rellenar el email').bail()
+        .isEmail().withMessage('No hemos podido encontra una cuenta con ese email.'),
+    check('password')
+        .notEmpty().withMessage('Debes rellenar la contraseña').bail()
+        .isLength({min:8}).withMessage('La contraseña debe tener al menos 8 caracteres.')
+];
+
+router.get('/register', usersController.register);
+
 router.post('/', upload.single('imgPerfil'), (req, res, next) => {
     const file = req.file;
     if(!file){
@@ -37,7 +68,7 @@ router.post('/', upload.single('imgPerfil'), (req, res, next) => {
         return next(error)
     }
     next();
-    }, usersController.crear);
+    }, validateRegister, usersController.crear);
 
 //editar usuario
 router.get('/editarUsuario/:idUsuario?', usersController.editarUsuario);

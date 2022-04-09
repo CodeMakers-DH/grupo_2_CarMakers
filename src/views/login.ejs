@@ -7,21 +7,23 @@
     <%- include('./partials/menuResponsive')%>
     <div class="container-blur" id="filter"></div>
 
+    <%- include('./partials/validation')%>
+    
     <main>
 
             <div clas="big-container">
 
                 <div class="single-column">
-                <form action="/" method="POST" class="form-login"c>
+                <form action="/users" method="POST" class="form-login">
 
                     <h2 class="titulo-login">Iniciar sesión</h2>
 
                     <div class="correo-contra">
-                        <label for="correo" class="label-correo">Correo electrónico</label>
-                        <input type="email" name="correo" id="correo" required>
+                        <label for="email" class="label-correo">Correo electrónico</label>
+                        <input type="email" name="email" id="correo" required>
 
-                        <label for="contraseña" class="label-contra">Contraseña</label>
-                        <input type="password" name="contraseña" id="contraseña" required>
+                        <label for="password" class="label-contra">Contraseña</label>
+                        <input type="password" name="password" id="contraseña" required>
                     </div>
                     
                     <div class="recuerdame">
