@@ -6,8 +6,6 @@
     <%- include('./partials/header-2')%>
     <%- include('./partials/menuResponsive')%>
     <div class="container-blur" id="filter"></div>
-
-    <%- include('./partials/validation')%>
     
     <main>
 
@@ -17,7 +15,7 @@
                 <form action="/users" method="POST" class="form-login">
 
                     <h2 class="titulo-login">Iniciar sesión</h2>
-
+                    <%- include('./partials/validation')%>
                     <div class="correo-contra">
                         <label for="email" class="label-correo">Correo electrónico</label>
                         <input type="email" name="email" id="correo" required>
@@ -52,7 +50,7 @@
         <p class="no-account">¿No tiene una cuenta?</p>
 
         <div class="boton-crear-cuenta">
-            <button class="account-button" type="submit" name="ingreso"><a href="/register">CREAR UNA CUENTA</a></button>
+            <button class="account-button" type="submit" name="ingreso"><a href="/users/register">CREAR UNA CUENTA</a></button>
         </div>
 
         </div>

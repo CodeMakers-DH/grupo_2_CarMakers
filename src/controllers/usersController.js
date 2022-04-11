@@ -17,7 +17,7 @@ const controlador ={
         let errors = validationResult(req);
 
         if(errors.isEmpty()) {
-            let usersJSON = fs.readFileSync('usuarios.json', {errors: errors.erros})
+            let usersJSON = fs.readFileSync(usersFilePath, {errors: errors.erros})
             let users;
             if(usersJSON == ''){
                 users=[];

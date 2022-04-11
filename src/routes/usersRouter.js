@@ -34,7 +34,7 @@ const validateLogin = [
         .isEmail().withMessage('No hemos podido encontra una cuenta con ese email.'),
     check('password')
         .notEmpty().withMessage('Debes rellenar la contraseña').bail()
-        .isLength({min:8}).withMessage('La contraseña debe tener al menos 8 caracteres.')
+        .isLength({min:5}).withMessage('La contraseña debe tener al menos 5 caracteres.')
 ];
 
 router.post('/', validateLogin, usersController.processLogin);
