@@ -56,7 +56,7 @@ const validateRegister = [
 
 router.get('/register', usersController.register);
 
-router.post('/', upload.single('imgPerfil'), (req, res, next) => {
+router.post('/register', upload.single('imgPerfil'), (req, res, next) => {
     const file = req.file;
     if(!file){
         const error = new Error('Por favor seleccione un archivo')
@@ -68,7 +68,7 @@ router.post('/', upload.single('imgPerfil'), (req, res, next) => {
         return next(error)
     }
     next();
-    }, validateRegister, usersController.crear);
+    }, validateRegister, usersController.processRegister);
 
 //editar usuario
 router.get('/editarUsuario/:idUsuario?', usersController.editarUsuario);

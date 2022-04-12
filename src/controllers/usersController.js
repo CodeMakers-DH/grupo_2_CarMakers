@@ -46,7 +46,7 @@ const controlador ={
         res.render('register')
     },
     processRegister: (req, res) => {
-
+        res.redirect('/users')
     },
 
     detalleUsuario: (req, res) => {
