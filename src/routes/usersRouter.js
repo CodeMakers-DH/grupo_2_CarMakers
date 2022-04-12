@@ -37,7 +37,7 @@ const validateLogin = [
         .isLength({min:5}).withMessage('La contraseña debe tener al menos 5 caracteres.')
 ];
 
-router.post('/', validateLogin, usersController.processLogin);
+router.post('/login', validateLogin, usersController.processLogin);
 
 //crear usuario
 

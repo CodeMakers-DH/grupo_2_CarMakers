@@ -4,6 +4,7 @@ const {validationResult} = require('express-validator');
 const user = require('../modelos/users');
 const usersFilePath = path.join(__dirname, '../data/usuarios.json');
 var usuarios = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
+let bcrypt = require('bcrypt');
 
 
 const controlador ={
@@ -17,8 +18,9 @@ const controlador ={
         let errors = validationResult(req);
 
         if(errors.isEmpty()) {
-            let usersJSON = fs.readFileSync(usersFilePath, {errors: errors.erros})
+            let usersJSON = fs.readFileSync(usersFilePath, {errors: errors.errors})
             let users;
+            let usuarioALoguearse;
             if(usersJSON == ''){
                 users=[];
             }else{
@@ -27,14 +29,16 @@ const controlador ={
             for(let i = 0; i < users.length; i++){
                 if(users[i].email == req.body.email){
                     if (bcrypt.compareSync(req.body.password, users[i].password)){
-                        let usuarioALoguearse = users[i];
-                        break;
+                        usuarioALoguearse = users[i];
+                        return res.send('Te logueaste: ' + usuarioALoguearse.nombres + ' ' + usuarioALoguearse.apellidos );
                     }
                 }
             }
         if(usuarioALoguearse == undefined){
             return res.render('login', {errors: [{msg: "Los datos ingresados no son válidos."}]});
             }
+            
+            // aca estaria bueno que tire error especificando si esta mal el mail o la password
 
         req.session.usuarioLogueado = usuarioALoguearse;
         
@@ -46,7 +50,19 @@ const controlador ={
         res.render('register')
     },
     processRegister: (req, res) => {
-        res.redirect('/users')
+        let nuevoUsuario = {
+            id : usuarios[usuarios.length-1].id +1,
+            nombres: req.body.nombres,
+            apellidos: req.body.apellidos,
+            email: req.body.email,
+            password: bcrypt.hashSync(req.body.password, 10),
+            imgPerfil: req.body.imgPerfil
+        }
+
+        usuarios.push(nuevoUsuario);
+		let newUserJSON = JSON.stringify(usuarios);
+		fs.writeFileSync(usersFilePath, newUserJSON);
+		res.redirect('/users/register');
     },
 
     detalleUsuario: (req, res) => {
