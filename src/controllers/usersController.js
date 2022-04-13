@@ -41,10 +41,17 @@ const controlador ={
             // aca estaria bueno que tire error especificando si esta mal el mail o la password
 
         req.session.usuarioLogueado = usuarioALoguearse;
+
+        if(req.body.rememberMe != undefined){
+            res.cookie('rememberMe', usuarioALoguearse.email, { maxAge: 200000});
+        }
         
         } else {
             return res.render('login', {errors: errors.errors});
         }
+    },
+    profile: (req, res) => {
+        res.render('profile', {usuario: usuarios});
     },
     register: (req, res) => {
         res.render('register')

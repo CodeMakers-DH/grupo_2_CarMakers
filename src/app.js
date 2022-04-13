@@ -5,12 +5,13 @@ const mainRoutes = require('./routes/mainRouter');
 const productRoutes = require('./routes/productRouter');
 const usersRoutes = require('./routes/usersRouter');
 const session = require('express-session');
+var cookieParser = require('cookie-parser');
+var rememberMeMiddleware = require('./midddlewares/rememberMeMiddleware');
 
-//configuracion del path publico
+
 app.use(express.static('public'));
-
-//middleware para traer json
-//Configuración del entorno
+app.use(cookieParser());
+app.use(rememberMeMiddleware());
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
