@@ -68,7 +68,7 @@ const controlador ={
         usuarios.push(nuevoUsuario);
 		let newUserJSON = JSON.stringify(usuarios);
 		fs.writeFileSync(usersFilePath, newUserJSON);
-		res.redirect('/users/register');
+		res.send('¡Te has registrado en CarMakers!');
     },
 
     detalleUsuario: (req, res) => {
