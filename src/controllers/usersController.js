@@ -63,9 +63,8 @@ const controlador ={
             apellidos: req.body.apellidos,
             email: req.body.email,
             password: bcrypt.hashSync(req.body.password, 10),
-            imgPerfil: req.body.imgPerfil
-        }
-
+            imgPerfil: req.file.filename
+        };
         usuarios.push(nuevoUsuario);
 		let newUserJSON = JSON.stringify(usuarios);
 		fs.writeFileSync(usersFilePath, newUserJSON);

@@ -11,7 +11,7 @@ var rememberMeMiddleware = require('./midddlewares/rememberMeMiddleware');
 
 app.use(express.static('public'));
 app.use(cookieParser());
-app.use(rememberMeMiddleware());
+app.use(rememberMeMiddleware);
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
@@ -38,7 +38,7 @@ app.use('/products', productRoutes);
 app.use('/users', usersRoutes);
 
 // llamada al servidor en puerto 5000
-app.listen(5000, () => {
+app.listen(5004, () => {
     console.log('Servidor para CarMakers');
 })
 

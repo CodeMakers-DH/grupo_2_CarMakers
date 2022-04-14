@@ -11,10 +11,10 @@ const storage = multer.diskStorage({
         cb (null, 'public/imgs/imgsPerfil')
     },
     filename: (req,file,cb) =>{
-        console.log(file);
-        const nuevoNombre = 'nombre_imagen' + Date.now() + path.extname(file.originalname);
+        //console.log(file);
+        let nuevoNombre = 'nombre_imagen' + Date.now() + path.extname(file.originalname);
         cb (null, nuevoNombre);
-        console.log (nuevoNombre);
+        //console.log (nuevoNombre);
     }
 })
 const upload = multer ({storage})
