@@ -6,22 +6,10 @@
         "imgModelo": "producto2.jpg",
         "deliveryEstimado": "90 dias",
         "precio": "$2.5M",
-        "caracteristicas": [
-            {
-                "nombreCaractiristica": "Autonomia",
-                "valor": "1500 kilometros"
-            },
-            {
-                "nombreCaractiristica": "Velocidad Máxima",
-                "valor": "230 km/h"
-            },
-            {
-                "nombreCaractiristica": "Tiempo de cero a 100 km/h",
-                "valor": "3 segundos"
-            }
-        ],
-        "tipoRuedas": "a",
-        "color": "c"
+        "autonomia": "1500 kilometros",
+        "velocidadMaxima": "230 km/h",
+        "tiempoDeCeroCien" : "3 segundos",
+        "ingreso" : ""
     },
     {
         "idModelo": 1,
@@ -30,20 +18,10 @@
         "imgModelo": "producto.jpg",
         "deliveryEstimado": "120 dias",
         "precio": "$2.2M",
-        "caracteristicas": [
-            {
-                "nombreCaractiristica": "Autonomia",
-                "valor": "1300 kilometros"
-            },
-            {
-                "nombreCaractiristica": "Velocidad Máxima",
-                "valor": "200 km/h"
-            },
-            {
-                "nombreCaractiristica": "Tiempo de cero a 100 km/h",
-                "valor": "60 segundos"
-            }
-        ]
+        "autonomia": "2000 kilometros",
+        "velocidadMaxima": "180 km/h",
+        "tiempoDeCeroCien" : "4 segundos",
+        "ingreso" : ""
     },
     {
         "idModelo": 2,
@@ -52,20 +30,10 @@
         "imgModelo": "producto2.jpg",
         "deliveryEstimado": "60 dias",
         "precio": "$2M",
-        "caracteristicas": [
-            {
-                "nombreCaractiristica": "Autonomia",
-                "valor": "1000 kilometros"
-            },
-            {
-                "nombreCaractiristica": "Velocidad Máxima",
-                "valor": "180 km/h"
-            },
-            {
-                "nombreCaractiristica": "Tiempo de cero a 100 km/h",
-                "valor": "65 segundos"
-            }
-        ]
+        "autonomia": "1300 kilometros",
+        "velocidadMaxima": "180 km/h",
+        "tiempoDeCeroCien" : "3 segundos",
+        "ingreso" : ""
     },
     {
         "idModelo": 3,
@@ -74,20 +42,10 @@
         "imgModelo": "producto.jpg",
         "deliveryEstimado": "30 dias",
         "precio": "$1.5M",
-        "caracteristicas": [
-            {
-                "nombreCaractiristica": "Autonomia",
-                "valor": "800 kilometros"
-            },
-            {
-                "nombreCaractiristica": "Velocidad Máxima",
-                "valor": "180 km/h"
-            },
-            {
-                "nombreCaractiristica": "Tiempo de cero a 100 km/h",
-                "valor": "95 segundos"
-            }
-        ]
+        "autonomia": "1300 kilometros",
+        "velocidadMaxima": "110 km/h",
+        "tiempoDeCeroCien" : "3 segundos",
+        "ingreso" : ""
     },
     {
         "idModelo": 4,
@@ -96,54 +54,9 @@
         "imgModelo": "producto2.jpg",
         "deliveryEstimado": "90 dias",
         "precio": "$5M",
-        "caracteristicas": [
-            {
-                "nombreCaractiristica": "Autonomia",
-                "valor": "1800 kilometros"
-            },
-            {
-                "nombreCaractiristica": "Velocidad Máxima",
-                "valor": "180 km/h"
-            },
-            {
-                "nombreCaractiristica": "Tiempo de cero a 100 km/h",
-                "valor": "25 segundos"
-            }
-        ]
-    },
-    {
-        "nombreModelo": "Luisana Lopilato",
-        "descripcion": "Soy Luisana",
-        "precio": "$5",
-        "tipoRuedas": "a",
-        "color": "e",
-        "ingreso": "",
-        "imgModelo": "nombre_imagen1647288219336.jpg",
-        "idModelo": 5,
-        "caracteristicas": [
-            {
-                "nombreCaractiristica": "Autonomia",
-                "valor": "1800 kilometros"
-            },
-            {
-                "nombreCaractiristica": "Velocidad Máxima",
-                "valor": "180 km/h"
-            },
-            {
-                "nombreCaractiristica": "Tiempo de cero a 100 km/h",
-                "valor": "25 segundos"
-            }
-        ]
-    },
-    {
-        "nombreModelo": "Auto gris",
-        "descripcion": "un auto gris",
-        "precio": "1500",
-        "autonomia": "1500",
-        "velocidadMaxima": "5000",
-        "tiempoDeCeroCien": "35555",
-        "ingreso": "",
-        "imgModelo": "nombre_imagen1647289497186.png",
-        "idModelo": 6
+        "autonomia": "1500 kilometros",
+        "velocidadMaxima": "230 km/h",
+        "tiempoDeCeroCien" : "3 segundos",
+        "ingreso" : ""
     }
 ]
