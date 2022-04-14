@@ -6,26 +6,26 @@
     <%- include('./partials/header-2')%>
     <%- include('./partials/menuResponsive')%>
     <div class="container-blur" id="filter"></div>
-
+    
     <main>
 
             <div clas="big-container">
 
                 <div class="single-column">
-                <form action="/" method="POST" class="form-login"c>
+                <form action="/users/login" method="POST" class="form-login">
 
                     <h2 class="titulo-login">Iniciar sesión</h2>
-
+                    <%- include('./partials/validation')%>
                     <div class="correo-contra">
-                        <label for="correo" class="label-correo">Correo electrónico</label>
-                        <input type="email" name="correo" id="correo" required>
+                        <label for="email" class="label-correo">Correo electrónico</label>
+                        <input type="email" name="email" id="correo" required>
 
-                        <label for="contraseña" class="label-contra">Contraseña</label>
-                        <input type="password" name="contraseña" id="contraseña" required>
+                        <label for="password" class="label-contra">Contraseña</label>
+                        <input type="password" name="password" id="contraseña" required>
                     </div>
                     
                     <div class="recuerdame">
-                        <input class="checkbox-box" type="checkbox" value="lsRememberMe" id="rememberMe"> 
+                        <input class="checkbox-box" type="checkbox" value="lsRememberMe" id="rememberMe" name="rememberMe"> 
                         <label class="checkbox-label" for="rememberMe">Recuérdame</label>
                     </div>
 
@@ -50,7 +50,7 @@
         <p class="no-account">¿No tiene una cuenta?</p>
 
         <div class="boton-crear-cuenta">
-            <button class="account-button" type="submit" name="ingreso"><a href="/register">CREAR UNA CUENTA</a></button>
+            <button class="account-button" type="submit" name="ingreso"><a href="/users/register">CREAR UNA CUENTA</a></button>
         </div>
 
         </div>

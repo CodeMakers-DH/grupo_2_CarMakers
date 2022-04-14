@@ -1,4 +1,4 @@
-const menu = document.querySelector('.boton-menu');
+const menu = document.querySelector('.menu-boton');
 const cruz = document.querySelector('.cruz');
 const enlaces = document.querySelector('.enlaces-menu');
 
