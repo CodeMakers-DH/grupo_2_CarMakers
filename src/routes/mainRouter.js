@@ -10,11 +10,9 @@ const router = express.Router();
 
 //rutas de las vistas
 
-//vista index
 router.get('/', mainControlador.index)
-
-//vista carrito de compras
 router.get('/carrito', mainControlador.carritoCompras)
+router.get('/construccion', mainControlador.construccion)
 
 
 /*

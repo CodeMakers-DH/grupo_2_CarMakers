@@ -14,6 +14,9 @@ const controlador ={
     pagerror: (req, res) => { 
         res.render('error')
     },
+    construccion: (req, res) => {
+        res.render('construccion')
+    }
 }
 
 // exportacion del modulo
