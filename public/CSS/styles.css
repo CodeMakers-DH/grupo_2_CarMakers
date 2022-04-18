@@ -233,6 +233,10 @@ header{
     text-decoration: none;
 }
 
+.sombra-nav{
+    box-shadow:  rgba(0, 0, 0, 0.1) 0px 8px 25px;
+}
+
 .carmakers-nav h1{
     font-size: 15px;
     margin:0;
@@ -1770,6 +1774,24 @@ main section article div h3{
 .losentimos{
     padding: 5px 0 0 0;
     text-align: center;
+}
+
+/*--USUARIOS--*/
+
+.main-usu h1{
+    padding: 50px 0 0 0;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    font-size: 24x;
+    font-weight: 500;
+    color:black;
+}
+
+.usuarios-article{
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20%;
+    justify-content: center;
+    grid-gap: 15px;
 }
 
 /*---ANIMACIONES---*/
