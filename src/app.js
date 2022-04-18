@@ -8,7 +8,6 @@ const session = require('express-session');
 var cookieParser = require('cookie-parser');
 var rememberMeMiddleware = require('./midddlewares/rememberMeMiddleware');
 
-
 app.use(express.static('public'));
 app.use(cookieParser());
 app.use(rememberMeMiddleware);
