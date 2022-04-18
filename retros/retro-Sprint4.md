@@ -15,3 +15,4 @@ Tenernos paciencia como grupo y comunicarnos de manera asertiva.
 ## 4_ Hacer menos:
 
 Dejar el Sprint para último momento.
+

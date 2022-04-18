@@ -11,7 +11,6 @@
 - Hay una nueva carpeta llamada modelos con un archivo llamado users.js
 - Estan instalados e implementados el session y las cookies.
 - Hay una nueva carpeta llamada middlewares con un middleware que se llama rememberMeMiddleware para recordar al usuario.
-  
 ### Si se encontró con algún impedimento.
 - Cuando subo un archivo con formato NO aceptado, lo que sucede es que me tira el error muy bien, PERO el archivo se me sube al servidor de todas maneras.
 -  El problema es que yo le paso 3 argumentos a mi router.post, y lo que sucede es que el tercero, el que me lleva a la funcion dentro del controlador, se ejecuta siempre, haya o no haya error, intente solucionarlo con poco codigo, con mucho, con funciones, intentando traer el error y filtrarlo con if, pero nada me funcionó.
