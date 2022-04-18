@@ -7,9 +7,10 @@ var usuarios = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 let bcrypt = require('bcrypt');
 
 
+
 const controlador ={
     index: (req, res) => {
-        res.send (usuarios)
+        res.render('usuarios',  {usuario: usuarios})
     },
     login: (req, res) => {
         res.render('login')
@@ -57,6 +58,13 @@ const controlador ={
         res.render('register')
     },
     processRegister: (req, res) => {
+
+        const resultValidation = validationResult(req);
+        
+        if(resultValidation.errors.length > 0) {
+            return res.render('register', {errors: resultValidation.mapped(), oldData: req.body})
+        }
+
         let nuevoUsuario = {
             id : usuarios[usuarios.length-1].id +1,
             nombres: req.body.nombres,
@@ -68,7 +76,7 @@ const controlador ={
         usuarios.push(nuevoUsuario);
 		let newUserJSON = JSON.stringify(usuarios);
 		fs.writeFileSync(usersFilePath, newUserJSON);
-		res.send('¡Te has registrado en CarMakers!');
+		res.redirect('/users');
     },
 
     detalleUsuario: (req, res) => {

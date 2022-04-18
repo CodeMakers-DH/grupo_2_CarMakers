@@ -5,6 +5,7 @@ const router = express.Router();
 const {check} = require('express-validator');
 const usersController = require('../controllers/usersController');
 
+
 //Usamos el Multer
 const storage = multer.diskStorage({
     destination: (req,file, cb) =>{
@@ -52,24 +53,26 @@ const validateRegister = [
         .isEmail().withMessage('No hemos podido encontra una cuenta con ese email.'),
     check('password')
         .notEmpty().withMessage('Debes rellenar la contraseña').bail()
-        .isLength({min:8}).withMessage('La contraseña debe tener al menos 8 caracteres.')
+        .isLength({min:8}).withMessage('La contraseña debe tener al menos 8 caracteres.'),
+    check('imgPerfil')
+        .custom((value, {req}) => {
+            let file = req.file;
+            let acceptedExtensions = ['.jpeg', '.jpg', '.png', '.gif'];
+            if(!file){
+                throw new Error('Por favor seleccione un archivo')
+            } else {
+                let fileExtensions = path.extname(file.originalname);
+                if (!acceptedExtensions.includes(fileExtensions)){
+                    throw new Error('Por favor seleccione un archivo en formato JPG, JPEG, GIF o PNG.')
+                }
+            }
+            return true;
+        })
 ];
 
 router.get('/register', usersController.register);
 
-router.post('/register', upload.single('imgPerfil'), (req, res, next) => {
-    const file = req.file;
-    if(!file){
-        const error = new Error('Por favor seleccione un archivo')
-        error.htttpStatusCode = 400;
-        return next(error);
-    } else if(path.extname(file.originalname) != ".jpg" && path.extname(file.originalname) != ".jpeg" && path.extname(file.originalname) != ".png"){
-        const error = new Error('Por favor seleccione un archivo de formato JPG, JPEG o PNG.');
-        error.htttpStatusCode = 400;
-        return next(error)
-    }
-    next();
-    }, validateRegister, usersController.processRegister);
+router.post('/register', upload.single('imgPerfil'), validateRegister, usersController.processRegister);
 
 //editar usuario
 router.get('/editarUsuario/:idUsuario?', usersController.editarUsuario);
