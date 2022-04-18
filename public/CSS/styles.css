@@ -245,7 +245,6 @@ header{
 /* FOOTER NUEVO */
 
 
-
 .footerprueba {
     margin-top: auto;
     margin-left:auto;
@@ -1558,6 +1557,21 @@ main section article div h3{
     justify-content: center;
 }
 
+.tiene-cuenta{
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    margin: 20px auto;
+    font-weight: 400;
+    text-decoration:none;
+    color:#6a6a6a;
+    text-align: center;
+}
+
+.tiene-cuenta-div{
+    margin: 10px auto;
+    text-align: center;
+}
+
 .olvido div a{
     font-family: 'Roboto', sans-serif;
     font-size: 15px;
@@ -1592,7 +1606,6 @@ main section article div h3{
     width: 80%;
     padding: 10px;
     border:solid 2px black;
-    margin-top:20px;
     font-weight: 600;
 }
 
@@ -1738,6 +1751,18 @@ main section article div h3{
     margin-right: 10px;
 }
 
+/*--FUERA DE SERVICIO--*/
+
+.ohoh{
+    padding: 100px 0 0 0;
+    text-align: center;
+}
+
+
+.losentimos{
+    padding: 5px 0 0 0;
+    text-align: center;
+}
 
 /*---ANIMACIONES---*/
 
