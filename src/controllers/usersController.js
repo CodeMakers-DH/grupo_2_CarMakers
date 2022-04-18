@@ -65,6 +65,21 @@ const controlador ={
             return res.render('register', {errors: resultValidation.mapped(), oldData: req.body})
         }
 
+        let userInDB = user.findByField('email', req.body.email)
+
+        if(userInDB) {
+            return res.render('register', 
+                {   errors: {
+                    email: {
+                        msg : 'Esta dirección de correo ya se encuentra registrada.'
+                    }
+                },
+
+                oldData: req.body
+            
+                });
+        }
+
         let nuevoUsuario = {
             id : usuarios[usuarios.length-1].id +1,
             nombres: req.body.nombres,
