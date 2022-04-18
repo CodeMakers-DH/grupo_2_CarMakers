@@ -3,11 +3,12 @@
     <%- include('./partials/head')%>
 <body class="body-reg">
     <%- include('./partials/header-2')%>
-
+    <%- include('./partials/menuResponsive')%>
+    <div class="container-blur" id="filter"></div>
     <main>
 
                 <div class="single-column">
-                <form action="/users" method="POST" class="form-login">
+                <form action="/users/register" method="POST" class="form-login" enctype="multipart/form-data">
 
                     <h2 class="titulo-login">Crear cuenta</h2>
 
@@ -19,11 +20,15 @@
                         <label for="apellidos" class="label-correo">Apellidos</label>
                         <input type="text" name="apellidos" id="apellido" required>
 
-                        <label for="correoElectronico" class="label-correo">Correo electrónico</label>
-                        <input type="email" name="correoElectronico" id="correo" required>
+                        <label for="email" class="label-correo">Correo electrónico</label>
+                        <input type="email" name="email" id="correo" required>
 
                         <label for="password" class="label-contra">Contraseña</label>
                         <input type="password" name="password" id="contraseña" required>
+
+                        <label for="imgPerfil" class="label-correo">Sube una imágen de perfil</label>
+                        <input accept="image/png,image/jpeg, image/jpg" type="file" name="imgPerfil" id="imgPerfil" required> 
+                        
                     </div>
                     
                     
@@ -35,17 +40,11 @@
                 </form>
 
             
-            <div class="olvido">
-
-                <div class="olvido-correo">
-                    <a href="/support.html">¿Ya tiene una cuenta?</a>
-                </div>
-
-            </div>
+        <h3 class="tiene-cuenta">¿Ya tiene una cuenta?</h3>
 
 
         <div class="boton-crear-cuenta">
-            <button class="account-button" type="submit" name="ingreso"><a href="/login">INICIAR SESIÓN</a></button>
+            <button class="account-button" type="submit" name="ingreso"><a href="/users/login">INICIAR SESIÓN</a></button>
         </div>
 
         </div>

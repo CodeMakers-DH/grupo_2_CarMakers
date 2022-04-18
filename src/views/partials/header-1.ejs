@@ -1,14 +1,18 @@
 <header>
     <a href="/" class="carmakers-nav"><h1>CARMAKERS</h1></a>
     <nav>
-        
-        <ul class="ul-botones-menu">
+            <ul class="ul-enlaces">
+            <% for(i=1; i<6; i++){ %>
+            <li><a href="#seccion-<%=i%>">Modelo <%=i%></a></li>
+            <% } %>
+        </ul>
+    </nav>
+
+    <ul class="ul-botones-menu">
             <li><button class="compras-boton" type="button"><a href="/products">Comprar</a></button></li>
             <li><button class="login-boton" type="button"><a href="/users/login">Cuenta</a></button></li>
             <li class="menu-boton"><button type="button">Menú</button></li>
     </ul>
-
-    </nav>
 
 </header>
  
