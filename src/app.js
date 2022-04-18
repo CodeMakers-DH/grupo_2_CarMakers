@@ -17,6 +17,7 @@ app.use(express.json());
 
 //Configuración de session
 
+
 app.use(session({
     secret: 'CarMakers',
     resave:false,
