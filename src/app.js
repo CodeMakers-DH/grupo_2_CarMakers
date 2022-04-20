@@ -40,10 +40,14 @@ app.use('/products', productRoutes);
 app.use('/users', usersRoutes);
 
 // llamada al servidor en puerto 5000
-app.listen(5000, () => {
-    console.log('Servidor para CarMakers');
-})
 
+/*app.listen(5000, () => {
+    console.log('Servidor para CarMakers');
+})*/
+// Para Heroku
+app.listen(process.env.PORT||3000, function(){
+    console.log('Servidor funcionando');
+});
 
 
 
