@@ -7,12 +7,14 @@ const usersRoutes = require('./routes/usersRouter');
 const session = require('express-session');
 var cookieParser = require('cookie-parser');
 var rememberMeMiddleware = require('./midddlewares/rememberMeMiddleware');
+const userLoggedMiddleware = require('./midddlewares/userLoggedMiddleware');
 
 app.use(express.static('public'));
 app.use(cookieParser());
 app.use(rememberMeMiddleware);
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
+app.use(userLoggedMiddleware);
 
 //Configuración de session
 
@@ -20,7 +22,7 @@ app.use(express.json());
 app.use(session({
     secret: 'CarMakers',
     resave:false,
-    saveUninitialized:true,
+    saveUninitialized:false,
 }));
 
 //congiguracion override

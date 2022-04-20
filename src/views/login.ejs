@@ -8,20 +8,30 @@
     <div class="container-blur" id="filter"></div>
     
     <main>
-
+    
             <div clas="big-container">
 
                 <div class="single-column">
                 <form action="/users/login" method="POST" class="form-login">
 
                     <h2 class="titulo-login">Iniciar sesión</h2>
-                    <%- include('./partials/validation')%>
                     <div class="correo-contra">
                         <label for="email" class="label-correo">Correo electrónico</label>
                         <input type="email" name="email" id="correo" placeholder="email@ejemplo.com" required>
+                        <% if(locals.errors && errors.email) { %>
+                            <div class="text-danger">
+                                <%= errors.email.msg %>
+                            </div>
+                        <% } %>
 
                         <label for="password" class="label-contra">Contraseña</label>
                         <input type="password" name="password" id="contraseña" required>
+                        <% if(locals.errors && errors.password) { %>
+                            <div class="text-danger">
+                                <%= errors.password.msg %>
+                            </div>
+                            
+                        <% } %>
                     </div>
                     
                     <div class="recuerdame">

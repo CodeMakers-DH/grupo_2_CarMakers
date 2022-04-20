@@ -15,7 +15,7 @@
                     <div class="correo-contra">
 
                         <label for="nombres" class="label-correo">Nombres</label>
-                        <input type="text" name="nombres" id="nombre" value="<%= locals.oldData ? oldData.nombres : null %>">
+                        <input type="text" name="nombres" id="nombre" value="<%= locals.oldData ? oldData.nombres : null %>" required>
                         <% if(locals.errors && errors.nombres) { %>
                             <div class="text-danger">
                                 <%= errors.nombres.msg %>
@@ -24,7 +24,7 @@
                         <% } %>
 
                         <label for="apellidos" class="label-correo">Apellidos</label>
-                        <input type="text" name="apellidos" id="apellido" value="<%= locals.oldData ? oldData.apellidos : null %>">
+                        <input type="text" name="apellidos" id="apellido" value="<%= locals.oldData ? oldData.apellidos : null %>" required>
                         <% if(locals.errors && errors.apellidos) { %>
                             <div class="text-danger">
                                 <%= errors.apellidos.msg %>
@@ -33,7 +33,7 @@
                         <% } %>
 
                         <label for="email" class="label-correo">Correo electrónico</label>
-                        <input type="email" name="email" id="correo" value="<%= locals.oldData ? oldData.email : null %>">
+                        <input type="email" name="email" id="correo" value="<%= locals.oldData ? oldData.email : null %>" required>
                         <% if(locals.errors && errors.email) { %>
                             <div class="text-danger">
                                 <%= errors.email.msg %>
@@ -42,7 +42,7 @@
                         <% } %>
 
                         <label for="password" class="label-contra">Contraseña</label>
-                        <input type="password" name="password" id="contraseña">
+                        <input type="password" name="password" id="contraseña" required>
                         <% if(locals.errors && errors.password) { %>
                             <div class="text-danger">
                                 <%= errors.password.msg %>
@@ -51,7 +51,7 @@
                         <% } %>
 
                         <label for="imgPerfil" class="label-correo">Sube una imágen de perfil</label>
-                        <input accept="image/png,image/jpeg, image/jpg" type="file" name="imgPerfil" id="imgPerfil">
+                        <input accept="image/png,image/jpeg, image/jpg" type="file" name="imgPerfil" id="imgPerfil" required>
                         <% if(locals.errors && errors.imgPerfil) { %>
                             <div class="text-danger">
                                 <%= errors.imgPerfil.msg %>
