@@ -4,6 +4,8 @@ const multer = require('multer');
 const router = express.Router();
 const {check} = require('express-validator');
 const usersController = require('../controllers/usersController');
+const guestMiddleware = require('../midddlewares/guestMiddleware');
+const authMiddleware = require('../midddlewares/authMiddleware');
 
 
 //Usamos el Multer
@@ -23,10 +25,11 @@ const upload = multer ({storage})
 //rutas de las vistas
 
 router.get('/', usersController.index);
-router.get('/login', usersController.login)
-router.get('/register', usersController.register)
+router.get('/login', guestMiddleware, usersController.login)
+router.get('/register', guestMiddleware, usersController.register)
 router.get('/detalleUsuario/:idUsuario?', usersController.detalleUsuario);
-router.get('/profile/:userID', usersController.profile);
+router.get('/profile/', authMiddleware, usersController.profile);
+router.get('/logout', usersController.logout);
 
 //login
 

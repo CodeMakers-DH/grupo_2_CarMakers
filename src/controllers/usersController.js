@@ -16,9 +16,10 @@ const controlador ={
         res.render('login')
     },
     processLogin: (req,res) => {
-        let errors = validationResult(req);
+        let userToLogIn = user.findByField('email', req.body.email)
 
-        if(errors.isEmpty()) {
+        if(userToLogIn){
+            let errors = validationResult(req);
             let usersJSON = fs.readFileSync(usersFilePath, {errors: errors.errors})
             let users;
             let usuarioALoguearse;
@@ -31,28 +32,36 @@ const controlador ={
                 if(users[i].email == req.body.email){
                     if (bcrypt.compareSync(req.body.password, users[i].password)){
                         usuarioALoguearse = users[i];
-                        return res.send('Te logueaste: ' + usuarioALoguearse.nombres + ' ' + usuarioALoguearse.apellidos );
+                        delete userToLogIn.password;
+                        req.session.userLogged = userToLogIn;
+                        return res.redirect('profile');
+                    } else {
+                        return res.render('login', {
+                            errors: {
+                                password: {
+                                    msg: 'La contraseña no es correcta'
+                                }
+                            }
+                        })
                     }
                 }
             }
-        if(usuarioALoguearse == undefined){
-            return res.render('login', {errors: [{msg: "Los datos ingresados no son válidos."}]});
+        }
+
+        return res.render('login', {
+            errors: {
+                email: {
+                    msg: 'No existe una cuenta con esa dirección de correo electrónico'
+                }
             }
-            
-            // aca estaria bueno que tire error especificando si esta mal el mail o la password
-
-        req.session.usuarioLogueado = usuarioALoguearse;
-
-        if(req.body.rememberMe != undefined){
-            res.cookie('rememberMe', usuarioALoguearse.email, { maxAge: 200000});
-        }
-        
-        } else {
-            return res.render('login', {errors: errors.errors});
-        }
+        })
     },
     profile: (req, res) => {
-        res.render('profile', {usuario: usuarios});
+        res.render('profile', {user: req.session.userLogged});
+    },
+    logout: (req,res) => {
+        req.session.destroy();
+        return res.redirect('/users/login');
     },
     register: (req, res) => {
         res.render('register')
@@ -71,7 +80,7 @@ const controlador ={
             return res.render('register', 
                 {   errors: {
                     email: {
-                        msg : 'Esta dirección de correo ya se encuentra registrada.'
+                        msg : 'Esta dirección de correo electrónico ya se encuentra registrada.'
                     }
                 },
 
@@ -91,7 +100,7 @@ const controlador ={
         usuarios.push(nuevoUsuario);
 		let newUserJSON = JSON.stringify(usuarios);
 		fs.writeFileSync(usersFilePath, newUserJSON);
-		res.redirect('/users');
+		res.redirect('/users/login');
     },
 
     detalleUsuario: (req, res) => {
