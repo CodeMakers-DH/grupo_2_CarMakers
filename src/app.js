@@ -9,7 +9,7 @@ var cookieParser = require('cookie-parser');
 var rememberMeMiddleware = require('./midddlewares/rememberMeMiddleware');
 const userLoggedMiddleware = require('./midddlewares/userLoggedMiddleware');
 
-app.use(express.static(__dirname+'public'));
+app.use(express.static('public'));
 
 app.use(cookieParser());
 app.use(rememberMeMiddleware);
