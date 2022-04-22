@@ -1794,6 +1794,50 @@ main section article div h3{
     grid-gap: 15px;
 }
 
+/*---PERFIL---*/
+.perfil{
+    margin: 0 auto;
+    text-align: center;
+}
+.perfil h1{
+    font-family: 'Roboto', sans-serif;
+    font-size: 25px;
+    font-weight: 500;
+    color:black;
+}
+
+.perfil h2{
+    font-family: 'Roboto', sans-serif;
+    font-size:20px;
+    font-weight: 400;
+    color:black;
+}
+
+.perfil div img{
+    width: 15%;
+    border-radius: 50%;
+    margin-top: 100px;
+}
+
+.perfil button a{
+    text-decoration: none;
+    color:black;
+    font-size: 15px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    border:none;
+    color:black;
+    background-color: #9bbae6;
+    border-radius: 20px;
+    padding: 10px;
+
+}
+
+.perfil button{
+    border:none;
+    background-color: transparent;
+    margin-top: 30px;
+}
 /*---ANIMACIONES---*/
 
 @keyframes arrow-movement{
