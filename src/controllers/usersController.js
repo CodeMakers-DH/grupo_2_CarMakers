@@ -34,6 +34,11 @@ const controlador ={
                         usuarioALoguearse = users[i];
                         delete userToLogIn.password;
                         req.session.userLogged = userToLogIn;
+
+                        if(req.body.rememberMe){
+                            res.cookie('userEmail', req.body.email, {maxAge: (1000 * 60) * 2})
+                        }
+
                         return res.redirect('profile');
                     } else {
                         return res.render('login', {
@@ -60,11 +65,12 @@ const controlador ={
         res.render('profile', {user: req.session.userLogged});
     },
     logout: (req,res) => {
+        res.clearCookie('userEmail');
         req.session.destroy();
-        return res.redirect('/users/login');
+        return res.redirect('/');
     },
     register: (req, res) => {
-        res.render('register')
+        return res.render('register');
     },
     processRegister: (req, res) => {
 

@@ -14,9 +14,6 @@ app.use(cookieParser());
 app.use(rememberMeMiddleware);
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
-app.use(userLoggedMiddleware);
-
-//Configuración de session
 
 
 app.use(session({
@@ -24,6 +21,9 @@ app.use(session({
     resave:false,
     saveUninitialized:false,
 }));
+
+
+app.use(userLoggedMiddleware);
 
 //congiguracion override
 const methodOverride = require('method-override');

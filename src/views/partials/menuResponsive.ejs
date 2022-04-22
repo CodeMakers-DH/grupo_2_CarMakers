@@ -1,7 +1,12 @@
 <button class="cruz" type="button"><i class="fa-solid fa-xmark"></i></button>
 <ul class="enlaces-menu">
-    <li><a href="/users/login" class="cuenta">Iniciar Sesión</a></li>
-    <li><a href="/users/register" class="cuenta">Crear Cuenta</a></li>
+    <% if(!locals.isLogged) { %> 
+        <li><a href="/users/login" class="cuenta">Iniciar Sesión</a></li>
+        <li><a href="/users/register" class="cuenta">Crear Cuenta</a></li>
+    <% } %>
+    <% if(locals.isLogged) { %> 
+        <li><a href="/users/login" class="cuenta">Cuenta</a></li>
+    <% } %>
     <li><a href="/carrito">Carrito</a></li>
     <li><a href="/products">Todos los productos</a></li>
     <li><a href="/users">Todos los usuarios</a></li>
