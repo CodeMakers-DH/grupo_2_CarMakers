@@ -30,11 +30,11 @@ CREATE TABLE `modelos_autos` (
   `descripcion` TEXT,
   `nombreModelo` varchar(500),
   `imgModelo` varchar(500),
-  `deliveryEstimado` int,
-  `precio` int,
-  `autonomia` int,
-  `velocidadMaxima` int,
-  `tiempoDeCeroCien` int,
+  `deliveryEstimado` int(10),
+  `precio` int(10),
+  `autonomia` int(10),
+  `velocidadMaxima` int(10),
+  `tiempoDeCeroCien` int(10),
   `ingreso` DATE ,
 
   PRIMARY KEY (`idModelo`)

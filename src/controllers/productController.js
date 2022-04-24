@@ -1,7 +1,8 @@
 const path = require('path');
 const fs = require('fs');
-const productsFilePath = path.join(__dirname, '../data/productos.json');
-let productosParseados = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+//const productsFilePath = path.join(__dirname, '../data/productos.json');//
+//let productosParseados = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+const db = require("../../database/models")
 const multer = require('multer');
 const { info } = require('console');
 
@@ -9,7 +10,9 @@ const controlador ={
 
     detalleProducto: (req, res) => {
         let idModelo = req.params.idModelo;
-        res.render('detalleproducto', {"modelos": productosParseados[idModelo] })
+        db.Producto.findByPk(idModelo)
+        .then(productos=> res.render('detalleproducto', {"modelos": productos}) )
+        //res.render('detalleproducto', {"modelos": productosParseados[idModelo] })
     },
     crearproducto: (req, res) => {
         res.render('crearproducto')
