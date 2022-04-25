@@ -7,65 +7,73 @@ const multer = require('multer');
 const { info } = require('console');
 
 const controlador ={
-
+// detalle del producto
     detalleProducto: (req, res) => {
         let idModelo = req.params.idModelo;
         db.Producto.findByPk(idModelo)
         .then(productos=> res.render('detalleproducto', {"modelos": productos}) )
-        //res.render('detalleproducto', {"modelos": productosParseados[idModelo] })
     },
+
+// vista para crear producto
     crearproducto: (req, res) => {
         res.render('crearproducto')
     },
+
+//POST crear producto
     create: (req, res) => {
 		let newProduct = req.body;
-		newProduct.imgModelo = req.file.filename;
-		let ultimoIndice = productosParseados.length;
-		newProduct.idModelo = ultimoIndice;
-		productosParseados.push(newProduct)
-		fs.writeFileSync(productsFilePath, newProductoJSON)
-		res.redirect('products')
+        db.Producto.create({
+            descripcion: newProduct.descripcionProducto,
+            nombreModelo: newProduct.nombreProducto,
+            imgModelo: newProduct.imgProducto,
+            deliveryEstimado:newProduct.deliveryEstimado,
+            precio: newProduct.precioProducto,
+            autonomia: newProduct.autonomia,
+            velocidadMaxima: newProduct.velocidadMaxima,
+            tiempoDeCeroCien: newProduct.tiempoDeCeroCien,
+            ingreso: newProduct.ingreso
+        })		
+		res.redirect('/products')
     },
+// vista editar producto
     editarproducto: (req, res) => {
         let idProducto = req.params.idModelo;
-        res.render('editarproducto' , {productToEdit : productosParseados.filter((producto) => producto.idModelo == idProducto)[0]});
+        db.Producto.findByPk(idProducto)
+        .then(productos=> res.render('editarproducto', {"productToEdit": productos}) )
     },
+
     editar: (req, res) => {
-        let idModelo = req.params.idModelo;
-        let infoForm = req.body;
-        productosParseados.forEach(element => {
-                    if(element.idModelo == idModelo){
-                        element.descripcion = infoForm.descripcion;
-                        element.nombreModelo = infoForm.nombreModelo;
-                        element.imgModelo = infoForm.imgModelo;
-                        element.precio = infoForm.precio;
-                        element.autonomia = infoForm.autonomia;
-                        element.velocidadMaxima = infoForm.velocidadMaxima;
-                        element.tiempoDeCeroCien = infoForm.tiempoDeCeroCien;
-                        element.deliveryEstimado = infoForm.deliveryEstimado;
-                        element.ingreso = infoForm.ingreso;
-                        }
-                    });
-
-        //fs.writeFileSync(path.join(productsFilePath) ,JSON.stringify(productosParseados))
-        //res.redirect('/')
-        res.send(productosParseados);
+        let idProducto = req.params.idModelo;
+        let newProduct = req.body;
+       // let editedProduct = ;
+        db.Producto.update({
+            descripcion: newProduct.descripcionProducto,
+            nombreModelo: newProduct.nombreProducto,
+            imgModelo: newProduct.imgProducto,
+            deliveryEstimado:newProduct.deliveryEstimado,
+            precio: newProduct.precioProducto,
+            autonomia: newProduct.autonomia,
+            velocidadMaxima: newProduct.velocidadMaxima,
+            tiempoDeCeroCien: newProduct.tiempoDeCeroCien,
+            ingreso: newProduct.ingreso
+        },
+            {where:{idModelo:idProducto}})
+            .then(productos=> productos )
+        res.redirect('/products');
     },
 
+//inventario
     products: (req, res) => {
-        res.render('products', {productosParseados});
+        db.Producto.findAll()
+            .then(productos=> res.render('products', {productos}) )
     },
-
+//eliminar producto o modelo
     destroy : (req, res) => {
 		let idProducto = req.params.idModelo;
-		
-		const nuevoProducto = productosParseados.filter(function(producto){
-			return producto.idModelo != idProducto;
-		})
-
-		//fs.writeFileSync(productsFilePath,JSON.stringify(nuevoProducto))
-
-		res.redirect('/')
+        db.Producto.destroy({
+            where:{idModelo:idProducto}
+        })
+		res.redirect('/products')
 	}
 }
 

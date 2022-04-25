@@ -27,25 +27,31 @@ Precio (p​ rice​)
                     <div class="correo-contra">
 
                         <label for="nombreProducto" class="label-correo">Nombre del Producto</label>
-                        <input type="text" name="nombreModelo" id="nombreProducto" value="Modelo X" required>
+                        <input type="text" name="nombreProducto" id="nombreProducto" value="Modelo X" required>
 
                         <label for="descripcionProducto" class="label-correo">Descripción</label>
-                        <input type="textarea" name="descripcion" id="descripcionProducto" value= "Lorem ipsum dolor sit amet consectetur." required>
+                        <input type="textarea" name="descripcionProducto" id="descripcionProducto" value= "Lorem ipsum dolor sit amet consectetur." required>
 
                         <label for="imgProducto" class="label-correo">Imagen del producto</label>
-                        <input type="file" name="imgModelo" id="imgProducto" required>
+                        <input type="file" name="imgProducto" id="imgProducto" required>
 
-                        <label for="precioProducto" class="label-correo">Precio</label>
-                        <input type="text" name="precio" id="precioProducto" value="$1.5M" required>
+                        <label for="deliveryEstimado" class="label-correo">Delivery Estimado (semanas)</label>
+                        <input type="number" name="deliveryEstimado" id="deliveryEstimado" value=10 required>
                         
-                        <label for="autonomia" class="label-correo">Autonomía</label>
-                        <input type="text" name="autonomia" id="autonomia" value="1000 kilómetros" required>
+                        <label for="precioProducto" class="label-correo">Precio (USD)</label>
+                        <input type="number" name="precioProducto" id="precioProducto" value=10 required>
+                        
+                        <label for="autonomia" class="label-correo">Autonomía (km)</label>
+                        <input type="number" name="autonomia" id="autonomia" value=10 required>
 
-                        <label for="velocidadMaxima" class="label-correo">Velocidad Máxima</label>
-                        <input type="text" name="velocidadMaxima" id="velocidadMaxima" value="180 km/h" required>
+                        <label for="velocidadMaxima" class="label-correo">Velocidad Máxima (km/h)</label>
+                        <input type="number" name="velocidadMaxima" id="velocidadMaxima" value=10 required>
 
-                        <label for="tiempoDeCeroCien" class="label-correo">Tiempo de cero a 100 km/h</label>
-                        <input type="text" name="tiempoDeCeroCien" id="tiempoDeCeroCien" value="25 segundos" required>
+                        <label for="tiempoDeCeroCien" class="label-correo">Tiempo de cero a 100 km/h (seg)</label>
+                        <input type="number" name="tiempoDeCeroCien" id="tiempoDeCeroCien" value=10 required>
+
+                        <label for="ingreso" class="label-correo">Ingreso</label>
+                        <input type="date" name="ingreso" id="ingreso" value="2022-01-01" required>
 
                     </div>
                     

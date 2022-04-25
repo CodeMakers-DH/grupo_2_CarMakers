@@ -23,40 +23,36 @@ Precio (p​ rice​)
 
                 <div class="single-column">
                     <form action="/products/<%= productToEdit.idModelo %>/editar?_method=PUT" method="POST" class="form-login">
->
+
                     <h2 class="titulo-login">Editar Producto</h2>
 
                     <div class="correo-contra">
+                        <label for="nombreProducto" class="label-correo">Nombre del Producto</label>
+                        <input type="text" name="nombreProducto" id="nombreProducto" value="<%= productToEdit.nombreModelo %>" required>
 
-                        <label for="idModelo" class="label-correo">Id del Producto</label>
-                        <input type="text" name="idModelo" id="idModelo" value="<%= productToEdit.idModelo %>" required>
+                        <label for="descripcionProducto" class="label-correo">Descripción</label>
+                        <input type="textarea" name="descripcionProducto" id="descripcionProducto" value="<%= productToEdit.descripcion %>" required>
 
-                        <label for="nombreModelo" class="label-correo">Nombre del Producto</label>
-                        <input type="text" name="nombreModelo" id="nombreModelo" value="<%= productToEdit.nombreModelo %>" required>
+                        <label for="imgProducto" class="label-correo">Imagen del producto</label>
+                        <input type="file" name="imgProducto" id="imgProducto" required>
 
-                        <label for="descripcion" class="label-correo">Descripción</label>
-                        <input type="textarea" name="descripcion" id="descripcion" value="<%= productToEdit.descripcion %>"  required>
-
-                        <label for="deliveryEstimado" class="label-correo">Delivery Estimado</label>
-                        <input type="textarea" name="deliveryEstimado" id="deliveryEstimado" value="<%= productToEdit.deliveryEstimado %>"  required>       
-
-                        <label for="autonomia" class="label-correo">Autonomía</label>
-                        <input type="textarea" name="autonomia" id="autonomia" value="<%= productToEdit.autonomia %>"  required>
+                        <label for="deliveryEstimado" class="label-correo">Delivery Estimado (semanas)</label>
+                        <input type="number" name="deliveryEstimado" id="deliveryEstimado" value="<%= productToEdit.deliveryEstimado %>" required>
                         
-                        <label for=velocidadMaxima" class="label-correo">Velocidad Máxima</label>
-                        <input type="textarea" name="velocidadMaxima" id="velocidadMaxima" value="<%= productToEdit.velocidadMaxima %>"  required>
+                        <label for="precioProducto" class="label-correo">Precio (USD)</label>
+                        <input type="number" name="precioProducto" id="precioProducto" value="<%= productToEdit.precio %>" required>
+                        
+                        <label for="autonomia" class="label-correo">Autonomía (km)</label>
+                        <input type="number" name="autonomia" id="autonomia" value="<%= productToEdit.autonomia %>" required>
 
-                        <label for="tiempoDeCeroCien" class="label-correo">Tiempo De Cero A Cien</label>
-                        <input type="textarea" name="tiempoDeCeroCien" id="tiempoDeCeroCien" value="<%= productToEdit.tiempoDeCeroCien %>"  required>
+                        <label for="velocidadMaxima" class="label-correo">Velocidad Máxima (km/h)</label>
+                        <input type="number" name="velocidadMaxima" id="velocidadMaxima" value="<%= productToEdit.velocidadMaxima %>" required>
+
+                        <label for="tiempoDeCeroCien" class="label-correo">Tiempo de cero a 100 km/h (seg)</label>
+                        <input type="number" name="tiempoDeCeroCien" id="tiempoDeCeroCien" value="<%= productToEdit.tiempoDeCeroCien %>" required>
 
                         <label for="ingreso" class="label-correo">Ingreso</label>
-                        <input type="textarea" name="ingreso" id="ingreso" value="<%= productToEdit.ingreso %>"  required>
-
-                        <label for="imgModelo" class="label-correo">Imagen del producto</label>
-                        <input type="file" name="imgModelo" id="imgModelo" required>
-
-                        <label for="precio" class="label-correo">Precio</label>
-                        <input type="textarea" name="precio" id="precio" value="<%= productToEdit.precio %>" required>
+                        <input type="date" name="ingreso" id="ingreso" value="<%= productToEdit.ingreso %>" required>
                     </div>
                     
                     

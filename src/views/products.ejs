@@ -76,13 +76,13 @@
 
 
         <article class="productos-article">
-            <% for(i=0; i<productosParseados.length; i++) { %>
+            <% for(i=0; i<productos.length; i++) { %>
                     <div class="div-producto">
-                        <a href="/products/detalleproducto/<%= productosParseados[i].idModelo %>">
-                            <img src="/imgs/products/<%=productosParseados[i].imgModelo%>" alt="imagen de producto">
+                        <a href="/products/detail/<%= productos[i].idModelo %>">
+                            <img src="/imgs/products/<%=productos[i].imgModelo%>" alt="imagen de producto">
                         </a>
-                        <h3><%= productosParseados[i].nombreModelo %></h3>
-                        <h4><%= productosParseados[i].precio %></h4>
+                        <h3><%= productos[i].nombreModelo %></h3>
+                        <h4><%= productos[i].precio %></h4>
                     </div>
 
             <% } %>

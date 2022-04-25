@@ -23,11 +23,11 @@ const upload = multer ({storage})
 //rutas de las vistas
 
 //detalle de producto
-router.get('/detalleproducto/:idModelo?', productsController.detalleProducto);
+router.get('/detail/:idModelo?', productsController.detalleProducto);
 
 //crear Producto
-router.get('/crearproducto', productsController.crearproducto);
-router.post('/', upload.single('imgModelo'), productsController.create);
+router.get('/create', productsController.crearproducto);
+router.post('/', upload.single('imgProducto'), productsController.create);
 
 
 //editar Producto
