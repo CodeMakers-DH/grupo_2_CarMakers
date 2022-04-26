@@ -41,7 +41,7 @@ CREATE TABLE `modelos_autos` (
 )
 LOCK TABLES `modelos_autos` WRITE;
 INSERT INTO `modelos_autos` VALUES
-    (1,'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam eaque ut porro pariatur eveniet.','Modelo 1','producto2.jpg',90,2.5,1500,230,3,NULL),
+    (1,'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam eaque ut porro pariatur eveniet.','Paris','producto2.jpg',90,2.5,1500,230,3,NULL),
     (2,'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam eaque ut porro pariatur eveniet.','Modelo 2','producto.jpg',20,2.2,500,180,4,NULL),
     (3,'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam eaque ut porro pariatur eveniet.','Modelo 3','producto2.jpg',60,2,1300,180,3,NULL),
     (4,'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam eaque ut porro pariatur eveniet.','Modelo 4','producto.jpg',30,1.5,1300,110,3,NULL),
