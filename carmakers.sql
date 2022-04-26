@@ -41,11 +41,11 @@ CREATE TABLE `modelos_autos` (
 )
 LOCK TABLES `modelos_autos` WRITE;
 INSERT INTO `modelos_autos` VALUES
-    (1,'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam eaque ut porro pariatur eveniet.','Paris','producto2.jpg',90,2.5,1500,230,3,NULL),
-    (2,'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam eaque ut porro pariatur eveniet.','Modelo 2','producto.jpg',20,2.2,500,180,4,NULL),
-    (3,'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam eaque ut porro pariatur eveniet.','Modelo 3','producto2.jpg',60,2,1300,180,3,NULL),
-    (4,'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam eaque ut porro pariatur eveniet.','Modelo 4','producto.jpg',30,1.5,1300,110,3,NULL),
-    (5,'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam eaque ut porro pariatur eveniet.','Modelo 5','producto2.jpg',90,5,1500,230,3,NULL);
+    (1,'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam eaque ut porro pariatur eveniet. Paris: se desataca por su confprt y potencia que lo hace un superdeportivo muy diferente a otro. Su alto diseno y mas amplio confort lo hace ser hoy en dia un auto envidiable por su competencia. EL fabricante Bnezema de origen frances nomino al auto en honor a su ciudad de origen. SU color principal hace honor a los colores de la bandera de su pais.','Paris','producto2.jpg',90,2.5,1500,230,3,NULL),
+    (2,'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam eaque ut porro pariatur eveniet. Roma: es un superdeportivo de origen Argentino cuyo nombre respresenta la ciudad natal de sucreador Ernesto Quiq,Destaca un gran motor y una agilidad para las curvas a seguir.','Roma','producto.jpg',20,2.2,500,180,4,NULL),
+    (3,'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam eaque ut porro pariatur eveniet.Zenit: auto creado excluivamente para Putin, destaca por sus asientos de cuero animal y mas alto confort','Zenit','producto2.jpg',60,2,1300,180,3,NULL),
+    (4,'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam eaque ut porro pariatur eveniet.  Berlin: es un diseno exclusivo que se realizo en apoyo a Mercedes, dicha compania baso su diseno y realizacion en el auto ya conocido AMG vision. ','Berlin','producto.jpg',30,1.5,1300,110,3,NULL),
+    (5,'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam eaque ut porro pariatur eveniet. Madrid: es un camioneta premiu, desarrollada por el piloto de carrera Alonso para brindarle un obsequio al plantel del Real Madrid en conmemoracion a su 14 champions. Su nombre hace honor a la capital de la ciudad espanola.','Madrid','producto2.jpg',90,5,1500,230,3,NULL);
 UNLOCK TABLES;
   
 /*SELECT * from modelos_autos*/
