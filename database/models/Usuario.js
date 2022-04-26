@@ -2,45 +2,34 @@ module.exports = (sequelize, dataType) => {
 
     let alias = 'Usuario';
     let cols = {
-        idModelo: {
+        idUsuario: {
             type: dataType.INTEGER(10),
             primaryKey: true,
             autoIncrement: true
         },
-        descripcion:{
-            type: dataType.TEXT
+        nombres: {
+            type: dataType.STRING(100)
         },
-        nombreModelo: {
-            type: dataType.STRING(500)
+        apellidos: {
+            type: dataType.STRING(100)
         },
-        imgModelo: {
-            type: dataType.STRING(500)
+        email: {
+            type: dataType.STRING(100)
         },
-        deliveryEstimado: {
-            type: dataType.INTEGER(10) 
+        password: {
+            type: dataType.STRING(100)
         },
-        precio: {
-            type: dataType.INTEGER(10)
-        },
-        autonomia: {
-            type: dataType.INTEGER(10)
-        },
-        velocidadMaxima: {
-            type: dataType.INTEGER(10)
-        },
-        tiempoDeCeroCien: {
-                type: dataType.INTEGER(10)
-        },
-        ingreso:{
-            type: dataType.DATE
+        imgPerfil: {
+            type: dataType.STRING(100)
         }};
+
     let config = {
-        tableName: 'modelos_autos',
+        tableName: 'usuarios',
         timestamps: false
     };
 
-    const Producto = sequelize.define(alias, cols, config)
+    const Usuario = sequelize.define(alias, cols, config)
 
-    return Producto
+    return Usuario
 
 }

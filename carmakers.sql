@@ -38,7 +38,8 @@ CREATE TABLE `modelos_autos` (
   `ingreso` DATE ,
 
   PRIMARY KEY (`idModelo`)
-)
+);
+
 LOCK TABLES `modelos_autos` WRITE;
 INSERT INTO `modelos_autos` VALUES
     (1,'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam eaque ut porro pariatur eveniet.','Modelo 1','producto2.jpg',90,2.5,1500,230,3,NULL),
