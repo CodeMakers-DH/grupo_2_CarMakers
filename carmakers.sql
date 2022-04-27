@@ -38,7 +38,8 @@ CREATE TABLE `modelos_autos` (
   `ingreso` DATE ,
 
   PRIMARY KEY (`idModelo`)
-)
+);
+
 LOCK TABLES `modelos_autos` WRITE;
 INSERT INTO `modelos_autos` VALUES
     (1,'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam eaque ut porro pariatur eveniet. Paris: se desataca por su confprt y potencia que lo hace un superdeportivo muy diferente a otro. Su alto diseno y mas amplio confort lo hace ser hoy en dia un auto envidiable por su competencia. EL fabricante Bnezema de origen frances nomino al auto en honor a su ciudad de origen. SU color principal hace honor a los colores de la bandera de su pais.','Paris','producto2.jpg',90,2.5,1500,230,3,NULL),

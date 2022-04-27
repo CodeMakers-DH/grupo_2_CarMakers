@@ -22,7 +22,7 @@ const storage = multer.diskStorage({
 })
 const upload = multer ({storage})
 
-//rutas de las vistas
+//rutas de las vistasgi
 
 router.get('/', usersController.index);
 router.get('/login', guestMiddleware, usersController.login)
