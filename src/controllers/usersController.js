@@ -1,22 +1,33 @@
 const path = require('path');
 const fs = require('fs');
 const {validationResult} = require('express-validator');
+//cargar db Usuarios
+const db = require('../../database/models')
+//==================
 const user = require('../modelos/users');
+//JSON==============
 const usersFilePath = path.join(__dirname, '../data/usuarios.json');
 var usuarios = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
+//==================
 let bcrypt = require('bcrypt');
 
 
 
 const controlador ={
     index: (req, res) => {
-        res.render('usuarios',  {usuario: usuarios})
+        db.Usuario.findAll()
+            .then(usuarios=> res.render('usuarios', {usuario: usuarios}))
     },
+    
     login: (req, res) => {
         res.render('login')
     },
+
     processLogin: (req,res) => {
-        let userToLogIn = user.findByField('email', req.body.email)
+        //let userToLogIn = user.findByField('email', req.body.email)
+        let userToLogIn = db.Usuario.findOne(
+            {where: {email: req.body.email}}
+        )
 
         if(userToLogIn){
             let errors = validationResult(req);
@@ -61,17 +72,21 @@ const controlador ={
             }
         })
     },
+
     profile: (req, res) => {
         res.render('profile', {user: req.session.userLogged});
     },
+
     logout: (req,res) => {
         res.clearCookie('userEmail');
         req.session.destroy();
         return res.redirect('/');
     },
+
     register: (req, res) => {
         return res.render('register');
     },
+
     processRegister: (req, res) => {
 
         const resultValidation = validationResult(req);
@@ -114,6 +129,7 @@ const controlador ={
         let usuarioFiltrado = usuarios.filter (usuario => usuario.id == idUsuario)
         res.send (usuarioFiltrado)
     },
+    
     crear: (req, res) => {
 		let nuevoUsuario = req.body;
         
