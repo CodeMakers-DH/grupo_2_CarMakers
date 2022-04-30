@@ -76,13 +76,13 @@
 
 
         <article class="productos-article">
-            <% for(i=0; i<productos.length; i++) { %>
+            <% for(i=0; i<products.length; i++) { %>
                     <div class="div-producto">
-                        <a href="/products/detail/<%= productos[i].idModelo %>">
-                            <img src="/imgs/products/<%=productos[i].imgModelo%>" alt="imagen de producto">
+                        <a href="/products/detail/<%= products[i].imgProducto %>">
+                            <img src="/imgs/products/<%=products[i].imgProducto%>" alt="imagen de producto">
                         </a>
-                        <h3><%= productos[i].nombreModelo %></h3>
-                        <h4><%= productos[i].precio %></h4>
+                        <h3><%= products[i].nombreModelo %></h3>
+                        <h4><%= products[i].precio %></h4>
                     </div>
 
             <% } %>

@@ -22,17 +22,19 @@ const controlador ={
 //POST crear producto
     create: (req, res) => {
 		let newProduct = req.body;
+        
         db.Producto.create({
             descripcion: newProduct.descripcionProducto,
             nombreModelo: newProduct.nombreProducto,
-            imgModelo: newProduct.imgProducto,
+            imgProducto:req.file.filename,// colocar el nuevo nombre que viene del multer
             deliveryEstimado:newProduct.deliveryEstimado,
             precio: newProduct.precioProducto,
             autonomia: newProduct.autonomia,
             velocidadMaxima: newProduct.velocidadMaxima,
             tiempoDeCeroCien: newProduct.tiempoDeCeroCien,
             ingreso: newProduct.ingreso
-        })		
+        });
+        //console.log(req.file)	
 		res.redirect('/products')
     },
 // vista editar producto
@@ -49,7 +51,7 @@ const controlador ={
         db.Producto.update({
             descripcion: newProduct.descripcionProducto,
             nombreModelo: newProduct.nombreProducto,
-            imgModelo: newProduct.imgProducto,
+            imgProducto: req.file.filename,//idem controlador create
             deliveryEstimado:newProduct.deliveryEstimado,
             precio: newProduct.precioProducto,
             autonomia: newProduct.autonomia,
@@ -60,12 +62,14 @@ const controlador ={
             {where:{idModelo:idProducto}})
             .then(productos=> productos )
         res.redirect('/products');
+        //console.log(req.file)	;
     },
 
 //inventario
     products: (req, res) => {
         db.Producto.findAll()
-            .then(productos=> res.render('products', {productos}) )
+            .then(productos=> res.render('products', {"products":productos}) )
+            //console.log(productos)
     },
 //eliminar producto o modelo
     destroy : (req, res) => {
