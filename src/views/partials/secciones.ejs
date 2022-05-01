@@ -1,15 +1,15 @@
-<% for(i=1; i<6; i++) { %>
+<% for(i=0; i < productos.length; i++) { %>
 
-    <section id="seccion-<%=(i)%>">
+    <section id="seccion-<%=(i+1)%>">
 
         <div class="texto-uno">
-            <h2 class="nombre-auto-uno">Modelo <%= i %> </h2>
+            <h2 class="nombre-auto-uno">Modelo <%= i + 1 %> </h2>
             <h3 class="desc-auto-uno">Conocé <a href="#seccion-1">acá</a> ofertas exclusivas</h3>
         </div>
     
         <div class="botones-container">
         <div class="botones">
-            <a href="/products/detalleproducto/<%= productosParseados[i-1].idModelo %>"> <!--acá va -1 porque el for empieza en 1 y necesitamos que muestre el primer objeto del array JSON-->
+            <a href="/products/detalleproducto/<%= productos[i].idModelo %>">
                 <button type="button" class="saber-mas">SABER MÁS</i></button>
             </a>
     

@@ -1,91 +1,36 @@
 <footer>
-    <h4 class="carmakers">CARMAKERS</h4>
-
-    <section class="footer-mobile">
-        <form action="/" method="POST" class="form-footer">
-            <h5>Sumate al newsletter</h5>
-
-            <input type="email" placeholder="tuemail@ejemplo.com" class="email" required="">
-
-            <div class="terminos">
-                <input type="checkbox" value="email" id="acepto" required>
-                <label for="acepto">Acepto términos y condiciones</label>
-            </div>
-
-            <button type="submit" class="suscribirme">SUSCRIBIRME</button>
-        </form>
-
-        <div class="social-media">
-            <h5>Seguínos en</h5>
-            <article class="iconos-mobile">
-                <a target="_blank" href="https://youtube.com"><i class="fa-brands fa-youtube"></i></a>
-                <a target="_blank" href="https://linkedin.com"><i class="fa-brands fa-linkedin-in"></i></a>
-                <a target="_blank" href="https://facebook.com"><i class="fa-brands fa-twitter"></i></a>
-                <a target="_blank" href="https://twitter.com"><i class="fa-brands fa-facebook-f"></i></a>
-                <a target="_blank" href="https://instagram.com"><i class="fa-brands fa-instagram"></i></a>
-            </article>
-        </div>
-
-
-        <div class="links">
-            <a href="/sobrenosotros.html">Sobre Nosotros</a>
-            <a href="/terminos.html">Términos y condiciones</a>
-            <a href="/cookies.html">Política de cookies</a>
-            <a href="/privacidad.html">Política de privacidad</a>
-        </div>
-
-
-        <div class="copy">
-            <p class="2022">CarMakers © 2022, </p>
-            <p class="derechos">Todos los derechos reservados</p>
-        </div>
-    </section>
     
     <section class="footer-nav">
 
-        <div class="grid-footer">
-
-            <div class="footer-item">
-                
-            </div>
-
-            <div class="footer-item">
-
-                <form class="form-footer">
+            <div class="div-footer">
+                <form action="/" method="POST" class="form-footer">
                     <h5>Sumate al newsletter</h5>
         
-                    <input type="email" placeholder="email@ejemplo.com" class="email" required="">
+                    <input type="email" placeholder="email@ejemplo.com" class="email" name="emailNL" id="emailNL">
         
                     <div class="terminos">
-                        <input type="checkbox" name="datos" value="email" required>
-                        <label for="datos">Acepto términos y condiciones</label>
+                        <input type="checkbox" name="email" value="email" id='email'>
+                        <% if(locals.errors && errors.email) { %>
+                            <div class="text-danger">
+                                <%= errors.email.msg %>
+                            </div>
+                        <% } %>
+                        <label for="email" name="acepto">Acepto términos y condiciones</label>
                     </div>
         
                     <button type="submit" class="suscribirme">SUSCRIBIRME</button>
                 </form>
-
-            </div>
-
-            
-            <div class="footer-item">
-                <h6>Links rápidos</h6>
-                <ul class="lista-links">
-                    <li><a href="/construccion">Comprar online</a></li>
-                    <li><a href="/construccion">Configurar mi auto</a></li>
-                    <li><a href="/construccion">Solicitar una oferta</a></li>
-                    <li><a href="/construccion">Actualizar GPS</a></li>
-                </ul>
             </div>
 
 
-            <div class="footer-item">
-                <h6>Descubrir</h6>
-                <ul class="lista-descubrir">
-                    <li><a href="/construccion">Accesorios</a></li>
-                    <li><a href="/construccion">Mantenimiento y reparación</a></li>
-                    <li><a href="/construccion">Opciones rápidas</a></li>
-                </ul>
+            <div class="links-nav">
+                <a href="/construccion">Sobre Nosotros</a>
+                <a href="/construccion">Términos y condiciones</a>
+                <a href="/construccion">Política de cookies</a>
+                <a href="/construccion">Política de privacidad</a>
             </div>
+        
+
 
             <div class="footer-item" id="social">
                 <div class="social-media">
@@ -93,33 +38,20 @@
                     <article class="iconos">
                         <a target="_blank" href="https://youtube.com"><i class="fa-brands fa-youtube"></i></a>
                         <a target="_blank" href="https://linkedin.com"><i class="fa-brands fa-linkedin-in"></i></a>
-                        <a target="_blank" href="https://facebook.com"><i class="fa-brands fa-twitter"></i></a>
-                        <a target="_blank" href="https://twitter.com"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a target="_blank" href="https://twitter.com"><i class="fa-brands fa-twitter"></i></a>
+                        <a target="_blank" href="https://facebook.com"><i class="fa-brands fa-facebook-f"></i></a>
                         <a target="_blank" href="https://instagram.com"><i class="fa-brands fa-instagram"></i></a>
                     </article>
                 </div>
             </div>
-        </div>
-
-        <div class="link-copy">
-
-        <div class="links-nav">
-            <a href="/construccion">Sobre Nosotros</a>
-            <a href="/construccion">Términos y condiciones</a>
-            <a href="/construccion">Política de cookies</a>
-            <a href="/construccion">Política de privacidad</a>
-        </div>
-
-        <div class="copy-nav">
-            <p class="veinte">CarMakers © 2022, </p>
-            <p class="derechos">Todos los derechos reservados</p>
-        </div>
-
-        </div>
-
-
 
     </section>
 
+    
+    <div class="copy-nav">
+        <p class="veinte">CarMakers © 2022, </p>
+        <p class="derechos">Todos los derechos reservados</p>
+    </div>
+    
 
 </footer>
