@@ -10,8 +10,8 @@ const db = require('../../database/models')
 //controladores de vitas
 const controlador ={
     index: (req, res) => {
-        db.Producto.findAll()
-            .then(productos=> res.render('index', {'productos': productos}));
+        db.Producto.findAll({limit: 5})
+            .then(productos=> res.render('index', {"productos":productos}));
     },
     carritoCompras: (req, res) => {
         res.render('carrito')
