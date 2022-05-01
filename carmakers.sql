@@ -29,7 +29,7 @@ CREATE TABLE `modelos_autos` (
   `idModelo` int unsigned NOT NULL AUTO_INCREMENT,
   `descripcion` TEXT,
   `nombreModelo` varchar(500),
-  `imgModelo` varchar(500),
+  `imgProducto` varchar(500),
   `deliveryEstimado` int(10),
   `precio` int(10),
   `autonomia` int(10),
