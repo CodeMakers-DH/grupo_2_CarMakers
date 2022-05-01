@@ -35,23 +35,24 @@
 }
 
 .enlaces-menu{
+    transition: all 500ms ease;
     position: fixed;
     top: 0px;
-    right: -50px;
+    bottom: 0;
+    right: -150px;
     padding-right: 6%;
     padding-left: 35px;
     background-color: rgb(255, 255, 255);
     box-shadow:  rgba(0, 0, 0, 0.2) -50px 10px 100px;
-    height: 300vh;
-    z-index: 400;
-    opacity: 1;
-    display: none;
+    height: 100vh;
+    z-index: -400;
+    opacity: 0;
 }
 
 #ocultar-nav li{
     opacity: 0;
 }
-
+/*
 @keyframes muestraMenu{
     from{right: -50}
     to{right: 0}
@@ -59,11 +60,12 @@
     from{ opacity:0}
     to{opacity: 1}
 }
-
+*/
 
 .enlaces-menu.activado{
-    display: block;
-    animation: muestraMenu 500ms ease-in-out both;
+    z-index: 400;
+    right: 0px;
+    opacity: 1;
 }
 
 .enlaces-menu li:first-child{
