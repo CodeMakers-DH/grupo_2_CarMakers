@@ -1,6 +1,7 @@
 const express = require('express');
 const req = require('express/lib/request');
 const path = require('path');
+const {check} = require('express-validator');
 
 //llamada al controlador
 const mainControlador = require("../controllers/mainController");
@@ -8,9 +9,17 @@ const mainControlador = require("../controllers/mainController");
 //definicion de rutas
 const router = express.Router();
 
-//rutas de las vistas
 
+const validateForm = [
+    check('email')
+        .notEmpty().withMessage('Debes rellenar el email').bail()
+        .isEmail().withMessage('El formato del email es incorrecto'),
+];
+
+
+//rutas de las vistas
 router.get('/', mainControlador.index)
+router.post('/', validateForm, mainControlador.newsletter)
 router.get('/carrito', mainControlador.carritoCompras)
 router.get('/construccion', mainControlador.construccion)
 

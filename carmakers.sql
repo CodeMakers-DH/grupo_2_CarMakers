@@ -49,7 +49,7 @@ INSERT INTO `modelos_autos` VALUES
     (5,'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam eaque ut porro pariatur eveniet. Madrid: es un camioneta premiu, desarrollada por el piloto de carrera Alonso para brindarle un obsequio al plantel del Real Madrid en conmemoracion a su 14 champions. Su nombre hace honor a la capital de la ciudad espanola.','Madrid','producto2.jpg',90,5,1500,230,3,NULL);
 UNLOCK TABLES;
   
-/*SELECT * from modelos_autos*/
+SELECT * from modelos_autos;
 
 DROP TABLE IF EXISTS `usuarios`;
 CREATE TABLE `usuarios` (
@@ -87,3 +87,13 @@ INSERT INTO usuarios VALUES
     (22,'Cathryn','Kellart','ckellarth@tumblr.com','xhqugnm','user_18.jpg'),
     (23,'Sydney','Heales','shealesi@twitpic.com','ytS8GA1f7','user_19.jpg'),
     (24,'Bennett','Lambertz','blambertzj@elegantthemes.com','3CYZObn5cV','user_20.jpg');
+   
+   
+   CREATE TABLE `emails` (
+  `idEmail` int unsigned NOT NULL AUTO_INCREMENT,
+  `email` varchar(100),
+
+  PRIMARY KEY (`idEmail`)
+);
+
+select * from emails;

@@ -14,6 +14,8 @@
 
 /*---NAV---*/
 
+/*MENU FLEX*/
+
 .container-blur{
     width:100%;
     height: 100vh;
@@ -136,10 +138,7 @@
 }
 
 
-
-
-
-
+/*NAV COMUN*/
 
 .ul-enlaces{
     display:none;
@@ -214,8 +213,6 @@ nav ul li a{
     padding: 4px 10px;
 }
 
-
-
 header{
     display: flex;
     justify-content: space-between;
@@ -223,9 +220,10 @@ header{
     padding: 15px 5%;
     position:fixed;
     z-index: 90;
-    background-color: white;
+    background-color: #ffffff;
     width:100%;
 }
+
 
 .carmakers-nav{
     margin:0;
@@ -246,10 +244,10 @@ header{
 }
 
 
-/* FOOTER NUEVO */
+/* FOOTER RESUMIDO */
 
 
-.footerprueba {
+.footerResumido {
     margin-top: auto;
     margin-left:auto;
     margin-right: auto;
@@ -261,7 +259,7 @@ header{
     background-color: white;
 }
 
-.footerprueba div p{
+.footerResumido div p{
     margin:0;
     padding:0;
     text-align: center;
@@ -283,246 +281,6 @@ header{
     margin-right: 10px;
 }
 
-/* footer prueba */
-
-
- /*
-nav{
-    display: grid;
-    grid-template-columns: 8% 25% 1fr 25% 8%;
-    background-color: rgb(233, 106, 106);
-    width:100%;
-    position:fixed;
-    z-index: 50;
-    margin:0;
-    padding:0;
-}
-    
-nav div{
-    border:black solid 2px;
-    display: flex;
-    align-items: center;
-}
-
-
-.enlaces-productos, .botones-nav{
-    display: flex;
-}
-
-
-nav h1{
-    color:#11151a;
-    font-family: fuentelogo;
-    font-size: 15px;
-    margin:0 5px;
-    padding:0;
-}
-
-nav a{
-    text-decoration: none;
-    color:black;
-}
-
-nav ul{
-    list-style: none;
-    margin:0;
-    padding:0;
-}
-
-.menu, .cuenta-button, .carrito-button{
-    background-color: transparent;
-    border:none;
-    margin:0;
-    padding:0;
-    font-family: 'Raleway', sans-serif;
-    font-weight: 600;
-    font-size: 90%;
-}
-
-.enlaces-productos li, .botones-nav li{
-    font-family: 'Raleway', sans-serif;
-    font-weight: 600;
-    font-size: 90%;
-    margin: 0 10%;
-    padding: 3px 8px;
-    border-radius: 5px;
-    background-color: yellow;
-}
-
-nav .div-enlace{
-    justify-content: center;
-}
-
-nav .div-botonn{
-    justify-content: end;
-}
-
-
-/*
-.barra-blanca{
-    background-color: white;
-    width: 85%;
-    margin: 0 auto;
-    padding: 10px 0;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.navbar{
-    background-color: rgb(233, 106, 106);
-    width:100%;
-    position:fixed;
-    z-index: 50;
-    margin:0;
-    padding:0;
-}
-
-
-
-.enlaces-productos{
-    background-color: red;
-}
-
-.botones-nav{
-    background-color: green;
-}
-
-a h1{
-    background-color: yellow;
-}
-
-/*
-.navbar{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 30px;
-}
-
-nav h1{
-    color:#11151a;
-    padding:0;
-    margin: 0 0 0 15px;
-    font-family: fuentelogo;
-    font-size: 15px;
-    position: fixed;
-    top: 15px;
-    z-index: 5;
-}
-
-.menu{
-    cursor:pointer;
-    margin: 8px 3px 0 0;
-    border:none;
-    font-family: 'Raleway', sans-serif;
-    font-size: 15px;
-    font-weight: 600;
-    padding: 5px 15px;
-    border-radius: 5px;
-    position: fixed;
-    right: 5px;
-    top:2px;
-    z-index: 5;
-    background-color: #ececec;
-    color:#313131;
-}
-
-.barra-blanca{
-    background-color: #ffffff;
-    width:100%;
-    position:fixed;
-    z-index: 4;
-}
-
-.enlaces-menu{
-    position: absolute;
-    top: 0px;
-    right: -50px;
-    padding-right:100px;
-    background-color: rgb(255, 255, 255);
-    height: 500vh;
-    z-index: 20;
-    opacity: 1;
-    display: none;
-}
-
-#ocultar-nav li{
-    opacity: 0;
-}
-
-
-@keyframes muestraMenu{
-    from{right: -50}
-    to{right: 0}
-
-    from{ opacity:0}
-    to{opacity: 1}
-}
-
-
-.enlaces-menu.activado{
-    display: block;
-    animation: muestraMenu 500ms ease-in-out both;
-}
-
-
-.enlaces-menu li:first-child{
-    margin-top: 100px;
-}
-
-
-.enlaces-menu li{
-    list-style: none;
-    margin: 20px 0 0 0;
-}
-
-
-.enlaces-menu li a{
-    text-decoration: none;
-    color:#313131;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 500;
-}
-
-@keyframes muestraCruz{
-    from{opacity:0}
-    to{opacity:1}
-}
-
-.cruz{
-    opacity:1;
-    z-index: 30;
-    position:absolute;
-    right: 10px;
-    top: 10px;
-    background-color: transparent;
-    border:none;
-    color:#313131;
-    display: none;
-}
-
-
-.cruz.activado{
-    display: block;
-    animation: muestraCruz 500ms ease-in-out both;
-}
-
-.cuenta-button{
-    display:none;
-}
-
-.carrito-button{
-    display: none;
-}
-
-.enlaces-productos{
-    display: none;
-    transition-property: all;
-    transition-duration: 2s;
-}
-
-*/
 
 /*---IMÁGENES----*/
 
@@ -882,133 +640,124 @@ img{
 
 /*---FOOTER---*/
 
-footer{
+
+.footer-nav{
     background-color: #ececec;
+    padding: 40px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0;
 }
 
-.carmakers{
-    padding:10px 0 0 10px;
-    margin:0;
-    font-family: fuentelogo;
-    font-size: 15px;
+footer{
+    background-color:#ececec;
 }
 
-footer div div a img{
-    width:40px;
-}
-
-.email, .terminos input, .terminos label{
-    margin-bottom: 5px;
-}
-
-.derechos{
-    margin:0;
-    padding:0;
-    color:#939393;
-    font-family: 'Raleway', sans-serif;
-}
-
-.veinte{
-    margin:0;
-    padding:0;
-    color:#11151a;
-    font-family: 'Raleway', sans-serif;
+.div-footer{
+    background-color: #ffffff;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0px 0px 20px rgb(204, 204, 204);
+    border-radius: 5px;
+    text-align: center;
+    padding: 25px;
+    margin: 0 auto;
 }
 
 .form-footer{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width:80%;
-    margin: 50px auto;
+    margin: 0 auto;
 }
 
+
+.form-footer h5, .email, .form-footer button{
+    width: 90%;
+    margin: 0 auto;
+}
+    
 .form-footer h5{
-    text-align: center;
-    padding-bottom:5px;
-}
-
-.suscribirme{
-    padding: 10px;
-    border:none;
-    border-radius: 20px;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 500;
-    background-color: #ed7237;
-    color: white;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
 }
 
 .email{
-    border:none;
-    border-radius: 20px;
+    margin: 10px 0;
     padding: 10px;
-    font-family: 'Roboto', sans-serif;
-    font-size: 15px;
+    border-radius: 20px;
+    border:solid 1px black;
+    background-color: white;
 }
 
 .email:focus{
-    outline-color: #ed7237;
+    outline-color: #ee6526;
 }
 
-.social-media h5{
+.form-footer button{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    color:rgb(255, 255, 255);
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 20px;
+    border: black solid 2px;
+    background-color: rgb(0, 0, 0);
+    transition: all 0.1s ease-in-out;
+}
+
+.footer-item{
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+}
+
+.footer-item div h5{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
     text-align: center;
-    margin-top: 30px;
 }
 
 .iconos{
-    width:80%;
-    display: flex;
-    margin: 0 auto;
+    font-size: 40px;
+    margin: 0;
+    padding: 0;
 }
 
-.iconos a, .iconos-mobile a{
-    padding: 5px;
-    color:#ed7237;
+.iconos a{
+    padding: 0 10px;
+    color: black;
+    transition: all 0.1s ease-in-out;
 }
 
-.links{
-    display: flex;
+.links-nav{
+    display:flex;
     flex-direction: column;
-    margin-top: 40px;
-    margin-bottom: 40px;
+    justify-content: center;
+    align-items: center;
+    margin: 40px auto;
 }
 
-.links a{
-    text-decoration: none;
-    margin: 0 auto;
-    font-family: 'Raleway', sans-serif;
-    color: #6a6a6a;
-    font-size: 80%;
+.links-nav a{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    margin: 5px 0;
+    color:black;
+    transition: all 0.1s ease-in-out;
 }
 
-.copy{
+.copy-nav{
+    background-color: #ececec;
+    margin:0;
+    padding:0;
     display: flex;
     justify-content: center;
 }
 
-.copy p{
-    font-size: 80%;
+.copy-nav p{
+    margin:0;
+    padding: 10px 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
 }
-
-.iconos-mobile{
-    font-size: 2em;
-    color:#ed7237;
-    text-align: center;
-    
-}
-
-
-/*FOOTER NAV*/
-
-.grid-footer{
-    display: grid;
-    grid-template-columns: 5% 40% 15% 15% 25%;
-}
-
-.footer-nav{
-    display: none;
-}
-
 
 /*---DETALLE DEL PRODUCTO---*/
 
@@ -1937,7 +1686,8 @@ main section article div h3{
 
 @media (min-width:900px){
 
-    /*CINCO PASOS*/
+
+/*CINCO PASOS*/
 
  .ambos-container{
     display: none;
@@ -2059,191 +1809,10 @@ main section article div h3{
         100% { bottom: 185px}
     }
 
-    /*--NAVEGADOR--*/
-    .ul-enlaces{
-        display:block;
-    }
-/*
-.menu{
-    top:16px;
-    right: 15px;
-    padding: 0;
-    margin: 0;
-    color:#313131;
-    background-color: transparent;
-}
 
-.cuenta-button{
-    display: block;
-    cursor:pointer;
-    padding: 0;
-    margin: 0;
-    border:none;
-    font-family: 'Raleway', sans-serif;
-    font-size: 15px;
-    font-weight: 600;
-    border-radius: 5px;
-    position: fixed;
-    right: 65px;
-    top:16px;
-    background-color: transparent;
-}
-
-.carrito-button{
-    display: block;
-    cursor:pointer;
-    padding: 0;
-    margin: 0;
-    border:none;
-    font-family: 'Raleway', sans-serif;
-    font-size: 15px;
-    font-weight: 600;
-    border-radius: 5px;
-    position: fixed;
-    right: 127px;
-    top:16px;
-    background-color: transparent;
-}
-
-.cuenta-button a, .carrito-button a{
-    text-decoration: none;
-    color:#313131;
-}
-
-.enlaces-productos{
-    list-style: none;
-    display: flex;
-    margin: 11px auto 0 auto;
-    padding-bottom: 10px;
-}
-
-.enlaces-productos li{
-    padding: 0 10px 0 0;
-    margin: 0;
-}
-
-.enlaces-productos li a{
-    text-decoration: none;
-    font-size: 15px;
-    color:#313131;
-    font-family: 'Raleway', sans-serif;
-    font-weight: 600;
-    padding: 8px;
-    margin: 0;
-    background-color: transparent;
-    border-radius: 5px;
-    transition-property: background-color;
-    transition-duration: 0.2s;
-    transition-timing-function: ease-in-out;
-}
-
-
-.navbar{
-    padding: 0;
-    margin: 0;
-}
-
-*/
-
-/*---FOOTER NAV---*/
-
-.footer-mobile{
-    display: none;
-}
-
-.footer-nav{
-    display: block;
-    margin-top: 30px;
-}
-
-.form-footer{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width:80%;
-    margin: 0 auto;
-}
-
-.terminos label{
-    font-size: 14px;
-}
-
-.lista-links, .lista-descubrir{
-    list-style: none;
-    margin:0;
-    padding:0;
-}
-
-.lista-links li a, .lista-descubrir li a{
-    margin:0;
-    padding:0;
-    text-decoration: none;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 400;
-    font-size: 15px;
-    color:#11151a;
-}
-
-#social{
-    display: grid;
-    align-items: end;
-}
-
-.social-media{
-    width: 80%;
-    height: 60%;
-    display: grid;
-    margin: 0 auto;
-    align-items: end;
-}
-
-
-.social-media h5{
-    text-align:center;
-    margin:0;
-}
-
-.form-footer h5, .footer-item h6, .social-media h5{
-    font-family: 'Roboto', sans-serif;
-    font-weight: 700;
-    font-size: 17px;
-}
-
-.iconos{
-    display: flex;
-    margin: 0 auto;
-}
-
-.iconos a{
-    color:#ed7237;
-    margin:0 auto;
-    font-size: 130%;
-}
-
-.link-copy{
-    margin: 80px 0 0 0;
-    padding-bottom: 20px;
-    display: flex;
-    justify-content: space-around;
-}
-
-.links-nav{
-    padding-left: 50px;
-}
-
-
-.links-nav a{
-    font-size: 0.9em;
-    padding-right: 20px;
-    font-family: 'Raleway', sans-serif;
-    text-decoration: none;
-    color:#11151a;
-}
-
-.copy-nav{
-    font-size: 0.9em;
-    display: flex;
-    padding-right:50px;
+/*--NAVEGADOR--*/
+.ul-enlaces{
+    display:block;
 }
 
  /*CARRITO*/
@@ -2341,7 +1910,86 @@ main section article div h3{
     overflow-y: scroll;
 }
 
+@media (min-width: 1000px){
 
+/*FOOTER*/
+
+.footer-nav{
+    background-color: #ececec;
+    margin: 0 auto;
+    padding: 40px 0;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    max-width: 1400px;
+}
+
+.form-footer{
+    margin: 0 auto;
+}
+
+.div-footer{
+    background-color: #ffffff;
+    width: 35%;
+    box-shadow: 0px 0px 20px rgb(204, 204, 204);
+    border-radius: 5px;
+    text-align: center;
+    padding: 40px;
+    margin: 0 0 0 5%;
+}
+
+.form-footer h5, .email, .form-footer button{
+    width: 80%;
+    margin: 0 auto;
+}
+
+
+.form-footer h5{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+}
+
+.email{
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 20px;
+    border:solid 1px black;
+    background-color: white;
+}
+.links-nav{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.links-nav a{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    margin: 5px 0;
+    color:black;
+    transition: all 0.1s ease-in-out;
+}
+
+.footer-item{
+    margin: 0 5% 0 0;
+    display: flex;
+    align-items: center;
+}
+
+.form-footer button{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    color:rgb(255, 255, 255);
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 20px;
+    border: black solid 2px;
+    background-color: rgb(0, 0, 0);
+    transition: all 0.1s ease-in-out;
+}
+
+}
 
 
 }
@@ -2354,18 +2002,6 @@ main section article div h3{
 
 /*---HOVER---*/
 
-
-/*
-.cruz:hover, .enlaces-menu li a:hover, .enlaces-productos li a:hover, .menu:hover, .cuenta-button a:hover, .carrito-button a:hover{
-    color:#939393;
-}
-
-
-.ul-enlaces li:hover, .ul-botones li:hover{
-    background-color: rgb(233, 233, 233);
-}
-
-*/
 .ul-enlaces li a:hover, .enlaces-menu li a:hover,.ul-botones-menu li button a:hover, .menu-boton:hover{
     background-color: rgb(233, 233, 233);
 }
@@ -2378,4 +2014,12 @@ nav a:hover{
     background-color: rgb(233, 233, 233);
 }
 
+.iconos a:hover, .links-nav a:hover{
+    color: rgba(0, 0, 0, 0.7);
+}
 
+.form-footer button:hover{
+    color:black;
+    border: black solid 2px;
+    background-color: transparent;
+}
