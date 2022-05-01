@@ -13,7 +13,7 @@ module.exports = (sequelize, dataType) => {
         nombreModelo: {
             type: dataType.STRING(500)
         },
-        imgModelo: {
+        imgProducto: {
             type: dataType.STRING(500)
         },
         deliveryEstimado: {
