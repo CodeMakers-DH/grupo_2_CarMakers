@@ -11,6 +11,7 @@ const controlador ={
         db.Producto.findAll()
             .then(productos=> res.render('index', {"productosParseados":productos}) )
         //res.render('index', {productosParseados})
+        console.log(req.body)
     },
     carritoCompras: (req, res) => {
         res.render('carrito')
