@@ -5,20 +5,22 @@
             <div class="div-footer">
                 <form action="/" method="POST" class="form-footer">
                     <h5>Sumate al newsletter</h5>
-        
-                    <input type="email" placeholder="email@ejemplo.com" class="email" name="emailNL" id="emailNL">
+
+                    <input type="text" placeholder="email@ejemplo.com" class="email" name="emailNL" id="emailNL"  value="<%= locals.oldData ? oldData.emailNL : null %>">
         
                     <div class="terminos">
-                        <input type="checkbox" name="email" value="email" id='email'>
-                        <% if(locals.errors && errors.email) { %>
-                            <div class="text-danger">
-                                <%= errors.email.msg %>
-                            </div>
-                        <% } %>
+                        <input type="checkbox" name="email" value="email" id='email' required>
                         <label for="email" name="acepto">Acepto términos y condiciones</label>
                     </div>
         
                     <button type="submit" class="suscribirme">SUSCRIBIRME</button>
+                    
+                    <% if(locals.errors && errors.emailNL) { %>
+                        <div class="text-danger">
+                            <%= errors.emailNL.msg %>
+                        </div>
+                    <%  } %>
+
                 </form>
             </div>
 

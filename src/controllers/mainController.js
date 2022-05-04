@@ -23,6 +23,7 @@ const controlador ={
         res.render('construccion')
     },
     newsletter: (req, res) => {
+        /*
         const resultValidation = validationResult(req);
 
         if(resultValidation.errors.length > 0) {
@@ -54,6 +55,22 @@ const controlador ={
         }) 
 
         res.redirect('/');
+        */
+        const resultValidation = validationResult(req);
+        console.log(resultValidation);
+        
+        if(resultValidation.errors.length > 0) {
+            db.Producto.findAll({limit: 5})
+            .then(productos=> res.render('index',  {errors: resultValidation.mapped(), oldData: req.body}));
+        };
+
+        let newEmail = req.body.emailNL;
+
+        db.Emails.create({
+            email: newEmail
+        });
+
+        res.redirect('/');
     }
 
 }
@@ -61,3 +78,5 @@ const controlador ={
 
 // exportacion del modulo
 module.exports = controlador;
+
+
