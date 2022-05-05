@@ -11,7 +11,7 @@ const router = express.Router();
 
 
 const validateForm = [
-    check('email')
+    check('emailNL')
         .notEmpty().withMessage('Debes rellenar el email').bail()
         .isEmail().withMessage('El formato del email es incorrecto'),
 ];
