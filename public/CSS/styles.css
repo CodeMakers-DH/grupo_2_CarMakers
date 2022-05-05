@@ -678,7 +678,7 @@ footer{
 }
 
 .email:focus{
-    outline-color: #ee6526;
+    outline-color: #b3b3b3;
 }
 
 .form-footer button{
@@ -1576,6 +1576,17 @@ main section article div h3{
     background-color: transparent;
     margin-top: 30px;
 }
+
+/*---ERRORES---*/
+
+.text-danger{
+    font-family: 'Roboto', sans-serif;
+    margin-top: 20px;
+    font-weight: 500;
+}
+
+
+
 /*---ANIMACIONES---*/
 
 @keyframes arrow-movement{
