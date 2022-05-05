@@ -56,15 +56,6 @@
 #ocultar-nav li{
     opacity: 0;
 }
-/*
-@keyframes muestraMenu{
-    from{right: -50}
-    to{right: 0}
-
-    from{ opacity:0}
-    to{opacity: 1}
-}
-*/
 
 .enlaces-menu.activado{
     z-index: 400;
@@ -79,7 +70,6 @@
 .compras-boton, .login-boton{
     display: none;
 }
-
 
 
 .enlaces-menu li{
@@ -137,13 +127,6 @@
     visibility: visible;
     opacity:1;
 }
-
-/*
-@keyframes muestraBlur{
-    from{opacity:0}
-    to{opacity:1}
-}
-*/
 
 /*NAV COMUN*/
 
@@ -431,7 +414,6 @@ img{
 
 #main-section-index{
     width:100%;
-    /*min-height: 100vh;*/
 }
 
 
@@ -696,7 +678,7 @@ footer{
 }
 
 .email:focus{
-    outline-color: #ee6526;
+    outline-color: #b3b3b3;
 }
 
 .form-footer button{
@@ -1594,6 +1576,17 @@ main section article div h3{
     background-color: transparent;
     margin-top: 30px;
 }
+
+/*---ERRORES---*/
+
+.text-danger{
+    font-family: 'Roboto', sans-serif;
+    margin-top: 20px;
+    font-weight: 500;
+}
+
+
+
 /*---ANIMACIONES---*/
 
 @keyframes arrow-movement{

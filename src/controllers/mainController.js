@@ -5,7 +5,8 @@ const fs = require('fs');
 const {validationResult} = require('express-validator');
 
 //cargar db Emails
-const db = require('../../database/models')
+const db = require('../../database/models');
+const res = require('express/lib/response');
 
 //controladores de vitas
 const controlador ={
@@ -23,41 +24,53 @@ const controlador ={
         res.render('construccion')
     },
     newsletter: (req, res) => {
-        const resultValidation = validationResult(req);
 
-        if(resultValidation.errors.length > 0) {
-            return res.render('index', {errors: resultValidation.mapped(), oldData: req.body})
+    /* - que los errores esten guardados en un array
+       - llevar los validate a middlewares separados
+       - validar el checkbox en el backend */
 
-        };
+    const resultValidation = validationResult(req)
 
-        let newsInDB = db.Emails.findOne({
-            where: {
-                email: req.body.emailNL
-            }
-        });
+    if(resultValidation.errors.length > 0){
+        db.Producto.findAll({limit:5})
+        .then(productos=> res.render('index', {productos,
+                                              errors: resultValidation.mapped(), 
+                                              oldData: req.body
+                                            }));
 
-        if(newsInDB) {
-            return res.render('index', 
-                {   errors: {
-                    email: {
-                        msg : 'Esta dirección de correo electrónico ya se encuentra suscripta.'
-                    }
-                },
+                                            };
 
-                oldData: req.body
-            
-                });
-        }
+                                db.Emails.findOne({
+                                        where: {
+                                                email: req.body.emailNL
+                                                }
 
-        db.Emails.create({
-            email: req.body.emailNL
-        }) 
+                                    }).then((resultado) => {
 
-        res.redirect('/');
-    }
+                                        if(resultado){
+                                            db.Producto.findAll({limit:5})
+                                            .then(productos=> res.render('index', {productos,
+                                                errors: { emailNL : { msg : 'Esta dirección ya se encuentra suscripta'} }, 
+                                                oldData: req.body
+                                                }));
+                                        } else {
+                                            let newEmail = req.body.emailNL;
 
+                                            db.Emails.create({
+                                                email: newEmail
+                                            });
+
+                                            db.Producto.findAll({limit:5})
+                                            .then(productos=> res.render('index', {productos,
+                                                errors: { emailNL : { msg : '¡Gracias por suscribirse!'} }, 
+                                                }));
+                                        }
+                                    })
+ }
 }
 
 
 // exportacion del modulo
 module.exports = controlador;
+
+
