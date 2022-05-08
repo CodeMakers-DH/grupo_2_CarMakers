@@ -28,45 +28,39 @@ const controlador ={
     },
 
     processLogin: (req,res) => {
-        //let userToLogIn = user.findByField('email', req.body.email)
-        let userToLogIn = db.Usuario.findOne(
+        db.Usuario.findOne(
             {where: {email: req.body.email}}
-        )
+        ).then((resultado) => {
+            if(resultado){
+                if (bcrypt.compareSync(req.body.password, resultado.password)){
+                    
+                    let usuarioALoguearse = {
+                        idUsuario: resultado.idUsuario,
+                        nombres: resultado.nombres,
+                        apellidos: resultado.apellidos,
+                        email: resultado.email,
+                        imgPerfil: resultado.imgPerfil
+                    };
+                    
+                    delete resultado.password;
+                    req.session.userLogged = usuarioALoguearse;
 
-        if(userToLogIn){
-            let errors = validationResult(req);
-            let usersJSON = usuarios
-            let users;
-            let usuarioALoguearse;
-            if(usersJSON == ''){
-                users=[];
-            }else{
-                users=JSON.parse(usersJSON);
-            }
-            for(let i = 0; i < users.length; i++){
-                if(users[i].email == req.body.email){
-                    if (bcrypt.compareSync(req.body.password, users[i].password)){
-                        usuarioALoguearse = users[i];
-                        delete userToLogIn.password;
-                        req.session.userLogged = userToLogIn;
-
-                        if(req.body.rememberMe){
-                            res.cookie('userEmail', req.body.email, {maxAge: (1000 * 60) * 2})
-                        }
-
-                        return res.redirect('profile');
-                    } else {
-                        return res.render('login', {
-                            errors: {
-                                password: {
-                                    msg: 'La contraseña no es correcta'
-                                }
-                            }
-                        })
+                    if(req.body.rememberMe){
+                        res.cookie('userEmail', req.body.email, {maxAge: (1000 * 60) * 2})
                     }
+                    
+                    return res.redirect('profile');
+                } else {
+                    return res.render('login', {
+                        errors: {
+                            password: {
+                                msg: 'La contraseña no es correcta'
+                            }
+                        }
+                    })
                 }
-            }
-        }
+
+            }});
 
         return res.render('login', {
             errors: {
@@ -114,17 +108,14 @@ const controlador ={
                 });
         }
 
-        let nuevoUsuario = {
-            id : usuarios[usuarios.length-1].id +1,
+
+        db.Usuario.create({            
             nombres: req.body.nombres,
             apellidos: req.body.apellidos,
             email: req.body.email,
             password: bcrypt.hashSync(req.body.password, 10),
-            imgPerfil: req.file.filename
-        };
-        usuarios.push(nuevoUsuario);
-		let newUserJSON = JSON.stringify(usuarios);
-		fs.writeFileSync(usersFilePath, newUserJSON);
+            imgPerfil: req.file.filename});
+
 		res.redirect('/users/login');
     },
 
