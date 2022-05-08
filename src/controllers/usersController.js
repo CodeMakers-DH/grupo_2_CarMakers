@@ -3,11 +3,15 @@ const fs = require('fs');
 const {validationResult} = require('express-validator');
 //cargar db Usuarios
 const db = require('../../database/models')
+//====
+let usuarios = db.Usuario.findAll({raw: true,
+    nest: true}).then(a => console.log(a))
+console.log(usuarios)
 //==================
 const user = require('../modelos/users');
 //JSON==============
 const usersFilePath = path.join(__dirname, '../data/usuarios.json');
-var usuarios = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
+//var usuarios = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 //==================
 let bcrypt = require('bcrypt');
 
@@ -24,53 +28,50 @@ const controlador ={
     },
 
     processLogin: (req,res) => {
-        //let userToLogIn = user.findByField('email', req.body.email)
-        let userToLogIn = db.Usuario.findOne(
+        db.Usuario.findOne(
             {where: {email: req.body.email}}
-        )
+        ).then((resultado) => {
+            if(resultado){
+                if (bcrypt.compareSync(req.body.password, resultado.password)){
+                    
+                    let usuarioALoguearse = {
+                        idUsuario: resultado.idUsuario,
+                        nombres: resultado.nombres,
+                        apellidos: resultado.apellidos,
+                        email: resultado.email,
+                        imgPerfil: resultado.imgPerfil
+                    };
 
-        if(userToLogIn){
-            let errors = validationResult(req);
-            let usersJSON = fs.readFileSync(usersFilePath, {errors: errors.errors})
-            let users;
-            let usuarioALoguearse;
-            if(usersJSON == ''){
-                users=[];
-            }else{
-                users=JSON.parse(usersJSON);
-            }
-            for(let i = 0; i < users.length; i++){
-                if(users[i].email == req.body.email){
-                    if (bcrypt.compareSync(req.body.password, users[i].password)){
-                        usuarioALoguearse = users[i];
-                        delete userToLogIn.password;
-                        req.session.userLogged = userToLogIn;
+                    delete resultado.password;
+                    req.session.userLogged = usuarioALoguearse;
 
-                        if(req.body.rememberMe){
-                            res.cookie('userEmail', req.body.email, {maxAge: (1000 * 60) * 2})
-                        }
-
-                        return res.redirect('profile');
-                    } else {
-                        return res.render('login', {
-                            errors: {
-                                password: {
-                                    msg: 'La contraseña no es correcta'
-                                }
+                    if(req.body.rememberMe){
+                        res.cookie('userEmail', req.body.email, {maxAge: (1000 * 60) * 2})
+                    }
+                    
+                    return res.redirect('profile');
+                } else {
+                    return res.render('login', {
+                        errors: {
+                            password: {
+                                msg: 'La contraseña no es correcta'
                             }
-                        })
+                        }
+                    })
+                }
+
+            }
+        
+            return res.render('login', {
+                errors: {
+                    email: {
+                        msg: 'No existe una cuenta con esa dirección de correo electrónico'
                     }
                 }
-            }
-        }
+            })
+        
+        });
 
-        return res.render('login', {
-            errors: {
-                email: {
-                    msg: 'No existe una cuenta con esa dirección de correo electrónico'
-                }
-            }
-        })
     },
 
     profile: (req, res) => {
@@ -110,17 +111,14 @@ const controlador ={
                 });
         }
 
-        let nuevoUsuario = {
-            id : usuarios[usuarios.length-1].id +1,
+
+        db.Usuario.create({            
             nombres: req.body.nombres,
             apellidos: req.body.apellidos,
             email: req.body.email,
             password: bcrypt.hashSync(req.body.password, 10),
-            imgPerfil: req.file.filename
-        };
-        usuarios.push(nuevoUsuario);
-		let newUserJSON = JSON.stringify(usuarios);
-		fs.writeFileSync(usersFilePath, newUserJSON);
+            imgPerfil: req.file.filename});
+
 		res.redirect('/users/login');
     },
 
@@ -170,3 +168,4 @@ const controlador ={
 
 // exportacion del modulo
 module.exports = controlador;
+

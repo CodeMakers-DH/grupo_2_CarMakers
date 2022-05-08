@@ -24,6 +24,7 @@ router.get('/carrito', mainControlador.carritoCompras)
 router.get('/construccion', mainControlador.construccion)
 
 
+
 /*
 PRUEBA SESSION
 router.get('/pruebaSession', function(req, res){
