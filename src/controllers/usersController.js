@@ -41,7 +41,7 @@ const controlador ={
                         email: resultado.email,
                         imgPerfil: resultado.imgPerfil
                     };
-                    
+
                     delete resultado.password;
                     req.session.userLogged = usuarioALoguearse;
 
@@ -60,15 +60,18 @@ const controlador ={
                     })
                 }
 
-            }});
-
-        return res.render('login', {
-            errors: {
-                email: {
-                    msg: 'No existe una cuenta con esa dirección de correo electrónico'
-                }
             }
-        })
+        
+            return res.render('login', {
+                errors: {
+                    email: {
+                        msg: 'No existe una cuenta con esa dirección de correo electrónico'
+                    }
+                }
+            })
+        
+        });
+
     },
 
     profile: (req, res) => {
