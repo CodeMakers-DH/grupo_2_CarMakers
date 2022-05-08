@@ -47,8 +47,9 @@ app.use('/users', usersRoutes);
 })*/
 // Para Heroku
 
-app.listen(process.env.PORT||1006, function(){
-    console.log('Servidor funcionando');
+let puerto = 3000
+app.listen(process.env.PORT||puerto, function(){
+    console.log('Servidor funcionando '+ puerto);
 });
 
 

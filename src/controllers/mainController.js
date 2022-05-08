@@ -40,32 +40,32 @@ const controlador ={
 
                                             };
 
-                                db.Emails.findOne({
-                                        where: {
-                                                email: req.body.emailNL
-                                                }
+        db.Emails.findOne({
+                where: {
+                        email: req.body.emailNL
+                        }
 
-                                    }).then((resultado) => {
+            }).then((resultado) => {
 
-                                        if(resultado){
-                                            db.Producto.findAll({limit:5})
-                                            .then(productos=> res.render('index', {productos,
-                                                errors: { emailNL : { msg : 'Esta dirección ya se encuentra suscripta'} }, 
-                                                oldData: req.body
-                                                }));
-                                        } else {
-                                            let newEmail = req.body.emailNL;
+                if(resultado){
+                    db.Producto.findAll({limit:5})
+                    .then(productos=> res.render('index', {productos,
+                        errors: { emailNL : { msg : 'Esta dirección ya se encuentra suscripta'} }, 
+                        oldData: req.body
+                        }));
+                } else {
+                    let newEmail = req.body.emailNL;
 
-                                            db.Emails.create({
-                                                email: newEmail
-                                            });
+                    db.Emails.create({
+                        email: newEmail
+                    });
 
-                                            db.Producto.findAll({limit:5})
-                                            .then(productos=> res.render('index', {productos,
-                                                errors: { emailNL : { msg : '¡Gracias por suscribirse!'} }, 
-                                                }));
-                                        }
-                                    })
+                    db.Producto.findAll({limit:5})
+                    .then(productos=> res.render('index', {productos,
+                        errors: { emailNL : { msg : '¡Gracias por suscribirse!'} }, 
+                        }));
+                }
+            })
  }
 }
 

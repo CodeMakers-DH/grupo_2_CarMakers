@@ -3,11 +3,15 @@ const fs = require('fs');
 const {validationResult} = require('express-validator');
 //cargar db Usuarios
 const db = require('../../database/models')
+//====
+let usuarios = db.Usuario.findAll({raw: true,
+    nest: true}).then(a => console.log(a))
+console.log(usuarios)
 //==================
 const user = require('../modelos/users');
 //JSON==============
 const usersFilePath = path.join(__dirname, '../data/usuarios.json');
-var usuarios = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
+//var usuarios = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 //==================
 let bcrypt = require('bcrypt');
 
@@ -31,7 +35,7 @@ const controlador ={
 
         if(userToLogIn){
             let errors = validationResult(req);
-            let usersJSON = fs.readFileSync(usersFilePath, {errors: errors.errors})
+            let usersJSON = usuarios
             let users;
             let usuarioALoguearse;
             if(usersJSON == ''){
@@ -170,3 +174,4 @@ const controlador ={
 
 // exportacion del modulo
 module.exports = controlador;
+
