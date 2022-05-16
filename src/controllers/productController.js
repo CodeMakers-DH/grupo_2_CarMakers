@@ -11,7 +11,13 @@ const controlador ={
     detalleProducto: (req, res) => {
         let idModelo = req.params.idModelo;
         db.Producto.findByPk(idModelo)
-        .then(productos=> res.render('detalleproducto', {"modelos": productos}) )
+        .then(productos=> 
+            {
+                if (productos){res.render('detalleproducto', {"modelos": productos}) }
+                else{res.status(404).render('error')}
+                
+            })
+          
     },
 
 // vista para crear producto
