@@ -313,9 +313,70 @@ img{
     object-fit:fill;
 }
 
+/*---MAIN SECTION INDEX---*/
+
+#main-section-index{
+    width:100%;
+}
+
+.titulo-carmakers{
+    padding: 200px 0 40px 0;
+    margin:0;
+    font-size: 2vw;
+    font-family: fuentelogo;
+    text-align: center;
+    color:rgb(255, 255, 255);
+}
+
+.main-section-index{
+    height:55vh;
+    background-image: url(https://www.xtrafondos.com/wallpapers/resized/porsche-rp-rojo-5351.jpg?s=large);
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position:center;
+    background-attachment: fixed;
+    background-origin:border-box;
+}
+
+.button-input{
+    width: 25%;
+    margin: 0 auto;
+   
+
+}
+
+.searchbar-form{ 
+    display: flex;
+    
+}
+
+.boton-lupa{
+    margin-left: -30px;
+    background-color: transparent;
+    border: none;
+    color:#8b8b8b;
+}
+
+.search{
+    color: white;
+    width: 100%;
+    background: #ffffff;
+    padding: 18px;
+    border: none;
+    border-radius: 8px;
+    transition: all 300ms ease-in-out;
+    margin: 0;
+    box-shadow: 0 2px 20px rgb(0 0 0 / 20%);
+}
+
+.search:focus{
+    outline: none;
+    background-color: rgb(77, 77, 77);
+}
+
 
 /*---SEARCH BAR---*/
-
+/*
 .box-container{
     margin: 30px auto 30px auto;
     position:relative;
@@ -354,6 +415,7 @@ img{
     color:#313131;
 }
 
+*/
 /*---ICONO-ARROW---*/
 
 .icon-arrow{
@@ -2022,4 +2084,8 @@ nav a:hover{
     color:black;
     border: black solid 2px;
     background-color: transparent;
+}
+
+.search:hover{
+    background-color: rgb(77, 77, 77);
 }
