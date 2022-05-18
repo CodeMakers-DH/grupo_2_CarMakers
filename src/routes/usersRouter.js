@@ -26,8 +26,11 @@ const upload = multer ({storage})
 
 router.get('/', usersController.index);
 router.get('/login', guestMiddleware, usersController.login)
+
+//router.get('/register', usersController.register);
 router.get('/register', guestMiddleware, usersController.register)
-router.get('/detalleUsuario/:idUsuario?', usersController.detalleUsuario);
+
+//router.get('/detalleUsuario/:idUsuario?', usersController.detalleUsuario);
 router.get('/profile/', authMiddleware, usersController.profile);
 router.get('/logout', usersController.logout);
 
@@ -73,7 +76,6 @@ const validateRegister = [
         })
 ];
 
-router.get('/register', usersController.register);
 
 router.post('/register', upload.single('imgPerfil'), validateRegister, usersController.processRegister);
 

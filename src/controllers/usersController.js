@@ -122,12 +122,21 @@ const controlador ={
 		res.redirect('/users/login');
     },
 
-    detalleUsuario: (req, res) => {
+    editarUsuario: (req, res) => {
         let idUsuario = req.params.idUsuario;
-        let usuarioFiltrado = usuarios.filter (usuario => usuario.id == idUsuario)
-        res.send (usuarioFiltrado)
+        db.Usuario.findByPk(idUsuario)
+        .then(usuarios=> 
+            {
+                if (usuarios){res.render('editarUsuario', {"usuarioToEdit": usuarios}) }
+                else{res.status(404).render('error')}
+                
+            })
+        .then(resultado => {
+            console.log(resultado)
+        })
+          
     },
-    
+
     crear: (req, res) => {
 		let nuevoUsuario = req.body;
         
@@ -136,12 +145,12 @@ const controlador ={
 
 		res.redirect('/users')
     }, 
-    
+/*
     editarUsuario: (req, res) => {
         let idUsuario = req.params.idUsuario;
         res.render('editarUsuario',{usuarioToEdit :usuarios.filter((usuario)=> usuario.id == idUsuario)[0] } )
     },
-    
+*/
     actualizar: (req, res)=>{
         let idUsuario = req.params.idUsuario;
         let infoForm = req.body;

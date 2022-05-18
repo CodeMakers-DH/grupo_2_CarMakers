@@ -13,7 +13,7 @@
         <article class="usuarios-article">
         <% for(i=0; i<usuario.length; i++) { %>
                 <div class="div-producto">
-                    <a href="/users/detalleusuario/<%= usuario[i].id %>">
+                    <a href="/users/editarUsuario/<%= usuario[i].idUsuario %>">
                         <img src="/imgs/imgsPerfil/<%=usuario[i].imgPerfil%>" alt="imagen de usuario">
                     </a>
                     <h3><%= usuario[i].nombres + ' ' + usuario[i].apellidos %></h3>
