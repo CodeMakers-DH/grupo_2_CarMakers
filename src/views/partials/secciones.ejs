@@ -7,7 +7,7 @@
             <h3 class="desc-auto-uno">Conocé <a href="#seccion-1">acá</a> ofertas exclusivas</h3>
         </div>
     
-        <div class="botones-container">
+
         <div class="botones">
             <a href="/products/detail/<%= productos[i].idModelo %>">
                 <button type="button" class="saber-mas">SABER MÁS</i></button>
@@ -16,14 +16,13 @@
             <a href="/products/carrito">
                 <button type="button" class="compra-ahora">COMPRAR AHORA</i></button>
             </a>
-         
         </div>
-        
-    </div>
     
+    <% if(i != productos.length - 1) { %>
     <div class="icon-arrow">
-        <a href="#seccion-<%=(i)%>"><i class="fas fa-solid fa-angle-down"></i></a>
+        <a href="#seccion-<%=(i+2)%>"><i class="fas fa-solid fa-angle-down"></i></a>
     </div>
+    <% } %>
     </section>
 
 
