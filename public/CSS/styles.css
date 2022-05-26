@@ -375,103 +375,6 @@ img{
 }
 
 
-/*---SEARCH BAR---*/
-/*
-.box-container{
-    margin: 30px auto 30px auto;
-    position:relative;
-    width:80%;
-    max-width: 400px;
-    background-color:#ececec;
-    padding: 7px;
-    border-radius: 5px;
-}
-
-.elements-container{
-    display: flex;
-    width:100%;
-    vertical-align: center;
-}
-
-.search{
-    border:none;
-    width:100%;
-    padding: 0 5px;
-    background-color:#ececec;
-    color:rgb(0, 0, 0);
-    border-radius: 5px;
-    font-size: 15px;
-    font-family: 'Roboto', sans-serif;
-    color:#313131;
-}
-
-.search:focus{
-    outline: none;
-}
-
-.boton-lupa{
-    border:none;
-    background-color:transparent;
-    color:#313131;
-}
-
-*/
-/*---ICONO-ARROW---*/
-
-.icon-arrow{
-    font-size: 20px;
-    text-align: center;
-    margin-top:10px;
-    position:relative;
-    bottom: 150px;
-    animation: arrow-movement 2s infinite;
-}
-
-.icon-arrow a{
-    color:white;
-}
-
-
-/*ICONO ARROW MAIN*/
-
-.icon-arrow-main{
-    font-size: 20px;
-    text-align: center;
-    animation: arrow-movement 2s infinite;
-    margin: 30px;
-}
-
-.icon-arrow-main a i{
-    color:#313131;
-}
-
-
-/*---WPP BOTON---*/
-
-.article-wpp{
-    display: flex;
-    flex-direction:row-reverse;
-    position: fixed;
-    top: 200px;
-    right: -13px;
-    z-index: 12;
-    display: none;
-}
-
-.wpp-container{
-    width: 60px;
-    display: flex;
-    flex-direction:row-reverse;
-    
-}
-
-.wpp-container button{
-    border:none;
-    border-radius: 10px;
-    padding: 5px 15px 5px 5px;
-    background-color: #37b2ed;
-}
-
 /*---MAIN SECTION INDEX---*/
 
 #main-section-index{
@@ -488,76 +391,82 @@ img{
     background-repeat: no-repeat;
     background-size:cover;
     background-position: center;
+}
+
+.texto-uno{
+    position: relative;
+    top: 15vh;
     margin:0;
     padding:0;
 }
 
-.botones{
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
-    text-align: center;
-}
-
-.botones-container{
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    position:relative;
-    bottom: 140px;
-}
-
-.saber-mas{
-        padding: 7px;
-        border:none;
-        border-radius: 20px;
-        font-family: 'Roboto', sans-serif;
-        font-weight: 700;
-        color:white;
-        background-color: #ed7237;
-        width: 250px;
-        margin-bottom: 20px;
-}
-
-.compra-ahora{
-        padding: 7px;
-        border:none;
-        border-radius: 20px;
-        font-family: 'Roboto', sans-serif;
-        font-weight: 700;
-        color: rgb(0, 0, 0);
-        background-color: #ececec;
-        width: 250px;
-}
-
-.texto-uno{
-    text-align: center;
-    position:relative;
-    top: 100px;
-}
-
 .nombre-auto-uno{
-    font-size: 2em;
-    color:#11151a;
     font-family: 'Raleway', sans-serif;
+    text-align: center;
+    font-size: 1.8em;
     font-weight: 600;
+    margin:0;
+    padding:0;
 }
 
 .desc-auto-uno{
-    font-size: 1em;
-    color:#11151a;
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
+    font-size: 0.8em;
     text-align: center;
+    margin:0;
+    padding:0;
 }
 
 .desc-auto-uno a{
-    font-size: 1em;
-    color:#11151a;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 400;
+    color: black;
+}
+.botones-container{
+    background-color: royalblue;
+    margin:0;
+    padding: 0;
+}
+
+.botones{
     text-align: center;
+    position: relative;
+    top: 60vh;
+}
+
+.icon-arrow{
+    text-align: center;
+    position: relative;
+    top: 65vh;
+    animation: arrow 2s infinite;
+} 
+
+.icon-arrow a{
+    color: rgb(255, 255, 255);
+}
+
+.compra-ahora{
+    background-color: rgb(218, 218, 218);
+    color:rgb(0, 0, 0);
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.8em;
+    width: 80%;
+    border-radius: 15px;
+    border-style: none;
+    font-weight: 500;
+    padding: 7px 15px;
+}
+
+.saber-mas{
+    background-color: rgb(22, 22, 22);
+    color:white;
+    width: 80%;
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 8px;
+    font-size: 0.8em;
+    border-radius: 15px;
+    font-weight: 500;
+    border-style: none;
+    padding: 7px 15px;
 }
 
 /*---SECCIÓN 2---*/
@@ -604,6 +513,8 @@ img{
     background-size:cover;
     background-position: center;
 }
+
+
 
 
 /*---CINCO PASOS---*/
@@ -1647,15 +1558,14 @@ main section article div h3{
     font-weight: 500;
 }
 
+/*---ANIMATIONS---*/
 
-
-/*---ANIMACIONES---*/
-
-@keyframes arrow-movement{
-    0% { bottom: 145px}
-    50% { bottom: 155px}
-    100% { bottom: 145px}
+@keyframes arrow {
+    0% { top: 63vh}
+    50% { top: 65vh}
+    100% { top: 63vh}
 }
+
 
 
 /*---MEDIA QUERIES---*/
@@ -1674,13 +1584,7 @@ main section article div h3{
     text-align: center;
 }
 
-.saber-mas, .compra-ahora{
-    width: 350px;
-}
 
-.texto-uno{
-    top: 110px;
-}
 
 /*FOOTER*/
 
@@ -1703,45 +1607,6 @@ main section article div h3{
         background-color: transparent;
     }
 
-    .texto-uno{
-        top: 130px;
-    }
-
-    .saber-mas{
-        padding: 10px;
-        margin-bottom: 15px;
-        margin-right: 12px;
-        border:none;
-        border-radius: 20px;
-        font-family: 'Roboto', sans-serif;
-        font-weight: 700;
-        color:white;
-        background-color: #ed7237;
-        width: 250px;
-    }
-
-    .compra-ahora{
-        margin-left: 12x;
-        padding: 10px;
-        border:none;
-        border-radius: 20px;
-        font-family: 'Roboto', sans-serif;
-        font-weight: 700;
-        color: rgb(0, 0, 0);
-        background-color: #ececec;
-        width: 250px;
-    }
-
-    .botones{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr;
-        text-align: center;
-    }
-
-    .botones-container{
-        bottom: 160px;
-    }
 
 }
 
@@ -1820,56 +1685,6 @@ main section article div h3{
    color: black;
 }
 
-
-/*BOTONES*/
-    .saber-mas{
-        padding: 12px;
-        margin-bottom: 15px;
-        margin-right: 15px;
-        width: 300px;
-    }
-
-    .compra-ahora{
-        margin-left: 15x;
-        padding: 12px;
-        width: 300px;
-    }
-
-
-    .botones-container{
-        bottom: 200px;
-    }
-
-    .texto-uno{
-        top: 140px;
-    }
-
-    .nombre-auto-uno{
-        font-size: 3em;
-    }
-    
-    .desc-auto-uno{
-        font-size: 1.1em;
-    }
-    
-    .desc-auto-uno a{
-        font-size: 1.1em;
-    }
-
-
-    .icon-arrow{
-        font-size: 20px;
-        text-align: center;
-        margin-top:10px;
-        position:relative;
-        bottom: 185px;
-    }
-
-    @keyframes arrow-movement{
-        0% { bottom: 185px}
-        50% { bottom: 180px}
-        100% { bottom: 185px}
-    }
 
 
 /*--NAVEGADOR--*/
