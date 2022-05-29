@@ -320,9 +320,9 @@ img{
 }
 
 .titulo-carmakers{
-    padding: 200px 0 40px 0;
+    padding: 23vh 0 20px 0;
     margin:0;
-    font-size: 2vw;
+    font-size: 1.3em;
     font-family: fuentelogo;
     text-align: center;
     color:rgb(255, 255, 255);
@@ -330,7 +330,7 @@ img{
 
 .main-section-index{
     height:55vh;
-    background-image: url(https://www.xtrafondos.com/wallpapers/resized/porsche-rp-rojo-5351.jpg?s=large);
+    background-image: url('/imgs/index.jpg');
     background-size:cover;
     background-repeat: no-repeat;
     background-position:center;
@@ -339,15 +339,14 @@ img{
 }
 
 .button-input{
-    width: 25%;
+    width: 80%;
     margin: 0 auto;
-   
+    max-width: 500px;
 
 }
 
 .searchbar-form{ 
     display: flex;
-    
 }
 
 .boton-lupa{
@@ -361,7 +360,7 @@ img{
     color: white;
     width: 100%;
     background: #ffffff;
-    padding: 18px;
+    padding: 15px;
     border: none;
     border-radius: 8px;
     transition: all 300ms ease-in-out;
@@ -395,7 +394,7 @@ img{
 
 .texto-uno{
     position: relative;
-    top: 15vh;
+    top: 20vh;
     margin:0;
     padding:0;
 }
@@ -418,6 +417,7 @@ img{
     padding:0;
 }
 
+
 .desc-auto-uno a{
     color: black;
 }
@@ -430,13 +430,13 @@ img{
 .botones{
     text-align: center;
     position: relative;
-    top: 60vh;
+    top: 65vh;
 }
 
 .icon-arrow{
     text-align: center;
     position: relative;
-    top: 65vh;
+    top: 80vh;
     animation: arrow 2s infinite;
 } 
 
@@ -450,10 +450,10 @@ img{
     font-family: 'Roboto', sans-serif;
     font-size: 0.8em;
     width: 80%;
-    border-radius: 15px;
+    border-radius: 20px;
     border-style: none;
     font-weight: 500;
-    padding: 7px 15px;
+    padding: 10px 15px;
 }
 
 .saber-mas{
@@ -461,12 +461,12 @@ img{
     color:white;
     width: 80%;
     font-family: 'Roboto', sans-serif;
-    margin-bottom: 8px;
+    margin-bottom: 10px;
     font-size: 0.8em;
-    border-radius: 15px;
+    border-radius: 20px;
     font-weight: 500;
     border-style: none;
-    padding: 7px 15px;
+    padding: 10px 15px;
 }
 
 /*---SECCIÓN 2---*/
@@ -1561,9 +1561,9 @@ main section article div h3{
 /*---ANIMATIONS---*/
 
 @keyframes arrow {
-    0% { top: 63vh}
-    50% { top: 65vh}
-    100% { top: 63vh}
+    0% { top: 70vh}
+    50% { top: 73vh}
+    100% { top: 70vh}
 }
 
 
@@ -1572,6 +1572,23 @@ main section article div h3{
 
 
 @media (min-width: 400px){
+
+/* INDEX */
+
+.botones{
+    display: flex;
+    justify-content: center;
+}
+
+.compra-ahora, .saber-mas{
+    width: 40vw;
+    max-width: 300px;
+}
+
+.compra-ahora{
+    margin-left: 15px;
+}
+
 
 .grid-container-dos{
     font-family: 'Raleway', sans-serif;
@@ -1685,7 +1702,16 @@ main section article div h3{
    color: black;
 }
 
+/*--INDEX--*/
 
+.compra-ahora, .saber-mas{
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.compra-ahora{
+    margin-left: 30px;
+}
 
 /*--NAVEGADOR--*/
 .ul-enlaces{
