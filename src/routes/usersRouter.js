@@ -3,6 +3,7 @@ const path = require('path');
 const multer = require('multer'); 
 const router = express.Router();
 const {check} = require('express-validator');
+const db = require('../../database/models')
 const usersController = require('../controllers/usersController');
 const guestMiddleware = require('../midddlewares/guestMiddleware');
 const authMiddleware = require('../midddlewares/authMiddleware');
@@ -51,15 +52,41 @@ router.post('/login', validateLogin, usersController.processLogin);
 
 const validateRegister = [
     check('nombres')
-        .notEmpty().withMessage('Debes rellenar los nombres').bail(),
+        .notEmpty().withMessage('Debes rellenar los nombres').bail()
+        .isLength({min:2}).withMessage('El nombre debe tener al menos 2 caracteres.').bail(),
     check('apellidos')
-        .notEmpty().withMessage('Debes rellenar los apellidos').bail(),
+        .notEmpty().withMessage('Debes rellenar los apellidos').bail()
+        .isLength({min:2}).withMessage('El apellido debe tener al menos 2 caracteres.').bail(),
     check('email')
         .notEmpty().withMessage('Debes rellenar el email').bail()
-        .isEmail().withMessage('No hemos podido encontra una cuenta con ese email.'),
+        .isEmail().withMessage('Ingresa un email de formato válido.').bail()
+        .custom((value, {req}) => {
+            let emailIngresado = req.body.email;
+            db.Usuario.findOne({
+                where: {
+                    email : emailIngresado
+                }
+            }).then((resultado) => {
+                if(resultado) {
+                    throw new Error('Esta dirección de correo electrónico ya se encuentra registrada.')
+                }
+            })
+
+            return true;
+        }),
     check('password')
         .notEmpty().withMessage('Debes rellenar la contraseña').bail()
-        .isLength({min:8}).withMessage('La contraseña debe tener al menos 8 caracteres.'),
+        .isLength({min:8}).withMessage('La contraseña debe tener al menos 8 caracteres.')
+        .custom((value, {req}) => {
+            let pass = req.body.password;
+
+            if(pass.match(/[0-9]/) && pass.match(/[A-Z]/) && pass.match(/[a-z]/) && pass.match(/[.,:;-_!"§$%&/()=?`+@]/)){
+                return true;
+            } 
+            else{
+            throw new Error('La contraseña debe tener al menos un número, una mayúscula, minúscula y un caracter especial.')
+        }
+        }),
     check('imgPerfil')
         .custom((value, {req}) => {
             let file = req.file;
@@ -73,7 +100,7 @@ const validateRegister = [
                 }
             }
             return true;
-        })
+        }),
 ];
 
 
