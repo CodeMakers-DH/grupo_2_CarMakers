@@ -54,7 +54,7 @@ const validateProductEdit = [
             let file = req.file;
             let acceptedExtensions = ['.jpeg', '.jpg', '.png', '.gif'];
             if(!file){
-                throw new Error('Por favor seleccione un archivo')
+                throw new Error('Por favor seleccione un archivo') 
             } else {
                 let fileExtensions = path.extname(file.originalname);
                 if (!acceptedExtensions.includes(fileExtensions)){
