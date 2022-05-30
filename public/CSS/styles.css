@@ -1178,7 +1178,7 @@ main section article div h3{
     color:#6a6a6a;
 }
 
-#correo, #contraseña, #idProducto, #descripcionProducto, #nombre, #nombreProducto, #apellido, #caracteres, #autonomia, #velocidadMaxima, #tiempoDeCeroCien, #ingreso, #precio, #idModelo, #nombreModelo, #descripcion, #deliveryEstimado{
+#correo, #contraseña, #idProducto, #descripcionProducto, #nombre, #nombreProducto, #apellido, #caracteres, #autonomia, #velocidadMaxima, #tiempoDeCeroCien, #ingreso, #precio, #idModelo, #nombreModelo, #descripcion, #deliveryEstimado, #precioProducto{
     background-color: #ececec;
     border-radius: 20px;
     margin: 5px auto 0 auto;

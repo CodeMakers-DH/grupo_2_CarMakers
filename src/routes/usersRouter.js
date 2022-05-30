@@ -15,10 +15,8 @@ const storage = multer.diskStorage({
         cb (null, 'public/imgs/imgsPerfil')
     },
     filename: (req,file,cb) =>{
-        //console.log(file);
         let nuevoNombre = 'nombre_imagen' + Date.now() + path.extname(file.originalname);
         cb (null, nuevoNombre);
-        //console.log (nuevoNombre);
     }
 })
 const upload = multer ({storage})
@@ -40,10 +38,10 @@ router.get('/logout', usersController.logout);
 const validateLogin = [
     check('email')
         .notEmpty().withMessage('Debes rellenar el email').bail()
-        .isEmail().withMessage('No hemos podido encontra una cuenta con ese email.'),
+        .isEmail().withMessage('No hemos podido encontrar una cuenta con ese email.'),
     check('password')
         .notEmpty().withMessage('Debes rellenar la contraseña').bail()
-        .isLength({min:5}).withMessage('La contraseña debe tener al menos 5 caracteres.')
+        .isLength({min:8}).withMessage('La contraseña debe tener al menos 8 caracteres.')
 ];
 
 router.post('/login', validateLogin, usersController.processLogin);
@@ -76,7 +74,7 @@ const validateRegister = [
         }),
     check('password')
         .notEmpty().withMessage('Debes rellenar la contraseña').bail()
-        .isLength({min:8}).withMessage('La contraseña debe tener al menos 8 caracteres.')
+        .isLength({min:8}).withMessage('La contraseña debe tener al menos 8 caracteres.').bail()
         .custom((value, {req}) => {
             let pass = req.body.password;
 
