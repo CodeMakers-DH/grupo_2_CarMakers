@@ -32,7 +32,7 @@ const validateProductEdit = [
         .notEmpty().withMessage('Debes rellenar el delivery estimado.').bail()
         .isNumeric().withMessage('Este campo debe contener sólo números.'),
     check('precioProducto')
-        .isLength({min:6}).withMessage('Este campo debe tener al menos 6 caracteres.').bail()
+        .isLength({min:5}).withMessage('Este campo debe tener al menos 5 caracteres.').bail()
         .notEmpty().withMessage('Debes rellenar el precio del producto.').bail()
         .isNumeric().withMessage('Este campo debe contener sólo números.'),
     check('autonomia')
@@ -48,9 +48,25 @@ const validateProductEdit = [
         .isNumeric().withMessage('Este campo debe contener sólo números.'),
     check('ingreso')
         .notEmpty().withMessage('Debes rellenar la fecha de ingreso.').bail()
-        .isDate().withMessage('Este campo debe tener formato DD.MM.AA').bail()
+        .isDate().withMessage('Este campo debe tener formato DD.MM.AA'),
+    check('imgProducto')
+        .custom((value, {req}) => {
+            let file = req.file;
+            let acceptedExtensions = ['.jpeg', '.jpg', '.png', '.gif'];
+            if(!file){
+                throw new Error('Por favor seleccione un archivo')
+            } else {
+                let fileExtensions = path.extname(file.originalname);
+                if (!acceptedExtensions.includes(fileExtensions)){
+                    throw new Error('Por favor seleccione un archivo en formato JPG, JPEG, GIF o PNG.')
+                }
+            }
+            return true;
+        })
 
 ];
+
+
 
 //rutas de las vistas
 
@@ -59,7 +75,7 @@ router.get('/detail/:idModelo?', productsController.detalleProducto);
 
 //crear Producto
 router.get('/create', productsController.crearproducto);
-router.post('/', upload.single('imgProducto'), productsController.create);
+router.post('/', upload.single('imgProducto'), validateProductEdit, productsController.create);
 
 
 //editar Producto

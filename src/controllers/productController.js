@@ -29,20 +29,26 @@ const controlador ={
 //POST crear producto
     create: (req, res) => {
 		let newProduct = req.body;
+        const resultValidation = validationResult(req);
+
+        if(resultValidation.errors.length > 0) {
+            return res.render('crearproducto', {errors: resultValidation.mapped(), oldData: req.body})
+        } else {
+            db.Producto.create({
+                descripcion: newProduct.descripcionProducto,
+                nombreModelo: newProduct.nombreProducto,
+                imgProducto:req.file.filename,// colocar el nuevo nombre que viene del multer
+                deliveryEstimado:newProduct.deliveryEstimado,
+                precio: newProduct.precioProducto,
+                autonomia: newProduct.autonomia,
+                velocidadMaxima: newProduct.velocidadMaxima,
+                tiempoDeCeroCien: newProduct.tiempoDeCeroCien,
+                ingreso: newProduct.ingreso
+            });
+    
+            res.redirect('/products')
+        }
         
-        db.Producto.create({
-            descripcion: newProduct.descripcionProducto,
-            nombreModelo: newProduct.nombreProducto,
-            imgProducto:req.file.filename,// colocar el nuevo nombre que viene del multer
-            deliveryEstimado:newProduct.deliveryEstimado,
-            precio: newProduct.precioProducto,
-            autonomia: newProduct.autonomia,
-            velocidadMaxima: newProduct.velocidadMaxima,
-            tiempoDeCeroCien: newProduct.tiempoDeCeroCien,
-            ingreso: newProduct.ingreso
-        });
-        //console.log(req.file)	
-		res.redirect('/products')
     },
 // vista editar producto
     editarproducto: (req, res) => {

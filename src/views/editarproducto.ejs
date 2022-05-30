@@ -36,6 +36,12 @@
 
                         <label for="imgProducto" class="label-correo">Imagen del producto</label>
                         <input type="file" name="imgProducto" id="imgProducto" required>
+                        <% if(locals.errors && errors.imgProducto) { %>
+                            <div class="text-danger">
+                                <%= errors.imgProducto.msg %>
+                            </div>
+                            
+                        <% } %>
 
                         <label for="deliveryEstimado" class="label-correo">Delivery Estimado (semanas)</label>
                         <input type="number" name="deliveryEstimado" id="deliveryEstimado" value="<%= productToEdit.deliveryEstimado %>" required>
