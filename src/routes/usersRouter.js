@@ -38,7 +38,7 @@ router.get('/logout', usersController.logout);
 const validateLogin = [
     check('email')
         .notEmpty().withMessage('Debes rellenar el email').bail()
-        .isEmail().withMessage('No hemos podido encontrar una cuenta con ese email.'),
+        .isEmail().withMessage('Ingrese un email de formato válido.'),
     check('password')
         .notEmpty().withMessage('Debes rellenar la contraseña').bail()
         .isLength({min:8}).withMessage('La contraseña debe tener al menos 8 caracteres.')
@@ -58,19 +58,18 @@ const validateRegister = [
     check('email')
         .notEmpty().withMessage('Debes rellenar el email').bail()
         .isEmail().withMessage('Ingresa un email de formato válido.').bail()
-        .custom((value, {req}) => {
-            let emailIngresado = req.body.email;
-            db.Usuario.findOne({
-                where: {
-                    email : emailIngresado
-                }
-            }).then((resultado) => {
-                if(resultado) {
-                    throw new Error('Esta dirección de correo electrónico ya se encuentra registrada.')
-                }
-            })
+        .custom(async(value, {req}) => {
 
-            return true;
+            const usuario = await db.Usuario.findOne({
+                where: {
+                    email: req.body.email
+            }});
+            
+            if(usuario){
+                throw new Error('Esta dirección de correo electrónico ya se encuentra registrada.')
+
+            }
+
         }),
     check('password')
         .notEmpty().withMessage('Debes rellenar la contraseña').bail()
