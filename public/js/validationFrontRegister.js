@@ -1,5 +1,5 @@
 window.addEventListener('load', function(){
-    let formRegister = document.querySelector('#form-register');
+    //let formRegister = document.querySelector('#form-register');
     let name = document.querySelector('.name-register');
     let textName = document.querySelector('.text-name');
 

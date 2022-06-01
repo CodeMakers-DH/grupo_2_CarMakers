@@ -17,7 +17,8 @@
                     <h2 class="titulo-login">Iniciar sesión</h2>
                     <div class="correo-contra">
                         <label for="email" class="label-correo">Correo electrónico</label>
-                        <input type="email" name="email" id="correo" placeholder="email@ejemplo.com" required>
+                        <input type="email" name="email" id="correo" placeholder="email@ejemplo.com" class='email-login' required>
+                        <p class="text-email"></p>
                         <% if(locals.errors && errors.email) { %>
                             <div class="text-danger">
                                 <%= errors.email.msg %>
@@ -25,7 +26,8 @@
                         <% } %>
 
                         <label for="password" class="label-contra">Contraseña</label>
-                        <input type="password" name="password" id="contraseña" required>
+                        <input type="password" name="password" id="contraseña" class="password-login" required>
+                        <p class="text-password"></p>
                         <% if(locals.errors && errors.password) { %>
                             <div class="text-danger">
                                 <%= errors.password.msg %>
@@ -69,6 +71,7 @@
 
         <%- include('./partials/footer-2')%>
         <script src="/js/main.js" type="module"></script>
+        <script src="/js/validationFrontLogin.js" type="module"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     </body>
     </html>
