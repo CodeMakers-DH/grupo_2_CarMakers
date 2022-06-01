@@ -7,7 +7,7 @@ window.addEventListener('load', function(){
     let textDesc = document.querySelector('.text-desc');
 
     let img = document.querySelector('.img-create');
-    let textImg = document.querySelector('.text-image');
+    let imgText = document.querySelector('.text-image');
 
     let delivery = document.querySelector('.delivery-create');
     let textDelivery = document.querySelector('.text-delivery');
@@ -75,5 +75,188 @@ window.addEventListener('load', function(){
         }
     })
 
+    //IMAGE
+
+    img.addEventListener('focus', function(){
+        let textObligatorio = "<small>Este campo es obligatorio.</small>"
+        let textFormato = "<br><small>Por favor seleccione un archivo en formato JPG, JPEG, GIF o PNG.</small>"
+        imgText.innerHTML = textObligatorio;
+        imgText.innerHTML += textFormato;
+    })
+
+    img.addEventListener('change', function(){
+        if(img.value.match('png') || img.value.match('jpg') || img.value.match('jpeg') || img.value.match('gif')){
+            imgText.innerHTML = '';
+        }
+    })
+
+
+    //DELIVERY
+
+    delivery.addEventListener('focus', function(){
+        let textObligatorio = "<small>Este campo es obligatorio.</small>"
+        let textNumber = "<br><small>Este campo solo puede contener números.</small>"
+        textDelivery.innerHTML = textObligatorio;
+        textDelivery.innerHTML += textNumber;
+      })
+
+
+      delivery.addEventListener('change', function(){
+
+        if(delivery.value.match(/[0-9]/)){
+            delivery.style.backgroundColor = 'lightgreen';
+            textDelivery.innerHTML = '';
+        }  else{
+            delivery.style.backgroundColor = 'pink';
+            let textObligatorio = "<small>Este campo es obligatorio.</small>"
+            let textNumber = "<br><small>Este campo solo puede contener números.</small>"
+            textDelivery.innerHTML = textObligatorio;
+            textDelivery.innerHTML += textNumber;
+        }
 
 })
+
+
+    //PRECIO
+
+    precio.addEventListener('focus', function(){
+        let textObligatorio = "<small>Este campo es obligatorio.</small>"
+        let textNumber = "<br><small>Este campo solo puede contener números.</small>"
+        let textCaracteres = "<br><small>Este campo debe tener al menos 5 caracteres.</small>"
+        textPrecio.innerHTML = textObligatorio;
+        textPrecio.innerHTML += textNumber;
+        textPrecio.innerHTML += textCaracteres;
+      })
+
+
+      precio.addEventListener('change', function(){
+
+        if(precio.value.match(/[0-9]/) && precio.value.length >= 5){
+            precio.style.backgroundColor = 'lightgreen';
+            textPrecio.innerHTML = '';
+        }  else{
+            precio.style.backgroundColor = 'pink';
+            let textObligatorio = "<small>Este campo es obligatorio.</small>"
+            let textNumber = "<br><small>Este campo solo puede contener números.</small>"
+            let textCaracteres = "<br><small>Este campo debe tener al menos 5 caracteres.</small>"
+            textPrecio.innerHTML = textObligatorio;
+            textPrecio.innerHTML += textNumber;
+            textPrecio.innerHTML += textCaracteres;
+
+        }
+})
+
+
+    //AUTONOMÍA
+
+    autonomia.addEventListener('focus', function(){
+        let textObligatorio = "<small>Este campo es obligatorio.</small>"
+        let textNumber = "<br><small>Este campo solo puede contener números.</small>"
+        let textCaracteres = "<br><small>Este campo debe tener al menos 4 caracteres.</small>"
+        textAutonomia.innerHTML = textObligatorio;
+        textAutonomia.innerHTML += textNumber;
+        textAutonomia.innerHTML += textCaracteres;
+      })
+
+
+      autonomia.addEventListener('change', function(){
+
+        if(autonomia.value.match(/[0-9]/) && autonomia.value.length >= 4){
+            autonomia.style.backgroundColor = 'lightgreen';
+            textAutonomia.innerHTML = '';
+        }  else{
+            autonomia.style.backgroundColor = 'pink';
+            let textObligatorio = "<small>Este campo es obligatorio.</small>"
+            let textNumber = "<br><small>Este campo solo puede contener números.</small>"
+            let textCaracteres = "<br><small>Este campo debe tener al menos 4 caracteres.</small>"
+            textAutonomia.innerHTML = textObligatorio;
+            textAutonomia.innerHTML += textNumber;
+            textAutonomia.innerHTML += textCaracteres;
+
+        }
+})
+
+    //VELOCIDAD MÁXIMA
+
+    velocidad.addEventListener('focus', function(){
+        let textObligatorio = "<small>Este campo es obligatorio.</small>"
+        let textNumber = "<br><small>Este campo solo puede contener números.</small>"
+        let textCaracteres = "<br><small>Este campo debe tener al menos 3 caracteres.</small>"
+        textVelocidad.innerHTML = textObligatorio;
+        textVelocidad.innerHTML += textNumber;
+        textVelocidad.innerHTML += textCaracteres;
+      })
+
+
+      velocidad.addEventListener('change', function(){
+
+        if(velocidad.value.match(/[0-9]/) && velocidad.value.length >= 3){
+            velocidad.style.backgroundColor = 'lightgreen';
+            textVelocidad.innerHTML = '';
+        }  else{
+            velocidad.style.backgroundColor = 'pink';
+            let textObligatorio = "<small>Este campo es obligatorio.</small>"
+            let textNumber = "<br><small>Este campo solo puede contener números.</small>"
+            let textCaracteres = "<br><small>Este campo debe tener al menos 3 caracteres.</small>"
+            textVelocidad.innerHTML = textObligatorio;
+            textVelocidad.innerHTML += textNumber;
+            textVelocidad.innerHTML += textCaracteres;
+
+        }
+})
+
+    //TIEMPO DE CERO A CIEN
+
+    tiempo.addEventListener('focus', function(){
+        let textObligatorio = "<small>Este campo es obligatorio.</small>"
+        let textNumber = "<br><small>Este campo solo puede contener números.</small>"
+        textTiempo.innerHTML = textObligatorio;
+        textTiempo.innerHTML += textNumber;
+      })
+
+
+      tiempo.addEventListener('change', function(){
+
+        if(tiempo.value.match(/[0-9]/)){
+            tiempo.style.backgroundColor = 'lightgreen';
+            textTiempo.innerHTML = '';
+        }  else{
+            tiempo.style.backgroundColor = 'pink';
+            let textObligatorio = "<small>Este campo es obligatorio.</small>"
+            let textNumber = "<br><small>Este campo solo puede contener números.</small>"
+            textTiempo.innerHTML = textObligatorio;
+            textTiempo.innerHTML += textNumber;
+        }
+
+})
+
+
+    //INGRESO
+
+    ingreso.addEventListener('focus', function(){
+        let textObligatorio = "<small>Este campo es obligatorio.</small>"
+        textIngreso.innerHTML = textObligatorio;
+      })
+
+
+      ingreso.addEventListener('change', function(){
+
+        if(ingreso.value.match(/[0-9]/)){
+            ingreso.style.backgroundColor = 'lightgreen';
+            textIngreso.innerHTML = '';
+        }  else{
+            ingreso.style.backgroundColor = 'pink';
+            let textObligatorio = "<small>Este campo es obligatorio.</small>"
+            textIngreso.innerHTML = textObligatorio;
+        }
+
+})
+})
+
+
+/* 
+Falta:
+- no funciona correctamente los caracteres especiales
+- que las fechas esten limitadas en el año que se pueda seleccionar
+- que valide el formato de la fecha
+*/
