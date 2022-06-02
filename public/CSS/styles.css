@@ -386,7 +386,7 @@ img{
 #seccion-1{
     width:100%;
     min-height: 100vh;
-    background-image: url(/imgs/edit1.jpg);
+    background-image: url(/imgs/modelo1.jpg);
     background-repeat: no-repeat;
     background-size:cover;
     background-position: center;
@@ -474,7 +474,7 @@ img{
 #seccion-2{
     width:100%;
     min-height: 100vh;
-    background-image: url(/imgs/edit2.jpg);
+    background-image: url(/imgs/modelo2.jpg);
     background-repeat: no-repeat;
     background-size:cover;
     background-position: center;
@@ -485,7 +485,7 @@ img{
 #seccion-3{
     width:100%;
     min-height: 100vh;
-    background-image: url(/imgs/editada1.jpg);
+    background-image: url(/imgs/modelo3.jpg);
     background-repeat: no-repeat;
     background-size:cover;
     background-position: center;
@@ -497,7 +497,7 @@ img{
 #seccion-4{
     width:100%;
     min-height: 100vh;
-    background-image: url(/imgs/edit3.jpg);
+    background-image: url(/imgs/modelo4.jpg);
     background-repeat: no-repeat;
     background-size:cover;
     background-position: center;
@@ -508,7 +508,7 @@ img{
 #seccion-5{
     width:100%;
     min-height: 100vh;
-    background-image: url(/imgs/edit1.jpg);
+    background-image: url(/imgs/modelo5.jpg);
     background-repeat: no-repeat;
     background-size:cover;
     background-position: center;
