@@ -3,7 +3,9 @@ const app = express();
 const path = require('path');
 const mainRoutes = require('./routes/mainRouter');
 const productRoutes = require('./routes/productRouter');
+
 const APIproductRoutes = require('./routes/APIrouter/productRouterAPI');
+
 const usersRoutes = require('./routes/usersRouter');
 const session = require('express-session');
 var cookieParser = require('cookie-parser');
@@ -42,7 +44,7 @@ app.use('/', mainRoutes);
 app.use('/products', productRoutes);
 app.use('/users', usersRoutes);
 
-//app.use('/api', APIproductRoutes);
+app.use('/api', APIproductRoutes);
 
 // llamada al servidor en puerto 5000
 

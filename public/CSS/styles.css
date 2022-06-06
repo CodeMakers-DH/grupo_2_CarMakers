@@ -1354,6 +1354,59 @@ main section article div h3{
 
 /*---PRODUCTOS---*/
 
+.h3-inv{
+    font-size: 1.5em;
+    font-family: 'Raleway', sans-serif;
+    padding: 100px 0 30px 0;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.seccion-inv{
+    padding: 50px 0 0 0;
+}
+
+.productos-article img {
+    max-width: 500px;
+    border: solid black 1px;
+}
+
+.productos-article{
+    display: grid;
+    grid-template-columns: 80%;   
+    justify-content: center;
+}
+
+.div-producto{
+    padding: 0 0 20px 0;
+    margin: 0 auto;
+}
+
+.inv-nombre{
+    margin: 0;
+    padding: 5px 0;
+}
+
+.inv-precio{
+    margin: 0;
+    padding: 0;
+}
+
+.inv-nombre{
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.3em;
+    color:black;
+    font-weight: 400;
+}
+
+.inv-precio{
+    font-family: 'Roboto', sans-serif;
+    font-size: 1em;
+    color:grey;
+    font-weight: 400;
+}
+
+/*
 .main-inv{
     height:90vh;
 }
@@ -1395,6 +1448,7 @@ main section article div h3{
 
 /*FOR PRODUCTOS */
 
+/*
 .productos-article img {
     max-width: 300px;
     border: solid black 2px;
@@ -1441,8 +1495,11 @@ main section article div h3{
     text-decoration: none;
 }
 
+*/
 
 /*FOOTER PRODUCTOS*/
+
+/*
 
 #footer-productos{
     padding-top: 10px;
@@ -1473,6 +1530,8 @@ main section article div h3{
     color: #6a6a6a;
     margin-right: 10px;
 }
+
+*/
 
 /*--FUERA DE SERVICIO--*/
 
@@ -1811,6 +1870,20 @@ main section article div h3{
 .scroll{
     height: 100vh;
     overflow-y: scroll;
+}
+
+/* INVENTARIO */
+
+.productos-article{
+    display: grid;
+    grid-template-columns: 40% 40%;
+    grid-gap: 30px;
+    justify-content: center;
+}
+
+.seccion-inv{
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 @media (min-width: 1000px){

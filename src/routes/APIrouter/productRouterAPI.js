@@ -1,4 +1,4 @@
-/*
+
 const express = require('express');
 const router = express.Router();
 
@@ -6,7 +6,7 @@ const multer = require('multer');
 const {check} = require('express-validator');
 const path = require('path');
 
-const controller = require('/controllers/mainController')
+const controller = require('../../controllers/APIcontroller/productControllerAPI');
 
 const storage = multer.diskStorage({
     destination: (req,file, cb) =>{
@@ -72,5 +72,3 @@ router.delete('/:idModelo/eliminar', controller.delete);
 router.get('/search', controller.search);
 
 module.exports = router;
-
-*/

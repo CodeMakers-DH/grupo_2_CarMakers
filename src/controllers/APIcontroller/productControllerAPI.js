@@ -1,12 +1,11 @@
-/*
 const path = require('path');
 const fs = require('fs');
-const db = require("../../database/models");
+const db = require("../../../database/models");
 const {validationResult} = require('express-validator');
 const Op = db.Sequelize.Op;
 
 
-module.exports = {
+const controller = {
     list: (req,res) => {
         db.Producto
                     .findAll()
@@ -71,4 +70,4 @@ module.exports = {
     },
 }
 
-*/
+module.exports = controller;
