@@ -4,8 +4,8 @@ const fs = require('fs');
 //let productosParseados = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 const {validationResult} = require('express-validator');
 const db = require("../../database/models")
-const multer = require('multer');
-const { info } = require('console');
+//const multer = require('multer');
+//const { info } = require('console');
 
 const controlador ={
 // detalle del producto
