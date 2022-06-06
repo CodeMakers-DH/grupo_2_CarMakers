@@ -6,93 +6,39 @@
     <%- include('./partials/menuResponsive')%>
     <div class="container-blur" id="filter"></div>
     
-<main class="main-inv">
-    <h1 class="inventario">Inventario</h1>
+<main>
+
+    <h3 class="h3-inv">Inventario</h3>
+
+    <div class="button-input">
+        <form action='/products' method="GET" class="searchbar-form">
+            <input type="text" placeholder="Modelos, características" class="search" required="">
+            <button type="submit" class="boton-lupa"><i class="fas fa-search" id="icono-lupa"></i></button>
+        </form>
+    </div>
+
 
     <section class="seccion-inv">
-        <form class="form-inv">
-            <h2>Modelos</h2>
-
-            <div class="interests">
-                <div>
-                    <input type="checkbox" name="interests" id="modelouno">
-                    <label for="modelouno">Modelo 1</label>
-                </div>
-                <div>
-                    <input type="checkbox" name="interests" id="modelodos">
-                    <label for="modelodos">Modelo 2</label>
-                </div>
-                <div>
-                    <input type="checkbox" name="interests" id="modelotres">
-                    <label for="modelotres">Modelo 3</label>
-                </div>
-                <div>
-                    <input type="checkbox" name="interests" id="modelocuatro">
-                    <label for="modelocuatro">Modelo 4</label>
-                </div>
-                <div>
-                    <input type="checkbox" name="interests" id="modelocinco">
-                    <label for="modelocinco">Modelo 5</label>
-                </div>
-            </div>
-
-            <h2>Colores</h2>
-
-
-            <div class="interests">
-                <div>
-                    <input type="checkbox" name="interests" id="coloruno">
-                    <label for="coloruno">Color 1</label>
-                </div>
-                <div>
-                    <input type="checkbox" name="interests" id="colordos">
-                    <label for="colordos">Color 2</label>
-                </div>
-                <div>
-                    <input type="checkbox" name="interests" id="colortres">
-                    <label for="colortres">Color 3</label>
-                </div>
-                <div>
-                    <input type="checkbox" name="interests" id="colorcuatro">
-                    <label for="colorcuatro">Color 4</label>
-                </div>
-            </div>
-
-
-            <h2>Ruedas</h2>
-
-            <div class="interests">
-                <div>
-                    <input type="checkbox" name="interests" id="ruedasuno">
-                    <label for="ruedasuno">Tipo 1</label>
-                </div>
-                <div>
-                    <input type="checkbox" name="interests" id="ruedasdos">
-                    <label for="ruedasdos">Tipo 2</label>
-                </div>
-            </div>
-
-        </form>
-
-
         <article class="productos-article">
             <% for(i=0; i<products.length; i++) { %>
                     <div class="div-producto">
                         <a href="/products/detail/<%= products[i].idModelo %>">
                             <img src="/imgs/products/<%=products[i].imgProducto%>" alt="imagen de producto">
                         </a>
-                        <h3><%= products[i].nombreModelo %></h3>
-                        <h4><%= products[i].precio %></h4>
+                        <h3 class="inv-nombre"><%= products[i].nombreModelo %></h3>
+                        <h4 class="inv-precio">USD <%= products[i].precio %></h4>
                     </div>
 
             <% } %>
 
         </article>
     </section>
+
+    <%- include('./partials/footer-2')%>
+
 </main>
 
-<%- include('./partials/footer-2')%>
-
     <script src="/js/main.js" type="module"></script>
+    
 </body>
 </html>

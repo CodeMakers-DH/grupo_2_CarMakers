@@ -1,23 +1,20 @@
+
 const express = require('express');
-const path = require('path');
-const multer = require('multer');
 const router = express.Router();
+
+const multer = require('multer');
 const {check} = require('express-validator');
-const productsController = require('../controllers/productController');
+const path = require('path');
 
-
-
-/*** USAMOS EL MULTER ***/ 
+const controller = require('../../controllers/APIcontroller/productControllerAPI');
 
 const storage = multer.diskStorage({
     destination: (req,file, cb) =>{
         cb (null, 'public/imgs/products')
     },
     filename: (req,file,cb) =>{
-        //console.log(file);
         const nuevoNombre = 'nombre_imagen' + Date.now() + path.extname(file.originalname);
         cb (null, nuevoNombre);
-        //console.log (nuevoNombre);
     }
 })
 const upload = multer ({storage})
@@ -68,30 +65,10 @@ const validateProductEdit = [
 
 ];
 
-
-
-//rutas de las vistas
-
-//detalle de producto
-router.get('/detail/:idModelo?', productsController.detalleProducto); 
-
-//crear Producto
-router.get('/create', productsController.crearproducto);
-router.post('/', upload.single('imgProducto'), validateProductEdit, productsController.create);
-
-
-//editar Producto
-router.get('/edit/:idModelo?', productsController.editarproducto);
-router.put('/:idModelo/editar', upload.single('imgProducto'), validateProductEdit, productsController.editar);
-
-
-
-//inventario
-router.get('/', productsController.products);
-
-//eliminar producto
-
-router.delete('/:idModelo/eliminar', productsController.destroy);
- 
+router.get('/', controller.list);
+router.get('/detail/:idModelo?', controller.show);
+router.post('/', upload.single('imgProducto'), validateProductEdit, controller.store);
+router.delete('/:idModelo/eliminar', controller.delete);
+router.get('/search', controller.search);
 
 module.exports = router;
