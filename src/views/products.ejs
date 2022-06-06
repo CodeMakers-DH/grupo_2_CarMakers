@@ -11,27 +11,22 @@
     <h3 class="h3-inv">Inventario</h3>
 
     <div class="button-input">
-        <form action='/products' method="GET" class="searchbar-form">
-            <input type="text" placeholder="Modelos, características" class="search" required="">
-            <button type="submit" class="boton-lupa"><i class="fas fa-search" id="icono-lupa"></i></button>
-        </form>
+        <div class="searchbar-form">
+            <input type="text" placeholder="Modelos, características" class="search" id="searchbarID">
+            <button type="button" class="boton-lupa"><i class="fas fa-search" id="icono-lupa"></i></button>
+        </div>
     </div>
 
 
-    <section class="seccion-inv">
-        <article class="productos-article">
-            <% for(i=0; i<products.length; i++) { %>
+        <section class="seccion-inv">
+            <article class="productos-article">
+            
                     <div class="div-producto">
-                        <a href="/products/detail/<%= products[i].idModelo %>">
-                            <img src="/imgs/products/<%=products[i].imgProducto%>" alt="imagen de producto">
-                        </a>
-                        <h3 class="inv-nombre"><%= products[i].nombreModelo %></h3>
-                        <h4 class="inv-precio">USD <%= products[i].precio %></h4>
+                        <ul id="productsList"></ul>
                     </div>
+            
+            </article>
 
-            <% } %>
-
-        </article>
     </section>
 
     <%- include('./partials/footer-2')%>
@@ -39,6 +34,7 @@
 </main>
 
     <script src="/js/main.js" type="module"></script>
-    
+    <script src="/js/searchBar.js" type="module"></script>
+
 </body>
 </html>
