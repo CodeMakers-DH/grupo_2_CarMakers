@@ -18,6 +18,7 @@ const controlador ={
                 else{res.status(404).render('error')}
                 
             })
+
           
     },
 
