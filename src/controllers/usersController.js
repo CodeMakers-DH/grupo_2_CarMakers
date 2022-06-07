@@ -121,6 +121,8 @@ const controlador ={
           
     },
 
+/* actualizar CRUD Usuarios  Eliminar, Actualizar, */
+
     crear: (req, res) => {
 		let nuevoUsuario = req.body;
         
