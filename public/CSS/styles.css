@@ -1382,30 +1382,29 @@ main section article div h3{
     list-style: none;
     margin: 0;
     padding: 0;
+    background-color: greenyellow;
 }
 
 #productsList li{
     display: grid;
     grid-template-columns: 80%;
+    background-color: rgb(136, 136, 185);
     justify-content: center;
+    margin: 0 auto;
 }
 
+#productsList li a{
+    text-align: center;
+}
 .div-producto{
     padding: 0 0 20px 0;
     margin: 0 auto;
+    background-color: red;
 }
 
 .inv-nombre{
     margin: 0;
     padding: 5px 0;
-}
-
-.inv-precio{
-    margin: 0;
-    padding: 0;
-}
-
-.inv-nombre{
     font-family: 'Raleway', sans-serif;
     font-size: 1.3em;
     color:black;
@@ -1413,6 +1412,8 @@ main section article div h3{
 }
 
 .inv-precio{
+    margin: 0;
+    padding: 0;
     font-family: 'Roboto', sans-serif;
     font-size: 1em;
     color:grey;
@@ -1890,6 +1891,7 @@ main section article div h3{
 .seccion-inv{
     max-width: 1100px;
     margin: 0 auto;
+    background-color: rgb(211, 120, 120);
 }
 
 #productsList{
@@ -1897,12 +1899,15 @@ main section article div h3{
     grid-template-columns: 50% 50%;
     grid-gap: 20px;
     justify-content: center;
+    background-color: rgb(168, 168, 109);
 }
 
 
 #productsList li{
     grid-template-columns: 100%;
     grid-gap: 0;
+    background-color: rgb(119, 119, 190);
+
 }
 
 @media (min-width: 1000px){

@@ -5,7 +5,7 @@ const {validationResult} = require('express-validator');
 const Op = db.Sequelize.Op;
 
 
-const controller = {
+const controllerAPI = {
     list: (req,res) => {
         db.Producto
                     .findAll()
@@ -70,4 +70,4 @@ const controller = {
     },
 }
 
-module.exports = controller;
+module.exports = controllerAPI;

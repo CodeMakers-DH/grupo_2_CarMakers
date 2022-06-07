@@ -92,8 +92,11 @@ const controlador ={
 
 //inventario
     products: (req, res) => {
+        let keyword = req.query.keyword;
+        console.log('holaa'+keyword)
         db.Producto.findAll()
-            .then(productos=> res.render('products', {"products":productos}) )
+            .then(productos=> res.render('products', {"products":productos,
+                                                        'keyword': keyword}) )
             //console.log(productos)
     },
 //eliminar producto o modelo

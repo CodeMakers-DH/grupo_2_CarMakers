@@ -57,4 +57,5 @@ const displayProducts = (products) => {
     productsList.innerHTML = htmlString;
 };
 
+
 loadProducts();
