@@ -7,12 +7,12 @@
                     <h5>Sumate al newsletter</h5>
 
                     <input type="text" placeholder="email@ejemplo.com" class="email" name="emailNL" id="emailNL"  value="<%= locals.oldData ? oldData.emailNL : null %>">
-        
+                    
                     <div class="terminos">
                         <input type="checkbox" name="email" value="email" id='email' required>
                         <label for="email" name="acepto">Acepto términos y condiciones</label>
                     </div>
-        
+                    
                     <button type="submit" class="suscribirme">SUSCRIBIRME</button>
                     
                     <% if(locals.errors && errors.emailNL) { %>
@@ -26,10 +26,10 @@
 
 
             <div class="links-nav">
-                <a href="/construccion">Sobre Nosotros</a>
-                <a href="/construccion">Términos y condiciones</a>
-                <a href="/construccion">Política de cookies</a>
-                <a href="/construccion">Política de privacidad</a>
+                <a href="/sobre-nosotros">Sobre Nosotros</a>
+                <a href="/terminos">Términos y condiciones</a>
+                <a href="/politica-cookies">Política de cookies</a>
+                <a href="/politica-privacidad">Política de privacidad</a>
             </div>
         
 

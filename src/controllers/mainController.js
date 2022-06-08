@@ -66,7 +66,20 @@ const controlador ={
                         }));
                 }
             })
- }
+ },
+
+ sobreNosotros: (req, res) => {
+    res.render('sobre-nosotros');
+},
+politicaCookies: (req, res) => {
+    res.render('politica-cookies');
+},
+politicaPrivacidad: (req, res) => {
+    res.render('politica-privacidad');
+},
+terminos: (req, res) => {
+    res.render('terminos');
+}
 }
 
 

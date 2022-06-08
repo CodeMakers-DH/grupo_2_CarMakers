@@ -18,10 +18,14 @@ const validateForm = [
 
 
 //rutas de las vistas
-router.get('/', mainControlador.index)
-router.post('/', validateForm, mainControlador.newsletter)
-router.get('/carrito', mainControlador.carritoCompras)
-router.get('/construccion', mainControlador.construccion)
+router.get('/', mainControlador.index);
+router.get('/sobre-nosotros', mainControlador.sobreNosotros);
+router.get('/politica-cookies', mainControlador.politicaCookies);
+router.get('/politica-privacidad', mainControlador.politicaPrivacidad);
+router.get('/terminos', mainControlador.terminos);
+router.post('/', validateForm, mainControlador.newsletter);
+router.get('/carrito', mainControlador.carritoCompras);
+router.get('/construccion', mainControlador.construccion);
 
 
 
