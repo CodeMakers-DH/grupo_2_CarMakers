@@ -8,7 +8,7 @@ for (let i in carrito) {
     idModelSelected.push(carrito[i].id)}
 
 
-const res = await fetch('http://localhost:3000/api');
+const res = await fetch('http://localhost:3000/api/products');
 const productsJSON = await res.json();
 products = productsJSON.data;
 var elementSelected = []
