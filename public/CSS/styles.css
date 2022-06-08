@@ -1358,193 +1358,70 @@ main section article div h3{
 .h3-inv{
     font-size: 1.5em;
     font-family: 'Raleway', sans-serif;
-    padding: 100px 0 30px 0;
+    padding: 70px 0 20px 0;
     margin: 0 auto;
     text-align: center;
 }
 
 .seccion-inv{
-    padding: 50px 0 0 0;
+    margin: 40px 0;
+    padding: 0;
+    width: 100%;
 }
 
 .productos-article img {
-    max-width: 500px;
+    width: 100%;
+    padding:0;
+    margin:0;
     border: solid black 1px;
 }
 
-/* .productos-article{
-    display: grid;
-    grid-template-columns: 80%;   
-    justify-content: center;
+.productos-article{
+    max-width: 1100px;
+    padding:0;
+    margin:0 auto;
 }
- */
+ 
 #productsList{
     list-style: none;
     margin: 0;
-    padding: 0;
+    padding: 20px 0;
+    width: 100%;
 }
 
 #productsList li{
-    display: grid;
-    grid-template-columns: 80%;
-    justify-content: center;
+    width: 80%;
+    margin: 0 auto 50px auto;
+    max-width: 500px;
 }
 
-.div-producto{
-    padding: 0 0 20px 0;
+#productsList li:last-child{
     margin: 0 auto;
+}
+
+#productsList li a{
+    margin: 0;
+
 }
 
 .inv-nombre{
     margin: 0;
     padding: 5px 0;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.3em;
+    color:black;
+    font-weight: 400; 
 }
 
 .inv-precio{
     margin: 0;
     padding: 0;
-}
-
-.inv-nombre{
-    font-family: 'Raleway', sans-serif;
-    font-size: 1.3em;
-    color:black;
-    font-weight: 400;
-}
-
-.inv-precio{
     font-family: 'Roboto', sans-serif;
     font-size: 1em;
     color:grey;
-    font-weight: 400;
+    font-weight: 400; 
 }
 
-/*
-.main-inv{
-    height:90vh;
-}
-
-.seccion-inv{
-    background-color: #ececec;
-    display: grid;
-    grid-template-columns: 15% 85%;
-    grid-template-rows: 75vh;
-}
-
-.form-inv{
-    margin-top: 20px;
-}
-
-.inventario{
-    padding: 60px 0 0 20px;
-}
-
-.form-inv h2{
-    font-family: 'Raleway', sans-serif;
-    font-size: 20px;
-    font-weight: 600;
-    padding:0;
-    margin: 25px auto 5px auto;
-    max-width: 70%;
-}
-
-.interests{
-    max-width: 70%;
-    margin: 0 auto;
-}
-
-.interests label{
-    font-family: 'Raleway', sans-serif;
-    font-size: 15px;
-    font-weight: 500;
-}
-
-/*FOR PRODUCTOS */
-
-/*
-.productos-article img {
-    max-width: 300px;
-    border: solid black 2px;
-}
-
-.productos-article{
-    background-color: white;
-    width: 95%;
-    padding: 40px 0 40px 0;
-    height: 95%;
-    margin: auto auto;
-    display: grid;
-    border-radius: 20px;
-    grid-template-columns: 30% 30% 30%;
-    justify-content: center;
-    row-gap: 20px;
-    overflow-y: scroll;
-}
-
-
-.div-producto{
-    margin: 0 auto;
-}
-
-.div-producto h3{
-    font-family: 'Roboto', sans-serif;
-    font-size: 18px;
-    font-weight: 500;
-    color:black;
-    margin: 10px 0 0 0;
-    padding:0;
-}
-
-.div-producto h4{
-    font-family: 'Roboto', sans-serif;
-    font-size: 15px;
-    font-weight: 400;
-    color:rgb(128, 128, 128);
-    margin: 3px 0 0 0;
-    padding:0;
-}
-
-.div-producto a{
-    text-decoration: none;
-}
-
-*/
-
-/*FOOTER PRODUCTOS*/
-
-/*
-
-#footer-productos{
-    padding-top: 10px;
-    text-align: center;
-    width: 100%;
-    background-color: white;
-}
-
-.copy-carrito{
-    font-size: 0.9em;
-    font-family: 'Raleway', sans-serif; 
-    color: #6a6a6a;
-}
-
-.car-productos{
-    margin-top: 0;
-    margin-bottom: 0;
-}
-
-.links-productos{
-    font-family: 'Raleway', sans-serif;
-    margin-bottom: 10px;
-    font-size: 0.9em;
-}
-
-.links-productos a{
-    text-decoration: none;
-    color: #6a6a6a;
-    margin-right: 10px;
-}
-
-*/
 
 /*--FUERA DE SERVICIO--*/
 
@@ -1558,6 +1435,49 @@ main section article div h3{
     padding: 5px 0 0 0;
     text-align: center;
 }
+
+/*---SOBRE NOSOTROS---*/
+
+.head-nosotros h3{
+    font-size: 1.5em;
+    font-family: 'Raleway', sans-serif;
+    padding: 30px 0 10px 20px;
+}
+
+
+.head-nosotros ul{
+    list-style: none;
+    margin:0;
+    padding: 70px 0 0 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    overflow-x: scroll;
+    max-width: 545px;
+}
+
+.head-nosotros ul li{
+    font-size: 1em;
+    border-right: solid 1px rgb(95, 95, 95);
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    display: inline;
+    width:max-content;
+    margin: 10px 5px;
+    padding: 0 10px 0 0 ;
+}
+
+.texto-sn{
+    font-family: 'Roboto', sans-serif;
+    font-size: 1fr;
+    margin: 0 20px 50px 20px;
+    color:rgb(95, 95, 95);
+}
+
+.head-nosotros ul li a{
+    color:black;
+    text-decoration: none;
+}
+
 
 /*--USUARIOS--*/
 
@@ -1688,6 +1608,7 @@ main section article div h3{
 
 @media (min-width: 600px){
 
+
     .compras-boton, .login-boton{
         display: inline-block;
     }    
@@ -1702,6 +1623,23 @@ main section article div h3{
 
 @media (min-width:900px){
 
+    /* POLITICAS */
+
+    .mainsoporte{
+        max-width: 700px;
+        margin: 0 auto;
+    }
+
+    .head-nosotros h3{
+        border-top: solid 1px rgb(204, 204, 204);
+        margin-top:10px;
+    }
+
+    .head-nosotros ul{
+        overflow-x:hidden;
+    }
+    
+    
 
 /*CINCO PASOS*/
 
@@ -1888,8 +1826,7 @@ main section article div h3{
 /* INVENTARIO */
 
 .seccion-inv{
-    max-width: 1100px;
-    margin: 0 auto;
+    margin: 40px auto;
 }
 
 #productsList{
