@@ -1449,10 +1449,9 @@ main section article div h3{
     list-style: none;
     margin:0;
     padding: 70px 0 0 20px;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
     overflow-x: scroll;
-    max-width: 545px;
+    display: flex;
+    flex-direction: row;
 }
 
 .head-nosotros ul li{
@@ -1460,7 +1459,6 @@ main section article div h3{
     border-right: solid 1px rgb(95, 95, 95);
     font-family: 'Roboto', sans-serif;
     text-align: center;
-    display: inline;
     width:max-content;
     margin: 10px 5px;
     padding: 0 10px 0 0 ;
@@ -1625,6 +1623,13 @@ main section article div h3{
 
     /* POLITICAS */
 
+    .head-nosotros ul{
+        list-style: none;
+        margin:0;
+        padding: 70px 0 0 20px;
+        overflow-x: scroll;
+    }
+
     .mainsoporte{
         max-width: 700px;
         margin: 0 auto;
@@ -1638,6 +1643,7 @@ main section article div h3{
     .head-nosotros ul{
         overflow-x:hidden;
     }
+    
     
     
 
