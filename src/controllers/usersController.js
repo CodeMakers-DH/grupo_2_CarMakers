@@ -151,13 +151,15 @@ const controlador ={
         res.redirect('/users')
     },
 
-    eliminarUsuario:  (req, res) => {
-		// Do the magic
-		let idUsuario= req.params.idUsuario;
-		usuarios = usuarios.filter((usuario)=> usuario.id != idUsuario);
+    //eliminar usuario
+    eliminarUsuario : (req, res) => {
+		let idUsuario = req.params.idUsuario;
+        db.Usuario.destroy({
+            where:{idUsuario:idUsuario}
+        })
+		res.redirect('/users')
+	},
 
-    res.send(usuarios);
-    }
 
 }
 
