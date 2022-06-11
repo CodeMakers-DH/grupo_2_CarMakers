@@ -15,17 +15,17 @@
             <h2 class="mis-compras-dos">Mis compras</h2>
 
                 <ul id="productList"></ul>
-            <div class="div-login-button">
-                <button class="register-button" type="submit" name="vaciar-carrito" id="vaciar-carrito">Vaciar Carrito</button>
-                <button class="register-button" type="submit" name="realizar-compra">Comprar</button>
-            </div>
-        </section>
+
+
+        </section>    
+        
+    <!--Agregar-->
 
 
         <section>
             <h3 class="resumen-compra">Resumen de compra</h3>
 
-            <form action="/carrito" method="POST" class="form-carrito">
+            <!-- <form action="/carrito" method="POST" class="form-carrito">
 
                 <div class="cupon-descuento">
                     <label for="cupon">¿Tenés cupón de descuento?</label>
@@ -49,15 +49,18 @@
                 <div class="checkout">
                     <h5>Impuestos</h5>
                     <h6>Calculado en el checkout</h6>
-                </div>
+                </div> -->
 
                 <div class="flex-total">
-                    <h4>Subtotal:</h4>
-                    <h5>$2,456,198</h5>
+                    <h4 >Subtotal:</h4>
+                    <h5 id = 'total-compra'>$2,456,198</h5>
                 </div>
 
                 <div class="div-boton">
-                <button type="submit" class="contacto">PONERSE EN CONTACTO CON EL VENDEDOR</button>
+                <button type="submit" class="contacto">CONFIRMAR COMPRA</button>
+                </div>
+                <div class="div-login-button">
+                    <button class="register-button" type="submit" name="vaciar-carrito" id="vaciar-carrito">Vaciar Carrito</button>
                 </div>
 
             </form>
