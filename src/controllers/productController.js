@@ -57,7 +57,7 @@ const controlador ={
         db.Producto.findByPk(idProducto)
         .then(productos=> res.render('editarproducto', {"productToEdit": productos}) )
     },
-//edición de producto
+    //edición de producto
     editar: (req, res) => {
 
         const resultValidation = validationResult(req);
@@ -68,13 +68,12 @@ const controlador ={
 
             db.Producto.findByPk(idProducto)
             .then(productos => res.render('editarproducto', {"productToEdit": productos, oldData: req.body, errors: resultValidation.mapped()}))
-        } else {
-
-        // let editedProduct = ;
+        } else if(req.file != undefined){
+        
         db.Producto.update({
             descripcion: newProduct.descripcionProducto,
             nombreModelo: newProduct.nombreProducto,
-            imgProducto: req.file.filename,//idem controlador create
+            imgProducto: req.file.filename,
             deliveryEstimado:newProduct.deliveryEstimado,
             precio: newProduct.precioProducto,
             autonomia: newProduct.autonomia,
@@ -85,8 +84,22 @@ const controlador ={
             {where:{idModelo:idProducto}})
             .then(productos=> productos )
         res.redirect('/products');
-        //console.log(req.file)	;
 
+
+        } else if(req.file == undefined){
+            db.Producto.update({
+                descripcion: newProduct.descripcionProducto,
+                nombreModelo: newProduct.nombreProducto,
+                deliveryEstimado:newProduct.deliveryEstimado,
+                precio: newProduct.precioProducto,
+                autonomia: newProduct.autonomia,
+                velocidadMaxima: newProduct.velocidadMaxima,
+                tiempoDeCeroCien: newProduct.tiempoDeCeroCien,
+                ingreso: newProduct.ingreso
+            },
+                {where:{idModelo:idProducto}})
+                .then(productos=> productos )
+            res.redirect('/products');
         }
     },
 

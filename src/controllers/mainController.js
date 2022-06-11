@@ -12,7 +12,7 @@ const res = require('express/lib/response');
 const controlador ={
     index: (req, res) => {
         db.Producto.findAll({limit: 5})
-            .then(productos=> res.render('index', {"productos":productos}));
+            .then(productos=> res.render('index', {"productos":productos}))
     },
     carritoCompras: (req, res) => {
         res.render('carrito')
@@ -30,7 +30,7 @@ const controlador ={
        - validar el checkbox en el backend */
 
     const resultValidation = validationResult(req)
-
+    
     if(resultValidation.errors.length > 0){
         db.Producto.findAll({limit:5})
         .then(productos=> res.render('index', {productos,
