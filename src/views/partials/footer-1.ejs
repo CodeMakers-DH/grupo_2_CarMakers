@@ -3,7 +3,7 @@
     <section class="footer-nav">
 
             <div class="div-footer">
-                <form action="/" method="POST" class="form-footer">
+                <form action="/" method="POST" class="form-footer" id="form-news">
                     <h5>Sumate al newsletter</h5>
 
                     <input type="text" placeholder="email@ejemplo.com" class="email" name="emailNL" id="emailNL"  value="<%= locals.oldData ? oldData.emailNL : null %>">
@@ -55,5 +55,6 @@
         <p class="derechos">Todos los derechos reservados</p>
     </div>
     
+    <script src="/js/formNews.js" type="module"></script>
 
 </footer>
