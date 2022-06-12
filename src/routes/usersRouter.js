@@ -7,6 +7,7 @@ const db = require('../../database/models')
 const usersController = require('../controllers/usersController');
 const guestMiddleware = require('../midddlewares/guestMiddleware');
 const authMiddleware = require('../midddlewares/authMiddleware');
+const adminMiddleware = require('../midddlewares/adminMiddleware');
 
 
 //Usamos el Multer
@@ -23,7 +24,7 @@ const upload = multer ({storage})
 
 //rutas de las vistasgi
 
-router.get('/', usersController.index);
+router.get('/', adminMiddleware, usersController.index);
 router.get('/login', guestMiddleware, usersController.login)
 
 //router.get('/register', usersController.register);
@@ -104,7 +105,7 @@ const validateRegister = [
 router.post('/register', upload.single('imgPerfil'), validateRegister, usersController.processRegister);
 
 //editar usuario
-router.get('/editarUsuario/:idUsuario?', usersController.editarUsuario);
+router.get('/editarUsuario/:idUsuario?', adminMiddleware, usersController.editarUsuario);
 router.put('/:idUsuario/editar', usersController.actualizar)
 
 //eliminar usuario

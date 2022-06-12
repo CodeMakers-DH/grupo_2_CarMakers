@@ -9,8 +9,12 @@
     <% } %>
     <li><a href="/carrito">Carrito</a></li>
     <li><a href="/products">Todos los productos</a></li>
-    <li><a href="/users">Todos los usuarios</a></li>
-    <li><a href="/users/">Editar Usuario</a></li>
-    <li><a href="/products/create">Crear Producto</a></li>
-    <li><a href="/products">Editar Producto</a></li>
+    <% if(locals.isLogged) { %>
+        <% if(locals.userLogged.is_admin == 1) { %> 
+            <li><a href="/users">Todos los usuarios</a></li>
+            <li><a href="/users/">Editar Usuario</a></li>
+            <li><a href="/products/create">Crear Producto</a></li>
+            <li><a href="/products">Editar Producto</a></li>
+        <% } %>
+    <% } %>
 </ul>

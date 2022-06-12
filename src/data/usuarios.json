@@ -5,7 +5,8 @@
         "apellidos": "Latyn",
         "email": "latynsara41@mail.com",
         "password": "$2b$10$mBjltuoEHceV.3iykvqbyuzPJErPRBKrV8hWWtcuFIgMqi38UDjL.",
-        "imgPerfil": "perrito.jpg"
+        "imgPerfil": "perrito.jpg",
+        "is_admin": "1"
     },
     {
         "id": 2,
@@ -13,7 +14,8 @@
         "apellidos": "González",
         "email": "gonzalogonzalez@gmail.com",
         "password": "$2b$10$RxWeJbr9u1PklvqvwmPVUup703LhVCdEMtwFJ5SWGfGMm1PH4zya6",
-        "imgPerfil": "nombre_imagen1650320611191.png"
+        "imgPerfil": "nombre_imagen1650320611191.png",
+        "is_admin": "0"
     },
     {
         "id": 3,
@@ -21,7 +23,8 @@
         "apellidos": "Lucas",
         "email": "lucaslucas@gmail.com",
         "password": "$2b$10$9FzJoXxuu9bNo5FuY2tU5.xGxBf227QN1/LAGrhB.cTImZatNxDE.",
-        "imgPerfil": "nombre_imagen1650321246265.png"
+        "imgPerfil": "nombre_imagen1650321246265.png",
+        "is_admin": "0"
     },
     {
         "id": 4,
@@ -29,6 +32,7 @@
         "apellidos": "Latyn",
         "email": "latynsara@mail.com",
         "password": "$2b$10$eCWAWuzqob5/gxL1U7mGHex2wUEm79PZC5AYHl952t0fPDEp0XgLC",
-        "imgPerfil": "nombre_imagen1650331039002.png"
+        "imgPerfil": "nombre_imagen1650331039002.png",
+        "is_admin": "0"
     }
 ]
