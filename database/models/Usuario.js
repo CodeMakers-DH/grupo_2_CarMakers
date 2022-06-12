@@ -21,6 +21,9 @@ module.exports = (sequelize, dataType) => {
         },
         imgPerfil: {
             type: dataType.STRING(100)
+        },
+        is_admin: {
+            type: dataType.INTEGER()
         }};
 
     let config = {

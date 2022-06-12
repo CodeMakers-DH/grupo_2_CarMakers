@@ -4,7 +4,7 @@ const multer = require('multer');
 const router = express.Router();
 const {check} = require('express-validator');
 const productsController = require('../controllers/productController');
-
+const adminMiddleware = require('../midddlewares/adminMiddleware');
 
 
 /*** USAMOS EL MULTER ***/ 
@@ -122,12 +122,12 @@ const validateProductEdit = [
 router.get('/detail/:idModelo?', productsController.detalleProducto); 
 
 //crear Producto
-router.get('/create', productsController.crearproducto);
+router.get('/create', adminMiddleware, productsController.crearproducto);
 router.post('/', upload.single('imgProducto'), validateProductCreate, productsController.create);
 
 
 //editar Producto
-router.get('/edit/:idModelo?', productsController.editarproducto);
+router.get('/edit/:idModelo?', adminMiddleware, productsController.editarproducto);
 router.put('/:idModelo/editar', upload.single('imgProducto'), validateProductEdit, productsController.editar);
 
 
