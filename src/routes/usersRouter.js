@@ -102,10 +102,10 @@ const validateRegister = [
 ];
 
 
-router.post('/register', upload.single('imgPerfil'), validateRegister, usersController.processRegister);
+router.post('/register/:isAdmin', upload.single('imgPerfil'), validateRegister, usersController.processRegister);
 
 //editar usuario
-router.get('/editarUsuario/:idUsuario?', adminMiddleware, usersController.editarUsuario);
+router.get('/editarUsuario/:isAdmin', adminMiddleware, usersController.editarUsuario);
 router.put('/:idUsuario/editar', usersController.actualizar)
 
 //eliminar usuario

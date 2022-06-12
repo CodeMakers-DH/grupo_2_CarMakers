@@ -3,6 +3,9 @@
     <nav>
         
         <ul class="ul-botones-menu">
+            <% if(locals.isLogged) { %> 
+                <li><%= locals.userLogged.nombres %> <%= locals.userLogged.apellidos %></li>
+            <% } %>
             <li><button class="compras-boton" type="button"><a href="/products">Comprar</a></button></li>
             <li><button class="login-boton" type="button"><a href="/users/login">Cuenta</a></button></li>
             <li class="menu-boton"><button type="button">Menú</button></li>
