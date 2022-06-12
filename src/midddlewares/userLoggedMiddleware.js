@@ -14,6 +14,7 @@ function userLoggedMiddleware(req, res, next){
     if(req.session.userLogged){
         res.locals.isLogged = true;
         res.locals.userLogged = req.session.userLogged;
+        //console.log('este es el nombre del usuario en sesion ' + res.locals.userLogged.nombres);
     }
 
     next();

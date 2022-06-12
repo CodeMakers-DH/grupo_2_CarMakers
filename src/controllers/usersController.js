@@ -39,7 +39,8 @@ const controlador ={
                         nombres: resultado.nombres,
                         apellidos: resultado.apellidos,
                         email: resultado.email,
-                        imgPerfil: resultado.imgPerfil
+                        imgPerfil: resultado.imgPerfil,
+                        is_admin: 0
                     };
 
                     delete resultado.password;
@@ -85,6 +86,7 @@ const controlador ={
     },
 
     register: (req, res) => {
+        console.log('query vista ' + req.query.isAdmin);
         return res.render('register');
     },
 
@@ -96,12 +98,21 @@ const controlador ={
             return res.render('register', {errors: resultValidation.mapped(), oldData: req.body})
         }
 
+        let queryAdmin = 0;
+        if (req.params.isAdmin === '1') {
+            queryAdmin = 1;
+        }
+
+        console.log('el query admin' + req.query.isAdmin);
+        console.log('variable qeryadmin' + queryAdmin);
+
         db.Usuario.create({            
             nombres: req.body.nombres,
             apellidos: req.body.apellidos,
             email: req.body.email,
             password: bcrypt.hashSync(req.body.password, 10),
-            imgPerfil: req.file.filename});
+            imgPerfil: req.file.filename,
+            is_admin: queryAdmin});
 
 		res.redirect('/users/login');
     },
