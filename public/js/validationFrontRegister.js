@@ -120,10 +120,8 @@ window.addEventListener('load', function(){
     //IMAGE
 
     img.addEventListener('focus', function(){
-        let textObligatorio = "<small>Este campo es obligatorio.</small>"
-        let textFormato = "<br><small>Por favor seleccione un archivo en formato JPG, JPEG, GIF o PNG.</small>"
-        imgText.innerHTML = textObligatorio;
-        imgText.innerHTML += textFormato;
+        let textFormato = "<small>Por favor seleccione un archivo en formato JPG, JPEG, GIF o PNG.</small>"
+        imgText.innerHTML = textFormato;
     })
 
     img.addEventListener('change', function(){

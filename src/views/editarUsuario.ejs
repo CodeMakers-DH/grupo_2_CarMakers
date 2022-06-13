@@ -10,7 +10,7 @@
     <main>
 
                 <div class="single-column">
-                <form action="/users/<%= usuarioToEdit.id %>/editar?_method=PUT" method="POST" class="form-login">
+                    <form action="/users/<%= usuarioToEdit.idUsuario %>/editar?_method=PUT" method="POST" class="form-login">
 
                     <h2 class="titulo-login">Editar Usuario</h2>
 
@@ -18,15 +18,46 @@
 
                         <label for="nombres" class="label-correo">Nombres</label>
                         <input type="text" name="nombres" id="nombres" value="<%= usuarioToEdit.nombres %>" required>
+                        <p class="text-name"></p>
+                        <% if(locals.errors && errors.nombres) { %>
+                            <div class="text-danger">
+                                <%= errors.nombres.msg %>
+                            </div>
+                        <% } %>
+                        
 
                         <label for="apellidos" class="label-correo">Apellidos</label>
                         <input type="text" name="apellidos" id="apellidos" value="<%= usuarioToEdit.apellidos %>" required>
+                        <p class="text-name"></p>
+                        <% if(locals.errors && errors.apellidos) { %>
+                            <div class="text-danger">
+                                <%= errors.apellidos.msg %>
+                            </div>
+                            
+                        <% } %>
+                        
 
                         <label for="correoElectronico" class="label-correo">Correo electrónico</label>
-                        <input type="email" name="correoElectronico" id="correoElectronico" value="<%= usuarioToEdit.email %>" required>
+                        <input type="email" name="email" id="correoElectronico" value="<%= usuarioToEdit.email %>" required>
+                        <p class="text-name"></p>
+                        <% if(locals.errors && errors.email) { %>
+                            <div class="text-danger">
+                                <%= errors.email.msg %>
+                            </div>
+                            
+                        <% } %>
+                        
 
                         <label for="password" class="label-contra">Contraseña</label>
                         <input type="password" name="password" id="password"  value="<%= usuarioToEdit.password %>" required>
+                        <p class="text-name"></p>
+                        <% if(locals.errors && errors.password) { %>
+                            <div class="text-danger">
+                                <%= errors.password.msg %>
+                            </div>
+                            
+                        <% } %>
+                        
                     </div>
                     
                     

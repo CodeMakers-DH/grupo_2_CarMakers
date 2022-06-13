@@ -8,7 +8,7 @@
     <main>
 
                 <div class="single-column">
-                <form action="/users/register/" method="POST" class="form-login" id='form-register' enctype="multipart/form-data">
+                <form action="/users/register" method="POST" class="form-login" id='form-register' enctype="multipart/form-data">
 
                     <h2 class="titulo-login">Crear cuenta</h2>
 
@@ -55,7 +55,7 @@
                         <% } %>
 
                         <label for="imgPerfil" class="label-correo">Sube una imágen de perfil</label>
-                        <input accept="image/png,image/jpeg, image/jpg" type="file" name="imgPerfil" id="imgPerfil" class='img-register' required>
+                        <input accept="image/png,image/jpeg, image/jpg" type="file" name="imgPerfil" id="imgPerfil" class='img-register'>
                         <p class="text-image"></p>
                         <% if(locals.errors && errors.imgPerfil) { %>
                             <div class="text-danger">
@@ -64,6 +64,10 @@
                             
                         <% } %>
 
+                        <div class="recuerdame">
+                            <input class="checkbox-box" type="checkbox" value="admin" id="rememberMe" name="admin"> 
+                            <label class="checkbox-label" for="rememberMe">Soy administrador</label>
+                        </div>
                         
                     </div>
                     
