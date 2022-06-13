@@ -76,7 +76,9 @@ const controlador ={
     },
 
     profile: (req, res) => {
-        res.render('profile', {user: req.session.userLogged});
+            db.Usuario.findAll()
+            .then(usuarios=> res.render('profile', {usuario: usuarios,
+                                                    user: req.session.userLogged}));
     },
 
     logout: (req,res) => {
@@ -86,7 +88,6 @@ const controlador ={
     },
 
     register: (req, res) => {
-        console.log('query vista ' + req.query.isAdmin);
         return res.render('register');
     },
 
@@ -98,21 +99,44 @@ const controlador ={
             return res.render('register', {errors: resultValidation.mapped(), oldData: req.body})
         }
 
-        let queryAdmin = 0;
-        if (req.params.isAdmin === '1') {
-            queryAdmin = 1;
+        if(req.body.admin && req.file != undefined){
+            db.Usuario.create({
+                nombres: req.body.nombres,
+                apellidos: req.body.apellidos,
+                email: req.body.email,
+                password: bcrypt.hashSync(req.body.password, 10),
+                imgPerfil: req.file.filename,
+                is_admin: 1});
+        }else if (req.body.admin && req.file == undefined){
+            db.Usuario.create({            
+                nombres: req.body.nombres,
+                apellidos: req.body.apellidos,
+                email: req.body.email,
+                password: bcrypt.hashSync(req.body.password, 10),
+                imgPerfil: null,
+                is_admin: 0});
+        }
+        
+        if(!req.body.admin && req.file != undefined){
+            db.Usuario.create({
+                nombres: req.body.nombres,
+                apellidos: req.body.apellidos,
+                email: req.body.email,
+                password: bcrypt.hashSync(req.body.password, 10),
+                imgPerfil: req.file.filename,
+                is_admin: 1});
+        }else if (!req.body.admin && req.file == undefined){
+            db.Usuario.create({            
+                nombres: req.body.nombres,
+                apellidos: req.body.apellidos,
+                email: req.body.email,
+                password: bcrypt.hashSync(req.body.password, 10),
+                imgPerfil: null,
+                is_admin: 0});
         }
 
-        console.log('el query admin' + req.query.isAdmin);
-        console.log('variable qeryadmin' + queryAdmin);
 
-        db.Usuario.create({            
-            nombres: req.body.nombres,
-            apellidos: req.body.apellidos,
-            email: req.body.email,
-            password: bcrypt.hashSync(req.body.password, 10),
-            imgPerfil: req.file.filename,
-            is_admin: queryAdmin});
+
 
 		res.redirect('/users/login');
     },
@@ -142,13 +166,34 @@ const controlador ={
 
 		res.redirect('/users')
     }, 
+
+    actualizar: (req,res) => {
+        const resultValidation = validationResult(req);
+        let idUser = req.params.idUsuario;
+        let newUser = req.body;
+
+        if(resultValidation.errors.length > 0){
+            db.Usuario.findByPk(idUser)
+            .then(usuarios => res.render('editarUsuario', {'usuarioToEdit': usuarios, oldData: req.body, errors: resultValidation.mapped()}))
+        }else{
+            db.Usuario.update({
+                nombres: newUser.nombres,
+                apellidos: newUser.apellidos,
+                email: newUser.email,
+                password: newUser.password
+            },
+                {where:{idUsuario: idUser}})
+                .then(usuarios => usuarios)
+                res.redirect('/users');
+        }
+    },
 /*
     editarUsuario: (req, res) => {
         let idUsuario = req.params.idUsuario;
         res.render('editarUsuario',{usuarioToEdit :usuarios.filter((usuario)=> usuario.id == idUsuario)[0] } )
     },
 */
-    actualizar: (req, res)=>{
+/*     actualizar: (req, res)=>{
         let idUsuario = req.params.idUsuario;
         let infoForm = req.body;
         usuarios.forEach(element => {
@@ -160,7 +205,7 @@ const controlador ={
             }
         });
         res.redirect('/users')
-    },
+    }, */
 
     //eliminar usuario
     eliminarUsuario : (req, res) => {
@@ -170,6 +215,22 @@ const controlador ={
         })
 		res.redirect('/users')
 	},
+    imgProfile: (req,res) => {
+        let newImage = req.file.filename;
+        let idUser = req.params.idUsuario;
+
+        console.log('imagen' + newImage);
+        console.log('usuario' + idUser);
+
+
+        db.Usuario.update({imgPerfil: newImage},
+                          {where:{idUsuario: idUser}}
+        )
+
+        res.redirect('/profile')
+
+        console.log('este es el usuario logeado' + usuarioLogeado)
+    }
 
 
 }

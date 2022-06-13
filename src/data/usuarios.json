@@ -5,7 +5,7 @@
         "apellidos": "Latyn",
         "email": "latynsara41@mail.com",
         "password": "$2b$10$mBjltuoEHceV.3iykvqbyuzPJErPRBKrV8hWWtcuFIgMqi38UDjL.",
-        "imgPerfil": "perrito.jpg",
+        "imgPerfil": null,
         "is_admin": "1"
     },
     {

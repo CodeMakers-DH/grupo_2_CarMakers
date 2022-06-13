@@ -9,7 +9,42 @@
 
     <main>
         <section class="main-section-index">
-                <h2 class="titulo-carmakers">CARMAKERS</h2>
+                <h2 class="titulo-carmakers">
+
+                    <% var currentTime = new Date(); %>
+                    <% var hour = currentTime.getHours(); %>
+
+                    <% if(locals.isLogged) { %> 
+
+                        <% if(hour > 6 && hour < 12) { %>
+                            Buenos días, <%= locals.userLogged.nombres %>
+                        <% } %>
+
+                        <% if(hour > 12 && hour < 20) { %>
+                            Buenas tardes, <%= locals.userLogged.nombres %>
+                        <% } %>
+
+                        <% if(hour > 20 && hour < 6) { %>
+                            Buenas noches, <%= locals.userLogged.nombres %>
+                        <% } %>
+
+                    <% } %>
+
+                    <% if(!locals.isLogged) { %>
+                        <% if(hour > 6 && hour < 12) { %>
+                            Buenos días
+                        <% } %>
+
+                        <% if(hour > 12 && hour < 20) { %>
+                            Buenas tardes
+                        <% } %>
+
+                        <% if(hour > 20 && hour < 6) { %>
+                            Buenas noches
+                        <% } %>
+                     <% } %>
+
+                </h2>
                 <div class="button-input">
                     <form action='/products' method="GET" class="searchbar-form">
                         <input type="text" placeholder="Ingrese un modelo" class="search" id='searchBarIndex' required="" name="keyword">

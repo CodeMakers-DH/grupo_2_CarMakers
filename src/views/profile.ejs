@@ -9,7 +9,33 @@
     
     <main>
         <article class="perfil">
-            <div><img src="/imgs/imgsPerfil/<%= user.imgPerfil%>" alt="Imágen de perfil"></div>
+            <div>
+                <% if(user.imgPerfil != null) { %>
+                    <img src="/imgs/imgsPerfil/<%= user.imgPerfil%>" alt="Imágen de perfil">
+                <% } %> 
+
+                <% if(user.imgPerfil == null) { %>
+                    <img src="/imgs/imgsPerfil/default.png" alt="Imágen de perfil"></div>
+                <% } %>
+
+
+                <form action="/profile/edit/<%= user.id %>?_method=PUT" method="POST" class="form-login" enctype="multipart/form-data">
+
+                        <label for="imgProfile" class="label-correo">Cambiar imágen de perfil</label>
+                        <input type="file" name="imgProfile" id="imgProfile" class="img-create">
+                        <p class="text-image"></p>
+                        <% if(locals.errors && errors.imgProfile) { %>
+                            <div class="text-danger">
+                                <%= errors.imgProfile.msg %>
+                            </div>
+                        <% } %>
+
+                        <div class="div-login-button">
+                            <button type="submit">Subir imágen</button>
+                        </div>
+
+                </form>
+                
             <h1><%= user.nombres + " " + user.apellidos%> </h1>
             <h2><%= user.email %> </h2>
             <button type="button"><a href="/users/logout">Cerrar sesión</a></button>

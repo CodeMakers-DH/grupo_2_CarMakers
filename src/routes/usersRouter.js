@@ -32,6 +32,7 @@ router.get('/register', guestMiddleware, usersController.register)
 
 //router.get('/detalleUsuario/:idUsuario?', usersController.detalleUsuario);
 router.get('/profile/', authMiddleware, usersController.profile);
+router.put('/profile/edit/:idUser', upload.single('imgProfile'), usersController.imgProfile)
 router.get('/logout', usersController.logout);
 
 //login
@@ -90,7 +91,7 @@ const validateRegister = [
             let file = req.file;
             let acceptedExtensions = ['.jpeg', '.jpg', '.png', '.gif'];
             if(!file){
-                throw new Error('Por favor seleccione un archivo')
+                return true;
             } else {
                 let fileExtensions = path.extname(file.originalname);
                 if (!acceptedExtensions.includes(fileExtensions)){
@@ -101,12 +102,39 @@ const validateRegister = [
         }),
 ];
 
+const validateUserToEdit = [
+    check('nombres')
+        .notEmpty().withMessage('Debes rellenar los nombres').bail()
+        .isLength({min:2}).withMessage('El nombre debe tener al menos 2 caracteres.').bail(),
+    check('apellidos')
+        .notEmpty().withMessage('Debes rellenar los apellidos').bail()
+        .isLength({min:2}).withMessage('El apellido debe tener al menos 2 caracteres.').bail(),
+    check('email')
+        .notEmpty().withMessage('Debes rellenar el email').bail()
+        .isEmail().withMessage('Ingresa un email de formato válido.').bail(),
+    check('password')
+        .notEmpty().withMessage('Debes rellenar la contraseña').bail()
+        .isLength({min:8}).withMessage('La contraseña debe tener al menos 8 caracteres.').bail()
+        .custom((value, {req}) => {
+            let pass = req.body.password;
 
-router.post('/register/:isAdmin', upload.single('imgPerfil'), validateRegister, usersController.processRegister);
+            if(pass.match(/[0-9]/) && pass.match(/[A-Z]/) && pass.match(/[a-z]/) && pass.match(/[.,:;-_!"§$%&/()=?`+@]/)){
+                return true;
+            } 
+            else{
+            throw new Error('La contraseña debe tener al menos un número, una mayúscula, minúscula y un caracter especial.')
+        }
+        })
+];
+
+
+
+
+router.post('/register', upload.single('imgPerfil'), validateRegister, usersController.processRegister);
 
 //editar usuario
-router.get('/editarUsuario/:isAdmin', adminMiddleware, usersController.editarUsuario);
-router.put('/:idUsuario/editar', usersController.actualizar)
+router.get('/editarUsuario/:idUsuario', adminMiddleware, usersController.editarUsuario);
+router.put('/:idUsuario/editar', validateUserToEdit, usersController.actualizar)
 
 //eliminar usuario
 router.delete('/:idUsuario/eliminar', usersController.eliminarUsuario); 
