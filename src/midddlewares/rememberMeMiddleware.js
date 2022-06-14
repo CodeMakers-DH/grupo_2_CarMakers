@@ -1,6 +1,14 @@
+/* const User = require('../modelos/users'); */
+const db = require('../../database/models');
+
 function rememberMeMiddleware(req,res,next){
     if(req.cookies.rememberMe != undefined && req.session.usuarioLogeado == undefined){
-            let usersJSON = fs.readFileSync(usersFilePath, {errors: errors.errors})
+
+        let usersJSON =   User.findAll({raw: true,
+            nest: true})
+            .then(usuarios => res.JSON(usuarios))
+
+            //let usersJSON = fs.readFileSync(usersFilePath, {errors: errors.errors})
             let users;
             let usuarioALoguearse;
             if(usersJSON == ''){

@@ -114,7 +114,7 @@ const controlador ={
                 email: req.body.email,
                 password: bcrypt.hashSync(req.body.password, 10),
                 imgPerfil: null,
-                is_admin: 0});
+                is_admin: 1});
         }
         
         if(!req.body.admin && req.file != undefined){
@@ -124,7 +124,7 @@ const controlador ={
                 email: req.body.email,
                 password: bcrypt.hashSync(req.body.password, 10),
                 imgPerfil: req.file.filename,
-                is_admin: 1});
+                is_admin: 0});
         }else if (!req.body.admin && req.file == undefined){
             db.Usuario.create({            
                 nombres: req.body.nombres,
