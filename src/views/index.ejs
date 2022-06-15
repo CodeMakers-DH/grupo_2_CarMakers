@@ -14,32 +14,41 @@
                     <% var currentTime = new Date(); %>
                     <% var hour = currentTime.getHours(); %>
 
+
                     <% if(locals.isLogged) { %> 
 
-                        <% if(hour > 6 && hour < 12) { %>
+                        <% if(hour > 5 && hour < 12) { %>
                             Buenos días, <%= locals.userLogged.nombres %>
                         <% } %>
 
-                        <% if(hour > 12 && hour < 20) { %>
+                        <% if(hour > 11 && hour < 20) { %>
                             Buenas tardes, <%= locals.userLogged.nombres %>
                         <% } %>
 
-                        <% if(hour > 20 && hour < 6) { %>
+                        <% if(hour < 6) { %>
+                            Buenas noches, <%= locals.userLogged.nombres %>
+                        <% } %>
+
+                        <% if(hour > 19 && hour < 24) { %>
                             Buenas noches, <%= locals.userLogged.nombres %>
                         <% } %>
 
                     <% } %>
 
                     <% if(!locals.isLogged) { %>
-                        <% if(hour > 6 && hour < 12) { %>
+                        <% if(hour > 5 && hour < 12) { %>
                             Buenos días
                         <% } %>
 
-                        <% if(hour > 12 && hour < 20) { %>
+                        <% if(hour > 11 && hour < 20) { %>
                             Buenas tardes
                         <% } %>
 
-                        <% if(hour > 20 && hour < 6) { %>
+                        <% if(hour < 6) { %>
+                            Buenas noches
+                        <% } %>
+
+                        <% if(hour > 19 && hour < 24) { %>
                             Buenas noches
                         <% } %>
                      <% } %>
