@@ -4,19 +4,6 @@ const productsList = document.getElementById('productsList');
 let products = [];
 
 
-/* { 
-    
-     fetch('http://localhost:3000/api') 
-                        .then( function(response) {
-                            return response.json();
-                        })
-                        .then( function(data) {
-                            products = data.data;
-                            displayProducts(products);
-}) 
-}
-
- */
 
 searchBar.addEventListener('keyup', (e) => {
     const searchString = e.target.value.toLowerCase();
@@ -54,7 +41,13 @@ const displayProducts = (products) => {
         `;
         })
         .join('');
-    productsList.innerHTML = htmlString;
+        if(htmlString){
+            productsList.innerHTML = htmlString;
+        } else{
+            const noProduct = '<img src="/imgs/404error.png" class="imagen-error" alt="No se encuentran productos con esas caraterísticas"></img><p class="loSentimos">Lo sentimos, no hemos encontrado resultados con esas características.</p>';
+            productsList.innerHTML = '';
+            noproducto.innerHTML = noProduct;
+        }
 };
 
 
