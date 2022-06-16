@@ -5,6 +5,7 @@ const mainRoutes = require('./routes/mainRouter');
 const productRoutes = require('./routes/productRouter');
 
 const APIproductRoutes = require('./routes/APIrouter/productRouterAPI');
+const APIusersRoutes = require('./routes/APIrouter/usersRouterAPI');
 
 const usersRoutes = require('./routes/usersRouter');
 const session = require('express-session');
@@ -42,9 +43,11 @@ app.set('views', path.join(__dirname,'/views'))
 
 app.use('/', mainRoutes);
 app.use('/products', productRoutes);
-app.use('/users', usersRoutes);
 
+//rutas api
+app.use('/api', APIusersRoutes);
 app.use('/api', APIproductRoutes);
+
 
 // llamada al servidor en puerto 5000
 

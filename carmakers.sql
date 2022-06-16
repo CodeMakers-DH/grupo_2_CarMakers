@@ -42,11 +42,11 @@ CREATE TABLE `modelos_autos` (
 
 LOCK TABLES `modelos_autos` WRITE;
 INSERT INTO `modelos_autos` VALUES
-    (1,'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam eaque ut porro pariatur eveniet. Paris: se desataca por su confprt y potencia que lo hace un superdeportivo muy diferente a otro. Su alto diseno y mas amplio confort lo hace ser hoy en dia un auto envidiable por su competencia. EL fabricante Bnezema de origen frances nomino al auto en honor a su ciudad de origen. SU color principal hace honor a los colores de la bandera de su pais.','Paris','producto2.jpg',90,2.5,1500,230,3,NULL),
-    (2,'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam eaque ut porro pariatur eveniet. Roma: es un superdeportivo de origen Argentino cuyo nombre respresenta la ciudad natal de sucreador Ernesto Quiq,Destaca un gran motor y una agilidad para las curvas a seguir.','Roma','producto.jpg',20,2.2,500,180,4,NULL),
-    (3,'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam eaque ut porro pariatur eveniet.Zenit: auto creado excluivamente para Putin, destaca por sus asientos de cuero animal y mas alto confort','Zenit','producto2.jpg',60,2,1300,180,3,NULL),
-    (4,'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam eaque ut porro pariatur eveniet.  Berlin: es un diseno exclusivo que se realizo en apoyo a Mercedes, dicha compania baso su diseno y realizacion en el auto ya conocido AMG vision. ','Berlin','producto.jpg',30,1.5,1300,110,3,NULL),
-    (5,'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam eaque ut porro pariatur eveniet. Madrid: es un camioneta premiu, desarrollada por el piloto de carrera Alonso para brindarle un obsequio al plantel del Real Madrid en conmemoracion a su 14 champions. Su nombre hace honor a la capital de la ciudad espanola.','Madrid','producto2.jpg',90,5,1500,230,3,NULL);
+    (1,'Paris: se desataca por su confort y potencia haciéndolo un superdeportivo diferente a cualquier otro. Su elegante diseño y cómoda estructura lo hace ser hoy en dia un auto envidiable por su competencia. El fabricante Bnezema de origen francés, le dió el nombre en honor a su ciudad de origen. Su color principal referencia los colores de la bandera de su pais.','Paris','miniaturaParis.jpg',90,40000,1500,230,3,NULL),
+    (2,'Roma: es un superdeportivo de origen argentino cuyo nombre respresenta la ciudad natal de su creador Ernesto Quiq. Se destaca por su gran motor y una agilidad para las curvas a seguir.','Roma','miniaturaRoma.jpg',20,35000,500,180,4,NULL),
+    (3,'Zenit: este móbil se destaca por sus asientos de cuero y más alto confort','Zenit','miniaturaZenit.jpg',60,25000,1300,180,3,NULL),
+    (4,'Berlin: exclusivo producto que se realizó en apoyo a Mercedes. Dicha compañía basó su diseño y realización en el auto ya conocido AMG vision. ','Berlin','miniaturaBerlin.jpg',30,30000,1300,110,3,NULL),
+    (5,'Madrid: automóvil premium, desarrollado por el piloto de carrera Alonso para brindarle un obsequio al plantel del Real Madrid en conmemoración a su 14 champions. Su nombre hace honor a la capital de la ciudad española.','Madrid','miniaturaMadrid.jpg',90,50000,1500,230,3,NULL);
 UNLOCK TABLES;
   
 SELECT * from modelos_autos;
@@ -59,35 +59,38 @@ CREATE TABLE `usuarios` (
     `email` VARCHAR(200) CHARACTER SET utf8,
     `password` VARCHAR(100) CHARACTER SET utf8,
     `imgPerfil` VARCHAR(200) CHARACTER SET utf8,
+    `is_admin` INT unsigned not NULL,
 PRIMARY KEY (`idUsuario`)
 );
 
 INSERT INTO usuarios VALUES
-    (1,'Sara','Latyn','latynsara41@mail.com','$2b$10$mBjltuoEHceV.3iykvqbyuzPJErPRBKrV8hWWtcuFIgMqi38UDjL.','perrito.jpg'),
-    (2,'Gonzalo','González','gonzalogonzalez@gmail.com','$2b$10$RxWeJbr9u1PklvqvwmPVUup703LhVCdEMtwFJ5SWGfGMm1PH4zya6','nombre_imagen1650320611191.png'),
-    (3,'Lucas','Lucas','lucaslucas@gmail.com','$2b$10$9FzJoXxuu9bNo5FuY2tU5.xGxBf227QN1/LAGrhB.cTImZatNxDE.','nombre_imagen1650321246265.png'),
-    (4,'Sara','Latyn','latynsara@mail.com','$2b$10$eCWAWuzqob5/gxL1U7mGHex2wUEm79PZC5AYHl952t0fPDEp0XgLC','nombre_imagen1650331039002.png'),
-    (5,'Tuesday','Slowey','tslowey0@economist.com','iVk9bpr','user_1.jpg'),
-    (6,'Rubi','Higgan','rhiggan1@twitpic.com','w8UoRswc4IK','user_2.jpg'),
-    (7,'Karil','Hammerton','khammerton2@princeton.edu','ZF8RmbY1','user_3.jpg'),
-    (8,'Katheryn','Hawkswell','khawkswell3@weather.com','wcMYwPT','user_4.jpg'),
-    (9,'Carlie','Buncom','cbuncom4@networkadvertising.org','Xd0fZKxq5','user_5.jpg'),
-    (10,'Margaret','Tisor','mtisor5@apache.org','cXb1sW','user_6.jpg'),
-    (11,'Torr','Hassur','thassur6@theguardian.com','XiidSE','user_7.jpg'),
-    (12,'Gigi','Cornfield','gcornfield7@alexa.com','LnX9Nk5wpvm','user_8.jpg'),
-    (13,'Winny','Farlamb','wfarlamb8@vinaora.com','fi1HGXgaVEKu','user_9.jpg'),
-    (14,'Kirsteni','Bolgar','kbolgar9@reference.com','Zrt2ur','user_10.jpg'),
-    (15,'Siusan','Troni','stronia@hud.gov','fnIXDxjNPO','user_11.jpg'),
-    (16,'Alys','Soonhouse','asoonhouseb@cocolog-nifty.com','Rh0Dx81Qt','user_12.jpg'),
-    (17,'Pavel','Kilroy','pkilroyc@slate.com','DKzCFjXj2c','user_13.jpg'),
-    (18,'Isador','Scarratt','iscarrattd@usda.gov','UlRJRI','user_14.jpg'),
-    (19,'Virginia','Shankster','vshankstere@ameblo.jp','IhLYBv','user_15.jpg'),
-    (20,'Allin','Fegan','afeganf@netlog.com','H1cUQ9W','user_16.jpg'),
-    (21,'Patience','Fitzmaurice','pfitzmauriceg@goo.gl','chz86FFO','user_17.jpg'),
-    (22,'Cathryn','Kellart','ckellarth@tumblr.com','xhqugnm','user_18.jpg'),
-    (23,'Sydney','Heales','shealesi@twitpic.com','ytS8GA1f7','user_19.jpg'),
-    (24,'Bennett','Lambertz','blambertzj@elegantthemes.com','3CYZObn5cV','user_20.jpg');
+    (1,'Sara','Latyn','latynsara41@mail.com','$2b$10$mBjltuoEHceV.3iykvqbyuzPJErPRBKrV8hWWtcuFIgMqi38UDjL.',NULL, 1),
+    (2,'Gonzalo','GonzÃ¡lez','gonzalogonzalez@gmail.com','$2b$10$RxWeJbr9u1PklvqvwmPVUup703LhVCdEMtwFJ5SWGfGMm1PH4zya6','nombre_imagen1650320611191.png', 0),
+    (3,'Lucas','Lucas','lucaslucas@gmail.com','$2b$10$9FzJoXxuu9bNo5FuY2tU5.xGxBf227QN1/LAGrhB.cTImZatNxDE.','nombre_imagen1650321246265.png', 0),
+    (4,'Sara','Latyn','latynsara@mail.com','$2b$10$eCWAWuzqob5/gxL1U7mGHex2wUEm79PZC5AYHl952t0fPDEp0XgLC','nombre_imagen1650331039002.png', 0),
+    (5,'Tuesday','Slowey','tslowey0@economist.com','iVk9bpr','user_1.jpg', 0),
+    (6,'Rubi','Higgan','rhiggan1@twitpic.com','w8UoRswc4IK','user_2.jpg', 0),
+    (7,'Karil','Hammerton','khammerton2@princeton.edu','ZF8RmbY1','user_3.jpg', 0),
+    (8,'Katheryn','Hawkswell','khawkswell3@weather.com','wcMYwPT','user_4.jpg', 0),
+    (9,'Carlie','Buncom','cbuncom4@networkadvertising.org','Xd0fZKxq5','user_5.jpg', 0),
+    (10,'Margaret','Tisor','mtisor5@apache.org','cXb1sW','user_6.jpg', 0),
+    (11,'Torr','Hassur','thassur6@theguardian.com','XiidSE','user_7.jpg', 0),
+    (12,'Gigi','Cornfield','gcornfield7@alexa.com','LnX9Nk5wpvm','user_8.jpg', 0),
+    (13,'Winny','Farlamb','wfarlamb8@vinaora.com','fi1HGXgaVEKu','user_9.jpg', 0),
+    (14,'Kirsteni','Bolgar','kbolgar9@reference.com','Zrt2ur','user_10.jpg', 0),
+    (15,'Siusan','Troni','stronia@hud.gov','fnIXDxjNPO','user_11.jpg', 0),
+    (16,'Alys','Soonhouse','asoonhouseb@cocolog-nifty.com','Rh0Dx81Qt','user_12.jpg', 0),
+    (17,'Pavel','Kilroy','pkilroyc@slate.com','DKzCFjXj2c','user_13.jpg', 0),
+    (18,'Isador','Scarratt','iscarrattd@usda.gov','UlRJRI','user_14.jpg', 0),
+    (19,'Virginia','Shankster','vshankstere@ameblo.jp','IhLYBv','user_15.jpg', 0),
+    (20,'Allin','Fegan','afeganf@netlog.com','H1cUQ9W','user_16.jpg', 0),
+    (21,'Patience','Fitzmaurice','pfitzmauriceg@goo.gl','chz86FFO','user_17.jpg', 0),
+    (22,'Cathryn','Kellart','ckellarth@tumblr.com','xhqugnm','user_18.jpg', 0),
+    (23,'Sydney','Heales','shealesi@twitpic.com','ytS8GA1f7','user_19.jpg', 0),
+    (24,'Bennett','Lambertz','blambertzj@elegantthemes.com','3CYZObn5cV','user_20.jpg', 0),
+    (25,'cris','Lambertz','criscriscris@cris.com','$2b$10$RR1nbUvNivf.GSISFaek5.Bf6A.jf.iJzWIIyD8YNPiJsRGlaaffu','user_20.jpg', 1);
    
+   select * from usuarios;
    
    CREATE TABLE `emails` (
   `idEmail` int unsigned NOT NULL AUTO_INCREMENT,
@@ -97,3 +100,4 @@ INSERT INTO usuarios VALUES
 );
 
 select * from emails;
+
