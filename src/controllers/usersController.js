@@ -25,6 +25,8 @@ const controlador ={
     
     login: (req, res) => {
         res.render('login')
+        db.Usuario.findAll({raw:true}).then((result) =>{
+            fs.writeFileSync("./src/data/usuarios.json", JSON.stringify(result) )})
     },
 
     processLogin: (req,res) => {
