@@ -43,6 +43,7 @@ const displayProducts = (products) => {
         .join('');
         if(htmlString){
             productsList.innerHTML = htmlString;
+            noproducto.innerHTML = '';
         } else{
             const noProduct = '<img src="/imgs/404error.png" class="imagen-error" alt="No se encuentran productos con esas caraterísticas"></img><p class="loSentimos">Lo sentimos, no hemos encontrado resultados con esas características.</p>';
             productsList.innerHTML = '';
