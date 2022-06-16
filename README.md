@@ -29,7 +29,7 @@ Vender autos de buena calidad y de renombre.
 
 **Cristian Salinas Talamilla** es Ingeniero en Recursos Naturales con 14 años de experiencia en el rubro minero. Respecto a conocimientos de programación, se encuentra terminando el curso de Científico de Datos de Acamica/Digital House. En 2021 se desempeñó profesor de Python Data Analytics en la Escuela Argentina de Nuevas Tecnologías. Ha realizado trabajos privados de analítica y ciencia de datos con R y Python para empresas mineras.
 
-**Giuliano Raschetti**
+**Giuliano Raschetti** nació el 24 de abril de 1998, es Despachante de Aeronave y Piloto Privado. Actualmente trabaja como empleado en Aerolineas Argentinas desde hace 3 años. Respecto a conocimientos de programación, comenzo a introducirse en el mundo de programacion en 2018 con php y atom. En 2021 comenzo nuevamente el curso de Developer Full Stack en DH, En el mundo de la programación le interesa todo lo que le de herramientas de funcionalidad en la vida cotidiana a las personas. 
 
 
 
