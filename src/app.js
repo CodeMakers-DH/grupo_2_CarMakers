@@ -43,6 +43,7 @@ app.set('views', path.join(__dirname,'/views'))
 
 app.use('/', mainRoutes);
 app.use('/products', productRoutes);
+app.use('/users', usersRoutes);
 
 //rutas api
 app.use('/api', APIusersRoutes);
