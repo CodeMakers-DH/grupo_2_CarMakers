@@ -10,6 +10,8 @@
     <main>
         <article class="perfil">
             <div>
+
+                <div class="img-profile">
                 <% if(user.imgPerfil != null) { %>
                     <img src="/imgs/imgsPerfil/<%= user.imgPerfil%>" alt="Imágen de perfil">
                 <% } %> 
@@ -17,28 +19,34 @@
                 <% if(user.imgPerfil == null) { %>
                     <img src="/imgs/imgsPerfil/default.png" alt="Imágen de perfil"></div>
                 <% } %>
+                </div>
 
 
-                <form action="/profile/edit/<%= user.id %>?_method=PUT" method="POST" class="form-login" enctype="multipart/form-data">
+                <form action="/profile/edit/<%= user.id %>?_method=PUT" method="POST" class="form-change-img" enctype="multipart/form-data">
 
-                        <label for="imgProfile" class="label-correo">Cambiar imágen de perfil</label>
-                        <input type="file" name="imgProfile" id="imgProfile" class="img-create">
-                        <p class="text-image"></p>
-                        <% if(locals.errors && errors.imgProfile) { %>
-                            <div class="text-danger">
-                                <%= errors.imgProfile.msg %>
+                        <div class="change-img">
+                            <p class="text-image"></p>
+                            <% if(locals.errors && errors.imgProfile) { %>
+                                <div class="text-danger">
+                                    <%= errors.imgProfile.msg %>
+                                </div>
+                            <% } %>
+
+                            <label for="imgProfile" class="change-label">Cambiar imágen de perfil</label>
+                            <input type="file" name="imgProfile" id="imgProfile" class="img-create">
+    
+                            <div class="div-img">
+                                <button type="submit" class="boton-change">Subir imágen</button>
                             </div>
-                        <% } %>
+    
+                            <h1 class="name-profile"><%= user.nombres + " " + user.apellidos%> </h1>
+                            <h2 class="mail-profile"><%= user.email %> </h2>
 
-                        <div class="div-login-button">
-                            <button type="submit">Subir imágen</button>
                         </div>
-
                 </form>
                 
-            <h1><%= user.nombres + " " + user.apellidos%> </h1>
-            <h2><%= user.email %> </h2>
-            <button type="button"><a href="/users/logout">Cerrar sesión</a></button>
+                <button type="button" class="log-out"><a href="/users/logout">Cerrar sesión</a></button>
+
         </article>
     
     </main>
