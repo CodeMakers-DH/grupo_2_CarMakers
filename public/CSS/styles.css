@@ -1504,49 +1504,108 @@ main section article div h3{
 }
 
 /*---PERFIL---*/
-.perfil{
+
+.form-change-img{
+    width: 80%;
+    max-width: 250px;
     margin: 0 auto;
+}
+
+.boton-change{
+    margin:20px 0 0 0;
+    padding:0;
+    border: none;
+    background-color: transparent;
+    font-family: 'Roboto', 'sans-serif';
+    font-weight: 500;
+    text-decoration:underline;
+    color:#313131;
+}
+
+.div-image{
+    width:100%;
+}
+
+.change-label{
+    margin:0 0 10px 0;
+    padding:0;
+    font-family: 'Roboto', 'sans-serif';
+    font-size: 17px;
+    color:black;
+    font-weight: 400;
+}
+.change-img{
+    display: flex;
+    flex-direction:column;
+    justify-content:flex-start;
+    align-items:flex-start;
+}
+
+.perfil{
+    padding: 5px 0 80px 0;
+    margin: 80px auto 0 auto;
     text-align: center;
 }
-.perfil h1{
-    font-family: 'Roboto', sans-serif;
-    font-size: 25px;
-    font-weight: 500;
-    color:black;
-}
 
-.perfil h2{
-    font-family: 'Roboto', sans-serif;
-    font-size:20px;
-    font-weight: 400;
-    color:black;
-}
-
-.perfil div img{
-    width: 15%;
+.img-profile{
+    margin: 50px auto 0 auto;
+    width: 200px;
+    height:200px;
     border-radius: 50%;
-    margin-top: 100px;
 }
 
-.perfil button a{
-    text-decoration: none;
-    color:black;
+.img-profile img{
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.name-profile{
+    margin: 50px 0 0 0;
+    padding:0;
+    font-family: 'Roboto', 'sans-serif';
+    font-size: 30px;
+    color:#313131;
+    font-weight: 500;
+}
+
+.mail-profile{
+    margin:0;
+    padding:0;
+    font-family: 'Roboto', 'sans-serif';
+    font-size: 17px;
+    color:#313131;
+    font-weight: 400;
+}
+
+.img-create{
+    width:90%;
+    margin:0;
+    padding:0;
+    font-family: 'Roboto', 'sans-serif';
     font-size: 15px;
-    font-family: 'Raleway', sans-serif;
-    font-weight: 600;
-    border:none;
-    color:black;
-    background-color: #9bbae6;
-    border-radius: 20px;
+    color:#313131;
+}
+
+.log-out{
+    width: 80%;
+    max-width: 250px;
     padding: 10px;
-
-}
-
-.perfil button{
     border:none;
-    background-color: transparent;
-    margin-top: 30px;
+    border-radius: 20px;
+    margin: 30px 0;
 }
+
+.log-out a{
+    text-decoration: none;
+    margin:0;
+    padding:0;
+    color:black;
+    font-family: 'Roboto', 'sans-serif';
+    font-size: 16px;
+}
+
 
 /*---ERRORES---*/
 
@@ -1559,13 +1618,14 @@ main section article div h3{
 .imagen-error{
     display: flex;
     justify-content: center;
-    margin: 0 auto;
+    margin: 50px auto 0 auto;
     width: 90%;
     max-width: 400px;
 }
 
 .loSentimos{
     margin: 20px auto;
+    width: 90%;
     text-align: center;
     font-family: 'Roboto', 'sans-serif';
     font-size: 1rem;
