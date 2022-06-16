@@ -219,7 +219,7 @@ const controlador ={
 	},
     imgProfile: (req,res) => {
         let newImage = req.file.filename;
-        let idUser = req.params.idUsuario;
+        let idUser = req.session.userLogged.idUsuario;
 
         console.log('imagen' + newImage);
         console.log('usuario' + idUser);

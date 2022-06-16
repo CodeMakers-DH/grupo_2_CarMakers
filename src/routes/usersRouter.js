@@ -27,14 +27,15 @@ const upload = multer ({storage})
 //rutas de las vistasgi
 
 router.get('/', adminMiddleware, usersController.index);
-router.get('/login', guestMiddleware, usersController.login)
+router.get('/login', guestMiddleware, usersController.login);
 
 //router.get('/register', usersController.register);
-router.get('/register', guestMiddleware, usersController.register)
+router.get('/register', guestMiddleware, usersController.register);
 
 //router.get('/detalleUsuario/:idUsuario?', usersController.detalleUsuario);
 router.get('/profile/', authMiddleware, usersController.profile);
-router.put('/profile/edit/:idUser', upload.single('imgProfile'), usersController.imgProfile)
+router.put('/profile/:id/edit', upload.single('imgProfile'), usersController.imgProfile);
+
 router.get('/logout', usersController.logout);
 
 //login

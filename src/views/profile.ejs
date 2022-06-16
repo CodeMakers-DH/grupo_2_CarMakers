@@ -22,7 +22,7 @@
                 </div>
 
 
-                <form action="/profile/edit/<%= user.id %>?_method=PUT" method="POST" class="form-change-img" enctype="multipart/form-data">
+                <form action="/profile/<%=locals.userLogged.idUsuario%>/edit?_method=PUT" method="POST" class="form-change-img" enctype="multipart/form-data">
 
                         <div class="change-img">
                             <p class="text-image"></p>
