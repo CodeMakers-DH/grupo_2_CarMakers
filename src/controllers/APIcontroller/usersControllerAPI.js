@@ -19,7 +19,7 @@ const controllerAPI = {
 
     show: (req,res) => {
         db.Usuario
-                    .findByPk(req.params.idModelo)
+                    .findByPk(req.params.idUsuario)
                     .then(usuario => {
                         return res.status(200).json({
                             data: usuario,
