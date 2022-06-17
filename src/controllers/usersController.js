@@ -25,7 +25,8 @@ const controlador ={
     
     login: (req, res) => {
         res.render('login')
-        db.Usuario.findAll({raw:true}).then((result) =>{
+        db.Usuario.findAll({raw:true})
+            .then((result) =>{
             fs.writeFileSync("./src/data/usuarios.json", JSON.stringify(result) )})
     },
 
@@ -81,6 +82,8 @@ const controlador ={
             db.Usuario.findAll()
             .then(usuarios=> res.render('profile', {usuario: usuarios,
                                                     user: req.session.userLogged}));
+            db.Usuario.findAll({raw:true}).then((result) =>{
+            fs.writeFileSync("./src/data/usuarios.json", JSON.stringify(result) )})
     },
 
     logout: (req,res) => {
@@ -221,20 +224,12 @@ const controlador ={
         let newImage = req.file.filename;
         let idUser = req.session.userLogged.idUsuario;
 
-        console.log('imagen' + newImage);
-        console.log('usuario' + idUser);
-
-
         db.Usuario.update({imgPerfil: newImage},
                           {where:{idUsuario: idUser}}
         )
 
-        res.redirect('/profile')
-
-        console.log('este es el usuario logeado' + usuarioLogeado)
+        res.redirect('/users/login');
     }
-
-
 }
 
 // exportacion del modulo
