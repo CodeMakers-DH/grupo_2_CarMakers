@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <%- include('./partials/head')%>
-<body>
+<body class="body-login">
     <%- include('./partials/header-2')%>
     <%- include('./partials/menuResponsive')%>
     <div class="container-blur" id="filter"></div>
@@ -15,7 +15,10 @@
             <h2 class="mis-compras-dos">Mis compras</h2>
 
                 <ul id="productList"></ul>
-
+                <div id="noproducto">
+                    <img src="/imgs/404error.png" class="imagen-error" alt="Todavía no has agregado productos en tu carrito."></img>
+                    <p class="loSentimos">Todavía no has agregado productos en tu carrito.</p>
+                </div>
 
         </section>    
         
@@ -52,8 +55,8 @@
                 </div> -->
 
                 <div class="flex-total">
-                    <h4 >Subtotal:</h4>
-                    <h5 id = 'total-compra'>$2,456,198</h5>
+                    <h4 >Total:</h4>
+                    <h5 id = 'total-compra'>USD 0</h5>
                 </div>
 
                 <div class="div-boton">
