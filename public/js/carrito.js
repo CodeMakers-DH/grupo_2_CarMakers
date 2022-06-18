@@ -66,7 +66,7 @@ const vaciarCarrito = document.querySelector('#vaciar-carrito')
 vaciarCarrito.addEventListener('click', function(event){
     localStorage.clear()
     elementSelected = []
-    new AWN().success('Se vacio el carrito')
+    new AWN().success('Se vació el carrito')
 
     window.location.reload();
     event.preventDefault()

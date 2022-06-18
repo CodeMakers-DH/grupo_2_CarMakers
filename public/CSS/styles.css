@@ -1612,7 +1612,7 @@ main section article div h3{
 
 .text-danger{
     font-family: 'Roboto', sans-serif;
-    margin-top: 20px;
+    /* margin-top: 20px; */
     font-weight: 500;
 }
 

@@ -1,4 +1,3 @@
-/* const User = require('../modelos/users'); */
 const db = require('../../database/models');
 
 function rememberMeMiddleware(req,res,next){

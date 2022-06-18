@@ -32,11 +32,8 @@ window.addEventListener('load', function(){
 
     //PASSWORD
     password.addEventListener('focus', function(){
-        let textCaracteres = "<br><small>La contraseña debe tener al menos 8 caracteres.</small>"
         let textObligatorio = "<small>Este campo es obligatorio.</small>"
-
         textPassword.innerHTML = textObligatorio;
-        textPassword.innerHTML += textCaracteres;
     })
 
     password.addEventListener('change', function(){
@@ -46,11 +43,9 @@ window.addEventListener('load', function(){
         }  else {
             password.style.backgroundColor = 'pink';
 
-            let textCaracteres = "<br><small>La contraseña debe tener al menos 8 caracteres.</small>"
             let textObligatorio = "<small>Este campo es obligatorio.</small>"
     
             textPassword.innerHTML = textObligatorio;
-            textPassword.innerHTML += textCaracteres;
         }
     })
 

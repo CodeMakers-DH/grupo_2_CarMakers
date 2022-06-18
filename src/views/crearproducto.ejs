@@ -49,7 +49,7 @@
                         <% } %>
 
                         <label for="deliveryEstimado" class="label-correo">Delivery Estimado (semanas)</label>
-                        <input type="number" name="deliveryEstimado" id="deliveryEstimado" value=10 class="delivery-create" required>
+                        <input type="number" name="deliveryEstimado" id="deliveryEstimado" value=10 class="delivery-create" min="1" max="1000" required >
                         <p class="text-delivery"></p>
                         <% if(locals.errors && errors.deliveryEstimado) { %>
                             <div class="text-danger">
@@ -59,7 +59,7 @@
                         <% } %>
                         
                         <label for="precioProducto" class="label-correo">Precio (USD)</label>
-                        <input type="number" name="precioProducto" id="precioProducto" value=10 class="precio-create" required>
+                        <input type="number" name="precioProducto" id="precioProducto" value=10 class="precio-create" min="1" max="1000000" required>
                         <p class="text-precio"></p>
                         <% if(locals.errors && errors.precioProducto) { %>
                             <div class="text-danger">
@@ -69,7 +69,7 @@
                         <% } %>
                         
                         <label for="autonomia" class="label-correo">Autonomía (km)</label>
-                        <input type="number" name="autonomia" id="autonomia" value=10 class="autonomia-create" required>
+                        <input type="number" name="autonomia" id="autonomia" value=10 class="autonomia-create" min="1" max="1000" required>
                         <p class="text-autonomia"></p>
                         <% if(locals.errors && errors.autonomia) { %>
                             <div class="text-danger">
@@ -79,7 +79,7 @@
                         <% } %>
 
                         <label for="velocidadMaxima" class="label-correo">Velocidad Máxima (km/h)</label>
-                        <input type="number" name="velocidadMaxima" id="velocidadMaxima" value=10 class="velocidad-create" required>
+                        <input type="number" name="velocidadMaxima" id="velocidadMaxima" value=10 class="velocidad-create" min="1" max="1000" required>
                         <p class="text-velocidad"></p>
                         <% if(locals.errors && errors.velocidadMaxima) { %>
                             <div class="text-danger">
@@ -89,7 +89,7 @@
                         <% } %>
 
                         <label for="tiempoDeCeroCien" class="label-correo">Tiempo de cero a 100 km/h (seg)</label>
-                        <input type="number" name="tiempoDeCeroCien" id="tiempoDeCeroCien" value=10 class="tiempo-create" required>
+                        <input type="number" name="tiempoDeCeroCien" id="tiempoDeCeroCien" value=10 class="tiempo-create" min="1" max="1000" required>
                         <p class="text-tiempo"></p>
                         <% if(locals.errors && errors.tiempoDeCeroCien) { %>
                             <div class="text-danger">
