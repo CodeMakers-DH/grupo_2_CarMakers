@@ -94,26 +94,29 @@ window.addEventListener('load', function(){
     delivery.addEventListener('focus', function(){
         let textObligatorio = "<small>Este campo es obligatorio.</small>"
         let textNumber = "<br><small>Este campo solo puede contener números.</small>"
+        let textPositiv = "<br><small>Los números negativos no están permitidos.</small>"
         textDelivery.innerHTML = textObligatorio;
         textDelivery.innerHTML += textNumber;
+        textDelivery.innerHTML += textPositiv;
       })
 
 
       delivery.addEventListener('change', function(){
 
-        if(delivery.value.match(/[0-9]/)){
+        if(delivery.value.match(/[0-9]/) && delivery.value > -1){
             delivery.style.backgroundColor = 'lightgreen';
             textDelivery.innerHTML = '';
         }  else{
             delivery.style.backgroundColor = 'pink';
             let textObligatorio = "<small>Este campo es obligatorio.</small>"
             let textNumber = "<br><small>Este campo solo puede contener números.</small>"
+            let textPositiv = "<br><small>Los números negativos no están permitidos.</small>"
             textDelivery.innerHTML = textObligatorio;
             textDelivery.innerHTML += textNumber;
+            textDelivery.innerHTML += textPositiv;
         }
 
 })
-
 
     //PRECIO
 
@@ -121,15 +124,17 @@ window.addEventListener('load', function(){
         let textObligatorio = "<small>Este campo es obligatorio.</small>"
         let textNumber = "<br><small>Este campo solo puede contener números.</small>"
         let textCaracteres = "<br><small>Este campo debe tener al menos 5 caracteres.</small>"
+        let textPositiv = "<br><small>Los números negativos no están permitidos.</small>"
         textPrecio.innerHTML = textObligatorio;
         textPrecio.innerHTML += textNumber;
         textPrecio.innerHTML += textCaracteres;
+        textPrecio.innerHTML += textPositiv;
       })
 
 
       precio.addEventListener('change', function(){
 
-        if(precio.value.match(/[0-9]/) && precio.value.length >= 5){
+        if(precio.value.match(/[0-9]/) && precio.value.length >= 5 && precio.value > -1){
             precio.style.backgroundColor = 'lightgreen';
             textPrecio.innerHTML = '';
         }  else{
@@ -137,10 +142,11 @@ window.addEventListener('load', function(){
             let textObligatorio = "<small>Este campo es obligatorio.</small>"
             let textNumber = "<br><small>Este campo solo puede contener números.</small>"
             let textCaracteres = "<br><small>Este campo debe tener al menos 5 caracteres.</small>"
+            let textPositiv = "<br><small>Los números negativos no están permitidos.</small>"
             textPrecio.innerHTML = textObligatorio;
             textPrecio.innerHTML += textNumber;
             textPrecio.innerHTML += textCaracteres;
-
+            textPrecio.innerHTML += textPositiv;
         }
 })
 
@@ -151,15 +157,17 @@ window.addEventListener('load', function(){
         let textObligatorio = "<small>Este campo es obligatorio.</small>"
         let textNumber = "<br><small>Este campo solo puede contener números.</small>"
         let textCaracteres = "<br><small>Este campo debe tener al menos 4 caracteres.</small>"
+        let textPositiv = "<br><small>Los números negativos no están permitidos.</small>"
         textAutonomia.innerHTML = textObligatorio;
         textAutonomia.innerHTML += textNumber;
         textAutonomia.innerHTML += textCaracteres;
+        textAutonomia.innerHTML += textPositiv;
       })
 
 
       autonomia.addEventListener('change', function(){
 
-        if(autonomia.value.match(/[0-9]/) && autonomia.value.length >= 4){
+        if(autonomia.value.match(/[0-9]/) && autonomia.value.length >= 4 && autonomia.value > -1){
             autonomia.style.backgroundColor = 'lightgreen';
             textAutonomia.innerHTML = '';
         }  else{
@@ -167,10 +175,11 @@ window.addEventListener('load', function(){
             let textObligatorio = "<small>Este campo es obligatorio.</small>"
             let textNumber = "<br><small>Este campo solo puede contener números.</small>"
             let textCaracteres = "<br><small>Este campo debe tener al menos 4 caracteres.</small>"
+            let textPositiv = "<br><small>Los números negativos no están permitidos.</small>"
             textAutonomia.innerHTML = textObligatorio;
             textAutonomia.innerHTML += textNumber;
             textAutonomia.innerHTML += textCaracteres;
-
+            textAutonomia.innerHTML += textPositiv;
         }
 })
 
@@ -180,15 +189,17 @@ window.addEventListener('load', function(){
         let textObligatorio = "<small>Este campo es obligatorio.</small>"
         let textNumber = "<br><small>Este campo solo puede contener números.</small>"
         let textCaracteres = "<br><small>Este campo debe tener al menos 3 caracteres.</small>"
+        let textPositiv = "<br><small>Los números negativos no están permitidos.</small>"
         textVelocidad.innerHTML = textObligatorio;
         textVelocidad.innerHTML += textNumber;
         textVelocidad.innerHTML += textCaracteres;
+        textVelocidad.innerHTML += textPositiv;
       })
 
 
       velocidad.addEventListener('change', function(){
 
-        if(velocidad.value.match(/[0-9]/) && velocidad.value.length >= 3){
+        if(velocidad.value.match(/[0-9]/) && velocidad.value.length >= 3 && velocidad.value > -1){
             velocidad.style.backgroundColor = 'lightgreen';
             textVelocidad.innerHTML = '';
         }  else{
@@ -196,34 +207,40 @@ window.addEventListener('load', function(){
             let textObligatorio = "<small>Este campo es obligatorio.</small>"
             let textNumber = "<br><small>Este campo solo puede contener números.</small>"
             let textCaracteres = "<br><small>Este campo debe tener al menos 3 caracteres.</small>"
+            let textPositiv = "<br><small>Los números negativos no están permitidos.</small>"
             textVelocidad.innerHTML = textObligatorio;
             textVelocidad.innerHTML += textNumber;
             textVelocidad.innerHTML += textCaracteres;
-
+            textVelocidad.innerHTML += textPositiv;
         }
 })
+
 
     //TIEMPO DE CERO A CIEN
 
     tiempo.addEventListener('focus', function(){
         let textObligatorio = "<small>Este campo es obligatorio.</small>"
         let textNumber = "<br><small>Este campo solo puede contener números.</small>"
+        let textPositiv = "<br><small>Los números negativos no están permitidos.</small>"
         textTiempo.innerHTML = textObligatorio;
         textTiempo.innerHTML += textNumber;
+        textTiempo.innerHTML += textPositiv;
       })
 
 
       tiempo.addEventListener('change', function(){
 
-        if(tiempo.value.match(/[0-9]/)){
+        if(tiempo.value.match(/[0-9]/) && tiempo.value > -1){
             tiempo.style.backgroundColor = 'lightgreen';
             textTiempo.innerHTML = '';
         }  else{
             tiempo.style.backgroundColor = 'pink';
             let textObligatorio = "<small>Este campo es obligatorio.</small>"
             let textNumber = "<br><small>Este campo solo puede contener números.</small>"
+            let textPositiv = "<br><small>Los números negativos no están permitidos.</small>"
             textTiempo.innerHTML = textObligatorio;
             textTiempo.innerHTML += textNumber;
+            textTiempo.innerHTML += textPositiv;
         }
 
 })

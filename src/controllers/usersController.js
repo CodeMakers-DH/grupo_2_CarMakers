@@ -227,7 +227,6 @@ const controlador ={
         db.Usuario.update({imgPerfil: newImage},
                           {where:{idUsuario: idUser}}
         )
-
         res.redirect('/users/login');
     }
 }

@@ -1,6 +1,5 @@
 const {check} = require('express-validator');
 
-
 const validateUserToEdit = [
     check('nombres')
         .notEmpty().withMessage('Debes rellenar los nombres').bail()

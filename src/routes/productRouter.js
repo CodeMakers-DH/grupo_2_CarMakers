@@ -32,22 +32,57 @@ const validateProductCreate = [
         .isLength({min:20}).withMessage('La descripción debe tener al menos 20 caracteres.'),
     check('deliveryEstimado')
         .notEmpty().withMessage('Debes rellenar el delivery estimado.').bail()
-        .isNumeric().withMessage('Este campo debe contener sólo números.'),
+        .isNumeric().withMessage('Este campo debe contener sólo números.').bail()
+        .custom((value, {req}) => {
+            if(value < 0){
+                throw new Error('Los números negativos no están permitidos.') 
+            } else {
+                return true;
+            }
+        }),
     check('precioProducto')
         .isLength({min:5}).withMessage('Este campo debe tener al menos 5 caracteres.').bail()
         .notEmpty().withMessage('Debes rellenar el precio del producto.').bail()
-        .isNumeric().withMessage('Este campo debe contener sólo números.'),
+        .isNumeric().withMessage('Este campo debe contener sólo números.').bail()
+        .custom((value, {req}) => {
+            if(value < 0){
+                throw new Error('Los números negativos no están permitidos.') 
+            } else {
+                return true;
+            }
+        }),
     check('autonomia')
         .isLength({min:4}).withMessage('Este campo debe tener al menos 4 caracteres.').bail()
         .notEmpty().withMessage('Debes rellenar la autonomía.').bail()
-        .isNumeric().withMessage('Este campo debe contener sólo números.'),
+        .isNumeric().withMessage('Este campo debe contener sólo números.').bail()
+        .custom((value, {req}) => {
+            if(value < 0){
+                throw new Error('Los números negativos no están permitidos.') 
+            } else {
+                return true;
+            }
+        }),
     check('velocidadMaxima')
         .isLength({min:3}).withMessage('Este campo debe tener al menos 3 caracteres.').bail()
         .notEmpty().withMessage('Debes rellenar la velocidad máxima.').bail()
-        .isNumeric().withMessage('Este campo debe contener sólo números.'),
+        .isNumeric().withMessage('Este campo debe contener sólo números.').bail()
+        .custom((value, {req}) => {
+            if(value < 0){
+                throw new Error('Los números negativos no están permitidos.') 
+            } else {
+                return true;
+            }
+        }),
     check('tiempoDeCeroCien')
         .notEmpty().withMessage('Debes rellenar el tiempo de cero a cien.').bail()
-        .isNumeric().withMessage('Este campo debe contener sólo números.'),
+        .isNumeric().withMessage('Este campo debe contener sólo números.').bail()
+        .custom((value, {req}) => {
+            if(value < 0){
+                throw new Error('Los números negativos no están permitidos.') 
+            } else {
+                return true;
+            }
+        }),
     check('ingreso')
         .notEmpty().withMessage('Debes rellenar la fecha de ingreso.').bail()
         .isDate().withMessage('Este campo debe tener formato DD.MM.AA'),
@@ -78,22 +113,57 @@ const validateProductEdit = [
         .isLength({min:20}).withMessage('La descripción debe tener al menos 20 caracteres.'),
     check('deliveryEstimado')
         .notEmpty().withMessage('Debes rellenar el delivery estimado.').bail()
-        .isNumeric().withMessage('Este campo debe contener sólo números.'),
+        .isNumeric().withMessage('Este campo debe contener sólo números.').bail()
+        .custom((value, {req}) => {
+            if(value < 0){
+                throw new Error('Los números negativos no están permitidos.') 
+            } else {
+                return true;
+            }
+        }),
     check('precioProducto')
         .isLength({min:5}).withMessage('Este campo debe tener al menos 5 caracteres.').bail()
         .notEmpty().withMessage('Debes rellenar el precio del producto.').bail()
-        .isNumeric().withMessage('Este campo debe contener sólo números.'),
+        .isNumeric().withMessage('Este campo debe contener sólo números.').bail()
+        .custom((value, {req}) => {
+            if(value < 0){
+                throw new Error('Los números negativos no están permitidos.') 
+            } else {
+                return true;
+            }
+        }),
     check('autonomia')
         .isLength({min:4}).withMessage('Este campo debe tener al menos 4 caracteres.').bail()
         .notEmpty().withMessage('Debes rellenar la autonomía.').bail()
-        .isNumeric().withMessage('Este campo debe contener sólo números.'),
+        .isNumeric().withMessage('Este campo debe contener sólo números.').bail()
+        .custom((value, {req}) => {
+            if(value < 0){
+                throw new Error('Los números negativos no están permitidos.') 
+            } else {
+                return true;
+            }
+        }),
     check('velocidadMaxima')
         .isLength({min:3}).withMessage('Este campo debe tener al menos 3 caracteres.').bail()
         .notEmpty().withMessage('Debes rellenar la velocidad máxima.').bail()
-        .isNumeric().withMessage('Este campo debe contener sólo números.'),
+        .isNumeric().withMessage('Este campo debe contener sólo números.').bail()
+        .custom((value, {req}) => {
+            if(value < 0){
+                throw new Error('Los números negativos no están permitidos.') 
+            } else {
+                return true;
+            }
+        }),
     check('tiempoDeCeroCien')
         .notEmpty().withMessage('Debes rellenar el tiempo de cero a cien.').bail()
-        .isNumeric().withMessage('Este campo debe contener sólo números.'),
+        .isNumeric().withMessage('Este campo debe contener sólo números.').bail()
+        .custom((value, {req}) => {
+            if(value < 0){
+                throw new Error('Los números negativos no están permitidos.') 
+            } else {
+                return true;
+            }
+        }),
     check('ingreso')
         .notEmpty().withMessage('Debes rellenar la fecha de ingreso.').bail()
         .isDate().withMessage('Este campo debe tener formato DD.MM.AA'),
