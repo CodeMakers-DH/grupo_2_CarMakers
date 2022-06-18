@@ -1,4 +1,5 @@
 const productsList = document.getElementById('productList');
+const noproducto = document.getElementById('noproducto');
 //console.log(productsList)
 
 let products = [];
@@ -48,14 +49,17 @@ const htmlString = elementSelected
             return `
             <li>
                 <h3 href="/products/detail/${product.idModelo}" class="inv-nombre">${product.nombreModelo}</h3>
-                <h4 class="inv-precio">USD$ ${product.precio}.000.000</h4>
+                <h4 class="inv-precio">USD ${product.precio}</h4>
                 <h4 class="inv-precio"> ${product.count} unidades</h4>
-                <h4 class="inv-precio">Subtotal $ ${product.precio * product.count}.000.000 </h4>
+                <h4 class="inv-precio">Subtotal USD ${product.precio * product.count}</h4>
             </li>
         `;
         })
         .join('');
-    productsList.innerHTML = htmlString;
+        if(htmlString){
+            productsList.innerHTML = htmlString;
+            noproducto.style.display = 'none';
+        }
 
 
 const vaciarCarrito = document.querySelector('#vaciar-carrito')
@@ -70,15 +74,10 @@ vaciarCarrito.addEventListener('click', function(event){
 
     window.location.reload();
     event.preventDefault()
-
 });
 
 const total = document.getElementById('total-compra'
 )
 
-total.innerHTML = `$ ${elementSelected.total}.000.000`
-
-
-
-
+total.innerHTML = `USD ${elementSelected.total}`
 
