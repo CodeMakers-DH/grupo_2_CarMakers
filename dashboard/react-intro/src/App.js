@@ -1,5 +1,6 @@
 //import logo from './logo.svg';
-//import './App.css';
+
+import './App.css';
 
 import React from "react";
 import {ListaUsuarios} from './Components/ListaUsuarios'
@@ -12,7 +13,7 @@ function App() {
 
   return (
    <React.Fragment>
-    <h2>Dashboard de Control de CarsMakers</h2>
+    <h2 className="dash-title">DASHBOARD DE CONTROL CARMAKERS</h2>
     <div>
       <div>
         <ListaUsuarios>
