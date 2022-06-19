@@ -12,7 +12,7 @@ const UsuarioItem = ()=>{
     }, [])
 
     const obtenerDatos = async () =>{
-        const data = await fetch('http://localhost:3000/api/usuarios')
+        const data = await fetch('http://localhost:4000/api/usuarios')
         const usuarios = await data.json()
        //console.log(usuarios)
        setPersonas(usuarios.data)
@@ -21,13 +21,14 @@ const UsuarioItem = ()=>{
 
     return(
         <div>
-            <h2>Usuarios</h2>
-            <h4>Usuarios Totales {personas.length}</h4>
-            <ul>
+            <h2 className='item-title'>Usuarios</h2>
+            <h4 className='total-user-title'>Usuarios Totales: {personas.length}</h4>
+            <ul className='ul-lista'>
                 {
                     personas.map(item=>(
-                        <li key = 'item.id'>
-                            {item.nombres} - {item.email}
+                        <li key = 'item.id' className='li'>
+                            {/* <img src="/imgs/imgsPerfil/{item.imgPerfil}" alt="Imágen de perfil"></img> */}
+                            <div className="important">{item.nombres} {item.apellidos}</div> <div className="less-imp">{item.email}</div>
                         </li>
                     ))
                 }

@@ -16,7 +16,7 @@ searchBar.addEventListener('keyup', (e) => {
 
 const loadProducts = async () => { 
     try {
-        const res = await fetch('http://localhost:3000/api/products');
+        const res = await fetch('http://localhost:4000/api/products');
         const productsJSON = await res.json();
         products = productsJSON.data;
         displayProducts(products);

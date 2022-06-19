@@ -1,38 +1,76 @@
-.App {
+.dash-title{
+  margin:0;
+  padding: 25px 0 25px 50px;
+  background-color: rgb(255, 255, 255);
+  color:#11151a;
+  font-family: 'Roboto', 'sans-serif';
+  font-size: 1em;
+  font-weight: 500;
+  box-shadow:  rgba(0, 0, 0, 0.13) -50px 10px 50px;
+}
+
+.item-title{
+  margin: 50px 0 0 0;
+  padding:0;
+  color:#11151a;
+  font-family: 'Raleway', 'sans-serif';
   text-align: center;
+  font-size: 2em;
+  font-weight: 500;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.total-user-title{
+  margin: 5px 0 0 0;
+  padding:0;
+  color:#11151a;
+  font-family: 'Roboto', 'sans-serif';
+  text-align: center;
+  font-size: 1em;
+  font-weight: 400;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.li{
+  list-style: none;
+  margin: 0 20px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.li-prod{
+  list-style: none;
+  margin: 0 20px;
+  width: 100%;
+}
+
+.ul-lista{
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  overflow-x: scroll;
+  margin: 50px auto;
+  padding:0;
+  width: 90%;
 }
 
-.App-link {
-  color: #61dafb;
+.important{
+  margin: 0;
+  padding:0;
+  color:#11151a;
+  font-family: 'Raleway', 'sans-serif';
+  font-size: 1.2em;
+  font-weight: 600;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.less-imp{
+  margin: 0;
+  padding:0;
+  color:#11151a;
+  font-family: 'Raleway', 'sans-serif';
+  font-size: 1em;
+  font-weight: 500;
+}
+
+.ul-listaUsuarios{
+  margin:0;
+  padding:0;
+}
+
+.name-model{
+  color:red;
 }
