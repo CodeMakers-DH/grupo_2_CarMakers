@@ -27,7 +27,7 @@ const UsuarioItem = ()=>{
                 {
                     personas.map(item=>(
                         <li key = 'item.id' className='li'>
-                            {/* <img src="/imgs/imgsPerfil/{item.imgPerfil}" alt="Imágen de perfil"></img> */}
+                            <img src="/imgs/imgsPerfil/{item.imgPerfil}" alt="Imágen de perfil"></img>
                             <div className="important">{item.nombres} {item.apellidos}</div> <div className="less-imp">{item.email}</div>
                         </li>
                     ))
