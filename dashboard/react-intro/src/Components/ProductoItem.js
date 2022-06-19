@@ -27,6 +27,7 @@ const ProductoItem = ()=>{
                 {
                     modelos.map(item=>(
                         <li key = 'item.idModelo' className='li-prod'>
+                            <div className="div-img"><img src = {`./../../../../imgs/products/${item.imgProducto}`} alt="Imágen de perfil" className="imgPro"></img></div>
                             <div className="important">{item.nombreModelo}</div> <div className="less-imp">{item.descripcion}</div>
                         </li>
                     ))
