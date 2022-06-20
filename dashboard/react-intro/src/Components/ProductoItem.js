@@ -35,7 +35,7 @@ const ProductoItem = ()=>{
 
     return(
         <div>
-            <h2 className='item-title-prod'>Productos</h2>
+            <h2 className='item-title'>Productos</h2>
             <h4 className='total-user-title'>Productos Totales: {modelos.length}</h4>
             <div className="section-search">
                 <SearchBar
