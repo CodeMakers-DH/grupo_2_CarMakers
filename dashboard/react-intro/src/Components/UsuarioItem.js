@@ -1,4 +1,5 @@
 import React from "react";
+import {SearchBar} from './SearchBar';
 
 
 const UsuarioItem = ()=>{
@@ -24,6 +25,9 @@ const UsuarioItem = ()=>{
         <div>
             <h2 className='item-title'>Usuarios</h2>
             <h4 className='total-user-title'>Usuarios Totales: {personas.length}</h4>
+            <div className="section-search">
+                <SearchBar/>
+            </div>
             <ul className='ul-lista'>
                 {
                     personas.map(item=>(
