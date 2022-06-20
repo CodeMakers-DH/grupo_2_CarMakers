@@ -7,10 +7,9 @@ import {ListaUsuarios} from './Components/ListaUsuarios'
 import {ListaProductos} from './Components/ListaProductos'
 import {ProductoItem} from './Components/ProductoItem'
 import {UsuarioItem} from './Components/UsuarioItem'
-import {SearchBar} from './Components/SearchBar'
-/* import {Cards} from './Components/Cards' */
-/*import { UltimoProducto } from './Components/UltimoProducto';*/
-/* import { UltimoUsuario } from './Components/UltimoUsuario';  */
+import {Cards} from './Components/Cards'
+import { UltimoProducto } from './Components/UltimoProducto';
+import { UltimoUsuario } from './Components/UltimoUsuario';
 
 
 
@@ -20,11 +19,15 @@ function App() {
    <React.Fragment>
     <h2 className="dash-title">DASHBOARD DE CONTROL CARMAKERS</h2>
     <div>
-{/*     <div>
+    <div className='cards-last'>
         <Cards>
-            
+            <UltimoUsuario/>
         </Cards>
-      </div> */}
+
+        <Cards>
+            <UltimoProducto/>
+        </Cards>
+      </div>
 
       <div>
         <ListaUsuarios>
