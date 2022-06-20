@@ -10,9 +10,6 @@
     src: url(fuentelogo.otf);
 }
 
-#cartel{
-    color:blue;
-}
 
 
 /*---NAV---*/
@@ -1083,9 +1080,9 @@ main section article div h3{
 }
 
 .carrito-button{
-    border:none;
+    border:black solid 2px;
     font-size: 15px;
-    background-color: #e9e9e9;
+    background-color: #ffffff;
     color: rgb(0, 0, 0);
     border-radius: 20px;
     font-family: 'Roboto', sans-serif; 
@@ -1225,7 +1222,7 @@ main section article div h3{
     color:#6a6a6a;
 }
 
-#correo, #contraseña, #idProducto, #descripcionProducto, #nombre, #nombreProducto, #apellido, #caracteres, #autonomia, #velocidadMaxima, #tiempoDeCeroCien, #ingreso, #precio, #idModelo, #nombreModelo, #descripcion, #deliveryEstimado, #precioProducto{
+#correo, #contraseña, #idProducto, #descripcionProducto, #nombre, #nombres, #apellidos, #correoElectronico, #password, #nombreProducto, #apellido, #caracteres, #autonomia, #velocidadMaxima, #tiempoDeCeroCien, #ingreso, #precio, #idModelo, #nombreModelo, #descripcion, #deliveryEstimado, #precioProducto{
     background-color: #ececec;
     border-radius: 20px;
     margin: 5px auto 0 auto;
@@ -1294,12 +1291,12 @@ main section article div h3{
 }
 
 .login-button{
-    font-size: 15px;
+    font-size: 17px;
     font-family: 'Raleway', sans-serif;
-    font-weight: 600;
+    font-weight: 500;
     border:none;
     color:white;
-    background-color: #9bbae6;
+    background-color: #ed7237;
     width: 100%;
     border-radius: 20px;
     padding: 10px;
@@ -1313,12 +1310,24 @@ main section article div h3{
     font-weight: 600;
     border:none;
     color:white;
-    background-color: #9bbae6;
+    background-color: #ed7237;;
     width: 100%;
     border-radius: 20px;
     padding: 10px;
     margin: 30px 0 0 0;
+}
 
+.delete-button{
+    font-size: 15px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    border:black solid 2px;
+    color:rgb(0, 0, 0);
+    background-color: #ffffff;;
+    width: 100%;
+    border-radius: 20px;
+    padding: 10px;
+    margin: 15px 0 0 0;
 }
 
 .olvido{
@@ -1369,14 +1378,14 @@ main section article div h3{
 }
 
 .account-button{
-    font-size: 15px;
+    font-size: 17px;
     font-family: 'Raleway', sans-serif;
     background-color: white;
     border-radius: 20px;
     width: 80%;
     padding: 10px;
     border:solid 2px black;
-    font-weight: 600;
+    font-weight: 500;
 }
 
 .boton-crear-cuenta{
