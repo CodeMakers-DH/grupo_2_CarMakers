@@ -7,6 +7,10 @@ import {ListaUsuarios} from './Components/ListaUsuarios'
 import {ListaProductos} from './Components/ListaProductos'
 import {ProductoItem} from './Components/ProductoItem'
 import {UsuarioItem} from './Components/UsuarioItem'
+/* import {Cards} from './Components/Cards'
+import { UltimoProducto } from './Components/UltimoProducto'; */
+import { UltimoUsuario } from './Components/UltimoUsuario';
+
 
 
 function App() {
