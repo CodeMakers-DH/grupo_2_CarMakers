@@ -14,13 +14,13 @@
             <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner">
                   <div class="carousel-item active">
-                    <img src="/imgs/products/<%=modelos.imgProducto%>" class="d-block w-100" alt="..." id="banner-uno">
+                    <img src="/imgs/products/<%=modelos.imgProducto%>" class="d-block w-100" alt="Foto producto completo" id="banner-uno">
                   </div>
                   <div class="carousel-item">
-                    <img src="/imgs/interior.jpg" class="d-block w-100" alt="...">
+                    <img src="/imgs/interior.jpg" class="d-block w-100" alt="Interior del auto">
                   </div>
                   <div class="carousel-item">
-                    <img src="/imgs/interior2.jpg" class="d-block w-100" alt="...">
+                    <img src="/imgs/interior2.jpg" class="d-block w-100" alt="Asientos del auto">
                   </div>
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
@@ -142,7 +142,7 @@
 
             <article class="add">
                 <a href="/carrito">
-                    <button type="button" id="carrito">AÑADIR AL CARRITO</i></button>
+                    <button type="button" id="carrito">Añadir al Carrito</i></button>
                 </a>
             </article>
 
@@ -151,7 +151,7 @@
                 <% if(locals.userLogged.is_admin == 1) { %> 
             <article class="add">
                 <a href="/products/edit/<%= modelos.idModelo%>">
-                    <button type="button">EDITAR PRODUCTO</i></button>
+                    <button type="button">Editar Producto</i></button>
                 </a>
             </article>
                 <% } %>

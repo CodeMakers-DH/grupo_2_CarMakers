@@ -20,7 +20,7 @@ const UltimoProducto = ()=>{
     return(
         <div className="div-padre">
         <h2 className="title-last">Último Producto</h2>
-        {modelos.filter(modelo => modelo.idModelo == (modelos.length - 1)).map(ModeloFiltrado => (
+        {modelos.filter(modelo => modelo.idModelo === (modelos.length - 1)).map(ModeloFiltrado => (
             <div>
             <div className="div-img-last"><img src = {`./../../../../imgs/products/${ModeloFiltrado.imgProducto}`} alt="Imágen del último producto" className="imgPro"></img></div>
             <h3>Modelo</h3>
