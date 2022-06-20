@@ -1,4 +1,4 @@
-/* import React from "react";
+import React from "react";
 
 function Cards(props){
     return(
@@ -9,4 +9,4 @@ function Cards(props){
             </section>
         )
     }
-export {Cards}; */
+export {Cards};

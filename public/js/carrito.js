@@ -48,9 +48,10 @@ const htmlString = elementSelected
         .map((product) => {
             return `
             <li>
+                <img src="./../imgs/products/${product.imgProducto}" alt="Imágen del producto">
                 <h3 href="/products/detail/${product.idModelo}" class="inv-nombre">${product.nombreModelo}</h3>
                 <h4 class="inv-precio">USD ${product.precio}</h4>
-                <h4 class="inv-precio"> ${product.count} unidades</h4>
+                <h4 class="inv-precio"> Cantidad: ${product.count}</h4>
                 <h4 class="inv-precio">Subtotal USD ${product.precio * product.count}</h4>
             </li>
         `;
