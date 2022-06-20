@@ -40,7 +40,7 @@ const validateProductCreate = [
                 return true;
             }
         }),
-    check('precioProducto')
+    check('precioProducto') 
         .isLength({min:5}).withMessage('Este campo debe tener al menos 5 caracteres.').bail()
         .notEmpty().withMessage('Debes rellenar el precio del producto.').bail()
         .isNumeric().withMessage('Este campo debe contener sólo números.').bail()
