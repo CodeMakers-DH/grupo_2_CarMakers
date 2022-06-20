@@ -946,8 +946,7 @@ main section article div h3{
 
 .main-section{
     border-top: #939393 solid 1px;
-    border-bottom: #939393 solid 1px;
-    padding: 40px 0;
+    padding: 0;
     margin: 40px auto;
     width:90%;
 
@@ -1060,18 +1059,6 @@ main section article div h3{
     margin: 15px 0 10px 0;
 }
 
-.flex-total{
-    font-family: 'Raleway', sans-serif; 
-    margin: 15px 0 10px 0;
-    display: flex;
-    justify-content: space-between;
-    width: 95%;
-    align-items: center;
-}
-
-.flex-total h4{
-    font-weight: 600;
-}
 
 .form-carrito{
     margin: 0 auto 0 auto;
@@ -1118,9 +1105,10 @@ main section article div h3{
 
 
 .flex-total{
-    font-family: 'Raleway', sans-serif; 
+    font-family: 'Roboto', sans-serif; 
     margin: 15px auto 10px auto;
-    color: #888888;
+    color:rgb(104, 104, 104);
+    font-size: 15px;
     display: flex;
     justify-content: space-between;
     width: 90%;
@@ -1128,19 +1116,13 @@ main section article div h3{
 }
 
 .flex-total h4{
-    color:black;
-    font-weight: 600;
-    font-size: 20px;
-}
-
-.checkout h6{
-    color: #888888;
-    font-weight: 400;
+    font-weight: 500;
 }
 
 .flex-total h5{
-    color: #888888;
+    font-weight: 400;
 }
+
 
 .checkout h5{
     font-family: 'Raleway', sans-serif;
@@ -1148,6 +1130,36 @@ main section article div h3{
     margin-top:15px;
     font-size: 20px;
     color: #000000;
+}
+
+.lista-carrito{
+    max-height: 550px;
+    list-style: none;
+    overflow-y: scroll;
+    border-bottom: #939393 solid 1px;
+}
+
+.lista-carrito li img{
+    width: 90%;
+    max-width: 300px;
+}
+
+.lista-carrito li:last-child{
+    margin-bottom: 50px;
+}
+
+.lista-carrito li h3{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    color: #000000;
+}
+
+.lista-carrito li h4{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    color: #494949;
 }
 
 /*FOOTER-CARRITO*/
@@ -1721,11 +1733,43 @@ main section article div h3{
         background-color: transparent;
     }
 
+    
+        /*-CARRITO-*/
+
+        .mis-compras{
+            max-width: 1200px;
+        }
+    
+         .main-section{
+            border-top: none;
+            border-bottom: none;
+            padding: 0;
+            margin: 0;
+            width:100%;
+        } 
+    
+    
+        .ambas-secciones{
+            display: grid;
+            grid-template-columns: 60% 40%;
+            margin: 30px auto 0 auto;
+            padding: 0;
+            border-top: #939393 solid 1px;
+            width: 90%;
+            max-width: 1200px;
+        }
+
+        .resumen-compra{
+            padding: 50px 0 0 0;
+        }
 
 }
 
 
 @media (min-width:900px){
+
+
+
 
     /* POLITICAS */
 
