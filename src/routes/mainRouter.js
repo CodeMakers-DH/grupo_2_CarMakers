@@ -3,6 +3,9 @@ const req = require('express/lib/request');
 const path = require('path');
 const {check} = require('express-validator');
 
+const authMiddleware = require('../midddlewares/authMiddleware');
+
+
 //llamada al controlador
 const mainControlador = require("../controllers/mainController");
 
@@ -23,7 +26,7 @@ router.get('/sobre-nosotros', mainControlador.sobreNosotros);
 router.get('/politica-cookies', mainControlador.politicaCookies);
 router.get('/politica-privacidad', mainControlador.politicaPrivacidad);
 router.get('/terminos', mainControlador.terminos);
-router.get('/carrito', mainControlador.carritoCompras);
+router.get('/carrito', authMiddleware, mainControlador.carritoCompras);
 router.get('/construccion', mainControlador.construccion);
 
 router.post('/', validateForm, mainControlador.newsletter);
