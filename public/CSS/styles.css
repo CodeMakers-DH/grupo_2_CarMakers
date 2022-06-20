@@ -1137,6 +1137,7 @@ main section article div h3{
     list-style: none;
     overflow-y: scroll;
     border-bottom: #939393 solid 1px;
+    display: none;
 }
 
 .lista-carrito li img{

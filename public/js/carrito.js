@@ -59,9 +59,9 @@ const htmlString = elementSelected
         .join('');
         if(htmlString){
             productsList.innerHTML = htmlString;
+            productsList.style.display = 'block';
             noproducto.style.display = 'none';
         }
-
 
 const vaciarCarrito = document.querySelector('#vaciar-carrito')
 
