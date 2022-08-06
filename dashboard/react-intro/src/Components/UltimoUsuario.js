@@ -17,13 +17,13 @@ const UltimoUsuario = ()=>{
 
     }
 
-
+console.log(personas.filter(persona => persona.idUsuario === (personas.length-1)))
     return(
             <div  className="div-padre">
             <h2 className="title-last">Último Usuario</h2>
-            {personas.filter(persona => persona.idUsuario === (personas.length - 1)).map(PersonaFiltrada => (
+            {personas.filter(persona => persona.idUsuario === (personas.length-1)).map(PersonaFiltrada => (
                 <div>
-                <div className="div-img-last"><img src = {`./../../../../imgs/imgsPerfil/${PersonaFiltrada.imgPerfil}`} alt="Imágen de perfil del último usuario" className="imgPro"></img></div>
+                {<div className="div-img-last"><img src = {`./../../../../imgs/imgsPerfil/${PersonaFiltrada.imgPerfil}`} alt="Imágen de perfil del último usuario" className="imgPro"></img></div>}
                 <h3>Nombre Completo</h3>
                 <h4>{PersonaFiltrada.nombres}  {personas[1].apellidos}</h4>
                 <h3>E-mail</h3>
@@ -34,6 +34,6 @@ const UltimoUsuario = ()=>{
             </div>
     )
 }
-
+//{'./../../../../public/imgs/imgsPerfil'}
 export{UltimoUsuario}
 

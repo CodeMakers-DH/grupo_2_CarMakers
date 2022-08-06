@@ -22,7 +22,7 @@ const UltimoProducto = ()=>{
         <h2 className="title-last">Último Producto</h2>
         {modelos.filter(modelo => modelo.idModelo === (modelos.length - 1)).map(ModeloFiltrado => (
             <div>
-            <div className="div-img-last"><img src = {`./../../../../imgs/products/${ModeloFiltrado.imgProducto}`} alt="Imágen del último producto" className="imgPro"></img></div>
+            {<div className="div-img-last"><img src = {`./../../../../imgs/products/${ModeloFiltrado.imgProducto}`} alt="Imágen del último producto" className="imgPro"></img></div> }
             <h3>Modelo</h3>
             <h4>{ModeloFiltrado.nombreModelo}</h4>
             <h3>Descripción</h3>

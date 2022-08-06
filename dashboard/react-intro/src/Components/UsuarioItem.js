@@ -7,9 +7,13 @@ const UsuarioItem = ()=>{
     const [personas, setPersonas]= React.useState([])
     const[searchValue, setSearchValue]=  React.useState('')
 
+   
+    // console.log(UltimoUsuario.nombres)
+
     React.useEffect(()=>{
        // console.log('use efect')
         obtenerDatos()
+        
     }, [])
 
     const obtenerDatos = async () =>{
@@ -18,6 +22,7 @@ const UsuarioItem = ()=>{
        //console.log(usuarios)
        setPersonas(usuarios.data)
     }
+
 
     let searchedPersonas=[];
     if(!searchValue.length>=1){
@@ -30,10 +35,13 @@ const UsuarioItem = ()=>{
         })
     }
 
+
+
     return(
         <div>
             <h2 className='item-title'>Usuarios</h2>
             <h4 className='total-user-title'>Usuarios Totales: {personas.length}</h4>
+ 
             <div className="section-search">
                 <SearchBar
                     searchValue={searchValue}
