@@ -42,7 +42,6 @@ app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname,'/views'))
 
 // configuracion de rutas
-
 app.use('/', mainRoutes);
 app.use('/products', productRoutes);
 app.use('/users', usersRoutes);
@@ -51,18 +50,8 @@ app.use('/users', usersRoutes);
 app.use('/api', APIusersRoutes);
 app.use('/api', APIproductRoutes);
 
-
-// llamada al servidor en puerto 5000
-
-/*app.listen(5000, () => {
-    console.log('Servidor para CarMakers');
-})*/
-// Para Heroku
-
-let puerto = 4000
+//puerto
+let puerto = 3000
 app.listen(process.env.PORT||puerto, function(){
     console.log('Servidor funcionando '+ puerto);
 });
-
-
-

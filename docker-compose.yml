@@ -1,0 +1,22 @@
+version: "3.8"
+
+services:
+  app:
+    image: node:16
+    command: npm run start
+    ports:
+      - 3000:3000
+    working_dir: /app
+    volumes:
+      - ./:/app
+    environment:
+      MYSQL_HOST: mysql
+      MYSQL_USER: root
+      MYSQL_PASSWORD: secret
+      MYSQL_DB: carmakers
+
+  mysql:
+    image: mydb
+    environment: 
+      MYSQL_ROOT_PASSWORD: secret
+      MYSQL_DATABASE: carmakers
