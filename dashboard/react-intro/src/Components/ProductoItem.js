@@ -52,7 +52,7 @@ const ProductoItem = ()=>{
                         </li>
                     ))
                 }
-            </ul>
+            </ul> 
         </div>
 
 
