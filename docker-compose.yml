@@ -20,7 +20,7 @@ services:
     container_name: nodeapp
     command: npm start
     ports:
-      - "6000:8080"
+      - "4000:4000"
     working_dir: /app
     volumes:
       - ./:/app
