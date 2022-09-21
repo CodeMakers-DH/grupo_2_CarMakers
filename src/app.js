@@ -50,8 +50,15 @@ app.use('/users', usersRoutes);
 app.use('/api', APIusersRoutes);
 app.use('/api', APIproductRoutes);
 
-//puerto
-let puerto = 3000
+// llamada al servidor en puerto 5000
+
+/*app.listen(5000, () => {
+    console.log('Servidor para CarMakers');
+})*/
+// Para Heroku
+
+let puerto = 6000
+
 app.listen(process.env.PORT||puerto, function(){
     console.log('Servidor funcionando '+ puerto);
 });
